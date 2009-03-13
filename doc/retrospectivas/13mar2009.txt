@@ -1,0 +1,34 @@
+* Retrospectiva 13 de março de 2009
+
+** Idéias
+- Cadastrar questionário no Survey Monkey para "tercerizar" a tarefa
+- Pesquisar outras ferramentas para não usar mais o XPlanner
+- Perguntar se o nosso cliente Ale quer ser mesmo o nosso pseudo-cliente
+- Pegar as histórias do ano passado e trabalhar em cima
+- Planning game com o cliente (sexta, segunda)
+
+** O que a gente fez?
+- Questionário versão final em duas páginas com papel rosa
+- Aplicação do questionário
+- Automação do processamento de dados pelo Survey Monkey
+- Decisão da tecnologia: linux, apache, python, django, banco de dados em aberto (mysql e postgre serão testados), componentes reusáveis do Django Plugables, ferramentas de teste automatizado (PyUnit, Twil, Selenium)
+
+** Pontos Positivos
+- Sugestões do Paulo, da Irene e da Grasi
+- A chamada na chincha da Selma
+- Reuniões produtivas semanais
+
+** Pontos Negativos
+- Problema de Ego
+- Confusão com o Paulo
+- A não conversa com a Roseli
+- As metas do PSI não estão definidas (planejamento)
+- falta de tempo para ler mais artigos
+
+** Próximos passos
+- Criação do Survey Monkey
+- Pré-Análise dos questionários
+- Levantamento de Histórias
+- Planning game com o cliente
+- Definição da 1ª iteração
+
