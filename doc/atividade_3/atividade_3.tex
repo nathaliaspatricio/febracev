@@ -8,7 +8,7 @@
 \autor{Leandro Coletto Biazon\protect\\Nathalia Sautchuk Patrício}
 \titulo{Febrace\textsuperscript{V}:\\Feira Brasileira Virtual de Ciências e
 Engenharia}
-\orientador[Orientadores:\\]{Profª. Drª. Roseli de Deus Lopes\protect\\Profª. Drª. Selma
+\orientador[Orientadoras:\\]{Profª. Drª. Roseli de Deus Lopes\protect\\Profª. Drª. Selma
 Shin Shimizu Melnikoff}
 \instituicao{Escola Politécnica da Universidade de São Paulo\par Departamento de Sistemas Digitais}
 \local{São Paulo}
@@ -23,24 +23,24 @@ Shin Shimizu Melnikoff}
   %\folhaderosto
 
   \renewenvironment{center}{}{}
-	\section{PCS 2040 - PROJETO DE FORMATURA I}
- 
-		\begin{tabular}[|l|]{ |r|l| }
-		\hline
+  \section{PCS 2040 - PROJETO DE FORMATURA I}
+
+    \begin{tabular}[|l|]{ |r|l| }
+    \hline
 			Equipe 07 & Nathalia S. Patrício, nathalia.sautchuk@gmail.com, (11)9678-1667 \\
 		\hline
 			& Leandro Coletto Biazon, leandrobiazon@gmail.com, (11)8961-4159 \\
 		\hline
-			Orientador & Prof. Dr. Selma S. S. Melnikoff, selma.melnikoff@poli.usp.br \\
+			Orientadora & Profª. Drª. Selma S. S. Melnikoff, selma.melnikoff@poli.usp.br \\
 		\hline
-			Co-Orientador & Prof. Dr. Roseli de Deus Lopes, roseli@lsi.usp.br \\
+			Co-Orientadora & Profª. Drª. Roseli de Deus Lopes, roseli@lsi.usp.br \\
 		\hline
 		\end{tabular} \\
-		
+
 		RA1 – Relatório Resumido (versão: 20/03/2009) \\
-		
+
 		\begin{tabular}{ |r|r|r| }
-	
+
 		\hline
 			\multicolumn{3}{|c|}{Campos a serem preenchidos pelo orientador, secretaria e comitê gestor} \\
 		\hline
@@ -77,25 +77,55 @@ Shin Shimizu Melnikoff}
 		\hline
 		\end{tabular}
 
-  	\section{Atividades Realizadas no Período}
-		
-		Como dito no documento de acompanhamento anterior, para a escrita dessa documento foi realizada a 2ª retrospectiva.
+  \section{Atividades Realizadas no Período}
+    Como dito no documento de acompanhamento anterior, esse relatório se baseia nas consideração levantadas na segunda retrospectiva, ocorrida no dia 13 de março.
 
-		Nesse período entre a 1ª e a 2ª retrospectiva, foram feitas as seguintes atividades:
-		\begin{itemize}
-		 \item questionário de perfil de uso: devido a algumas sugestões recebidas da equipe da FEBRACE e de outras pessoas com experiência em levantamento de dados com usuários foram feitos melhoramentos no questionário;
-		 \item aplicação do questionário: a FEBRACE ocorreu nos dias 17, 18 e 19 de março e durante esse período foram aplicados questionários para alunos e professores participantes, além de visitantes da feira. Ainda não houve tempo para a compilação dos dados dos questionários;
-		 \item automação do processamento de dados coletados com os questionários: o método escolhido para a aplicação do questionário foi em papel. Porém, com o objetivo de facilitar a compilação desses dados será usada a ferramenta Lime Survey. Assim, os dados de cada questionário podem ser inseridos nessa ferramenta de forma mais rápida e prática, e, pelo fato de ser online, o trabalho poder ser mais facilmente entre os membros do grupo. Além disso, a ferramenta já faz gráficos e cálculos de desvio padrão;
-		 \item decisão das tecnologias a serem utilizadas no projeto: o projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem escolhida foi Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e Postgre.
-		\end{itemize}
-	
-  	\section{Planejamento e Cronograma de Atividades}
+    No período compreendido entre a 1ª e a 2ª retrospectivas, foram realizadas as seguintes atividades:
+    \begin{itemize}
+      \item
+        Questionário de perfil de uso;
+      \item
+        Aplicação do questionário;
+      \item
+        Automação do processamento de dados coletados com os questionários;
+      \item
+        Pesquisa sobre utilização de metodologias ágeis no contexto acadêmico
+      \item
+        Decisão das tecnologias a serem utilizadas no projeto;
+    \end{itemize}
 
-		Até o momento o cronograma está sendo seguido e o grupo não se encontra atrasado em relação ao mesmo. Ainda sim houve um replanejamento, pois algumas atividades ficaram mais claras nesse último mês e de acordo com sugestões da orientação.					
-		
+    A descrição dessas atividades será feita a seguir.
+
+  \section{Questionário de perfil de uso}
+    Devido a sugestões ao questionário feitas pela equipe da FEBRACE e por outras pessoas com experiência em levantamento de dados com usuários foram feitos melhoramentos no questionário de perfil de uso de Internet dos participantes da feira.
+
+    O questionário final apresenta três partes. A primeira tem por objetivo colher alguns dados demográficos, como idade, local de residência e escolaridade. Na segunda parte há perguntas que procuram identificar o perfil de uso da internet do usuário (de onde e com qual frequência ocorre o acesso, quais serviços são utilizados, etc.). O objetivo da terceira parte é saber a opinião dos usuários sobre sua atual experiência com os serviços web da FEBRACE e sobre seu interesse nas possíveis ferramentas oferecidas pela Febrace\textsuperscript{v}.
+
+  \section{Aplicação do questionário}
+    A FEBRACE ocorreu nos dias 17, 18 e 19 de março e durante esse período foram aplicados questionários para alunos e professores participantes, além de visitantes da feira. Foram distribuídos ao total mil e quinhenhos questionários, e XXX foram respondidos. Ainda não houve tempo para a compilação dos dados dos questionários.
+
+  \section{Automação do processamento de dados coletados}
+    O método escolhido para a aplicação do questionário foi em papel. Porém, com o objetivo de facilitar tanto a inserção de dados no computador quanto a compilação desses dados decidiu-se pelo uso de alguma ferramenta online. O questionário começo a ser transposto para o SurveyMonkey, porém a conta gratuita desse serviço é restrita a dez perguntas no questinário e cem questionários respondidos, limitações que tornam o serviço aquém de nossas necessidades.
+
+    Mais adequada é a ferramenta LimeSurvey, uma \textit{webapp} de código aberto que foi instalada e configurada localmente. Com ela os dados de cada questionário podem ser inseridos de forma mais rápida e prática, e, pelo fato de estar online, o trabalho poder ser mais facilmente entre os membros do grupo. Além disso, a ferramenta gera diversas estatísticas e desenha os respectivos gráficos.
+
+  \section{Pesquisa sobre utilização de metodologias ágeis no contexto acadêmico}
+    Uma das metas do presente projeto é testar a validade de um conjunto de práticas propostas pelas metodologias ágeis de desenvolvimento de software, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetiva-se também documentar essa experiência de forma que outros alunos que também queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias no nosso caso particular.
+
+    Tendo isso em vista, realizou-se uma pesquisa por artigos que descrevessem experiências semelhantes de aplicação de metodologias ágeis na graduação. Foram encontrados diversos relatos dessa natureza, muitos deles descrevendo a utilização dessas metodologias em projetos de conclusão de curso, muito convenientes por se situarem no mesmo contexto em que estamos inseridos.
+
+  \section{Decisão das tecnologias a serem utilizadas}
+    O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
+
+  \section{Planejamento e Cronograma de Atividades}
+
+    Até o momento o cronograma está sendo seguido e o grupo não se encontra atrasado em relação ao mesmo. Ainda sim houve um replanejamento, pois algumas atividades ficaram mais claras nesse último mês e de acordo com sugestões da orientação.
+
+    Outra modificação é a inclusão das datas das apresentações e entregas no Departamento de Engenharia de Sistema Eletrônicos, que foram definidas no dia 13 de março. As datas presentes no último relatório, que eram estimativas, foram então ajustadas.
+
 		\begin{tabular}[|l|]{ |r|l| }
 		\hline
-			\multicolumn{2}{|c|}{\textbf{Cronograma}} \\
+			\multicolumn{2}{|c|}{\large{Cronograma}} \\
 		\hline
 			14/03 & 2ª retrospectiva \\
 		\hline
@@ -106,7 +136,7 @@ Shin Shimizu Melnikoff}
 			23/03 & 3ª apresentação \\
 		\hline
 			22/03-28/03 & compilação e análise dos dados do questionário \\
-			 & levantamento de histórias através Planning Game com o cliente \\ 
+			 & levantamento de histórias através Planning Game com o cliente \\
 			 & e definição da 1ª iteração \\
 		\hline
 			29/03-04/04 & implementação \\
@@ -120,12 +150,18 @@ Shin Shimizu Melnikoff}
 			17/04 & entrega do 3º documento de acompanhamento \\
 		\hline
 			23/04 & 4ª apresentação \\
+    \hline
+      08/05 & entrega do relatório parcial de atividades no PSI \\
+    \hline
+      15/05 & apresentação de atividades no PSI \\
 		\hline
-			19/04-20/06 & implementação \\
+			19/04-25/06 & implementação \\
 		\hline
-			21/06-27/06 & revisão final \\
+			14/06-18/06 & revisão final \\
 		\hline
-			30/06 & entrega da monografia 1 e projeto 1 no PSI \\
+			19/06 & entrega da monografia 1 no PSI \\
+		\hline
+			26/06 & apresentação do projeto 1 no PSI \\
 		\hline
 			01/07-31/08 & testes de usabilidade e avaliação \\
 		\hline
