@@ -1,0 +1,126 @@
+%atividade_3.tex - Relatório de acompanhamento do projeto para a disciplina PCS2040
+
+\documentclass[a4paper,12pt,font=plain,header=plain]{abnt}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+
+\autor{Leandro Coletto Biazon\protect\\Nathalia Sautchuk Patrício}
+\titulo{Febrace\textsuperscript{V}:\\Feira Brasileira Virtual de Ciências e
+Engenharia}
+\orientador[Orientadoras:\\]{Profª. Drª. Roseli de Deus Lopes\protect\\Profª. Drª. Selma
+Shin Shimizu Melnikoff}
+\instituicao{Escola Politécnica da Universidade de São Paulo\par Departamento de Sistemas Digitais}
+\local{São Paulo}
+\data{Abril de 2009}
+
+\renewcommand{\ABNTchapterfont}{\bfseries\sffamily\fontseries{sbc}\selectfont}
+\renewcommand{\ABNTsectionfont}{\bfseries\sffamily}
+
+\begin{document}
+  \setcounter{secnumdepth}{-1}
+  \capa
+  %\folhaderosto
+
+  \renewenvironment{center}{}{}
+  \section{PCS 2040 - PROJETO DE FORMATURA I}
+
+    \begin{tabular}[|l|]{ |r|l| }
+    \hline
+			Equipe 07 & Nathalia S. Patrício, nathalia.sautchuk@gmail.com, (11)9678-1667 \\
+		\hline
+			& Leandro Coletto Biazon, leandrobiazon@gmail.com, (11)8961-4159 \\
+		\hline
+			Orientadora & Profª. Drª. Selma S. S. Melnikoff, selma.melnikoff@poli.usp.br \\
+		\hline
+			Co-Orientadora & Profª. Drª. Roseli de Deus Lopes, roseli@lsi.usp.br \\
+		\hline
+		\end{tabular} \\
+
+		RA1 – Relatório de Especificação de Software (versão: 12/04/2009) \\
+
+		\begin{tabular}{ |r|r|r| }
+
+		\hline
+			\multicolumn{3}{|c|}{Campos a serem preenchidos pelo orientador, secretaria e comitê gestor} \\
+		\hline
+			Orientador & Data de Entrega &  \\
+		\hline
+			& De acordo &  \\
+		\hline
+			& &  \\
+		\hline
+			Secretaria & Data e hora de entrega &  \\
+		\hline
+			&  &  \\
+		\hline
+			Comitê Gestor &  &  \\
+		\hline
+			&  &  \\
+		\hline
+			\multicolumn{3}{|l|}{Comentários} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+			\multicolumn{3}{|l|}{} \\
+		\hline
+		\end{tabular}
+
+  \section{Objetivos}
+    O projeto tem como objetivo desenvolver uma rede social focada em desenvolvimento e exposição de projetos de ciências e engenharia. Dentre os conceitos de engenharia de software a serem aplicados no projeto, destacam-se a temática de usabilidade e acessibilidade, metódos ágeis de desenvolvimento de software e práticas de desenvolvimento web.
+
+  \section{Resumo}
+
+    A Febrace (Feira Brasileira de Ciências e Engenharia), realizada todos os anos na Escola Politécnica da USP e organizada pelo Nate-LSI (Núcleo de Aprendizagem, Trabalho e Entretenimento do Laboratório de Sistemas Integráveis), é um projeto de ação contínua com o objetivo de estimular a criatividade, a reflexão, o aprofundamento e o raciocínio crítico nas atividades desenvolvidas por estudantes dos Ensinos Fundamental, Médio e Técnico, por meio da indução em realizar projetos investigativos em Ciências, Engenharia e suas aplicações.
+
+    Com o intuito de aumentar o alcance da Feira, levando-a por mais tempo a mais pessoas, e estimulando a criação de redes entre elas, o presente projeto propõe a criação de uma aplicação Web que possibilite o desenvolvimento e exposição dos projetos na Internet e que ofereça ferramentas que viabilizem maior interação entre os diversos envolvidos na Febrace (alunos participantes, professores orientadores, organizadores da Feira, avaliadores e público interessado).
+
+    Assim, propõe-se:
+
+    \begin{itemize}
+      \item{
+        Desenvolver e disponibilizar uma aplicação de código aberto que ofereça ferramentas para a exposição virtual de projetos de Ciência e Engenharia;
+      }
+      \item{
+        Agregar à exposição virtual uma rede social que permita a interação entre os participantes da feira e que estes possam se ajudar com seus projetos e dirimir dúvidas de visitantes interessados em participar de suas futuras edições e
+      }
+      \item{
+        Estudar e utilizar conceitos de usabilidade, acessibilidade e práticas de desenvolvimento web 2.0, aplicando metódos ágeis de desenvolvimento de software.
+      }
+    \end{itemize}
+
+  \section{Descrição}
+
+  \section{Tecnologias e justificativa}
+    O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
+
+    As tecnologias foram escolhidas com base na experiência e habilidades técnicas da equipe.
+
+  \section{Extreme Programming}
+	  Como um dos desdobramentos do primeiro passo percebeu-se a necessidade da adaptação da proposta das metodologias agéis de desenvolvimento de software ao contexto do projeto de formatura, visto que alguns documentos são necessários. Foi feito um primeiro esboço de uma proposta de adaptação a metodologia. Como este é um assunto novo em termos científicos (começou a ser desenvolvido a pouco mais de 10 anos) definiu-se que um dos focos principais do projeto será fazer um relato do processo de desenvolvimento da aplicação proposta, descrevendo com detalhes as adaptações necessárias no modelo para que ele se adeque a um contexto acadêmico. Uma decisão que foi tomada é que a monografia será escrita concomitatemente com o andamento do projeto devido a este objetivo.
+
+    Uma das adaptações que já está começando a ser feita na metodologia diz respeito à retrospectiva. A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e a idéia é levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
+
+    \subsection{Metodologias ágeis no contexto acadêmico}
+      Uma das metas do presente projeto é testar a validade de um conjunto de práticas propostas pelas metodologias ágeis de desenvolvimento de software, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetiva-se também documentar essa experiência de forma que outros alunos que também queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias no nosso caso particular.
+
+      Tendo isso em vista, realizou-se uma pesquisa por artigos que descrevessem experiências semelhantes de aplicação de metodologias ágeis na graduação. Foram encontrados diversos relatos dessa natureza, muitos deles descrevendo a utilização dessas metodologias em projetos de conclusão de curso, muito convenientes por se situarem no mesmo contexto em que estamos inseridos.
+
+  \section{Arquitetura do sistema}
+
+  \section{Cartões e 1\textsuperscript{a} iteração}
+
+  \section{Cronograma}
+
+\end{document}
