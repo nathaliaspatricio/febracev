@@ -125,6 +125,39 @@ Shin Shimizu Melnikoff}
 
     \subsection{Princípios}
 
+      Os princípios definidos na segunda edição do livro \textit{Extreme Programming Explained}\cite{beck04} são as seguintes:
+
+      \begin{description}
+        \item[Humanidade]
+          O software é desenvolvido por pessoas. As necessidades pessoais dos membros da equipe devem ser levadas em consideração no processo de desenvolvimento.
+        \item[Economia]
+          A produção de software não está a parte do processo econômico, e seus aspectos devem ser considerados.
+        \item[Benefício mútuo]
+          Qualquer atividade deve beneficiar todas as pessoas envolvidas (desenvolvedores e clientes). Decisões emergencias, que custem a uma pessoa, representam uma perda ao projeto como um todo.
+        \item[Auto semelhança]
+          A estrutura de uma solução deve ser utilizada em outros contextos, mesmo que em diferentes escalas.
+        \item[Aperfeiçoamento]
+          Deve-se sempre buscar a realização do melhor trabalho possível, hoje.
+        \item[Diversidade]
+          As equipes devem ser formadas por pessoas com diferentes perfis. Os conflitos que possam surgir dessa escolha são compensados pelo benefício das múltiplas visões sobre um problema.
+        \item[Reflexão]
+          Não é suficiente realizar tarefas, é necessário constantemente revisitar o trabalho feito e refletir sobre as decisões tomadas, analisando as razões dos sucessos e das falhas.
+        \item[Fluxo]
+          O fluxo é a realização simultânea de várias etapas do processo de desenvolvimento, ao invés de separar as fases e trabalhá-las isoladamente.
+        \item[Oportunidade]
+          Problemas devem ser vistos como oportunidades de mudança.
+        \item[Redundância]
+          Normalmente vista como desperdício, a redundância é o melhor caminho para lidar com as falhas, e deve ser empregada em diversos contextos (múltipla resolução de um problema, programação pareada, etc.).
+        \item[Falha]
+          Quando não se sabe a maneira de resolver um problema, deve-se implementar uma alternativa que falhe, e aprender com ela. As falhas não são um desperdício, e sim conhecimento.
+        \item[Qualidade]
+          Qualidade não deve ser vista como uma variável de controle, negociável, e deve ser sempre buscada.
+        \item[Pequenos passos]
+          Ao dar grandes passos, leva-se muito tempo para realizá-los e, caso tenham sido dados na direção errada, é mais difícil voltar atrás. Agindo dessa maneira, é frequente o temor da necessidade de mudanças. Pequenos passos são uma postura mais adequada em processos complexos.
+        \item[Aceitação de responsabilidade]
+          A responsabilidade não deve ser designadas, devem ser aceitas.
+      \end{description}
+
     \subsection{Práticas}
 
 %	  Como um dos desdobramentos do primeiro passo percebeu-se a necessidade da adaptação da proposta das metodologias agéis de desenvolvimento de software ao contexto do projeto de formatura, visto que alguns documentos são necessários. Foi feito um primeiro esboço de uma proposta de adaptação a metodologia. Como este é um assunto novo em termos científicos (começou a ser desenvolvido a pouco mais de 10 anos) definiu-se que um dos focos principais do projeto será fazer um relato do processo de desenvolvimento da aplicação proposta, descrevendo com detalhes as adaptações necessárias no modelo para que ele se adeque a um contexto acadêmico. Uma decisão que foi tomada é que a monografia será escrita concomitatemente com o andamento do projeto devido a este objetivo.
@@ -194,7 +227,7 @@ Shin Shimizu Melnikoff}
 	 \item Estatísticas do sistema \\
 		Quero, como administrador do sistema, ter uma página que indique quais são as páginas mais visitadas do site, os usuários mais ativos e as requisições que ocupam maior tempo de processamento do servidor.
 	 \item Visualização de Prêmios \\
-		Quero, como usuário, saber quais prêmios foram oferecidos na FEBRACE, por qual empresa/instituição e a quais projetos. Quero assim que os projetos contemplados ofereçam um link para a página do respectivo prêmio, e quero encontrar nessa página mais informações sobre eles. 
+		Quero, como usuário, saber quais prêmios foram oferecidos na FEBRACE, por qual empresa/instituição e a quais projetos. Quero assim que os projetos contemplados ofereçam um link para a página do respectivo prêmio, e quero encontrar nessa página mais informações sobre eles.
 	 \item Visualização de Instituições \\
 		Quero, como usuário, que as diversas instituições ligadas à FEBRACE, como escolas, centros técnicos, patrocinadores, entre outros, tenham sua página no portal, contendo mais informações sobre elas.
 	 \item Cadastro de novo projeto \\
@@ -206,7 +239,7 @@ Shin Shimizu Melnikoff}
 	\end{enumerate}
 
   \section{1\textsuperscript{a} iteração}
-	
+
 	Através do Planning Game realizado com o cliente foi definida a primeira iteração do projeto. Fazem parte da primeira iteração as seguintes histórias:
 
 	\begin{itemize}
@@ -232,35 +265,35 @@ Shin Shimizu Melnikoff}
 
     Espera-se ao longo do semestre desenvolver a primeira versão da atividade, implementando os seguintes módulos:
 
-    \subsection*{Projetos}
+    \subsection{Projetos}
     O principal módulo da aplicação é o de projetos. Nele são reunidas e apresentadas ao público informações sobre um projeto, como, entre outras, descrição, autores, orientadores e região de origem. O módulo de projetos deve oferecer integração com um serviço de vídeo sob demanda (como o IPTV-USP), onde serão armazenados vídeos dos projetos. São nas páginas geradas por esse módulo que ocorrem a maior parte das interações entre os usuários, pois dão acesso aos módulos de comentários e mensagens.
 
-    \subsection*{Perfis}
+    \subsection{Perfis}
     Cada usuário tem seu perfil na aplicação com suas informações pessoais. Esse módulo tem a função de gerir a apresentação desses perfis bem como oferecer as funcionalidades de edição e exclusão.
 
-    \subsection*{Comentários}
+    \subsection{Comentários}
     Várias das páginas geradas pela aplicação, tais como as de projeto e de artigos, têm agregadas caixas de comentários que podem ser usadas pelos visitantes (cadastrados ou não). Esse módulo oferece essa funcionalidade.
 
-    \subsection*{Fórum}
+    \subsection{Fórum}
     Pelas páginas geradas por esse módulo os usuários podem perguntar e responder uns aos outros questões relacionadas à feira e aos seus projetos.
 
-    \subsection*{Blog}
+    \subsection{Blog}
     Esse módulo oferece, atrelado a cada projeto, uma ferramenta de Blog, ou Diário de Bordo virtual, na qual os participantes podem relatar o processo do desenvolvimento de seus projetos. Os blogs, tais como outros serviços de
     módulos com conteúdos dinâmicos, devem prover serviço de RSS.
 
-    \subsection*{Mensagens}
+    \subsection{Mensagens}
     Os usuários registrados podem enviar mensagens privadas a outros usuários, e esse módulo oferece essa funcionalidade.
 
-    \subsection*{Coluna}
+    \subsection{Coluna}
     O módulo de artigos possibilita a geração de conteúdo proveniente da equipe da FEBRACE ou de seus colaboradores, em páginas com esse fim.
 
-    \subsection*{Busca}
+    \subsection{Busca}
     Além do acesso ao conteúdo da aplicação pelos menus correspondentes, é possível filtrá-lo por palavras-chave na ferramenta de busca.
 
-    \subsection*{Login}
+    \subsection{Login}
     Módulo no qual usuários registrados autenticam sua entrada, e os não registrados têm a oportunidade de criar uma conta.
 
-    \subsection*{Administração}
+    \subsection{Administração}
     Interface administrativa da aplicação, que permite operações de moderação, gerenciamento de usuários e conteúdo, etc.
 
   \section{Cronograma}
