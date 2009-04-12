@@ -5,6 +5,8 @@
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 
+\usepackage[num]{abntcite}
+
 \autor{Leandro Coletto Biazon\protect\\Nathalia Sautchuk Patrício}
 \titulo{Febrace\textsuperscript{V}:\\Feira Brasileira Virtual de Ciências e
 Engenharia}
@@ -56,7 +58,7 @@ Shin Shimizu Melnikoff}
 		\hline
 			Comitê Gestor &  &  \\
 		\hline
-			&  &  \\
+		&  &  \\
 		\hline
 			\multicolumn{3}{|l|}{Comentários} \\
 			\multicolumn{3}{|l|}{} \\
@@ -107,10 +109,32 @@ Shin Shimizu Melnikoff}
 
     As tecnologias foram escolhidas com base na experiência e habilidades técnicas da equipe.
 
-  \section{Extreme Programming}
-	  Como um dos desdobramentos do primeiro passo percebeu-se a necessidade da adaptação da proposta das metodologias agéis de desenvolvimento de software ao contexto do projeto de formatura, visto que alguns documentos são necessários. Foi feito um primeiro esboço de uma proposta de adaptação a metodologia. Como este é um assunto novo em termos científicos (começou a ser desenvolvido a pouco mais de 10 anos) definiu-se que um dos focos principais do projeto será fazer um relato do processo de desenvolvimento da aplicação proposta, descrevendo com detalhes as adaptações necessárias no modelo para que ele se adeque a um contexto acadêmico. Uma decisão que foi tomada é que a monografia será escrita concomitatemente com o andamento do projeto devido a este objetivo.
+  \section{Programação extrema}
+    A programação extrema (\textit{eXtreme Programming} ou XP) é um método leve para que equipes pequenas ou médias desenvolvam software em face a requerimentos vagos ou que mudem constantemente\cite{beck04}. Pela definição de seu autor, Kent Beck, o XP é leve porque é focado na realização das tarefas que criem valor para o cliente. Seu principal objetivo é o desenvolvimento de software com qualidade, por meio de um estilo de desenvolvimento focado nas melhores práticas de programação, comunicação clara e trabalho em equipe.
 
-    Uma das adaptações que já está começando a ser feita na metodologia diz respeito à retrospectiva. A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e a idéia é levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
+    Como outras metodologias ágeis, o XP se opõe a diversas premissas assumidas pelas metodologias tradicionais de engenharia de software. Uma dessas premissas é que é possível prever todos os passos necessários para o desenvolvimento de um sistema, pelo detalhado levantamento de características do problema a ser resolvido e da solução a ser desenvolvida. O XP assume a presença constante das mudanças durante o processo de desenvolvimento, e propõe uma série de práticas para lidar com elas.
+
+    A programação extrema é descrita por meio de seus valores, princípios e práticas. As práticas são uma série de técnicas a serem aplicadas no dia-a-dia de trabalho da equipe. Os valores são a noção do que é certo e do que é errado no relacionamento da equipe com o trabalho e entre si. Os valores são o que fundamentam as práticas. Porém os valores do XP são universais e independem do contexto do desenvolvimento de software, estando assim muito distante das práticas. A ponte entre os valores e as práticas são os princípios, que trazem orientações para um contexto específico.
+
+    \subsection{Valores}
+
+      O primeiro dos valores do XP é a \textbf{Comunicação}, por pressupor que a maioria dos problemas de um projeto ocorrem por dificuldades nesse aspecto. A comunicação constante e eficaz entre os membros da equipe permeia todo processo de desenvolvimento, e é ressaltado em diversas das práticas do XP.
+
+      Outro princípio é a \textbf{Simplicidade}, que leva a equipe a buscar sempre as soluções mais simples a um dado problema, sem tentar otimizações precoces ou a a tentativa de resolução de um problema futuro.
+
+      Como não há uma direção pré-definida a ser seguida, a equipe de XP precisa constantemente saber onde se encontra para poder determinar seus próximos passos. O valor que orienta a equipe à rápida resposta sobre as ações realizadas é o \textbf{Feedback}.
+
+      \textbf{Coragem} é a ação efetiva frente à insegurança, para a tomada de decisões necessárias ao projeto.
+
+      O último valor é o \textbf{Respeito}. Os membros da equipe devem se importar uns com os outros e com as ações realizadas.
+
+    \subsection{Princípios}
+
+    \subsection{Práticas}
+
+%	  Como um dos desdobramentos do primeiro passo percebeu-se a necessidade da adaptação da proposta das metodologias agéis de desenvolvimento de software ao contexto do projeto de formatura, visto que alguns documentos são necessários. Foi feito um primeiro esboço de uma proposta de adaptação a metodologia. Como este é um assunto novo em termos científicos (começou a ser desenvolvido a pouco mais de 10 anos) definiu-se que um dos focos principais do projeto será fazer um relato do processo de desenvolvimento da aplicação proposta, descrevendo com detalhes as adaptações necessárias no modelo para que ele se adeque a um contexto acadêmico. Uma decisão que foi tomada é que a monografia será escrita concomitatemente com o andamento do projeto devido a este objetivo.
+
+%   Uma das adaptações que já está começando a ser feita na metodologia diz respeito à retrospectiva. A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e a idéia é levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
 
     \subsection{Metodologias ágeis no contexto acadêmico}
       Uma das metas do presente projeto é testar a validade de um conjunto de práticas propostas pelas metodologias ágeis de desenvolvimento de software, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetiva-se também documentar essa experiência de forma que outros alunos que também queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias no nosso caso particular.
@@ -122,5 +146,7 @@ Shin Shimizu Melnikoff}
   \section{Cartões e 1\textsuperscript{a} iteração}
 
   \section{Cronograma}
+
+  \bibliography{atividade_4}
 
 \end{document}
