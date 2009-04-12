@@ -104,11 +104,6 @@ Shin Shimizu Melnikoff}
 
   \section{Descrição}
 
-  \section{Tecnologias e justificativa}
-    O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
-
-    As tecnologias foram escolhidas com base na experiência e habilidades técnicas da equipe.
-
   \section{Programação extrema}
     A programação extrema (\textit{eXtreme Programming} ou XP) é um método leve para que equipes pequenas ou médias desenvolvam software em face a requerimentos vagos ou que mudem constantemente\cite{beck04}. Pela definição de seu autor, Kent Beck, o XP é leve porque é focado na realização das tarefas que criem valor para o cliente. Seu principal objetivo é o desenvolvimento de software com qualidade, por meio de um estilo de desenvolvimento focado nas melhores práticas de programação, comunicação clara e trabalho em equipe.
 
@@ -141,9 +136,132 @@ Shin Shimizu Melnikoff}
 
       Tendo isso em vista, realizou-se uma pesquisa por artigos que descrevessem experiências semelhantes de aplicação de metodologias ágeis na graduação. Foram encontrados diversos relatos dessa natureza, muitos deles descrevendo a utilização dessas metodologias em projetos de conclusão de curso, muito convenientes por se situarem no mesmo contexto em que estamos inseridos.
 
+  \section{Levantamento de Histórias}
+
+	Como uma forma de especificar o sistema a ser desenvolvido durante o projeto de formatura optou-se por descrever as histórias levantadas através de Planning Game com o cliente.
+
+	\begin{enumerate}
+	 \item Convite a ex-participantes \\
+		Envio automático de convite para participar a rede social para todos os participantes de edições anteriores da FEBRACE (cadastrados em um banco de dados legado). Caso o ex-participante crie seu perfil na rede social, o projeto dele deve ser criado automaticamente e associado a ele.
+	 \item Autenticação no sistema \\
+		Quero, como usuário, acessar a página inicial com meu e-mail e senha para me autenticar no sistema. Caso esqueça minha senha, quero informar o sistema e pedir que envie uma nova senha para meu e-mail. Se não for um usuário registrado, quero que me seja apresentada a tela de cadastro de novo usuário.
+	 \item Cadastro de Usuário \\
+		Quero poder criar um perfil no sistema através de cadastro no sistema fornecendo um e-mail válido e uma senha para o acesso.
+	 \item Edição de Perfil \\
+		Quero, como usuário registrado, poder editar a página de meu perfil pessoal, alterando, inserindo e excluindo os dados lá presentes, e escolhendo quais usuários podem ter acesso a determinadas informações minhas.
+	 \item Visualização de Perfil \\
+		Quero, como usuário, poder visualizar meu perfil e de meus amigos, bem como, via sistema de busca, visualizar os perfis de quem o permita a qualquer usuário.
+	 \item Cancelamento de Cadastro \\
+		Quero, como usuário, poder quando assim desejar cancelar meu cadastro do sistema.
+	 \item Visualização de Projeto \\
+		O sistema deve disponibilizar, para cada projeto, uma página com suas informações. Deve nela constar o nome e resumo do projeto, sua área do conhecimento, participantes e demais informações relevantes.
+	 \item Visualização de Participantes de um projeto \\
+		A página de um projeto deve exibir cada um de seus participantes, e apresentar um link para cada um de seus perfis. Devem estar associados aos participantes seu papel na Feira (estudante, orientador, etc.) e a instituição a qual pertence.
+	 \item Visualização de Vídeo de um projeto \\
+		A página de um projeto deve exibir, quando disponível, o vídeo oficial do projeto, feito na própria FEBRACE. Esse vídeo estará hospedado em um site dedicado como a IPTV-USP ou o Youtube.
+	 \item Visualização de prêmios de um projeto \\
+		A página de um projeto deve exibir, quando aplicável, os prêmios ganhos por aquele projeto na feira em que participou. Além do nome, deve ser exibido um link para a página do prêmio.
+	 \item Edição dos Conteúdos de um projeto \\
+		Quero, como participante de um projeto, poder inserir novas informações em sua página, como textos (relatório, diário de bordo, etc.), fotos e vídeos relacionados com ele, entre outros. Quero também poder editar esses conteúdos por mim adicionados, modificando-os ou apagando-os.
+	 \item Edição de Diário de Bordo de um projeto \\
+		Quero que cada projeto tenha a ele associado uma ferramenta que permita a criação de um diário de bordo online, com o formato de \textit{weblog}.
+	 \item Adicionar amigos \\
+		Quero, como usuário, escolher quais outros usuários são meus amigos, dando a eles permissão de me escrever mensagens, entre outras operações.
+	 \item Adicionar projetos prediletos \\
+		Quero, como usuário, fazer uma lista de projetos que mais me chamaram atenção na feira. Quero poder fazer um comentário que justifique minha indicação, se assim o desejar.
+	 \item Postar em fórum \\
+		Quero, como usuário, ter um espaço que permita postar perguntas que outros usuários possam responder, avisos, notícias e quaisquer outro tipo de texto relacionado.
+	 \item Comentar em caixas de comentários \\
+		Quero, como usuário, poder deixar comentários nas diversas páginas da rede social, como projetos, artigos e diários de bordo. Caso eu tenha feito o comentário estando logado, ele deve ser identificado e deve haver um link para meu perfil nele. Comentários de visitantes podem ou não ser aceitos a critério de quem administra o conteúdo comentado.
+	 \item Enviar mensagens a outros usuários \\
+		Quero, como usuário, enviar mensagens privadas de texto a outros usuários e receber mensagens enviadas por ele. Quero também poder escolher quais usuários podem ou não me escrever.
+	 \item Buscar conteúdos do sistema \\
+		O sistema deve ter um sistema de busca que permita encontrar projetos pesquisando pelo seu nome, área de conhecimento, local de origem, integrantes, entre outros. Esse mecanismo de busca deve também possibilitar a pesquisa por usuários.
+	 \item Assinar RSS de conteúdos \\
+		Todo o conteúdo dinâmico da rede social (Artigos, entradas em diários de bordo, entradas nos fóruns, etc.) deve fornecer serviço de RSS, podendo ser assinados pelos usuários que desejam ser avisados de mudanças no conteúdo.
+	 \item Visualização de Coluna da Equipe FEBRACE \\
+		Deve haver uma área na rede social no qual sejam exibidos textos escritos por pessoas ligadas a feira, como a equipe da FEBRACE, avaliadores, ex-participantes, etc., que sejam de interesse para os outros usuários. É também necessário que haja uma interface no qual esses textos possam ser criados e inseridos no sistema através da Interface Administrativa.
+	 \item Estatísticas do uso do sistema \\
+		Quero, como usuário, ter um espaço no site no qual possa ver quais são os artigos mais lidos, os projetos mais visitados, os projetos que mais são escolhidos como prediletos, os usuários mais ativos, conteúdos mais acompanhados, etc.
+	 \item Interface Administrativa \\
+		É necessário haver um sistema auxiliar ao da rede social que permita a realização de tarefas administrativas.
+	 \item Moderação de conteúdos \\
+		Quero, como usuário moderador, poder tirar do ar conteúdos impróprios postados por usuários. Quando um conteúdo for excluído ou editado, quero que o sistema envie uma mensagem para esse usuário informando o motivo dessa ação.
+	 \item Gerenciamento de Usuários \\
+		Quero, como administrador do sistema, poder inserir usuários, modificar suas informações e excluí-los do sistema. Quero também editar permissões de cada usuário, determinando o tipo de uso que ele pode fazer do sistema.
+	 \item Gerenciamento de conteúdo \\
+		O sistema administrativo deve permitir a inserção, edição e exclusão de conteúdo (como artigos e páginas de projeto).
+	 \item Estatísticas do sistema \\
+		Quero, como administrador do sistema, ter uma página que indique quais são as páginas mais visitadas do site, os usuários mais ativos e as requisições que ocupam maior tempo de processamento do servidor.
+	 \item Visualização de Prêmios \\
+		Quero, como usuário, saber quais prêmios foram oferecidos na FEBRACE, por qual empresa/instituição e a quais projetos. Quero assim que os projetos contemplados ofereçam um link para a página do respectivo prêmio, e quero encontrar nessa página mais informações sobre eles. 
+	 \item Visualização de Instituições \\
+		Quero, como usuário, que as diversas instituições ligadas à FEBRACE, como escolas, centros técnicos, patrocinadores, entre outros, tenham sua página no portal, contendo mais informações sobre elas.
+	 \item Cadastro de novo projeto \\
+		Quero, como usuário registrado, poder cadastrar um novo projeto em andamento para ser submetido para a próxima edição da FEBRACE. Posso escolher a opção de criar um diário de bordo para meu projeto, além de poder convidar outras pessoas para participar do projeto criado.
+	 \item Relatório de especificação do software \\
+		Elaboração do relatório de especificação do software a ser entregue para o PCS.
+	 \item Estrutura da monografia 1 \\
+		Elaboração da estrutura da monografia 1 a ser entregue para o PSI. Após cada capítulo deve ser dividido em iterações também.
+	\end{enumerate}
+
+  \section{1\textsuperscript{a} iteração}
+	
+	Através do Planning Game realizado com o cliente foi definida a primeira iteração do projeto. Fazem parte da primeira iteração as seguintes histórias:
+
+	\begin{itemize}
+	 \item Autenticação no sistema
+	 \item Cadastro de usuário
+	 \item Visualização de Projeto
+	 \item Visualização de Participantes de um projeto
+	 \item Edição dos Conteúdos de um projeto
+	 \item Cadastro de novo projeto
+	 \item Relatório de especificação do software
+	 \item Estrutura da monografia 1
+	\end{itemize}
+
+
+  \section{Tecnologias e justificativa}
+    O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
+
+    O código do projeto será gerenciado através de um sistema de gerenciamento de versões, o Git. Como será produzido um sistema com código fonte aberto, o mesmo será disponibilizado no GitHub. Como forma de registro do andamento do projeto foi criado um blog para o mesmo no Wordpress. Como uma forma de ajudar no gerenciamento do projeto está sendo usado o site Producteev. Para fazer a compilação dos dados coletados com os questionários de perfil de uso está sendo usado o LimeSurvey.
+
+    As tecnologias foram escolhidas com base na experiência e habilidades técnicas da equipe.
+
   \section{Arquitetura do sistema}
 
-  \section{Cartões e 1\textsuperscript{a} iteração}
+    Espera-se ao longo do semestre desenvolver a primeira versão da atividade, implementando os seguintes módulos:
+
+    \subsection*{Projetos}
+    O principal módulo da aplicação é o de projetos. Nele são reunidas e apresentadas ao público informações sobre um projeto, como, entre outras, descrição, autores, orientadores e região de origem. O módulo de projetos deve oferecer integração com um serviço de vídeo sob demanda (como o IPTV-USP), onde serão armazenados vídeos dos projetos. São nas páginas geradas por esse módulo que ocorrem a maior parte das interações entre os usuários, pois dão acesso aos módulos de comentários e mensagens.
+
+    \subsection*{Perfis}
+    Cada usuário tem seu perfil na aplicação com suas informações pessoais. Esse módulo tem a função de gerir a apresentação desses perfis bem como oferecer as funcionalidades de edição e exclusão.
+
+    \subsection*{Comentários}
+    Várias das páginas geradas pela aplicação, tais como as de projeto e de artigos, têm agregadas caixas de comentários que podem ser usadas pelos visitantes (cadastrados ou não). Esse módulo oferece essa funcionalidade.
+
+    \subsection*{Fórum}
+    Pelas páginas geradas por esse módulo os usuários podem perguntar e responder uns aos outros questões relacionadas à feira e aos seus projetos.
+
+    \subsection*{Blog}
+    Esse módulo oferece, atrelado a cada projeto, uma ferramenta de Blog, ou Diário de Bordo virtual, na qual os participantes podem relatar o processo do desenvolvimento de seus projetos. Os blogs, tais como outros serviços de
+    módulos com conteúdos dinâmicos, devem prover serviço de RSS.
+
+    \subsection*{Mensagens}
+    Os usuários registrados podem enviar mensagens privadas a outros usuários, e esse módulo oferece essa funcionalidade.
+
+    \subsection*{Coluna}
+    O módulo de artigos possibilita a geração de conteúdo proveniente da equipe da FEBRACE ou de seus colaboradores, em páginas com esse fim.
+
+    \subsection*{Busca}
+    Além do acesso ao conteúdo da aplicação pelos menus correspondentes, é possível filtrá-lo por palavras-chave na ferramenta de busca.
+
+    \subsection*{Login}
+    Módulo no qual usuários registrados autenticam sua entrada, e os não registrados têm a oportunidade de criar uma conta.
+
+    \subsection*{Administração}
+    Interface administrativa da aplicação, que permite operações de moderação, gerenciamento de usuários e conteúdo, etc.
 
   \section{Cronograma}
 
