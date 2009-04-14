@@ -190,10 +190,6 @@ Shin Shimizu Melnikoff}
           O design de um sistema deve ser trabalhado diariamente, levando-se em consideração o melhor a ser feito naquele momento.
       \end{description}
 
-%	  Como um dos desdobramentos do primeiro passo percebeu-se a necessidade da adaptação da proposta das metodologias agéis de desenvolvimento de software ao contexto do projeto de formatura, visto que alguns documentos são necessários. Foi feito um primeiro esboço de uma proposta de adaptação a metodologia. Como este é um assunto novo em termos científicos (começou a ser desenvolvido a pouco mais de 10 anos) definiu-se que um dos focos principais do projeto será fazer um relato do processo de desenvolvimento da aplicação proposta, descrevendo com detalhes as adaptações necessárias no modelo para que ele se adeque a um contexto acadêmico. Uma decisão que foi tomada é que a monografia será escrita concomitatemente com o andamento do projeto devido a este objetivo.
-
-%   Uma das adaptações que já está começando a ser feita na metodologia diz respeito à retrospectiva. A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e a idéia é levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
-
     \subsection{Programação extrema no contexto acadêmico}
       Uma das metas do presente projeto é testar a validade de um conjunto de práticas propostas pela programação extrema, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetiva-se também documentar essa experiência de forma que outros alunos que também queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias no particular caso do presente projeto.
 
@@ -223,19 +219,27 @@ Shin Shimizu Melnikoff}
       \subsubsection{Formas de avaliação}
         Grande parte das avaliações realizadas nas disciplinas de projeto de conclusão de curso é baseada na documentação levantada por etapas das metodologias tradicionais. A criação desses documentos não é parte do processo das metodologias ágeis e outros critérios de avaliação apropriados a esse contexto foram necessários nas experiências apresentadas.
 
-    \subsection{Programação extrema no Febrace\textsuperscript{V}}
-      Essa sessão irá discutir as escolhas metodológicas que serão tomadas no projeto, com relação às práticas do XP. Elas são (que eu lembrei agora. Deve ter mais).
+    \subsection{Programação extrema na Febrace\textsuperscript{V}}
+      Em consequência dos motivos apresentados na sessão anterior, uma série de adaptações foi necessária para adequar a utilização da programação extrema ao contexto do presente projeto. As principais são descritas abaixo.
 
-      \begin{enumerate}
-        \item{Espaço de trabalho compartilhado virtual}
-        \item{Tamanho e número de iterações}
-        \item{Cliente Martinazzo}
-        \item{Semana de 10 horas}
-        \item{Programação pareada}
-        \item{Histórias}
-        \item{Retrospectivas}
-        \item{\ldots}
-      \end{enumerate}
+      \subsubsection{Espaço de trabalho compartilhado virtual}
+        Não será possível dispor de um espaço de trabalho fixo para a realização das atividades referentes ao projeto. Na tentativa de suprir essa necessidade, será feito uso de um conjunto de ferramentas de trabalho colaborativo pela Internet, entre elas um "quadro branco" virtual e uma ferramenta de acompanhamento de \textit{bugs}. Mais detalhes sobre algumas dessas ferramentas são apresentados na sessão \textbf{Tecnologias utilizadas}.
+
+      \subsubsection{Semana de 10 horas}
+        Espera-se que a semana de trabalho da equipe seja de 10 horas.
+
+      \subsubsection{Iterações}
+        O tempo escolhido para cada iteração foi de três semanas. Assim, serão realizadas quatro iterações até o fim do primeiro semestre.
+
+      \subsubsection{Cliente}
+        O papel do cliente foi designado a um pesquisador do NATE-LSI que participa da organização da Febrace. Ele não estará sempre presente durante o desenvolvimento do projeto, mas serão realizadas reuniões semanais com ele.
+
+      \subsubsection{Programação pareada}
+        Todo o código de produção será escrito em sessões de programação pareada.
+
+      \subsubsection{Retrospectivas}
+        A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
+
 
   \section{Levantamento de Histórias}
 
@@ -322,7 +326,7 @@ Shin Shimizu Melnikoff}
 	\end{itemize}
 
 
-  \section{Tecnologias e justificativa}
+  \section{Tecnologias utilizadas}
     O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
 
     O código do projeto será gerenciado através de um sistema de gerenciamento de versões, o Git. Como será produzido um sistema com código fonte aberto, o mesmo será disponibilizado no GitHub. Como forma de registro do andamento do projeto foi criado um blog para o mesmo no Wordpress. Como uma forma de ajudar no gerenciamento do projeto está sendo usado o site Producteev. Para fazer a compilação dos dados coletados com os questionários de perfil de uso está sendo usado o LimeSurvey.
