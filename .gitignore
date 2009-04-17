@@ -19,3 +19,4 @@
 *.bbl
 #binários do python
 *.pyc
+*.db

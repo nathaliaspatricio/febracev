@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage[num]{abntcite}
+\usepackage{tabularx}
 
 \autor{Leandro Coletto Biazon\protect\\Nathalia Sautchuk Patrício}
 \titulo{Febrace\textsuperscript{V}:\\Feira Brasileira Virtual de Ciências e
@@ -20,12 +21,12 @@ Shin Shimizu Melnikoff}
 \renewcommand{\ABNTsectionfont}{\bfseries\sffamily}
 
 \begin{document}
-  \setcounter{secnumdepth}{-1}
+%  \setcounter{secnumdepth}{-1}
   \capa
   %\folhaderosto
 
 	\renewenvironment{center}{}{}
-	\section{PCS 2040 - PROJETO DE FORMATURA I}
+	\section*{PCS 2040 - PROJETO DE FORMATURA I}
 	
 	\begin{tabular}[|l|]{ |r|l| }
 	\hline
@@ -39,7 +40,7 @@ Shin Shimizu Melnikoff}
 			\hline
 			\end{tabular} \\
 	
-			RA1 – Relatório de Especificação de Software (versão: 12/04/2009) \\
+			RA1 – Relatório de Especificação de Software (versão: 17/04/2009) \\
 	
 			\begin{tabular}{ |r|r|r| }
 	
@@ -79,10 +80,7 @@ Shin Shimizu Melnikoff}
 			\hline
 			\end{tabular}
 
-	\section{Objetivos}
-	O projeto tem como objetivo desenvolver uma rede social focada em desenvolvimento e exposição de projetos de ciências e engenharia. Dentre os conceitos de engenharia de software a serem aplicados no projeto, destacam-se a temática de usabilidade e acessibilidade, metódos ágeis de desenvolvimento de software e práticas de desenvolvimento web.
-
-	\section{Resumo}
+	\chapter{Introdução}
 	
 	A Febrace (Feira Brasileira de Ciências e Engenharia), realizada todos os anos na Escola Politécnica da USP e organizada pelo Nate-LSI (Núcleo de Aprendizagem, Trabalho e Entretenimento do Laboratório de Sistemas Integráveis), é um projeto de ação contínua com o objetivo de estimular a criatividade, a reflexão, o aprofundamento e o raciocínio crítico nas atividades desenvolvidas por estudantes dos Ensinos Fundamental, Médio e Técnico, por meio da indução em realizar projetos investigativos em Ciências, Engenharia e suas aplicações.
 	
@@ -98,18 +96,22 @@ Shin Shimizu Melnikoff}
 		Agregar à exposição virtual uma rede social que permita a interação entre os participantes da feira e que estes possam se ajudar com seus projetos e dirimir dúvidas de visitantes interessados em participar de suas futuras edições e
 	}
 	\item{
-		Estudar e utilizar conceitos de usabilidade, acessibilidade e práticas de desenvolvimento web 2.0, aplicando metódos ágeis de desenvolvimento de software.
+		Estudar e utilizar conceitos de usabilidade, acessibilidade e práticas de desenvolvimento web 2.0, aplicando metódos ágeis de desenvolvimento de \textit{software}.
 	}
 	\end{itemize}
 
-	\section{Programação extrema}
-	A programação extrema (\textit{eXtreme Programming} ou XP) é um método leve para que equipes pequenas ou médias desenvolvam software em face a requerimentos vagos ou que mudem constantemente\cite{beck04}. Pela definição de seu autor, Kent Beck, o XP é leve porque é focado na realização das tarefas que criem valor para o cliente. Seu principal objetivo é o desenvolvimento de software com qualidade, por meio de um estilo de desenvolvimento focado nas melhores práticas de programação, comunicação clara e trabalho em equipe.
+	\section{Objetivos}
+	O projeto tem como objetivo desenvolver uma rede social focada em desenvolvimento e exposição de projetos de ciências e engenharia. Dentre os conceitos de engenharia de \textit{software} a serem aplicados no projeto, destacam-se a temática de usabilidade e acessibilidade, metódos ágeis de desenvolvimento de \textit{software} e práticas de desenvolvimento web.
+
+
+	\chapter{Programação extrema}
+	A programação extrema (\textit{eXtreme Programming} ou XP) é um método leve para que equipes pequenas ou médias desenvolvam \textit{software} em face a requisitos vagos ou que mudem constantemente\cite{beck04}. Pela definição de seu autor, Kent Beck, o XP é leve porque é focado na realização das tarefas que criem valor para o cliente. Seu principal objetivo é o desenvolvimento de \textit{software} com qualidade, por meio de um estilo de desenvolvimento focado nas melhores práticas de programação, comunicação clara e trabalho em equipe.
 	
-	Como outras metodologias ágeis, o XP se opõe a diversas premissas assumidas pelas metodologias tradicionais de engenharia de software. Uma dessas premissas é que é possível prever todos os passos necessários para o desenvolvimento de um sistema, pelo detalhado levantamento de características do problema a ser resolvido e da solução a ser desenvolvida. O XP assume a presença constante das mudanças durante o processo de desenvolvimento, e propõe uma série de práticas para lidar com elas.
+	Como outras metodologias ágeis, o XP se opõe a diversas premissas assumidas pelas metodologias tradicionais de engenharia de \textit{software}. Uma dessas premissas é que é possível prever todos os passos necessários para o desenvolvimento de um sistema, pelo detalhado levantamento de características do problema a ser resolvido e da solução a ser desenvolvida. O XP assume a presença constante das mudanças durante o processo de desenvolvimento, e propõe uma série de práticas para lidar com elas.
 	
-	A programação extrema é descrita por meio de seus valores, princípios e práticas. As práticas são uma série de técnicas a serem aplicadas no dia-a-dia de trabalho da equipe. Os valores são a noção do que é certo e do que é errado no relacionamento da equipe com o trabalho e entre si. Os valores são o que fundamentam as práticas. Porém os valores do XP são universais e independem do contexto do desenvolvimento de software, estando assim muito distante das práticas. A ponte entre os valores e as práticas são os princípios, que trazem orientações para um contexto específico.
+	A programação extrema é descrita por meio de seus valores, princípios e práticas. As práticas são uma série de técnicas a serem aplicadas no dia-a-dia de trabalho da equipe. Os valores são a noção do que é certo e do que é errado no relacionamento da equipe com o trabalho e entre si. Os valores são o que fundamentam as práticas. Porém os valores do XP são universais e independem do contexto do desenvolvimento de \textit{software}, estando assim muito distante das práticas. A ponte entre os valores e as práticas são os princípios, que trazem orientações para um contexto específico.
 	
-	\subsection{Valores}
+	\section{Valores}
 	
 	O primeiro dos valores do XP é a \textbf{Comunicação}, por pressupor que a maioria dos problemas de um projeto ocorrem por dificuldades nesse aspecto. A comunicação constante e eficaz entre os membros da equipe permeia todo processo de desenvolvimento, e é ressaltado em diversas das práticas do XP.
 	
@@ -121,17 +123,17 @@ Shin Shimizu Melnikoff}
 	
 	O último valor é o \textbf{Respeito}. Os membros da equipe devem se importar uns com os outros e com as ações realizadas.
 	
-	\subsection{Princípios}
+	\section{Princípios}
 	
 	Os princípios definidos na segunda edição do livro \textit{Extreme Programming Explained}\cite{beck04} são as seguintes:
 	
 	\begin{description}
 		\item[Humanidade]
-		O software é desenvolvido por pessoas. As necessidades pessoais dos membros da equipe devem ser levadas em consideração no processo de desenvolvimento.
+		O \textit{software} é desenvolvido por pessoas. As necessidades pessoais dos membros da equipe devem ser levadas em consideração no processo de desenvolvimento.
 		\item[Economia]
-		A produção de software não está a parte do processo econômico, e seus aspectos devem ser considerados.
+		A produção de \textit{software} não está à parte do processo econômico, e seus aspectos devem ser considerados.
 		\item[Benefício mútuo]
-		Qualquer atividade deve beneficiar todas as pessoas envolvidas (desenvolvedores e clientes). Decisões emergencias, que custem a uma pessoa, representam uma perda ao projeto como um todo.
+		Qualquer atividade deve beneficiar todas as pessoas envolvidas (desenvolvedores e clientes). Decisões emergenciais, que custem a uma pessoa, representam uma perda ao projeto como um todo.
 		\item[Auto semelhança]
 		A estrutura de uma solução deve ser utilizada em outros contextos, mesmo que em diferentes escalas.
 		\item[Aperfeiçoamento]
@@ -156,7 +158,7 @@ Shin Shimizu Melnikoff}
 		A responsabilidade não deve ser designadas, devem ser aceitas.
 	\end{description}
 	
-	\subsection{Práticas}
+	\section{Práticas}
 	As práticas são o que se vê no dia-a-dia de uma equipe de XP. Elas não devem ser adotadas, entretanto, desvinculadas dos valores e princípios mencionados anteriormente, sob o risco de se tornarem vazias. Na primeira edição de seu livro principal, Beck definiu 12 práticas, e mencionou que elas deveriam ser adotadas todas simultaneamente. Na edição mais recente, o autor muda a abordagem, dizendo que a adoção das práticas pode ser feita parcialmente, conforme as necessidades e experiências da equipe. Também nessa edição as práticas, agora 24, são divididas em dois grupos, primárias e corolárias. As práticas primárias são aquelas que devem ser tentadas primeiro pelas equipes, na sequência que se mostrar adequada. Já as práticas corolárias são mais difíceis de serem aplicadas, e requerem a experiência anterior com as práticas primárias. Nesse projeto serão trabalhadas, principalmente, as práticas primárias, descritas a seguir.
 	
 	\begin{description}
@@ -188,7 +190,7 @@ Shin Shimizu Melnikoff}
 		O design de um sistema deve ser trabalhado diariamente, levando-se em consideração o melhor a ser feito naquele momento.
 	\end{description}
 	
-	\subsection{Programação extrema no contexto acadêmico}
+	\section{Programação extrema no contexto acadêmico}
 	Uma das metas do projeto é testar a validade de um conjunto de práticas propostas pela programação extrema, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetiva-se também documentar essa experiência de forma que outros alunos que também queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias nesse caso em particular.
 	
 	Tendo isso em vista, realizou-se uma pesquisa por artigos que descrevessem experiências semelhantes de aplicação de metodologias ágeis na graduação. Foram encontrados diversos relatos dessa natureza, muitos deles descrevendo a utilização dessas metodologias em projetos de conclusão de curso.
@@ -199,53 +201,53 @@ Shin Shimizu Melnikoff}
 	
 	Apesar das relatos positivos envolvendo a aplicação desse método ágil no contexto acadêmico, uma série de adaptações foi necessária para adequá-la aos cursos. As principais dificuldades citadas na utilização dessa metodologia na universidade foram:
 	
-	\subsubsection{Área de trabalho compartilhada}
+	\subsection{Área de trabalho compartilhada}
 		Os laboratórios das universidades, assim como suas salas de aula, não foram projetados para possibilitar a colaboração entre seus alunos. Um espaço de trabalho coletivo e informativo, preconizado pelo XP, não está a disposição das equipes.
 	
-	\subsubsection{Disponibilidade de tempo}
+	\subsection{Disponibilidade de tempo}
 		Por ser dirigido ao ambiente corporativo, o XP define uma semana de trabalho de 40 horas, de impossível reprodução num curso universitário.
 	
-	\subsubsection{Presença do cliente}
+	\subsection{Presença do cliente}
 		A presença do cliente na equipe de XP, incomum mesmo em empresas, é ainda mais difícil na universidade.
 	
-	\subsubsection{Necessidade de \textit{coaching}}
+	\subsection{Necessidade de \textit{coaching}}
 		Normalmente as equipes não tem nenhuma experiência anterior com o XP, e a presença do coach é importante para a aprendizagem da metodologia.
 	
-	\subsubsection{Testes}
+	\subsection{Testes}
 		As experiências relatam dificuldades na utilização de testes automáticos, seja por problemas culturais (como a pouca importância dada a esse tópico no restante do currículo), seja por aspectos técnicos.
 	
-	\subsubsection{Formas de avaliação}
+	\subsection{Formas de avaliação}
 		Grande parte das avaliações realizadas nas disciplinas de projeto de conclusão de curso é baseada na documentação levantada por etapas das metodologias tradicionais. A criação desses documentos não é parte do processo das metodologias ágeis e outros critérios de avaliação apropriados a esse contexto foram necessários nas experiências apresentadas.
 	
-	\subsection{Programação extrema na Febrace\textsuperscript{V}}
-	Em consequência dos motivos apresentados na sessão anterior, uma série de adaptações foi necessária para adequar a utilização da programação extrema ao contexto do projeto. As principais são descritas abaixo.
+	\section{Programação extrema na Febrace\textsuperscript{V}}
+	Em consequência dos motivos apresentados na sessão anterior, uma série de adaptações foi necessária para adequar a utilização da programação extrema ao contexto do projeto. As principais são descritas a seguir.
 	
-	\subsubsection{Espaço de trabalho compartilhado virtual}
+	\subsection{Espaço de trabalho compartilhado virtual}
 		Não será possível dispor de um espaço de trabalho fixo para a realização das atividades referentes ao projeto. Na tentativa de suprir essa necessidade, será feito uso de um conjunto de ferramentas de trabalho colaborativo pela Internet, entre elas um "quadro branco" virtual e uma ferramenta de acompanhamento de \textit{bugs}. Mais detalhes sobre algumas dessas ferramentas são apresentados na sessão \textbf{Tecnologias utilizadas}.
 	
-	\subsubsection{Semana de 10 horas}
+	\subsection{Semana de 10 horas}
 		Espera-se que a semana de trabalho da equipe seja de 10 horas.
 	
-	\subsubsection{Iterações}
+	\subsection{Iterações}
 		O tempo escolhido para cada iteração foi de três semanas. Assim, serão realizadas quatro iterações até o fim do primeiro semestre.
 	
-	\subsubsection{Cliente}
+	\subsection{Cliente}
 		O papel do cliente foi designado a um pesquisador do NATE-LSI que participa da organização da Febrace. Ele não estará sempre presente durante o desenvolvimento do projeto, mas serão realizadas reuniões semanais com ele.
 	
-	\subsubsection{Programação pareada}
+	\subsection{Programação pareada}
 		Todo o código de produção será escrito em sessões de programação pareada.
 	
-	\subsubsection{Retrospectivas}
+	\subsection{Retrospectivas}
 		A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
 	
 
-  	\section{Levantamento de Histórias}
+  	\chapter{Levantamento de Histórias}
 
-	Como uma forma de especificar o sistema a ser desenvolvido durante o projeto de formatura optou-se por descrever as histórias levantadas através de \texit{Planning Game} com o cliente.
+	Como uma forma de especificar o sistema a ser desenvolvido durante o projeto de formatura optou-se por descrever as histórias levantadas através de \textit{Planning Game} com o cliente.
 
 	\begin{enumerate}
 	 \item Convite a ex-participantes \\
-		Envio automático de convite para participar a rede social para todos os participantes de edições anteriores da FEBRACE (cadastrados em um banco de dados legado). Caso o ex-participante crie seu perfil na rede social, o projeto dele deve ser criado automaticamente e associado a ele.
+		Quero, como administrador do sistema, que seja enviado automaticamente um convite para participação na rede social para todos os participantes de edições anteriores da FEBRACE (cadastrados em um banco de dados legado). Caso o ex-participante crie seu perfil na rede social, o projeto dele deve ser criado automaticamente e associado a ele.
 	 \item Autenticação no sistema \\
 		Quero, como usuário, acessar a página inicial com meu e-mail e senha para me autenticar no sistema. Caso esqueça minha senha, quero informar o sistema e pedir que envie uma nova senha para meu e-mail. Se não for um usuário registrado, quero que me seja apresentada a tela de cadastro de novo usuário.
 	 \item Cadastro de Usuário \\
@@ -257,13 +259,13 @@ Shin Shimizu Melnikoff}
 	 \item Cancelamento de Cadastro \\
 		Quero, como usuário, poder quando assim desejar cancelar meu cadastro do sistema.
 	 \item Visualização de Projeto \\
-		O sistema deve disponibilizar, para cada projeto, uma página com suas informações. Deve nela constar o nome e resumo do projeto, sua área do conhecimento, participantes e demais informações relevantes.
+		Quero, como usuário, ver as informações de cada projeto, como seu nome e resumo, sua área do conhecimento, participantes e demais informações relevantes.
 	 \item Visualização de Participantes de um projeto \\
-		A página de um projeto deve exibir cada um de seus participantes, e apresentar um link para cada um de seus perfis. Devem estar associados aos participantes seu papel na Feira (estudante, orientador, etc.) e a instituição a qual pertence.
+		Quero, como usuário, ver na página de um projeto quais são seus participantes, e ter acesso a seus perfis. Gostaria de saber também qual seu papel na Feira (estudante, orientador, etc.) e a instituição a qual pertence.
 	 \item Visualização de Vídeo de um projeto \\
-		A página de um projeto deve exibir, quando disponível, o vídeo oficial do projeto, feito na própria FEBRACE. Esse vídeo estará hospedado em um site dedicado como a IPTV-USP ou o Youtube.
+		Quero, como usuário, poder ver na página de um projeto, quando disponível, seu vídeo oficial, feito na própria FEBRACE, hospedado em um site dedicado como a IPTV-USP ou o Youtube.
 	 \item Visualização de prêmios de um projeto \\
-		A página de um projeto deve exibir, quando aplicável, os prêmios ganhos por aquele projeto na feira em que participou. Além do nome, deve ser exibido um link para a página do prêmio.
+		Quero, como usuário, saber quais prêmios foram ganhos por algum projeto na edição da feira em que participou. Quero também poder acessar mais informações sobre esses prêmios.
 	 \item Edição dos Conteúdos de um projeto \\
 		Quero, como participante de um projeto, poder inserir novas informações em sua página, como textos (relatório, diário de bordo, etc.), fotos e vídeos relacionados com ele, entre outros. Quero também poder editar esses conteúdos por mim adicionados, modificando-os ou apagando-os.
 	 \item Edição de Diário de Bordo de um projeto \\
@@ -279,21 +281,23 @@ Shin Shimizu Melnikoff}
 	 \item Enviar mensagens a outros usuários \\
 		Quero, como usuário, enviar mensagens privadas de texto a outros usuários e receber mensagens enviadas por ele. Quero também poder escolher quais usuários podem ou não me escrever.
 	 \item Buscar conteúdos do sistema \\
-		O sistema deve ter um sistema de busca que permita encontrar projetos pesquisando pelo seu nome, área de conhecimento, local de origem, integrantes, entre outros. Esse mecanismo de busca deve também possibilitar a pesquisa por usuários.
-	 \item Assinar RSS de conteúdos \\
-		Todo o conteúdo dinâmico da rede social (Artigos, entradas em diários de bordo, entradas nos fóruns, etc.) deve fornecer serviço de RSS, podendo ser assinados pelos usuários que desejam ser avisados de mudanças no conteúdo.
+		Quero, como usuário, ter acesso a  um sistema de busca que permita encontrar projetos pesquisando pelo seu nome, área de conhecimento, local de origem, integrantes, entre outros. Quero também poder usá-lo para encontrar outros usuários.
+	 \item Notificação de novos conteúdos \\
+		Quero, como usuário, ser notificado caso novos conteúdos (entradas em Diários de Bordo, colunas, etc.) sejam criados na rede social.
 	 \item Visualização de Coluna da Equipe FEBRACE \\
-		Deve haver uma área na rede social no qual sejam exibidos textos escritos por pessoas ligadas a feira, como a equipe da FEBRACE, avaliadores, ex-participantes, etc., que sejam de interesse para os outros usuários. É também necessário que haja uma interface no qual esses textos possam ser criados e inseridos no sistema através da Interface Administrativa.
+		Quero, como usuário, uma área na rede social na qual possa ler textos escritos por pessoas ligadas a feira, como a equipe da FEBRACE, avaliadores, ex-participantes, etc. 
+	 \item Interface de escrita de colunas \\
+                Quero, como participante da equipe da Febrace ter acesso a uma interface no qual o texto das colunas possam ser criados e inseridos no sistema.
 	 \item Estatísticas do uso do sistema \\
 		Quero, como usuário, ter um espaço no site no qual possa ver quais são os artigos mais lidos, os projetos mais visitados, os projetos que mais são escolhidos como prediletos, os usuários mais ativos, conteúdos mais acompanhados, etc.
 	 \item Interface Administrativa \\
-		É necessário haver um sistema auxiliar ao da rede social que permita a realização de tarefas administrativas.
+		Quero, como administrador do sistema, uma interface auxiliar ao da rede social que permita a realização de tarefas administrativas.
 	 \item Moderação de conteúdos \\
 		Quero, como usuário moderador, poder tirar do ar conteúdos impróprios postados por usuários. Quando um conteúdo for excluído ou editado, quero que o sistema envie uma mensagem para esse usuário informando o motivo dessa ação.
 	 \item Gerenciamento de Usuários \\
 		Quero, como administrador do sistema, poder inserir usuários, modificar suas informações e excluí-los do sistema. Quero também editar permissões de cada usuário, determinando o tipo de uso que ele pode fazer do sistema.
 	 \item Gerenciamento de conteúdo \\
-		O sistema administrativo deve permitir a inserção, edição e exclusão de conteúdo (como artigos e páginas de projeto).
+		Quero, como administrador do sistema, inserir, editar e excluir quaisquer conteúdos (como colunas e páginas de projeto).
 	 \item Estatísticas do sistema \\
 		Quero, como administrador do sistema, ter uma página que indique quais são as páginas mais visitadas do site, os usuários mais ativos e as requisições que ocupam maior tempo de processamento do servidor.
 	 \item Visualização de Prêmios \\
@@ -302,15 +306,11 @@ Shin Shimizu Melnikoff}
 		Quero, como usuário, que as diversas instituições ligadas à FEBRACE, como escolas, centros técnicos, patrocinadores, entre outros, tenham sua página no portal, contendo mais informações sobre elas.
 	 \item Cadastro de novo projeto \\
 		Quero, como usuário registrado, poder cadastrar um novo projeto em andamento para ser submetido para a próxima edição da FEBRACE. Posso escolher a opção de criar um diário de bordo para meu projeto, além de poder convidar outras pessoas para participar do projeto criado.
-	 \item Relatório de especificação do software \\
-		Elaboração do relatório de especificação do software a ser entregue para o PCS.
-	 \item Estrutura da monografia 1 \\
-		Elaboração da estrutura da monografia 1 a ser entregue para o PSI. Após cada capítulo deve ser dividido em iterações também.
 	\end{enumerate}
 
   	\section{1\textsuperscript{a} iteração}
 
-	Através do Planning Game realizado com o cliente foi definida a primeira iteração do projeto. Fazem parte da primeira iteração as seguintes histórias:
+	Através do \textit{Planning Game} realizado com o cliente foi definida a primeira iteração do projeto. Fazem parte da primeira iteração as seguintes histórias:
 
 	\begin{itemize}
 	 \item Autenticação no sistema
@@ -319,14 +319,12 @@ Shin Shimizu Melnikoff}
 	 \item Visualização de Participantes de um projeto
 	 \item Edição dos Conteúdos de um projeto
 	 \item Cadastro de novo projeto
-	 \item Relatório de especificação do software
-	 \item Estrutura da monografia 1
 	\end{itemize}
 
 	A duração de cada iteração será de três semanas e após esse período será feita uma entrega para o cliente que avaliará os resultados obtidos e definirá a iteração seguinte.
 
 
-	\section{Tecnologias utilizadas}
+	\chapter{Tecnologias utilizadas}
 	
 	O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
 	
@@ -334,13 +332,13 @@ Shin Shimizu Melnikoff}
 	
 	As tecnologias foram escolhidas com base na experiência prévia e habilidades técnicas da equipe.
 
-  	\section{Arquitetura do sistema}
+  	\chapter{Arquitetura do sistema}
 
 	Como consequência do uso do framework para desenvolvimento web Django, a arquitetura do sistema deverá ser aquela especificada pelo Django. 
 	
 	O Django usa uma arquitetura conhecida como MTV (Model, Template, View) que nada mais é que uma variação do modelo MVC (Model, View, Controller). No MVC, separam-se as regras de negócios (Controller), os dados e métodos de acessos aos mesmos (Model) e as regras de apresentação (View).
 
-	No caso da arquitetura MTV, o framework Django é o que faz as vezes de controlador da arquitetura MVC. Sendo assim, na arquitetura MTV, o Controller não é responsável pela lógica do negócio e sim pelo funcionamento do projeto. Além de models, views e templates, no Django há também url dispatchers, middlewares e handlers e são estes que são encarados como Controller.
+	No caso da arquitetura MTV, o framework Django é o que faz as vezes de controlador da arquitetura MVC. Sendo assim, na arquitetura MTV, o Controller não é responsável pela lógica do negócio e sim pelo funcionamento do sistema. Além de models, views e templates, no Django há também url dispatchers, middlewares e handlers e são estes que são encarados como Controller.
 	
 	No Model, são escritas as classes que designarão as tabelas no banco de dados. A manipulação dessas tabelas ocorre através do ORM (mapeamento objeto relacional) e, por isso, não é necessária a escrita de querys em SQL para a persistência dos dados. Uma outra vantagem é baixa preocupação com qual sistema gerenciador de banco de dados será usado, uma vez que o ORM suporta vários sistemas.
 	
@@ -354,41 +352,41 @@ Shin Shimizu Melnikoff}
 
     	Tendo em vista essa arquitetura, espera-se ao longo do primeiro semestre desenvolver a primeira versão do projeto. Essa primeira versão contemplará as seguintes aplicações:
 
-		\subsection{Projetos}
+		\section{Projetos}
 		O principal módulo da aplicação é o de projetos. Nele são reunidas e apresentadas ao público informações sobre um projeto, como, entre outras, descrição, autores, orientadores e região de origem. O módulo de projetos deve oferecer integração com um serviço de vídeo sob demanda (como o IPTV-USP), onde serão armazenados vídeos dos projetos. São nas páginas geradas por esse módulo que ocorrem a maior parte das interações entre os usuários, pois dão acesso aos módulos de comentários e mensagens.
 		
-		\subsection{Perfis}
+		\section{Perfis}
 		Cada usuário tem seu perfil na aplicação com suas informações pessoais. Esse módulo tem a função de gerir a apresentação desses perfis bem como oferecer as funcionalidades de edição e exclusão.
 		
-		\subsection{Comentários}
+		\section{Comentários}
 		Várias das páginas geradas pela aplicação, tais como as de projeto e de artigos, têm agregadas caixas de comentários que podem ser usadas pelos visitantes (cadastrados ou não). Esse módulo oferece essa funcionalidade.
 	
-		\subsection{Fórum}
+		\section{Fórum}
 		Pelas páginas geradas por esse módulo os usuários podem perguntar e responder uns aos outros questões relacionadas à feira e aos seus projetos. O fórum será composto por diversas áreas, cada uma relativa à área de conhecimento correspondente na Feira.
 		
-		\subsection{Blog}
+		\section{Blog}
 		Esse módulo oferece, atrelado a cada projeto, uma ferramenta de Blog, ou Diário de Bordo virtual, na qual os participantes podem relatar o processo do desenvolvimento de seus projetos, sua experiência na feira ou qualquer outro assunto que achem pertinentes. Os blogs, tais como outros serviços de módulos com conteúdos dinâmicos, devem prover serviço de RSS.
 		
-		\subsection{Mensagens}
+		\section{Mensagens}
 		Os usuários registrados podem enviar mensagens privadas a outros usuários, e esse módulo oferece essa funcionalidade. Haverá também um sistema de mensagens públicas (\textit{scrap}).
 	
-		\subsection{Colunas}
+		\section{Colunas}
 		O módulo de colunas possibilita a inserção de conteúdo proveniente da equipe da FEBRACE ou de seus colaboradores, em páginas com esse fim.
 		
-		\subsection{Busca}
+		\section{Busca}
 		Além do acesso ao conteúdo da aplicação pelos menus correspondentes, é possível filtrá-lo por palavras-chave na ferramenta de busca.
 		
-		\subsection{Login}
+		\section{Login}
 		Módulo no qual usuários registrados autenticam sua entrada, e os não registrados têm a oportunidade de criar uma conta.
 	
-		\subsection{Administração}
+		\section{Administração}
 		Interface administrativa da aplicação, que permite operações de moderação, gerenciamento de usuários e conteúdo, etc.
 
-  	\section{Cronograma}
+  	\chapter{Cronograma}
 
-	\begin{tabular}[|l|]{ |r|l| }
+	\begin{tabularx}{0.9\linewidth}[|l|]{ |r|X|l|X| }
 	\hline
-		\multicolumn{2}{|c|}{\textbf{Cronograma}} \\
+		\multicolumn{2}{|c|}{\textbf{Atividades cumpridas}} \\
 	\hline
 		27/02 & 1ª retrospectiva e entrega do 2º documento de acompanhamento \\
 	\hline
@@ -408,7 +406,7 @@ Shin Shimizu Melnikoff}
 	\hline
 		22/03-28/03 & compilação e análise dos dados do questionário \\
 	\hline
-		29/03-04/04 & levantamento de histórias através Planning Game com o cliente \\
+		29/03-04/04 & levantamento de histórias através \textit{Planning Game} com o cliente \\
 			    & e definição da 1ª iteração \\
 	\hline
 		05/03-11/04 & implementação da 1ª iteração \\
@@ -422,6 +420,12 @@ Shin Shimizu Melnikoff}
 		19/04-25/04 & implementação da 1ª iteração \\
 	\hline
 		23/04 & 4ª apresentação \\
+	\hline
+	\end{tabularx} \\
+
+	\begin{tabularx}{0.9\linewidth}[|l|]{ |r|X|l|X| }
+	\hline
+		\multicolumn{2}{|c|}{\textbf{Atividades planejadas}} \\
 	\hline
 		26/04-16/05 & implementação da 2ª iteração \\
 	\hline
@@ -445,7 +449,7 @@ Shin Shimizu Melnikoff}
 	\hline
 		30/11 & entrega da monografia 2 e projeto 2 no PCS \\
 	\hline
-	\end{tabular} \\
+	\end{tabularx} \\
 
   	\bibliography{atividade_4}
 
