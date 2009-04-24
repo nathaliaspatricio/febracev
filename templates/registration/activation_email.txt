@@ -1,0 +1,1 @@
+Olá! Clique em {{ activation_key }} para ativar sua conta. 

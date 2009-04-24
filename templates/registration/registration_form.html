@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Registro</h1>
+
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    <form action="" method="post">
+        <div class="field">
+            {{ form.username.errors }}
+            <label for="id_subject">Usuário:</label>
+            {{ form.username }}
+        </div>
+        <div class="field">
+            {{ form.email.errors }}
+            <label for="id_email">E-mail:</label>
+            {{ form.email }}
+        </div>
+        <div class="field">
+            {{ form.password1.errors }}
+            <label for="id_message">Senha:</label>
+            {{ form.password1 }}
+        </div>
+        <div class="field">
+            {{ form.password2.errors }}
+            <label for="id_message">Confirme a Senha:</label>
+            {{ form.password2 }}
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+

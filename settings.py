@@ -5,6 +5,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     ('nathalia', 'nathalia.sautchuk@gmail.com'),
+    ('leandro', 'leandrobiazon@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -66,6 +67,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'febracev.urls'
 
 TEMPLATE_DIRS = (
+    "templates",
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -77,5 +79,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'projeto',
+    'project',
+    'profile',
+    'registration',
 )
+
+AUTH_PROFILE_MODULE = 'profile.UserProfile'
+ACCOUNT_ACTIVATION_DAYS = 7
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_USE_TLS=1
+EMAIL_PORT=587
+EMAIL_HOST_USER='febracev@gmail.com'
+EMAIL_HOST_PASSWORD='f3br4c3v'
