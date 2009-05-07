@@ -6,8 +6,6 @@ http://localhost:8000/accounts/activate/{{ activation_key }}
 
 ou copie e cole a url em seu navegador.
 
-http://localhost:8000/{{ activation_key }}
-
 Qualquer dúvida entre em contato.
 
 Equipe FEBRACEv

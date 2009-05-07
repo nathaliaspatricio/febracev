@@ -40,3 +40,7 @@ class UserProfile(models.Model):
     
     mugshot = models.URLField()
     institution = models.CharField(max_length=100)
+
+    def get_absolute_url(self):
+        return ('profiles_profile_detail', (), { 'username': self.user.username })
+    get_absolute_url = models.permalink(get_absolute_url)

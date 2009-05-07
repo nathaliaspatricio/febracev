@@ -82,6 +82,7 @@ INSTALLED_APPS = (
     'project',
     'profile',
     'registration',
+    'profiles',
 )
 
 AUTH_PROFILE_MODULE = 'profile.UserProfile'

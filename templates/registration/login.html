@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    <form action="" method="post">
+        <div class="field">
+            {{ form.username.errors }}
+            <label for="id_subject">Usuário:</label>
+            {{ form.username }}
+        </div>
+        <div class="field">
+            {{ form.password.errors }}
+            <label for="id_message">Senha:</label>
+            {{ form.password }}
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
