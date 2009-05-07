@@ -21,5 +21,5 @@
 *.pyc
 *.db
 #apps externas
-registration/*
-profiles/*
+#registration/*
+#profiles/*
