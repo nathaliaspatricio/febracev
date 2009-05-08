@@ -5,9 +5,11 @@
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 
-\usepackage[num]{abntcite}
+\usepackage[alf]{abntcite}
+
 \usepackage{tabularx}
 \usepackage{verbatim}
+\usepackage[final]{pdfpages}
 
 \autor{Leandro Coletto Biazon\protect\\Nathalia Sautchuk Patrício}
 \titulo{Febrace\textsuperscript{V}:\\Feira Brasileira Virtual de Ciências e
@@ -23,148 +25,140 @@ Shin Shimizu Melnikoff}
 
 \begin{document}
 %  \setcounter{secnumdepth}{-1}
-  \capa
-  %\folhaderosto
+\capa
+%\folhaderosto
 
-	\renewenvironment{center}{}{}
-	\section*{PSI 2594 - PROJETO DE FORMATURA II}
+\renewenvironment{center}{}{}
+\chapter*{PSI 2594 - PROJETO DE FORMATURA II}
 
-	\begin{tabular}[|l|]{ |r|l| }
-	\hline
-				& Leandro Coletto Biazon, leandrobiazon@gmail.com, (11)8961-4159 \\
-			\hline
-				& Nathalia S. Patrício, nathalia.sautchuk@gmail.com, (11)9678-1667 \\
-			\hline
-				Orientadora & Profª. Drª. Roseli de Deus Lopes, roseli@lsi.usp.br \\
-			\hline
-			  Co-orientadora & Profª. Drª. Selma S. S. Melnikoff, selma.melnikoff@poli.usp.br \\
-			\hline
-			\end{tabular} \\
+  \begin{tabular}[|l|]{ |r|l| }
+    \hline
+      & Leandro Coletto Biazon, leandrobiazon@gmail.com (PSI) \\
+    \hline
+      & Nathalia S. Patrício, nathalia.sautchuk@gmail.com (PCS) \\
+    \hline
+      Orientadoras & Profª. Drª. Roseli de Deus Lopes, roseli@lsi.usp.br \\
+    \hline
+      & Profª. Drª. Selma S. S. Melnikoff, selma.melnikoff@poli.usp.br \\
+    \hline
+  \end{tabular} \\
 
-			A1.a – Relatório Parcial de atividades (versão: 06/05/2009) \\
+  A1.a – Relatório Parcial de atividades (versão: 06/05/2009) \\
 
-    %\begin{comment}
+  \begin{tabularx}{0.9\linewidth}{ |r|r|X|r| }
+    \hline
+      \multicolumn{3}{|c|}{Campos a serem preenchidos pelo orientador, secretaria e comitê gestor} \\
+    \hline
+      Orientador & Data de Entrega &  \\
+    \hline
+      & De acordo &  \\
+    \hline
+      & &  \\
+    \hline
+      Secretaria & Data e hora de entrega &  \\
+    \hline
+      &  &  \\
+    \hline
+      Comitê Gestor &  &  \\
+    \hline
+      &  &  \\
+    \hline
+      \multicolumn{3}{|l|}{Comentários} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+        \multicolumn{3}{|l|}{} \\
+    \hline
+  \end{tabularx}
 
-			%\begin{tabular}{ |r|r|r| }
-	    \begin{tabularx}{0.97\linewidth}{ |r|r|X|r| }
+\sumario
 
-			\hline
-				\multicolumn{3}{|c|}{Campos a serem preenchidos pelo orientador, secretaria e comitê gestor} \\
-			\hline
-				Orientador & Data de Entrega &  \\
-			\hline
-				& De acordo &  \\
-			\hline
-				& &  \\
-			\hline
-				Secretaria & Data e hora de entrega &  \\
-			\hline
-				&  &  \\
-			\hline
-				Comitê Gestor &  &  \\
-			\hline
-			&  &  \\
-			\hline
-				\multicolumn{3}{|l|}{Comentários} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-				\multicolumn{3}{|l|}{} \\
-			\hline
-			\end{tabularx}
-    %\end{comment}
+\chapter{Introdução}
 
-	\chapter{Introdução}
+  A Febrace (Feira Brasileira de Ciências e Engenharia), realizada todos os anos na Escola Politécnica da USP e organizada pelo Nate-LSI (Núcleo de Aprendizagem, Trabalho e Entretenimento do Laboratório de Sistemas Integráveis), é um projeto de ação contínua com o objetivo de estimular a criatividade, a reflexão, o aprofundamento e o raciocínio crítico nas atividades desenvolvidas por estudantes dos Ensinos Fundamental, Médio e Técnico, por meio da indução em realizar projetos investigativos em Ciências, Engenharia e suas aplicações\cite{lopes07}.
 
-	A Febrace (Feira Brasileira de Ciências e Engenharia), realizada todos os anos na Escola Politécnica da USP e organizada pelo Nate-LSI (Núcleo de Aprendizagem, Trabalho e Entretenimento do Laboratório de Sistemas Integráveis), é um projeto de ação contínua com o objetivo de estimular a criatividade, a reflexão, o aprofundamento e o raciocínio crítico nas atividades desenvolvidas por estudantes dos Ensinos Fundamental, Médio e Técnico, por meio da indução em realizar projetos investigativos em Ciências, Engenharia e suas aplicações.
+  Com o intuito de aumentar o alcance da Feira, levando-a por mais tempo a mais pessoas, e estimulando a criação de redes entre elas, o presente projeto propõe a criação de uma aplicação Web que possibilite o desenvolvimento e exposição dos projetos na Internet e que ofereça ferramentas que viabilizem maior interação entre os diversos envolvidos na Febrace (alunos participantes, professores orientadores, organizadores da Feira, avaliadores e público interessado).
 
-	Com o intuito de aumentar o alcance da Feira, levando-a por mais tempo a mais pessoas, e estimulando a criação de redes entre elas, o presente projeto propõe a criação de uma aplicação Web que possibilite o desenvolvimento e exposição dos projetos na Internet e que ofereça ferramentas que viabilizem maior interação entre os diversos envolvidos na Febrace (alunos participantes, professores orientadores, organizadores da Feira, avaliadores e público interessado).
+  Assim, propõe-se:
 
-	Assim, propõe-se:
-
-	\begin{itemize}
-	\item{
-		Desenvolver e disponibilizar uma aplicação de código aberto que ofereça ferramentas para a exposição virtual de projetos de Ciência e Engenharia;
-	}
-	\item{
+  \begin{itemize}
+    \item{
+      Desenvolver e disponibilizar uma aplicação de código aberto que ofereça ferramentas para a exposição virtual de projetos de Ciência e Engenharia;
+    }
+    \item{
 		Agregar à exposição virtual uma rede social que permita a interação entre os participantes da feira e que estes possam se ajudar com seus projetos e dirimir dúvidas de visitantes interessados em participar de suas futuras edições e
-	}
-	\item{
+    }
+    \item{
 		Estudar e utilizar conceitos de usabilidade, acessibilidade e práticas de desenvolvimento web 2.0, aplicando metódos ágeis de desenvolvimento de \textit{software}.
-	}
-	\end{itemize}
+    }
+  \end{itemize}
 
-	\section{Objetivos}
-	O projeto tem como objetivo desenvolver uma rede social focada em desenvolvimento e exposição de projetos de ciências e engenharia. Dentre os conceitos de engenharia de \textit{software} a serem aplicados no projeto, destacam-se a temática de usabilidade e acessibilidade, metódos ágeis de desenvolvimento de \textit{software} e práticas de desenvolvimento web.
+  \section{Objetivo}
+    O projeto tem como objetivo desenvolver uma rede social focada em desenvolvimento e exposição de projetos de ciências e engenharia. Dentre os conceitos de engenharia de \textit{software} a serem aplicados no projeto, destacam-se a temática de usabilidade e acessibilidade, metódos ágeis de desenvolvimento de \textit{software} e práticas de desenvolvimento web.
 
+\chapter{Programação extrema}
+  A programação extrema (\textit{eXtreme Programming} ou XP) é um método leve para que equipes pequenas ou médias desenvolvam \textit{software} em face a requisitos vagos ou que mudem constantemente\cite{beck04}. Pela definição de seu autor, Kent Beck, o XP é leve porque é focado na realização das tarefas que criem valor para o cliente. Seu principal objetivo é o desenvolvimento de \textit{software} com qualidade, por meio de um estilo de desenvolvimento focado nas melhores práticas de programação, comunicação clara e trabalho em equipe.
 
-	\chapter{Programação extrema}
-	A programação extrema (\textit{eXtreme Programming} ou XP) é um método leve para que equipes pequenas ou médias desenvolvam \textit{software} em face a requisitos vagos ou que mudem constantemente\cite{beck04}. Pela definição de seu autor, Kent Beck, o XP é leve porque é focado na realização das tarefas que criem valor para o cliente. Seu principal objetivo é o desenvolvimento de \textit{software} com qualidade, por meio de um estilo de desenvolvimento focado nas melhores práticas de programação, comunicação clara e trabalho em equipe.
+  Como outras metodologias ágeis, o XP se opõe a diversas premissas assumidas pelas metodologias tradicionais de engenharia de \textit{software}. Uma dessas premissas é que é possível prever todos os passos necessários para o desenvolvimento de um sistema, pelo detalhado levantamento de características do problema a ser resolvido e da solução a ser desenvolvida. O XP assume a presença constante das mudanças durante o processo de desenvolvimento, e propõe uma série de práticas para lidar com elas.
 
-	Como outras metodologias ágeis, o XP se opõe a diversas premissas assumidas pelas metodologias tradicionais de engenharia de \textit{software}. Uma dessas premissas é que é possível prever todos os passos necessários para o desenvolvimento de um sistema, pelo detalhado levantamento de características do problema a ser resolvido e da solução a ser desenvolvida. O XP assume a presença constante das mudanças durante o processo de desenvolvimento, e propõe uma série de práticas para lidar com elas.
+  A programação extrema é descrita por meio de seus valores, princípios e práticas. As práticas são uma série de técnicas a serem aplicadas no dia-a-dia de trabalho da equipe. Os valores são a noção do que é certo e do que é errado no relacionamento da equipe com o trabalho e entre si. Os valores são o que fundamentam as práticas. Porém os valores do XP são universais e independem do contexto do desenvolvimento de \textit{software}, estando assim muito distante das práticas. A ponte entre os valores e as práticas são os princípios, que trazem orientações para um contexto específico.
 
-	A programação extrema é descrita por meio de seus valores, princípios e práticas. As práticas são uma série de técnicas a serem aplicadas no dia-a-dia de trabalho da equipe. Os valores são a noção do que é certo e do que é errado no relacionamento da equipe com o trabalho e entre si. Os valores são o que fundamentam as práticas. Porém os valores do XP são universais e independem do contexto do desenvolvimento de \textit{software}, estando assim muito distante das práticas. A ponte entre os valores e as práticas são os princípios, que trazem orientações para um contexto específico.
+  \section{Valores}
+    O primeiro dos valores do XP é a \textbf{Comunicação}, por pressupor que a maioria dos problemas de um projeto ocorrem por dificuldades nesse aspecto. A comunicação constante e eficaz entre os membros da equipe permeia todo processo de desenvolvimento, e é ressaltado em diversas das práticas do XP.
 
-	\section{Valores}
+    Outro princípio é a \textbf{Simplicidade}, que leva a equipe a buscar sempre as soluções mais simples a um dado problema, sem tentar otimizações precoces ou a a tentativa de resolução de um problema futuro.
 
-	O primeiro dos valores do XP é a \textbf{Comunicação}, por pressupor que a maioria dos problemas de um projeto ocorrem por dificuldades nesse aspecto. A comunicação constante e eficaz entre os membros da equipe permeia todo processo de desenvolvimento, e é ressaltado em diversas das práticas do XP.
+    Como não há uma direção pré-definida a ser seguida, a equipe de XP precisa constantemente saber onde se encontra para poder determinar seus próximos passos. O valor que orienta a equipe à rápida resposta sobre as ações realizadas é o \textbf{Feedback}.
 
-	Outro princípio é a \textbf{Simplicidade}, que leva a equipe a buscar sempre as soluções mais simples a um dado problema, sem tentar otimizações precoces ou a a tentativa de resolução de um problema futuro.
+    \textbf{Coragem} é a ação efetiva frente à insegurança, para a tomada de decisões necessárias ao projeto.
 
-	Como não há uma direção pré-definida a ser seguida, a equipe de XP precisa constantemente saber onde se encontra para poder determinar seus próximos passos. O valor que orienta a equipe à rápida resposta sobre as ações realizadas é o \textbf{Feedback}.
+    O último valor é o \textbf{Respeito}. Os membros da equipe devem se importar uns com os outros e com as ações realizadas.
 
-	\textbf{Coragem} é a ação efetiva frente à insegurança, para a tomada de decisões necessárias ao projeto.
+  \section{Princípios}
 
-	O último valor é o \textbf{Respeito}. Os membros da equipe devem se importar uns com os outros e com as ações realizadas.
+    Os princípios definidos na segunda edição do livro \textit{Extreme Programming Explained}\cite{beck04} são as seguintes:
 
-	\section{Princípios}
+    \begin{description}
+      \item[Humanidade]
+	      O \textit{software} é desenvolvido por pessoas. As necessidades pessoais dos membros da equipe devem ser levadas em consideração no processo de desenvolvimento.
+      \item[Economia]
+        A produção de \textit{software} não está à parte do processo econômico, e seus aspectos devem ser considerados.
+      \item[Benefício mútuo]
+        Qualquer atividade deve beneficiar todas as pessoas envolvidas (desenvolvedores e clientes). Decisões emergenciais, que custem a uma pessoa, representam uma perda ao projeto como um todo.
+      \item[Auto semelhança]
+        A estrutura de uma solução deve ser utilizada em outros contextos, mesmo que em diferentes escalas.
+      \item[Aperfeiçoamento]
+        Deve-se sempre buscar a realização do melhor trabalho possível, hoje.
+      \item[Diversidade]
+        As equipes devem ser formadas por pessoas com diferentes perfis. Os conflitos que possam surgir dessa escolha são compensados pelo benefício das múltiplas visões sobre um problema.
+      \item[Reflexão]
+        Não é suficiente realizar tarefas, é necessário constantemente revisitar o trabalho feito e refletir sobre as decisões tomadas, analisando as razões dos sucessos e das falhas.
+      \item[Fluxo]
+        O fluxo é a realização simultânea de várias etapas do processo de desenvolvimento, ao invés de separar as fases e trabalhá-las isoladamente.
+      \item[Oportunidade]
+        Problemas devem ser vistos como oportunidades de mudança.
+      \item[Redundância]
+        Normalmente vista como desperdício, a redundância é o melhor caminho para lidar com as falhas, e deve ser empregada em diversos contextos (múltipla resolução de um problema, programação pareada, etc.).
+      \item[Falha]
+        Quando não se sabe a maneira de resolver um problema, deve-se implementar uma alternativa que falhe, e aprender com ela. As falhas não são um desperdício, e sim conhecimento.
+      \item[Qualidade]
+        Qualidade não deve ser vista como uma variável de controle, negociável, e deve ser sempre buscada.
+      \item[Pequenos passos]
+        Ao dar grandes passos, leva-se muito tempo para realizá-los e, caso tenham sido dados na direção errada, é mais difícil voltar atrás. Agindo dessa maneira, é frequente o temor da necessidade de mudanças. Pequenos passos são uma postura mais adequada em processos complexos.
+      \item[Aceitação de responsabilidade]
+        A responsabilidade não deve ser designadas, devem ser aceitas.
+    \end{description}
 
-	Os princípios definidos na segunda edição do livro \textit{Extreme Programming Explained}\cite{beck04} são as seguintes:
-
-	\begin{description}
-		\item[Humanidade]
-		O \textit{software} é desenvolvido por pessoas. As necessidades pessoais dos membros da equipe devem ser levadas em consideração no processo de desenvolvimento.
-		\item[Economia]
-		A produção de \textit{software} não está à parte do processo econômico, e seus aspectos devem ser considerados.
-		\item[Benefício mútuo]
-		Qualquer atividade deve beneficiar todas as pessoas envolvidas (desenvolvedores e clientes). Decisões emergenciais, que custem a uma pessoa, representam uma perda ao projeto como um todo.
-		\item[Auto semelhança]
-		A estrutura de uma solução deve ser utilizada em outros contextos, mesmo que em diferentes escalas.
-		\item[Aperfeiçoamento]
-		Deve-se sempre buscar a realização do melhor trabalho possível, hoje.
-		\item[Diversidade]
-		As equipes devem ser formadas por pessoas com diferentes perfis. Os conflitos que possam surgir dessa escolha são compensados pelo benefício das múltiplas visões sobre um problema.
-		\item[Reflexão]
-		Não é suficiente realizar tarefas, é necessário constantemente revisitar o trabalho feito e refletir sobre as decisões tomadas, analisando as razões dos sucessos e das falhas.
-		\item[Fluxo]
-		O fluxo é a realização simultânea de várias etapas do processo de desenvolvimento, ao invés de separar as fases e trabalhá-las isoladamente.
-		\item[Oportunidade]
-		Problemas devem ser vistos como oportunidades de mudança.
-		\item[Redundância]
-		Normalmente vista como desperdício, a redundância é o melhor caminho para lidar com as falhas, e deve ser empregada em diversos contextos (múltipla resolução de um problema, programação pareada, etc.).
-		\item[Falha]
-		Quando não se sabe a maneira de resolver um problema, deve-se implementar uma alternativa que falhe, e aprender com ela. As falhas não são um desperdício, e sim conhecimento.
-		\item[Qualidade]
-		Qualidade não deve ser vista como uma variável de controle, negociável, e deve ser sempre buscada.
-		\item[Pequenos passos]
-		Ao dar grandes passos, leva-se muito tempo para realizá-los e, caso tenham sido dados na direção errada, é mais difícil voltar atrás. Agindo dessa maneira, é frequente o temor da necessidade de mudanças. Pequenos passos são uma postura mais adequada em processos complexos.
-		\item[Aceitação de responsabilidade]
-		A responsabilidade não deve ser designadas, devem ser aceitas.
-	\end{description}
-
-	\section{Práticas}
-	As práticas são o que se vê no dia-a-dia de uma equipe de XP. Elas não devem ser adotadas, entretanto, desvinculadas dos valores e princípios mencionados anteriormente, sob o risco de se tornarem vazias. Na primeira edição de seu livro principal, Beck definiu 12 práticas, e mencionou que elas deveriam ser adotadas todas simultaneamente. Na edição mais recente, o autor muda a abordagem, dizendo que a adoção das práticas pode ser feita parcialmente, conforme as necessidades e experiências da equipe. Também nessa edição as práticas, agora 24, são divididas em dois grupos, primárias e corolárias. As práticas primárias são aquelas que devem ser tentadas primeiro pelas equipes, na sequência que se mostrar adequada. Já as práticas corolárias são mais difíceis de serem aplicadas, e requerem a experiência anterior com as práticas primárias. Nesse projeto serão trabalhadas, principalmente, as práticas primárias, descritas a seguir.
+  \section{Práticas}
+    As práticas são o que se vê no dia-a-dia de uma equipe de XP. Elas não devem ser adotadas, entretanto, desvinculadas dos valores e princípios mencionados anteriormente, sob o risco de se tornarem vazias. Na primeira edição de seu livro principal, Beck definiu 12 práticas, e mencionou que elas deveriam ser adotadas todas simultaneamente. Na edição mais recente, o autor muda a abordagem, dizendo que a adoção das práticas pode ser feita parcialmente, conforme as necessidades e experiências da equipe. Também nessa edição as práticas, agora 24, são divididas em dois grupos, primárias e corolárias. As práticas primárias são aquelas que devem ser tentadas primeiro pelas equipes, na sequência que se mostrar adequada. Já as práticas corolárias são mais difíceis de serem aplicadas, e requerem a experiência anterior com as práticas primárias. Nesse projeto serão trabalhadas, principalmente, as práticas primárias, descritas a seguir.
 
 	\begin{description}
 		\item[Sentar Junto]
@@ -200,9 +194,9 @@ Shin Shimizu Melnikoff}
 
 	Tendo isso em vista, realizou-se uma pesquisa por artigos que descrevessem experiências semelhantes de aplicação de metodologias ágeis na graduação. Foram encontrados diversos relatos dessa natureza, muitos deles descrevendo a utilização dessas metodologias em projetos de conclusão de curso.
 
-	Schneider\cite{schneider03} avalia a aplicação da programação extrema no contexto acadêmico, avaliando num plano teórico as práticas do XP e sua conformidade com o currículo de Engenharia de Computação do instituto onde leciona. Noble\cite{noble04} e Keefe\cite{keefe04} ministraram disciplinas de projetos de conclusão de curso onde o XP foi apresentado com uma das possíveis metodologias a serem escolhidas pelos alunos, e relatam nos artigos suas experiências.
+	\citeonline{schneider03} avaliam a aplicação da programação extrema no contexto acadêmico, avaliando num plano teórico as práticas do XP e sua conformidade com o currículo de Engenharia de Computação do instituto onde lecionam. \citeonline{noble04} e \citeonline{keefe04} ministraram disciplinas de projetos de conclusão de curso onde o XP foi apresentado com uma das possíveis metodologias a serem escolhidas pelos alunos, e relatam nos artigos suas experiências.
 
-	No artigo de Schneider, o XP é descartado como uma metodologia compatível com os objetivos da universidade. Cabe observar que o autor não se baseia em nenhuma experiência real. Noble e Keefe, pelo contrário, consideram as experiências em seus cursos bem sucedidas, ressaltando a qualidade presente nos projetos desenvolvidos e a melhor interação entre os membros da equipe.
+	No artigo de \citeauthoronline{schneider03}, o XP é descartado como uma metodologia compatível com os objetivos da universidade. Cabe observar que os autores não se baseiam em nenhuma experiência real. \citeauthoronline{noble04} e \citeauthoronline{keefe04}, pelo contrário, consideram as experiências em seus cursos bem sucedidas, ressaltando a qualidade presente nos projetos desenvolvidos e a melhor interação entre os membros da equipe.
 
 	Apesar das relatos positivos envolvendo a aplicação desse método ágil no contexto acadêmico, uma série de adaptações foi necessária para adequá-la aos cursos. As principais dificuldades citadas na utilização dessa metodologia na universidade foram:
 
@@ -245,9 +239,27 @@ Shin Shimizu Melnikoff}
 	\subsection{Retrospectivas}
 		A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
 
-  	\chapter{Levantamento de Histórias}
+\chapter{Levantamento do perfil dos usuários}
+  Um dos objetivos do projeto é o estudo dos conceitos de usabilidade, aplicando-os no desenvolvimento da Febrace\textsuperscript{V}. Para se fazer um estudo de usabilidade verificou-se como necessário um levantamento prévio com possíveis usuários do sistema para verificar o seu perfil de uso e suas reais necessidades em relação a uma nova ferramenta computacional. Como a sétima edição da FEBRACE ocorreria no primeiro semestre, viu-se a possibilidade de fazer esse levantamento com os participantes da feira que são potenciais usuários da rede social. O método escolhido para fazer esse levantamento foi através de questionário aplicados a finalistas, orientadores e visitantes durante a feira.
 
-	Como uma forma de especificar o sistema a ser desenvolvido durante o projeto de formatura optou-se por descrever as histórias levantadas através de \textit{Planning Game} com o cliente.
+  \section{Elaboração do Questionário de perfil de uso}
+    O questionário proposto pelos integrantes do projeto foi avalidado pela equipe da FEBRACE e por outras pessoas com experiência em levantamento de dados com usuários, e a partir de suas sugestões foram feitos melhoramentos no questionário de perfil de uso de Internet dos participantes da feira.
+
+    O questionário final, apresentado no Apêndice 1, apresenta três partes. A primeira tem por objetivo colher alguns dados demográficos, como idade, local de residência e escolaridade. Na segunda parte há perguntas que procuram identificar o perfil de uso da internet do usuário (de onde e com qual frequência ocorre o acesso, quais serviços são utilizados, etc.). O objetivo da terceira parte é saber a opinião dos usuários sobre sua atual experiência com os serviços web da FEBRACE e sobre seu interesse nas possíveis ferramentas oferecidas pela Febrace\textsuperscript{v}.
+
+  \section{Aplicação do questionário}
+    A FEBRACE ocorreu nos dias 17, 18 e 19 de março e durante esse período foram aplicados questionários para alunos e professores participantes, além de visitantes da feira. Foram respondidos 520 questionários. Até o presento momento foram compilados 136 questionários, 26\% do total.
+
+  \section{Automação do processamento de dados coletados}
+    O método escolhido para a aplicação do questionário foi em papel. Porém, com o objetivo de facilitar tanto a inserção de dados no computador quanto a compilação desses dados decidiu-se pelo uso de alguma ferramenta online. O questionário começou a ser transposto para o SurveyMonkey, porém a conta gratuita desse serviço é restrita a dez perguntas no questinário e cem questionários respondidos, limitações que tornam o serviço aquém das necessidades.
+
+    Mais adequada é a ferramenta LimeSurvey, uma \textit{webapp} de código aberto que foi instalada e configurada localmente. Com ela os dados de cada questionário podem ser inseridos de forma mais rápida e prática e, pelo fato de estar \textit{online}, o trabalho poder ser mais facilmente entre os membros do grupo. Além disso, a ferramenta gera diversas estatísticas e desenha os respectivos gráficos.
+
+\chapter{Levantamento de Histórias}
+
+  O planejamento em XP feito com Histórias escritas em pequenos cartões. Cada cartão é escrito pelo cliente e deve descrever uma unidade de funcionalidade, que geralmente representa um requisito funcional desejado\cite{sato07}.
+
+  Como uma forma de especificar o sistema a ser desenvolvido durante o projeto de formatura optou-se por descrever as histórias levantadas através de \textit{Planning Game} com o cliente.
 
 	\begin{enumerate}
 	 \item Convite a ex-participantes \\
@@ -326,22 +338,6 @@ Shin Shimizu Melnikoff}
   \end{itemize}
 
 	A duração de cada iteração será de três semanas e após esse período será feita uma entrega para o cliente que avaliará os resultados obtidos e definirá a iteração seguinte.
-
-  \chapter{Levantamento do perfil dos usuários}
-    Um dos objetivos do projeto é o estudo dos conceitos de usabilidade, aplicando-os no desenvolvimento da Febrace\textsuperscript{V}. Para se fazer um estudo de usabilidade verificou-se como necessário um levantamento prévio com possíveis usuários do sistema para verificar o seu perfil de uso e suas reais necessidades em relação a uma nova ferramenta computacional. Como a sétima edição da FEBRACE ocorreria no primeiro semestre, viu-se a possibilidade de fazer esse levantamento com os participantes da feira que são potenciais usuários da rede social. O método escolhido para fazer esse levantamento foi através de questionário aplicados a finalistas, orientadores e visitantes durante a feira.
-
-    \section{Elaboração do Questionário de perfil de uso}
-      O questionário proposto pelos integrantes do projeto foi avalidado pela equipe da FEBRACE e por outras pessoas com experiência em levantamento de dados com usuários, e a partir de suas sugestões foram feitos melhoramentos no questionário de perfil de uso de Internet dos participantes da feira.
-
-      O questionário final, apresentado no Anexo 1, apresenta três partes. A primeira tem por objetivo colher alguns dados demográficos, como idade, local de residência e escolaridade. Na segunda parte há perguntas que procuram identificar o perfil de uso da internet do usuário (de onde e com qual frequência ocorre o acesso, quais serviços são utilizados, etc.). O objetivo da terceira parte é saber a opinião dos usuários sobre sua atual experiência com os serviços web da FEBRACE e sobre seu interesse nas possíveis ferramentas oferecidas pela Febrace\textsuperscript{v}.
-
-    \section{Aplicação do questionário}
-      A FEBRACE ocorreu nos dias 17, 18 e 19 de março e durante esse período foram aplicados questionários para alunos e professores participantes, além de visitantes da feira. Foram respondidos 520 questionários. Ainda não houve tempo para a compilação dos dados dos questionários.
-
-    \section{Automação do processamento de dados coletados}
-      O método escolhido para a aplicação do questionário foi em papel. Porém, com o objetivo de facilitar tanto a inserção de dados no computador quanto a compilação desses dados decidiu-se pelo uso de alguma ferramenta online. O questionário começou a ser transposto para o SurveyMonkey, porém a conta gratuita desse serviço é restrita a dez perguntas no questinário e cem questionários respondidos, limitações que tornam o serviço aquém das necessidades.
-
-      Mais adequada é a ferramenta LimeSurvey, uma \textit{webapp} de código aberto que foi instalada e configurada localmente. Com ela os dados de cada questionário podem ser inseridos de forma mais rápida e prática e, pelo fato de estar \textit{online}, o trabalho poder ser mais facilmente entre os membros do grupo. Além disso, a ferramenta gera diversas estatísticas e desenha os respectivos gráficos.
 
 	\chapter{Tecnologias utilizadas}
 
@@ -458,18 +454,16 @@ Shin Shimizu Melnikoff}
 	\hline
 		14/06-18/06 & revisão final da monografia 1 \\
 	\hline
-		19/06 & entrega da monografia 1 no PSI \\
+		19/06 & entrega da monografia no PSI \\
 	\hline
-		26/06 & apresentação do projeto 1 no PSI \\
-	\hline
-		01/07-31/08 & testes de usabilidade e avaliação \\
-	\hline
-		01/09-27/11 & implementação com base nos resultados dos testes \\
-	\hline
-		30/11 & entrega da monografia 2 e projeto 2 no PCS \\
+		26/06 & apresentação do projeto no PSI \\
 	\hline
 	\end{tabularx} \\
 
-  	\bibliography{atividades_psi}
+\bibliography{atividades_psi}
+
+\apendice
+\chapter{Pesquisa de Perfil de Usuário}
+  \includepdf[pages={1-2}]{questionario}
 
 \end{document}
