@@ -398,6 +398,7 @@ Shin Shimizu Melnikoff}
 		Interface administrativa da aplicação, que permite operações de moderação, gerenciamento de usuários e conteúdo, etc.
 
 \chapter{Atividades realizadas}
+  As atividades realizadas nos últimos meses dividem-se em três grupos: 1) Compilação parcial dos questionários para levantamento do perfil do público-alvo do projeto, 2) Fase de exploração do Febrace\textsuperscript{V} e 3) Implementação da primeira iteração. Essas atividades são descritas a seguir.
 
   \section{Compilação parcial dos questionários}
 
@@ -425,16 +426,18 @@ Shin Shimizu Melnikoff}
       Parte do código do módulo de Login deve oferecer a funcionalidade de autenticação no sistema. Foram desenvolvidas as telas de \textit{login} e \textit{logout} do Febrace\textsuperscript{V}, e a elas foi integrada a lógica de autenticação de usuários e o mecanismo de validação de sessões.
 
     \subsection{História 3 - Cadastro de usuário}
-      A segunda parte do módulo de Login é o cadastro de usuários.
+      A segunda parte do módulo de Login é o cadastro de usuários. Para se cadastrar, o usuário deve entrar com seu nome de usuário desejado e senha, além de um email válido. Ao término do cadastro, um email é enviado para o usuário. Ele deve então clicar no link presente nesse email para ativar sua conta. Sua chave de ativação é válida por sete dias.
 
     \subsection{História 4 - Edição de perfil}
-      Usuários logados no sistema podem visualizar e alterar as informações presentes em seu perfil.
+      Após a realização do cadastro, na primeira vez que o usuário entra no sistema ele tem opção de completar sua página de perfil. A edição do perfil não precisa ser realizada naquele momento, uma vez que qualquer usuário logado no sistema pode visualizar e alterar as informações presentes em seu perfil.
 
     \subsection{História 5 - Visualização de perfil}
-      Os perfis dos usuários podem ser visualizados por qualquer visitante do site.
+      Cada usuário do sistema tem uma página pessoal, com seu perfil. Essa página pode ser acessada por qualquer visitante do Febrace\textsuperscript{V}, anônimo ou não. Posteriormente será criada a funcionalidade da alteração dos níveis de exibição dos dados do perfil (configuração de privacidade).
 
     \subsection{História 22 - Interface administrativa}
       Foi ativada a interface administrativa, que permite o gerenciamento de usuários e conteúdos do Febrace\textsuperscript{V}.
+
+    No segundo \textit{Planning Game}, programado para ocorrer no dia 11 de maio, serão definidas as histórias que serão desenvolvidas na segunda iteração.
 
 \chapter{Cronograma}
 
@@ -485,15 +488,21 @@ Shin Shimizu Melnikoff}
 	\hline
 		\multicolumn{2}{|c|}{\textbf{Atividades planejadas}} \\
 	\hline
+		11/05 & 2º \textit{Planning game} \\
+	\hline
 		11/05-15/05 & implementação da 2ª iteração \\
 	\hline
 		15/05 & apresentação de atividades no PSI \\
 	\hline
 		18/05-22/05 & implementação da 2ª iteração \\
 	\hline
+		25/05 & 3º \textit{Planning game} \\
+	\hline
 		25/05-29/06 & implementação da 3ª iteração \\
 	\hline
 		01/05-05/06 & implementação da 3ª iteração \\
+	\hline
+		08/06 & 4º \textit{Planning game} \\
 	\hline
 		08/06-12/06 & implementação da 4ª iteração \\
 	\hline
