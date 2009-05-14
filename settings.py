@@ -1,4 +1,9 @@
 # Django settings for febracev project.
+import os
+import django
+
+DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -36,7 +41,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -67,7 +72,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'febracev.urls'
 
 TEMPLATE_DIRS = (
-    "templates",
+    os.path.join(SITE_ROOT, 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -85,8 +90,13 @@ INSTALLED_APPS = (
     'profiles',
 )
 
+#User profile
 AUTH_PROFILE_MODULE = 'profile.UserProfile'
+
+#Number of days to validate user account
 ACCOUNT_ACTIVATION_DAYS = 7
+
+#Mail Server configuration
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_USE_TLS=1
 EMAIL_PORT=587
