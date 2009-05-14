@@ -1,8 +1,8 @@
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title%} | Login{% endblock %}
+
+{% block content %}
     <h1>Login</h1>
 
     {% if form.errors %}
@@ -14,16 +14,16 @@
     <form action="" method="post">
         <div class="field">
             {{ form.username.errors }}
-            <label for="id_subject">Usuário:</label>
+            <label for="id_username">Usuário:</label>
             {{ form.username }}
         </div>
         <div class="field">
             {{ form.password.errors }}
-            <label for="id_message">Senha:</label>
+            <label for="id_password">Senha:</label>
             {{ form.password }}
         </div>
         <input type="submit" value="Enviar">
-    </form>
-</body>
-</html>
+        <input type="hidden" name="next" value="/profiles/" />
 
+    </form>
+{% endblock %}

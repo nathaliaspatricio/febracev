@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>FEBRACEv {% block title %}{% endblock %}</title>
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+  <div id="header">
+    <h1 id="branding">FebraceV</h1>
+  </div>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div id="sidebar">
+    <h2>Navegação</h2>
+    <ul id="main-nav">
+       <li id="main-logout">
+       <a href="/accounts/logout">Logout</a>
+       </li>
+    </ul>
+    <h2>What is this?</h2>
+    {% block whatis %}
+    {% endblock %}
+  </div>
+</body>
+</html>
