@@ -1,11 +1,14 @@
 from django import forms
 from profile.models import UserProfile
+from django.contrib.auth.models import User
 
 class ProfileForm(forms.ModelForm):
-    first_name = forms.CharField()
-    last_name = forms.CharField()
-    email = forms.EmailField()
 
     class Meta:
         model = UserProfile
         exclude = ('user',)
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email',)

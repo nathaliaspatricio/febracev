@@ -5,15 +5,22 @@
 <body>
     <h1>Editar Perfil</h1>
 
-    {% if form.errors %}
+    {% if user_form.errors %}
         <p style="color: red;">
-            Please correct the error{{ form.errors|pluralize }} below.
+            Please correct the error{{ user_form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    {% if profile_form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ profile_form.errors|pluralize }} below.
         </p>
     {% endif %}
 
     <form action="" method="post">
         <table>
-            {{ form.as_table }}
+            {{ user_form.as_table }}
+            {{ profile_form.as_table }}
         </table>
         <input type="submit" value="Enviar">
     </form>

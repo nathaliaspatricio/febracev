@@ -1,0 +1,33 @@
+Retrospectiva - 14/05/2009
+
+1ª Iteração
+
+- Planejada
+
+    2 - Autenticação no sistema
+    3 - Cadastro de usuário
+
+    Visualização de Projeto
+    Visualização de Participantes de um projeto
+    Edição dos Conteúdos de um projeto
+    Cadastro de novo projeto
+
+- Executada
+
+    2 - Autenticação no sistema
+    3 - Cadastro de usuário
+    4 - Edição de perfil
+    5 - Visualização de perfil
+
+    22 - Interface administrativa
+
+Mais 3 iterações (2 semanas cada)
+
+2ª iteração
+
+    Esboçar PageFlow
+    Esboçar hierarquia de templates
+    Projetos: Visualização
+    Projetos: Participantes
+    Projetos: Vídeos
+    Cadastro de novo projeto
