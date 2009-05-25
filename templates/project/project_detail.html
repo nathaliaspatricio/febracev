@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title%} | Projetos | {{ project.code }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ project.name }}</h1>
+    <br/>
+    <embed TYPE='application/x-mplayer2'
+    pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
+    SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
+    ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=288
+    LOOP='false'></embed> <br/>
+
+{% endblock %}

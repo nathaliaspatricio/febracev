@@ -3,23 +3,22 @@
   <title>FEBRACEv {% block title %}{% endblock %}</title>
 </head>
 <body class="{% block bodyclass %}{% endblock %}">
+
   <div id="header">
-    <h1 id="branding">FebraceV</h1>
+      <img src="{{ MEDIA_URL }}images/logo.png" alt="logo" />
   </div>
+
   <div id="content">
     {% block content %}
     {% endblock %}
   </div>
-  <div id="sidebar">
-    <h2>Navegação</h2>
-    <ul id="main-nav">
-       <li id="main-logout">
-       <a href="/accounts/logout">Logout</a>
-       </li>
-    </ul>
-    <h2>What is this?</h2>
-    {% block whatis %}
-    {% endblock %}
+
+  <div id="menu">
+    <h2>Menu</h2>
   </div>
+
+  <div id="footer">
+  </div>
+
 </body>
 </html>
