@@ -15,8 +15,8 @@ from django.template import RequestContext
 from django.views.generic.list_detail import object_list
 
 from profiles import utils
-from profile.forms import ProfileForm
-from profile.forms import UserForm
+from profiles.forms import ProfileForm
+from profiles.forms import UserForm
 
 
 def create_profile(request, form_class=ProfileForm, success_url=None,

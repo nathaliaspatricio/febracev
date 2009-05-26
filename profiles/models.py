@@ -45,8 +45,8 @@ class UserProfile(models.Model):
     def __unicode__(self):
         return self.user.username
 
+    @models.permalink
     def get_absolute_url(self):
         return ('profiles_profile_detail', (), { 'username': self.user.username })
-    get_absolute_url = models.permalink(get_absolute_url)
 
 admin.site.register(UserProfile)

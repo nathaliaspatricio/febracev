@@ -85,13 +85,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'project',
-    'profile',
-    'registration',
     'profiles',
+    'registration',
 )
 
 #User profile
-AUTH_PROFILE_MODULE = 'profile.UserProfile'
+AUTH_PROFILE_MODULE = 'profiles.UserProfile'
 
 #Number of days to validate user account
 ACCOUNT_ACTIVATION_DAYS = 7

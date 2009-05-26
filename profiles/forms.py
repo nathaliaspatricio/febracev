@@ -1,5 +1,5 @@
 from django import forms
-from profile.models import UserProfile
+from profiles.models import UserProfile
 from django.contrib.auth.models import User
 
 class ProfileForm(forms.ModelForm):
