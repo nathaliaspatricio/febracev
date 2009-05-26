@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
-from project import views
+from projects import views
 
 urlpatterns = patterns('',
     (r'^(?P<year>\d{4})/$', views.projects_by_year),

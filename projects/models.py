@@ -33,6 +33,6 @@ class Project(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('project.views.project_detail', (), {'year': self.edition, 'code': self.code})
+        return ('projects.views.project_detail', (), {'year': self.edition, 'code': self.code})
 
 admin.site.register(Project)
