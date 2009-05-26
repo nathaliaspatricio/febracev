@@ -23,8 +23,8 @@ class Project(models.Model):
     #subcategory = models.CharField(max_length=50)
     keywords = models.CharField(max_length=100)
 
-    edition = models.IntegerField()
-    code = models.CharField(max_length=6)
+    edition = models.CharField(max_length=4)
+    code = models.CharField(max_length=3)
 
     video = models.CharField(max_length=47)
 
@@ -33,6 +33,8 @@ class Project(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('projects.views.project_detail', (), {'year': self.edition, 'code': self.code})
+        return ('projects.views.project_detail', (), {'year': self.edition,
+                                                      'category': self.category,
+                                                      'code': self.code})
 
 admin.site.register(Project)
