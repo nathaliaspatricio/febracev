@@ -1,7 +1,7 @@
 [
   {
     "pk": 1, 
-    "model": "auth.user", 
+	    "model": "auth.user", 
     "fields": {
       "username": "admin", 
       "first_name": "", 
@@ -15,6 +15,14 @@
       "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
       "email": "admin@admin.com", 
       "date_joined": "2009-05-14 13:27:14"
+    }
+  },
+  {
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+      "domain": "localhost:8000", 
+      "name": "localhost:8000"
     }
   }
 ]
