@@ -7,12 +7,15 @@ from django.http import Http404
 from projects.models import Project, CATEGORIES
 
 def projects_by_year(request, year):
-    return list_detail.object_list(
-               request,
-               queryset = Project.objects.filter(edition=year),
-               template_object_name = 'project',
-               extra_context = {'title': year}
-           )
+    if (int(year) < 2003 or int(year) > 2009):
+        raise Http404
+    else:
+        return list_detail.object_list(
+                   request,
+                   queryset = Project.objects.filter(edition=year),
+                   template_object_name = 'project',
+                   extra_context = {'title': year}
+               )
 
 def projects_by_category(request, category):
     if (category not in [cat[0] for cat in CATEGORIES]):
