@@ -99,9 +99,9 @@ def create_profile(request, form_class=ProfileForm, success_url=None,
     if form_class is None:
         form_class = utils.get_profile_form()
     if request.method == 'POST':
+        profile_form = form_class(data=request.POST, files=request.FILES)
         user_form = UserForm(data=request.POST, files=request.FILES,
                              instance=request.user)
-        profile_form = form_class(data=request.POST, files=request.FILES)
         if user_form.is_valid() and profile_form.is_valid():
             user_obj = user_form.save()
 
@@ -202,9 +202,10 @@ def edit_profile(request, form_class=ProfileForm, success_url=None,
         form_class = utils.get_profile_form()
 
     if request.method == 'POST':
+        profile_form = form_class(data=request.POST, files=request.FILES, instance=profile_obj)        
         user_form = UserForm(data=request.POST, files=request.FILES,
                              instance=request.user)
-        profile_form = form_class(data=request.POST, files=request.FILES, instance=profile_obj)
+        
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()

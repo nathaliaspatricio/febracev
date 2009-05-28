@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans 'Django site admin' %}{% endblock %}
+
+{% block branding %}
+<img src="{{ MEDIA_URL }}images/logo.png" height="40px" alt="febracev"/>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

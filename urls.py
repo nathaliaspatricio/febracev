@@ -1,5 +1,7 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
+from projects.models import Project
+from tagging.models import Tag
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -20,4 +22,11 @@ urlpatterns = patterns('',
     (r'^projects/', include('projects.urls')),
     (r'^media/(.*)$', 'django.views.static.serve',
      {'document_root': settings.MEDIA_ROOT}),
+    (r'^tags/$',
+     'django.views.generic.list_detail.object_list',
+     { 'queryset': Tag.objects.all() }),
+    (r'^tags/projects/(?P<tag>[-\w]+)/$',
+     'tagging.views.tagged_object_list',
+     { 'queryset_or_model': Project,
+     'template_name': 'projects/projects_by_tag.html' }),
 )

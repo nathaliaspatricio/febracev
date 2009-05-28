@@ -2,6 +2,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib import admin
+from tagging.fields import TagField
 
 CATEGORIES = (
         ('AGR', 'Ciências Agrárias'),
@@ -21,7 +22,7 @@ class Project(models.Model):
     institution = models.CharField(max_length=100)
     category = models.CharField(max_length=3, choices=CATEGORIES)
     #subcategory = models.CharField(max_length=50)
-    keywords = models.CharField(max_length=100)
+    keywords = TagField()
 
     edition = models.CharField(max_length=4)
     code = models.CharField(max_length=3)
@@ -36,5 +37,3 @@ class Project(models.Model):
         return ('projects.views.project_detail', (), {'year': self.edition,
                                                       'category': self.category,
                                                       'code': self.code})
-
-admin.site.register(Project)

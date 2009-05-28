@@ -39,7 +39,7 @@ class UserProfile(models.Model):
     birthdate = models.DateField()
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
 
-    mugshot = models.URLField()
+    mugshot = models.ImageField(upload_to='uploads/', blank=True)
     institution = models.CharField(max_length=100)
 
     def __unicode__(self):

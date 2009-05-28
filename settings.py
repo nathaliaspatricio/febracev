@@ -87,6 +87,7 @@ INSTALLED_APPS = (
     'projects',
     'profiles',
     'registration',
+    'tagging',
 )
 
 #User profile
