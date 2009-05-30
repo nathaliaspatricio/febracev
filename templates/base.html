@@ -1,24 +1,114 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-  <title>FEBRACEv {% block title %}{% endblock %}</title>
-</head>
-<body class="{% block bodyclass %}{% endblock %}">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+    	<title>Feira Brasileira Virtual de Ciências e Engenharia {% block title %}{% endblock %}</title>    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Language" content="PT-BR">
+        <meta http-equiv="imagetoolbar" content="no">
+        <meta name="keywords" content="video sharing, videos, share, camera, videoblog, vidblogs, movies, science, community, videoblogging, science fair, engineering, feira de ciências, ciência, engenharia, blog">
+        <meta name="abstract" content="Share your video clips.">
+        <meta name="author" content="Leandro Biazon e Nathalia Patrício">
+        <meta name="distribution" content="Global">
+        <meta name="developers" content="Leandro Biazon e Nathalia Patrício">
+        <meta name="revisit-after" content="1 days">
+        <meta name="robots" content="follow,index">
+        <meta name="warning" content="HC SVNT DRACONES">
+		<meta name="description" content="FebraceV é uma feira virtual de ciências e engenharia.">
+		
+        <link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}css/main.css">
+        <!--[if IE]>
+	        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/ie.css?25243" />
+        <![endif]-->
+        <!--[if IE 7]>
+	        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/ie7.css?25243" />
+        <![endif]-->		
+    </head>
 
-  <div id="header">
-      <img src="{{ MEDIA_URL }}images/logo.png" alt="logo" />
-  </div>
+    <body>
+	<div id="outer_wrap">
+	    <div id="inner_wrap">
+		    <div id="everything">
+			    <div id="top">
+				    <div id="logo">
+                        <a href=""><img src="{{ MEDIA_URL }}images/logo.png" alt="Febracev" class="transifyme" /></a>
+                    </div>
+				    <div id="newmenudo">
+	                    <ul id="nav" class="grandpappy">
+		                    <img src="{{ MEDIA_URL }}images/menudo_capright.png" class="transifyme" id="capright" alt="">
+		                    <li class="firstborn search" id="menudo_search_subtier">
+			                    <div class="rounded_input">
+				                    <div class="contain">
+					                    <form onsubmit="menudo_search(); return false;" name="search">
+					                        <input id="menudo_search_field" type="text" onblur="menudo_search_blur()" onclick="menudo_search_click()" value="Busca" class="field" />
+					                        <input type="submit" value="" onclick="menudo_search(); return false;" class="button" />
+					                    </form>
+				                    </div>	
+		                        </div>
+		                    </li>
+		                    <li class="firstborn explore">
+			                    <a class="label" href="">Colunas</a>
+		                    </li>
+		                    <li class="firstborn explore" id="menudo_explore">
+			                    <a href="" class="label">Projetos</a>
+		                    </li>
+		                    <li class="firstborn login">
+		                        <a class="label" href="" rel="nofollow">Login</a>
+		                    </li>
+		                    <li class="firstborn join">
+			                    <img src="{{ MEDIA_URL }}images/newmenudo_join.gif" class="joinimage" alt="" onclick="window.location = '';" />
+		                    </li>
+	                    </ul>
+	                </div>			
+                </div>
+			    <div id="cap">
+				    <img src="{{ MEDIA_URL }}images/top_cap.png" alt="" class="transifyme" />
+			    </div>
 
-  <div id="content">
-    {% block content %}
-    {% endblock %}
-  </div>
-
-  <div id="menu">
-    <h2>Menu</h2>
-  </div>
-
-  <div id="footer">
-  </div>
-
-</body>
+			    <div id="main">
+				    <div id="header">
+					    <h1>&nbsp;</h1>
+				    </div>
+                    <div class="columns">
+                        <div id="columnA" class="column">
+                            <div id="content">
+                                {% block content %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                        <div id="columnB" class="column">
+                        </div>
+                        <div class="clear"/>
+                    </div>
+                    <div id="related_feeds_wrapper">
+                        <div id="related_feeds">
+                        </div>
+                    </div>
+                    <div id="bottom">
+                        <ul>
+                            <li>
+                            <a href="">Sobre</a>
+                            /
+                            <a target="_blank" href="http://febracev.wordpress.com">Blog</a>
+                            /
+                            <a target="_blank" href="http://github.com/nathaliaspatricio/febracev">Código fonte</a>
+                            /
+                            <a href="http://www.lsi.usp.br/febrace">FEBRACE</a>
+                            /
+                            <a href="">Mapa do Site</a>
+                            /
+                            <a href="">Ajuda</a>
+                            /
+                            <a href="">Termos de Uso</a>
+                            /
+                            <a rel="nofollow" href="">Política de Privacidade</a>
+                            </div>
+                            <div class="clear"/>
+                            </li>
+                        </ul>
+                    </div>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+    </body>
 </html>
