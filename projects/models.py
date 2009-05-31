@@ -2,6 +2,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib import admin
+from datetime import datetime
 from tagging.fields import TagField
 
 CATEGORIES = (
@@ -37,3 +38,11 @@ class Project(models.Model):
         return ('projects.views.project_detail', (), {'year': self.edition,
                                                       'category': self.category,
                                                       'code': self.code})
+
+class ProjectLink(models.Model):
+    user = models.ForeignKey(User)
+    project = models.ForeignKey(Project)
+    date_added = models.DateTimeField(default=datetime.now)
+
+    def __unicode__(self):
+        return u'%s é favorito de %s' % (self.project.name, self.user.username)
