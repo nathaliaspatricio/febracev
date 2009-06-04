@@ -1,8 +1,8 @@
-<html>
-<head>
-    <title>Editar Perfil</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title%} | Editar Perfil{% endblock %}
+
+{% block content %}
     <h1>Editar Perfil</h1>
 
     {% if user_form.errors %}
@@ -24,6 +24,5 @@
         </table>
         <input type="submit" value="Enviar">
     </form>
-</body>
-</html>
+{% endblock %}
 
