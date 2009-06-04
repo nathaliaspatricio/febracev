@@ -1,8 +1,8 @@
-<html>
-<head>
-    <title>Perfil</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title%} | Perfil{% endblock %}
+
+{% block content %}
     <h1>Perfil</h1>
     <img src="{{ profile.mugshot.url }}" />
     <br/>    
@@ -12,6 +12,4 @@
     Estado: {{ profile.state }} <br/>
     Data de Nascimento: {{ profile.birthdate }} <br/>
     Sexo: {{ profile.gender }} <br/>
-</body>
-</html>
-
+{% endblock %}
