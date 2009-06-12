@@ -2,7 +2,7 @@
 
 import unittest
 from django.contrib.auth.models import User
-from profile.models import UserProfile
+from profiles.models import UserProfile
 
 from datetime import date
 

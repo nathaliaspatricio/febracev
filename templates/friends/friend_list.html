@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title%} | Amigos {% endblock %}
+
+{% block content %}
+    <h2>Amigos </h2>
+
+    <ul>
+    {% for friend in friend_list %}
+        {% if friend.get_profile %}
+            <li><a href={{ friend.get_profile.get_absolute_url }}>{{ friend.username }}</a></li>
+        {% else %}
+            <li>{{ friend.username }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+{% endblock %}

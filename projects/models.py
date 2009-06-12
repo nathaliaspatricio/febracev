@@ -46,3 +46,6 @@ class ProjectLink(models.Model):
 
     def __unicode__(self):
         return u'%s é favorito de %s' % (self.project.name, self.user.username)
+
+    class Meta:
+        unique_together = (('user', 'project'),)

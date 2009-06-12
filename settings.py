@@ -31,7 +31,8 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'pt-br'
+#LANGUAGE_CODE = 'pt-br'
+LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
@@ -87,6 +88,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.flatpages',
     'django.contrib.comments',
+    'friends',
     'projects',
     'profiles',
     'registration',
