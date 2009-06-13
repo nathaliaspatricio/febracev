@@ -2,8 +2,11 @@
 
 {% block title%} | Registro {% endblock %}
 
-{% block content %}
+{% block header %}
     <h1>Registro</h1>
+{% endblock %}
+
+{% block content %}
 
     {% if form.errors %}
         <p style="color: red;">

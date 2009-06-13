@@ -2,12 +2,15 @@
 
 {% block title%} | Login{% endblock %}
 
-{% block content %}
+{% block header%}
     <h1>Login</h1>
+{% endblock %}
+
+{% block content %}
 
     {% if form.errors %}
         <p style="color: red;">
-            Please correct the error{{ form.errors|pluralize }} below.
+            Por favor, corrija o erro {{ form.error|pluralize }} abaixo.
         </p>
     {% endif %}
 
