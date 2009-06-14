@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block head %}
+{% if user.is_authenticated %}
+    <meta http-equiv="REFRESH" content="0;url={{ user.get_profile.get_absolute_url }}">
+{% endif %}
+{% endblock %}
+
 {% block title%} | Registro {% endblock %}
 
 {% block header %}
