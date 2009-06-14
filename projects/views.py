@@ -9,6 +9,14 @@ from django.contrib.auth.decorators import login_required
 from projects.models import Project, CATEGORIES
 from projects.utils import get_favorite_projects
 
+def projects_main(request):
+    years = range(2003,2010)
+    categories = list(CATEGORIES)
+    return render_to_response('projects/projects_main.html',
+                              {'years': years,
+                               'categories': categories},
+                              context_instance = RequestContext(request))
+
 def projects_by_year(request, year):
     if (int(year) < 2003 or int(year) > 2009):
         raise Http404
@@ -21,14 +29,15 @@ def projects_by_year(request, year):
                )
 
 def projects_by_category(request, category):
-    if (category not in [cat[0] for cat in CATEGORIES]):
+    categories = dict(CATEGORIES)
+    if (category not in categories.keys()):
         raise Http404
     else:
         return list_detail.object_list(
                    request,
                    queryset = Project.objects.filter(category=category),
                    template_object_name = 'project',
-                   extra_context = {'title': category}
+                   extra_context = {'title': categories[category]}
                )
 
 def project_detail(request, year, category, code):

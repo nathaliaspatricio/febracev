@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %} | Projetos {% endblock %}
+
+{% block header %}
+    <h1>Projetos</h1>
+{% endblock %}
+
+{% block content %}
+
+    <h2>Projetos por categoria<h2>
+    <br />
+    <ul>
+    {% for key, category in categories %}
+        <li><a href="{% url projects_by_category key  %}">{{ category }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <br />
+
+    <h2>Projetos por ano<h2>
+    <br />
+    <ul>
+    {% for year in years reversed %}
+        <li><a href="{% url projects_by_year year  %}">{{ year }}</a></li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

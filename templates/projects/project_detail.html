@@ -19,7 +19,7 @@
         {% render_comment_form for project %}
 
         {% get_comment_list for project as comment_list %}
-        
+
         {% get_comment_form for project as form %}
         <form action="{% comment_form_target %}" method="POST">
           {{ form.user }}
