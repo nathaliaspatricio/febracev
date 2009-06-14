@@ -6,6 +6,23 @@
     <h1>{{ user.first_name }} {{ user.last_name }}</h1>
 {% endblock %}
 
+{% block toolbar %}
+    <div id="toolbar">          
+        <div class="toolbar_item" onmouseover="toolbar_roll('envelope',event)" onmouseout="toolbar_roll('envelope',event)">
+			<a href="">
+                <img src="{{ MEDIA_URL }}images/toolbar_envelope.png" id="toolbar_envelope" alt="share" /><br />
+	            Mensagem
+            </a>
+		</div>
+        <div id="contact_switch" class="toolbar_item">
+            <a href="">
+                <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
+                Adicione
+            </a>
+	    </div>                           			
+    </div>
+{% endblock %}
+
 {% block content %}
     <div class="column" id="column1A">
 
