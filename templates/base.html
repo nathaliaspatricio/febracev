@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-    	<title>Feira Brasileira Virtual de Ciências e Engenharia {% block title %}{% endblock %}</title>    
+    	<title>Feira Brasileira Virtual de Ciências e Engenharia {% block title %}{% endblock %}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="Content-Language" content="PT-BR">
         <meta http-equiv="imagetoolbar" content="no">
@@ -14,14 +14,15 @@
         <meta name="robots" content="follow,index">
         <meta name="warning" content="HC SVNT DRACONES">
 		<meta name="description" content="FebraceV é uma feira virtual de ciências e engenharia.">
-		
+
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/search.js"></script>
         <link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}css/main.css">
         <!--[if IE]>
 	        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/ie.css?25243" />
         <![endif]-->
         <!--[if IE 7]>
 	        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/ie7.css?25243" />
-        <![endif]-->	
+        <![endif]-->
         {% block head %}{% endblock %}
     </head>
 
@@ -44,7 +45,7 @@
 					                            <input id="menudo_search_field" type="text" onblur="menudo_search_blur()" onclick="menudo_search_click()" value="Busca" class="field" />
 					                            <input type="submit" value="" onclick="menudo_search(); return false;" class="button" />
 					                        </form>
-				                        </div>	
+				                        </div>
 			                        </div>
 		                        </li>
 		                        <li class="firstborn explore">
@@ -61,7 +62,7 @@
 		                        </li>
 	                        </ul>
                             <img id="capleft" alt="" src="{{ MEDIA_URL }}images/menudo_capleft.png"/>
-	                    </div>	
+	                    </div>
                     {% else %}
 				        <div id="newmenudo">
 	                        <ul id="nav" class="grandpappy">
@@ -73,7 +74,7 @@
 					                            <input id="menudo_search_field" type="text" onblur="menudo_search_blur()" onclick="menudo_search_click()" value="Busca" class="field" />
 					                            <input type="submit" value="" onclick="menudo_search(); return false;" class="button" />
 					                        </form>
-				                        </div>	
+				                        </div>
 		                            </div>
 		                        </li>
 		                        <li class="firstborn explore">

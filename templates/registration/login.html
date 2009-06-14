@@ -2,7 +2,11 @@
 
 {% block head %}
 {% if user.is_authenticated %}
-    <meta http-equiv="REFRESH" content="0;url={{ user.get_profile.get_absolute_url }}">
+    {% if user.get_profile %}
+        <meta http-equiv="REFRESH" content="0;url={{ user.get_profile.get_absolute_url }}">
+    {% else %}
+        <meta http-equiv="REFRESH" content="0;url=/profiles/create/">
+    {% endif %}
 {% endif %}
 {% endblock %}
 
