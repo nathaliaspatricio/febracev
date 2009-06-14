@@ -2,8 +2,11 @@
 
 {% block title%} | Criar Perfil{% endblock %}
 
-{% block content %}
+{% block header%}
     <h1>Criar Perfil</h1>
+{% endblock %}
+
+{% block content %}
 
     {% if user_form.errors %}
         <p style="color: red;">

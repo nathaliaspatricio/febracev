@@ -2,8 +2,11 @@
 
 {% block title%} | Tags {% endblock %}
 
+{% block header%}
+    <h1>Tags</h1>
+{% endblock %}
+
 {% block content %}
-    <h2>Tags </h2>
 
     <ul>
     {% for tag in object_list %}
