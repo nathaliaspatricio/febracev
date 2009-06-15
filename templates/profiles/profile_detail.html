@@ -90,34 +90,44 @@
                 <a href="/friends/mutual/{{ user.username }}">mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>
-			<div class="subcolumn" id="columnBright">
-                {% if user.is_authenticated %}			
-                    <h3>Recados</h3>
-                        {% render_comment_form for profile %}
-
-                        {% get_comment_list for profile as comment_list %}
-
-                        {% get_comment_form for profile as form %}
-                        <form action="{% comment_form_target %}" method="POST">
-                          {{ form.user }}
-                          <tr>
-                            <td></td>
-                            <td><input type="submit" name="preview" class="submit-post" value="Preview"></td>
-                          </tr>
-                        </form>
-                    {% else %}
-                        {% render_comment_form for profile %}
-                    {% endif %}
-                    <ul>
-                        {% for comment in comment_list %}
-                            <li> {{ comment.user_name }}</li>
-                            <li> {{ comment.comment }}</li>
-                        {% endfor %}
-                    </ul>
-                <div class="clear">&nbsp;</div>
-			</div>
 		</div>
 		<div class="clear"></div>
 	</div>
 
+{% endblock %}
+
+{% block columnB %}
+    <div class="column" id="columnB">
+		<div class="columnBhead">	
+            <h2>Recados</h2>
+			<div class="clear">&nbsp;</div>
+		</div>
+		<div class="subcolumns">
+			<div class="subcolumn" id="columnBleft">
+                {% if user.is_authenticated %}			
+                    {% render_comment_form for profile %}
+
+                    {% get_comment_list for profile as comment_list %}
+
+                    {% get_comment_form for profile as form %}
+                    <form action="{% comment_form_target %}" method="POST">
+                      {{ form.user }}
+                      <tr>
+                        <td></td>
+
+                      </tr>
+                    </form>
+                {% else %}
+                    {% render_comment_form for profile %}
+                {% endif %}
+                <ul>
+                    {% for comment in comment_list %}
+                        <li> {{ comment.user_name }}</li>
+                        <li> {{ comment.comment }}</li>
+                    {% endfor %}
+                </ul>
+			    <div class="clear">&nbsp;</div>
+	        </div>
+        </div>
+    </div>
 {% endblock %}
