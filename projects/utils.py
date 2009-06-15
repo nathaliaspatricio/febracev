@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from projects.models import Project, ProjectLink
 from django.contrib.auth.models import User
 

@@ -33,6 +33,9 @@ class Project(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        unique_together = (('category', 'edition', 'code'),)
+
     @models.permalink
     def get_absolute_url(self):
         return ('projects.views.project_detail', (), {'year': self.edition,

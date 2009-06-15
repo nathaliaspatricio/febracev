@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title%} | Busca | {{ title }}{% endblock %}
+
+{% block header%}
+    <h1>Busca | {{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+
+    <h2>Projetos</h2>
+    <ul>
+    {% for project in project_list %}
+        <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2>Usuários</h2>
+    <ul>
+    {% for user in user_list %}
+        <li><a href="{{ user.get_profile.get_absolute_url }}">{{ user.username }}</a></li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

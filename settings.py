@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Django settings for febracev project.
 import os
 import django
@@ -92,6 +93,7 @@ INSTALLED_APPS = (
     'projects',
     'profiles',
     'registration',
+    'search',
     'tagging',
 )
 

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf.urls.defaults import *
 from django.conf import settings
 from projects.models import Project
@@ -22,6 +23,7 @@ urlpatterns = patterns('',
     (r'^friends/', include('friends.urls')),
     (r'^profiles/', include('profiles.urls')),
     (r'^projects/', include('projects.urls')),
+    (r'^search/', include('search.urls')),
     (r'^media/(.*)$', 'django.views.static.serve',
      {'document_root': settings.MEDIA_ROOT}),
     (r'^tags/$',
