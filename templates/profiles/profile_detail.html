@@ -4,24 +4,28 @@
 {% block title%} | Perfil{% endblock %}
 
 {% block header%}
-    <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+    <h1>{{ profile.user.first_name }} {{ profile.user.last_name }}</h1>
 {% endblock %}
 
 {% block toolbar %}
-    <div id="toolbar">          
-        <div class="toolbar_item" onmouseover="toolbar_roll('envelope',event)" onmouseout="toolbar_roll('envelope',event)">
-			<a href="">
-                <img src="{{ MEDIA_URL }}images/toolbar_envelope.png" id="toolbar_envelope" alt="share" /><br />
-	            Mensagem
-            </a>
-		</div>
-        <div id="contact_switch" class="toolbar_item">
-            <a href="">
-                <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
-                Adicione
-            </a>
-	    </div>                           			
-    </div>
+    {% if user.is_authenticated %}
+        {% ifnotequal user profile.user %}
+            <div id="toolbar">
+                <div class="toolbar_item" onmouseover="toolbar_roll('envelope',event)" onmouseout="toolbar_roll('envelope',event)">
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}images/toolbar_envelope.png" id="toolbar_envelope" alt="share" /><br />
+                        Mensagem
+                    </a>
+                </div>
+                <div id="contact_switch" class="toolbar_item">
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
+                        Adicione
+                    </a>
+                </div>
+            </div>
+        {% endifnotequal %}
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -34,10 +38,10 @@
         </div>
         <div class="portrait_area">
             <div class="portrait">
-                <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ user.first_name }} {{ user.last_name }}" />
+                <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
                 <div id="formyportrait" style="display:none;width:300px;height:300px;">
                 </div>
-            </div>										
+            </div>
         </div>
 
         <div class="softcorners2" style="background:#f1f2e8;">
@@ -47,47 +51,49 @@
             <div class="insides">
                 <div class="personal">
                     {% if user.is_authenticated %}
-				        <div class="where">
-					        <span class="locality"></span><br />
-					        <span class="url"><a href="/profiles/edit">Editar Perfil</a>
-                            </span>
-				        </div>
-                    {% endif %}	
+                        {% ifequal user profile.user %}
+                            <div class="where">
+                                <span class="locality"></span><br />
+                                <span class="url"><a href={% url profiles_edit_profile %}>Editar Perfil</a>
+                                </span>
+                            </div>
+                        {% endifequal %}
+                    {% endif %}
                     <div id="bio">
                         <br/>
-                        Email: {{ user.email }} <br/>
+                        Email: {{ profile.user.email }} <br/>
                         Cidade: {{ profile.city }} <br/>
                         Estado: {{ profile.state }} <br/>
                         Data de Nascimento: {{ profile.birthdate }} <br/>
                         Sexo: {{ profile.gender }} <br/>
                     </div>
-                </div>			
-            </div>	
+                </div>
+            </div>
             <div class="sosoft" style="background: url('{{ MEDIA_URL }}images/rounder_right_inferior.gif') no-repeat bottom right; height: 15px;">
                 <div style="background: url('{{ MEDIA_URL }}images/rounder_left_inferior.gif') no-repeat bottom left;  height: 15px;" ></div>
             </div>
-        </div>	
+        </div>
     </div>
 
 	<div class="column" id="columnB">
-		<div class="columnBhead">	
+		<div class="columnBhead">
             <h2>Amigos</h2>
 			<div class="clear">&nbsp;</div>
 		</div>
 		<div class="subcolumns">
 			<div class="subcolumn" id="columnBleft">
                 <h3>Pessoas que sigo</h3>
-                <a href="/friends/following/{{ user.username }}">mais...</a> 
+                <a href={% url friends_following profile.user.username %}>mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>
-			<div class="subcolumn" id="columnBright">			
+			<div class="subcolumn" id="columnBright">
                 <h3>Pessoas que me seguem</h3>
-                <a href="/friends/followers/{{ user.username }}">mais...</a>
+                <a href={% url friends_followers profile.user.username %}>mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>
-			<div class="subcolumn" id="columnBright">			
+			<div class="subcolumn" id="columnBright">
                 <h3>Amigos</h3>
-                <a href="/friends/mutual/{{ user.username }}">mais...</a>
+                <a href={% url friends_mutual profile.user.username %}>mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>
 		</div>
@@ -98,13 +104,13 @@
 
 {% block columnB %}
     <div class="column" id="columnB">
-		<div class="columnBhead">	
+		<div class="columnBhead">
             <h2>Recados</h2>
 			<div class="clear">&nbsp;</div>
 		</div>
 		<div class="subcolumns">
 			<div class="subcolumn" id="columnBleft">
-                {% if user.is_authenticated %}			
+                {% if user.is_authenticated %}
                     {% render_comment_form for profile %}
 
                     {% get_comment_list for profile as comment_list %}

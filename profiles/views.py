@@ -202,10 +202,10 @@ def edit_profile(request, form_class=ProfileForm, success_url=None,
         form_class = utils.get_profile_form()
 
     if request.method == 'POST':
-        profile_form = form_class(data=request.POST, files=request.FILES, instance=profile_obj)        
+        profile_form = form_class(data=request.POST, files=request.FILES, instance=profile_obj)
         user_form = UserForm(data=request.POST, files=request.FILES,
                              instance=request.user)
-        
+
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
@@ -297,7 +297,7 @@ def profile_detail(request, username, public_profile_field=None,
         context[key] = callable(value) and value() or value
 
     return render_to_response(template_name,
-                              { 'profile': profile_obj, 'user': user },
+                              { 'profile': profile_obj, },
                               context_instance=context)
 
 def profile_list(request, public_profile_field=None,

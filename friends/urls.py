@@ -6,15 +6,18 @@ urlpatterns = patterns('friends.views',
         r'^following/(?P<username>[a-z]+)/$',
         'friend_list',
         {'function_alias': 'following'},
+        name='friends_following',
     ),
     url(
         r'^followers/(?P<username>[a-z]+)/$',
         'friend_list',
         {'function_alias': 'followers'},
+        name='friends_followers',
     ),
     url(
         r'^mutual/(?P<username>[a-z]+)/$',
         'friend_list',
         {'function_alias': 'mutual'},
+        name='friends_mutual',
     ),
 )
