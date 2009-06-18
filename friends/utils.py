@@ -21,3 +21,6 @@ def get_mutual_set(user):
     mutual_set = set(following_set).intersection(set(followers_set))
 
     return list(mutual_set)
+
+def is_friend(visitor, user):
+    return user in get_following_set(visitor)

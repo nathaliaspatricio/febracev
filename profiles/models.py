@@ -43,9 +43,6 @@ class UserProfile(models.Model):
     mugshot = models.ImageField(upload_to='uploads/', blank=True)
     institution = models.CharField(max_length=100)
 
-    def is_friend(self, user):
-        return user in get_following_set(self.user)
-
     def __unicode__(self):
         return self.user.username
 

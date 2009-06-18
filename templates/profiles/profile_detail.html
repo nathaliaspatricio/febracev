@@ -92,16 +92,31 @@
 		<div class="subcolumns">
 			<div class="subcolumn" id="columnBleft">
                 <h3>Pessoas que sigo</h3>
-                <a href={% url friends_following profile.user.username %}>mais...</a>
-                <div class="clear">&nbsp;</div>
-			</div>
+                <ul>
+                {% for following in following_list %}
+                    <li><a href={{ following.get_profile.get_absolute_url }}>{{ following.username }}</a></li>
+                {% endfor %}
+                </ul>
+                    <a href={% url friends_following profile.user.username %}>mais...</a>
+                    <div class="clear">&nbsp;</div>
+            </div>
 			<div class="subcolumn" id="columnBright">
                 <h3>Pessoas que me seguem</h3>
+                <ul>
+                {% for follower in follower_list %}
+                    <li><a href={{ follower.get_profile.get_absolute_url }}>{{ follower.username }}</a></li>
+                {% endfor %}
+                </ul>
                 <a href={% url friends_followers profile.user.username %}>mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>
 			<div class="subcolumn" id="columnBright">
                 <h3>Amigos</h3>
+                <ul>
+                {% for mutual in mutual_list %}
+                    <li><a href={{ mutual.get_profile.get_absolute_url }}>{{ mutual.username }}</a></li>
+                {% endfor %}
+                </ul>
                 <a href={% url friends_mutual profile.user.username %}>mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>

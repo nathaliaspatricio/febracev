@@ -18,6 +18,8 @@ from profiles import utils
 from profiles.forms import ProfileForm
 from profiles.forms import UserForm
 
+from friends import utils as friends_utils
+
 def create_profile(request, form_class=ProfileForm, success_url=None,
                    template_name='profiles/create_profile.html',
                    extra_context=None):
@@ -296,9 +298,18 @@ def profile_detail(request, username, public_profile_field=None,
     for key, value in extra_context.items():
         context[key] = callable(value) and value() or value
 
+    is_friend = friends_utils.is_friend(visitor, user)
+    follower_list = friends_utils.get_follower_set(profile_obj)
+    following_list = friends_utils.get_following_set(profile_obj)
+    mutual_list = friends_utils.get_mutual_set(profile_obj)
+
     return render_to_response(template_name,
-                              { 'profile': profile_obj, 
-                                'is_friend': visitor.get_profile().is_friend(user)},
+                              { 'profile': profile_obj,
+                                'is_friend': is_friend,
+                                'follower_list': follower_list,
+                                'following_list': following_list,
+                                'mutual_list': mutual_list,
+                              },
                               context_instance=context)
 
 def profile_list(request, public_profile_field=None,
