@@ -20,4 +20,14 @@ urlpatterns = patterns('friends.views',
         {'function_alias': 'mutual'},
         name='friends_mutual',
     ),
+    url(
+        r'^add/(?P<username>[a-z]+)/$',
+        'add_friend',
+        name='friends_add_friend',
+    ),
+    url(
+        r'^remove/(?P<username>[a-z]+)/$',
+        'remove_friend',
+        name='friends_remove_friend',
+    ),
 )

@@ -18,7 +18,6 @@ from profiles import utils
 from profiles.forms import ProfileForm
 from profiles.forms import UserForm
 
-
 def create_profile(request, form_class=ProfileForm, success_url=None,
                    template_name='profiles/create_profile.html',
                    extra_context=None):
@@ -281,6 +280,7 @@ def profile_detail(request, username, public_profile_field=None,
     :template:`profiles/profile_detail.html`.
 
     """
+    visitor = request.user
     user = get_object_or_404(User, username=username)
     try:
         profile_obj = user.get_profile()
@@ -297,7 +297,8 @@ def profile_detail(request, username, public_profile_field=None,
         context[key] = callable(value) and value() or value
 
     return render_to_response(template_name,
-                              { 'profile': profile_obj, },
+                              { 'profile': profile_obj, 
+                                'is_friend': visitor.get_profile().is_friend(user)},
                               context_instance=context)
 
 def profile_list(request, public_profile_field=None,

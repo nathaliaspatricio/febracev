@@ -17,12 +17,21 @@
                         Mensagem
                     </a>
                 </div>
-                <div id="contact_switch" class="toolbar_item">
-                    <a href="">
-                        <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
-                        Adicione
-                    </a>
-                </div>
+                {% if is_friend %}
+                    <div id="contact_switch" class="toolbar_item">
+                        <a href={% url friends_remove_friend profile.user.username %}>
+                            <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
+                            Remover
+                        </a>
+                    </div>
+                {% else %}
+                    <div id="contact_switch" class="toolbar_item">
+                        <a href={% url friends_add_friend profile.user.username %}>
+                            <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
+                            Adicionar
+                        </a>
+                    </div>
+                {% endif %}
             </div>
         {% endifnotequal %}
     {% endif %}

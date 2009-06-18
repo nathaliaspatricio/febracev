@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib import admin
+from friends.utils import get_following_set
 
 GENDER_CHOICES = (
     ('M', 'Masculino'),
@@ -41,6 +42,9 @@ class UserProfile(models.Model):
 
     mugshot = models.ImageField(upload_to='uploads/', blank=True)
     institution = models.CharField(max_length=100)
+
+    def is_friend(self, user):
+        return user in get_following_set(self.user)
 
     def __unicode__(self):
         return self.user.username
