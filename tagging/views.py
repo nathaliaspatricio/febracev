@@ -4,6 +4,9 @@ Tagging related views.
 from django.http import Http404
 from django.utils.translation import ugettext as _
 from django.views.generic.list_detail import object_list
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.http import Http404
 
 from tagging.models import Tag, TaggedItem
 from tagging.utils import get_tag, get_queryset_and_model
@@ -50,3 +53,21 @@ def tagged_object_list(request, queryset_or_model=None, tag=None,
             Tag.objects.related_for_model(tag_instance, queryset_or_model,
                                           counts=related_tag_counts)
     return object_list(request, queryset, **kwargs)
+
+def tag_detail(request,tag):
+
+    try:
+        tag = Tag.objects.get(name=tag)
+    except:
+        raise Http404
+
+    tagged_items = tag.items.all()
+    object_list = []
+
+    for item in tagged_items:
+        object_list.append(item.object)
+
+    return render_to_response('tagging/tag_detail.html',
+                              {'tag_name': tag,
+                               'object_list': object_list},
+                              context_instance = RequestContext(request))

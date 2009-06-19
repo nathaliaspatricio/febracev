@@ -4,7 +4,7 @@ from django.conf.urls.defaults import *
 
 urlpatterns = patterns('search.views',
     url(
-        r'^(?P<search_input>[\w|\s|"]+)/$',
+        r'^(?P<search_input>[-\w\s"]+)/$',
         'search',
     ),
 )

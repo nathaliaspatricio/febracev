@@ -459,6 +459,10 @@ class Tag(models.Model):
     def __unicode__(self):
         return self.name
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('tagging.views.tag_detail', (), {'tag': self.name})
+
 class TaggedItem(models.Model):
     """
     Holds the relationship between a tag and the item being tagged.
