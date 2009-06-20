@@ -51,6 +51,11 @@
 		                        <li class="firstborn explore">
 			                        <a class="label" href="/accounts/logout/">Logout</a>
 		                        </li>
+                                {% if user.is_staff %}
+		                            <li class="firstborn explore">
+			                            <a class="label" href="/admin">Admin</a>
+		                            </li>
+                                {% endif %}	
 		                        <li class="firstborn explore">
 			                        <a class="label" href="">Colunas</a>
 		                        </li>
