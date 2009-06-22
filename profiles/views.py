@@ -283,7 +283,6 @@ def profile_detail(request, username, public_profile_field=None,
     :template:`profiles/profile_detail.html`.
 
     """
-    visitor = request.user
     user = get_object_or_404(User, username=username)
     try:
         profile_obj = user.get_profile()
@@ -299,7 +298,12 @@ def profile_detail(request, username, public_profile_field=None,
     for key, value in extra_context.items():
         context[key] = callable(value) and value() or value
 
-    is_friend = friends_utils.is_friend(visitor, user)
+    if request.user.is_authenticated():
+        visitor = request.user
+        is_friend = friends_utils.is_friend(visitor, user)
+    else:
+        is_friend = False
+
     follower_list = friends_utils.get_follower_set(profile_obj)
     following_list = friends_utils.get_following_set(profile_obj)
     mutual_list = friends_utils.get_mutual_set(profile_obj)

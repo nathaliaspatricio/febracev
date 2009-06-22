@@ -27,7 +27,7 @@ class Project(models.Model):
     edition = models.CharField(max_length=4)
     code = models.CharField(max_length=3)
 
-    video = models.CharField(max_length=47)
+    video = models.CharField(max_length=47, blank=True)
 
     def __unicode__(self):
         return self.name

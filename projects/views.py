@@ -40,12 +40,18 @@ def projects_by_category(request, category):
                )
 
 def project_detail(request, year, category, code):
-    visitor = request.user
     project = get_object_or_404(Project, edition=year, category=category, code=code)
+
+    if request.user.is_authenticated():
+        visitor = request.user
+        is_fav = is_favorite(visitor, project)
+    else:
+        is_fav = False
+
 
     return render_to_response('projects/project_detail.html',
                               { 'project': project,
-                                'is_favorite': is_favorite(visitor, project),
+                                'is_favorite': is_fav,
                               },
                               context_instance=RequestContext(request))
 
