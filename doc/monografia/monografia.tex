@@ -1,0 +1,40 @@
+%monografia.tex - monografia final do projeto para a disciplina PSI2594
+
+\documentclass[a4paper,12pt,font=plain,header=plain]{abnt}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage[alf]{abntcite}
+
+\usepackage{tabularx}
+\usepackage{verbatim}
+\usepackage[final]{pdfpages}
+
+\autor{Leandro Coletto Biazon\protect\\Nathalia Sautchuk Patrício}
+\titulo{Febrace\textsuperscript{V}:\\Feira Brasileira Virtual de Ciências e Engenharia}
+\comentario{Trabalho de formatura apresentado à Escola Politécnica da Universidade de São Paulo para obtenção do título de Graduação em Engenharia\\ \\Área de concentração:\\Sistemas Digitais\\ \\Orientadoras:\\Roseli de Deus Lopes\\Selma Shin Shimizu Melnikoff}
+\local{São Paulo}
+\data{2009}
+
+%Pelo visto, os campos abaixo podem ser substituídos pelo esquema de comentario acima
+%\orientador[Orientadoras:\\]{Roseli de Deus Lopes\protect\\Selma Shin Shimizu Melnikoff}
+%\instituicao{Escola Politécnica da Universidade de São Paulo\par Departamento de Engenharia de Sistema Eletrônicos}
+
+\renewcommand{\ABNTchapterfont}{\bfseries\sffamily\fontseries{sbc}\selectfont}
+\renewcommand{\ABNTsectionfont}{\bfseries\sffamily}
+
+\begin{document}
+
+  \capa
+  \folhaderosto
+  \input{resumo}
+  \sumario
+  \input{introducao}
+  \input{metodologia}
+  \input{resultados_e_discussao}
+  \input{conclusoes}
+  \bibliography{referencias}
+  \input{apendice}
+
+\end{document}

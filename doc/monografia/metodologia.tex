@@ -1,0 +1,154 @@
+%metodologia.tex
+
+\chapter{Metodologia}
+
+\section{Programação extrema}
+  A programação extrema (\textit{eXtreme Programming} ou XP) é um método leve para que equipes pequenas ou médias desenvolvam \textit{software} em face a requisitos vagos ou que mudem constantemente\cite{beck04}. Pela definição de seu autor, Kent Beck, o XP é leve porque é focado na realização das tarefas que criem valor para o cliente. Seu principal objetivo é o desenvolvimento de \textit{software} com qualidade, por meio de um estilo de desenvolvimento focado nas melhores práticas de programação, comunicação clara e trabalho em equipe.
+
+  Como outras metodologias ágeis, o XP se opõe a diversas premissas assumidas pelas metodologias tradicionais de engenharia de \textit{software}. Uma dessas premissas é que é possível prever todos os passos necessários para o desenvolvimento de um sistema, pelo detalhado levantamento de características do problema a ser resolvido e da solução a ser desenvolvida. O XP assume a presença constante das mudanças durante o processo de desenvolvimento, e propõe uma série de práticas para lidar com elas.
+
+  A programação extrema é descrita por meio de seus valores, princípios e práticas. As práticas são uma série de técnicas a serem aplicadas no dia-a-dia de trabalho da equipe. Os valores são a noção do que é certo e do que é errado no relacionamento da equipe com o trabalho e entre si. Os valores são o que fundamentam as práticas. Porém os valores do XP são universais e independem do contexto do desenvolvimento de \textit{software}, estando assim muito distante das práticas. A ponte entre os valores e as práticas são os princípios, que trazem orientações para um contexto específico.
+
+  \subsection{Valores}
+    O primeiro dos valores do XP é a \textbf{Comunicação}, por pressupor que a maioria dos problemas de um projeto ocorrem por dificuldades nesse aspecto. A comunicação constante e eficaz entre os membros da equipe permeia todo processo de desenvolvimento, e é ressaltado em diversas das práticas do XP.
+
+    Outro princípio é a \textbf{Simplicidade}, que leva a equipe a buscar sempre as soluções mais simples a um dado problema, sem tentar otimizações precoces ou a a tentativa de resolução de um problema futuro.
+
+    Como não há uma direção pré-definida a ser seguida, a equipe de XP precisa constantemente saber onde se encontra para poder determinar seus próximos passos. O valor que orienta a equipe à rápida resposta sobre as ações realizadas é o \textbf{Feedback}.
+
+    \textbf{Coragem} é a ação efetiva frente à insegurança, para a tomada de decisões necessárias ao projeto.
+
+    O último valor é o \textbf{Respeito}. Os membros da equipe devem se importar uns com os outros e com as ações realizadas.
+
+  \subsection{Princípios}
+
+    Os princípios definidos na segunda edição do livro \textit{Extreme Programming Explained}\cite{beck04} são as seguintes:
+
+    \begin{description}
+      \item[Humanidade]
+	      O \textit{software} é desenvolvido por pessoas. As necessidades pessoais dos membros da equipe devem ser levadas em consideração no processo de desenvolvimento.
+      \item[Economia]
+        A produção de \textit{software} não está à parte do processo econômico, e seus aspectos devem ser considerados.
+      \item[Benefício mútuo]
+        Qualquer atividade deve beneficiar todas as pessoas envolvidas (desenvolvedores e clientes). Decisões emergenciais, que custem a uma pessoa, representam uma perda ao projeto como um todo.
+      \item[Auto semelhança]
+        A estrutura de uma solução deve ser utilizada em outros contextos, mesmo que em diferentes escalas.
+      \item[Aperfeiçoamento]
+        Deve-se sempre buscar a realização do melhor trabalho possível, hoje.
+      \item[Diversidade]
+        As equipes devem ser formadas por pessoas com diferentes perfis. Os conflitos que possam surgir dessa escolha são compensados pelo benefício das múltiplas visões sobre um problema.
+      \item[Reflexão]
+        Não é suficiente realizar tarefas, é necessário constantemente revisitar o trabalho feito e refletir sobre as decisões tomadas, analisando as razões dos sucessos e das falhas.
+      \item[Fluxo]
+        O fluxo é a realização simultânea de várias etapas do processo de desenvolvimento, ao invés de separar as fases e trabalhá-las isoladamente.
+      \item[Oportunidade]
+        Problemas devem ser vistos como oportunidades de mudança.
+      \item[Redundância]
+        Normalmente vista como desperdício, a redundância é o melhor caminho para lidar com as falhas, e deve ser empregada em diversos contextos (múltipla resolução de um problema, programação pareada, etc.).
+      \item[Falha]
+        Quando não se sabe a maneira de resolver um problema, deve-se implementar uma alternativa que falhe, e aprender com ela. As falhas não são um desperdício, e sim conhecimento.
+      \item[Qualidade]
+        Qualidade não deve ser vista como uma variável de controle, negociável, e deve ser sempre buscada.
+      \item[Pequenos passos]
+        Ao dar grandes passos, leva-se muito tempo para realizá-los e, caso tenham sido dados na direção errada, é mais difícil voltar atrás. Agindo dessa maneira, é frequente o temor da necessidade de mudanças. Pequenos passos são uma postura mais adequada em processos complexos.
+      \item[Aceitação de responsabilidade]
+        A responsabilidade não deve ser designadas, devem ser aceitas.
+    \end{description}
+
+  \subsection{Práticas}
+    As práticas são o que se vê no dia-a-dia de uma equipe de XP. Elas não devem ser adotadas, entretanto, desvinculadas dos valores e princípios mencionados anteriormente, sob o risco de se tornarem vazias. Na primeira edição de seu livro principal, Beck definiu 12 práticas, e mencionou que elas deveriam ser adotadas todas simultaneamente. Na edição mais recente, o autor muda a abordagem, dizendo que a adoção das práticas pode ser feita parcialmente, conforme as necessidades e experiências da equipe. Também nessa edição as práticas, agora 24, são divididas em dois grupos, primárias e corolárias. As práticas primárias são aquelas que devem ser tentadas primeiro pelas equipes, na sequência que se mostrar adequada. Já as práticas corolárias são mais difíceis de serem aplicadas, e requerem a experiência anterior com as práticas primárias. Nesse projeto serão trabalhadas, principalmente, as práticas primárias, descritas a seguir.
+
+    \begin{description}
+      \item[Sentar Junto]
+      O ambiente de trabalho da equipe deve ser compartilhado. Há sim a necessidade de espaços privados, mas a equipe deve trabalhar junta, fisicamente, a maior parte possível do tempo.
+      \item[Time completo]
+      As equipes de XP devem ter pessoas com diversas habilidades diferentes, que atendam todas as necessidades de um projeto
+      \item[Área de trabalho informativa]
+      Uma pessoa que entre no espaço de uma equipe deve poder, num curto espaço de tempo, ter noção do estado em que se encontra o projeto em desenvolvimento. O ambiente deve propiciar também espaços coletivos para a programação e espaços individuais para a privacidade. Nas paredes, é interessante manter gráficos grandes, bem como outras informações pertinentes sobre o estado do projeto e da equipe.
+      \item[Trabalho energizado]
+      Só as horas produtivas devem ser trabalhadas. Trabalhar mais do que um limite apenas reduz o rendimento de um programador no resto da semana.
+      \item[Programação pareada]
+      Todo o código, exceto o escrito como experimentação, deve ser escrito com duas pessoas no mesmo computador.
+      \item[Histórias]
+      O planejamento deve ser realizado usando uma descrição de funcionalidades compreensível pelo cliente, por meio de cartões de história. Tão logo uma história é escrita, deve-se estimar o esforço necessário para implementá-la.
+      \item[Ciclo semanal]
+      O trabalho deve ser planejado uma semana por vez, e na reunião no início dessa semana a) reflita sobre a semana anterior, b) escolha um conjunto de histórias ainda não implementadas e c) quebre as histórias em tarefas.
+      \item[Ciclo trimestral]
+      Planejamentos de nível mais alto devem ser realizados trimestralmente. A cada trimestre devem ser levantados quais são os gargalos que impedem o time de prosseguir, e determinado o tema do próximo trimestre.
+      \item[Folga]
+      Tarefas menos importantes devem ser incluídas no planejamento, para que possam ser descartadas em caso de atrasos. A folga, seja ela com relação a tarefas, orçamento ou horas trabalhadas deve ser considerada em um projeto.
+      \item[\textit{Build} em 10 minutos]
+      A compilação e realização dos testes automáticos de um projeto devem ser realizados em 10 minutos.
+      \item[Integração contínua]
+      O código recém escrito e os testes a ele associados devem ser integrados constantemente no corpo de código do projeto, no máximo a cada 2 horas.
+      \item[Desenvolvimento dirigido por testes]
+      Testes automáticos devem ser escritos antes de uma parte do sistema ser modificada.
+      \item[Design incremental]
+      O design de um sistema deve ser trabalhado diariamente, levando-se em consideração o melhor a ser feito naquele momento.
+    \end{description}
+
+	\subsection{Programação extrema no contexto acadêmico}
+    Uma das metas do projeto é testar a validade de um conjunto de práticas propostas pela programação extrema, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetiva-se também documentar essa experiência de forma que outros alunos que também queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias nesse caso em particular.
+
+    Tendo isso em vista, realizou-se uma pesquisa por artigos que descrevessem experiências semelhantes de aplicação de metodologias ágeis na graduação. Foram encontrados diversos relatos dessa natureza, muitos deles descrevendo a utilização dessas metodologias em projetos de conclusão de curso.
+
+    \citeonline{schneider03} avaliam a aplicação da programação extrema no contexto acadêmico, avaliando num plano teórico as práticas do XP e sua conformidade com o currículo de Engenharia de Computação do instituto onde lecionam. \citeonline{noble04} e \citeonline{keefe04} ministraram disciplinas de projetos de conclusão de curso onde o XP foi apresentado com uma das possíveis metodologias a serem escolhidas pelos alunos, e relatam nos artigos suas experiências.
+
+    No artigo de \citeauthoronline{schneider03}, o XP é descartado como uma metodologia compatível com os objetivos da universidade. Cabe observar que os autores não se baseiam em nenhuma experiência real. \citeauthoronline{noble04} e \citeauthoronline{keefe04}, pelo contrário, consideram as experiências em seus cursos bem sucedidas, ressaltando a qualidade presente nos projetos desenvolvidos e a melhor interação entre os membros da equipe.
+
+    Apesar das relatos positivos envolvendo a aplicação desse método ágil no contexto acadêmico, uma série de adaptações foi necessária para adequá-la aos cursos. As principais dificuldades citadas na utilização dessa metodologia na universidade foram:
+
+    \subsubsection{Área de trabalho compartilhada}
+      Os laboratórios das universidades, assim como suas salas de aula, não foram projetados para possibilitar a colaboração entre seus alunos. Um espaço de trabalho coletivo e informativo, preconizado pelo XP, não está a disposição das equipes.
+
+    \subsubsection{Disponibilidade de tempo}
+      Por ser dirigido ao ambiente corporativo, o XP define uma semana de trabalho de 40 horas, de impossível reprodução num curso universitário.
+
+    \subsubsection{Presença do cliente}
+      A presença do cliente na equipe de XP, incomum mesmo em empresas, é ainda mais difícil na universidade.
+
+    \subsubsection{Necessidade de \textit{coaching}}
+      Normalmente as equipes não tem nenhuma experiência anterior com o XP, e a presença do coach é importante para a aprendizagem da metodologia.
+
+    \subsubsection{Testes}
+      As experiências relatam dificuldades na utilização de testes automáticos, seja por problemas culturais (como a pouca importância dada a esse tópico no restante do currículo), seja por aspectos técnicos.
+
+    \subsubsection{Formas de avaliação}
+      Grande parte das avaliações realizadas nas disciplinas de projeto de conclusão de curso é baseada na documentação levantada por etapas das metodologias tradicionais. A criação desses documentos não é parte do processo das metodologias ágeis e outros critérios de avaliação apropriados a esse contexto foram necessários nas experiências apresentadas.
+
+	\subsection{Programação extrema na Febrace\textsuperscript{V}}
+    Em consequência dos motivos apresentados na sessão anterior, uma série de adaptações foi necessária para adequar a utilização da programação extrema ao contexto do projeto. As principais são descritas a seguir.
+
+    \subsubsection{Espaço de trabalho compartilhado virtual}
+      Não será possível dispor de um espaço de trabalho fixo para a realização das atividades referentes ao projeto. Na tentativa de suprir essa necessidade, será feito uso de um conjunto de ferramentas de trabalho colaborativo pela Internet, entre elas um "quadro branco" virtual e uma ferramenta de acompanhamento de \textit{bugs}. Mais detalhes sobre algumas dessas ferramentas são apresentados na sessão \textbf{Tecnologias utilizadas}.
+
+    \subsubsection{Semana de 10 horas}
+      Espera-se que a semana de trabalho da equipe seja de 10 horas.
+
+    \subsubsection{Iterações}
+      O tempo escolhido para cada iteração foi de três semanas. Assim, serão realizadas quatro iterações até o fim do primeiro semestre.
+
+    \subsubsection{Cliente}
+      O papel do cliente foi designado a um pesquisador do NATE-LSI que participa da organização da Febrace. Ele não estará sempre presente durante o desenvolvimento do projeto, mas serão realizadas reuniões semanais com ele.
+
+    \subsubsection{Programação pareada}
+      Todo o código de produção será escrito em sessões de programação pareada.
+
+    \subsubsection{Retrospectivas}
+      A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
+
+\section{Levantamento do perfil dos usuários}
+  Um dos objetivos do projeto é o estudo dos conceitos de usabilidade, aplicando-os no desenvolvimento da Febrace\textsuperscript{V}. Para se fazer um estudo de usabilidade verificou-se como necessário um levantamento prévio com possíveis usuários do sistema para verificar o seu perfil de uso e suas reais necessidades em relação a uma nova ferramenta computacional. Como a sétima edição da FEBRACE ocorreria no primeiro semestre, viu-se a possibilidade de fazer esse levantamento com os participantes da feira que são potenciais usuários da rede social. O método escolhido para fazer esse levantamento foi através de questionário aplicados a finalistas, orientadores e visitantes durante a feira.
+
+  \subsection{Elaboração do questionário de perfil de uso}
+    O questionário proposto pelos integrantes do projeto foi avalidado pela equipe da FEBRACE e por outras pessoas com experiência em levantamento de dados com usuários, e a partir de suas sugestões foram feitos melhoramentos no questionário de perfil de uso de Internet dos participantes da feira.
+
+    O questionário final, apresentado no Apêndice 1, apresenta três partes. A primeira tem por objetivo colher alguns dados demográficos, como idade, local de residência e escolaridade. Na segunda parte há perguntas que procuram identificar o perfil de uso da internet do usuário (de onde e com qual frequência ocorre o acesso, quais serviços são utilizados, etc.). O objetivo da terceira parte é saber a opinião dos usuários sobre sua atual experiência com os serviços web da FEBRACE e sobre seu interesse nas possíveis ferramentas oferecidas pela Febrace\textsuperscript{v}.
+
+  \subsection{Aplicação do questionário}
+    A FEBRACE ocorreu nos dias 17, 18 e 19 de março e durante esse período foram aplicados questionários para alunos e professores participantes, além de visitantes da feira. Foram respondidos 520 questionários. Até o presento momento foram compilados 136 questionários, 26\% do total.
+
+  \subsection{Automação do processamento de dados coletados}
+    O método escolhido para a aplicação do questionário foi em papel. Porém, com o objetivo de facilitar tanto a inserção de dados no computador quanto a compilação desses dados decidiu-se pelo uso de alguma ferramenta online. O questionário começou a ser transposto para o SurveyMonkey, porém a conta gratuita desse serviço é restrita a dez perguntas no questinário e cem questionários respondidos, limitações que tornam o serviço aquém das necessidades.
+
+    Mais adequada é a ferramenta LimeSurvey, uma \textit{webapp} de código aberto que foi instalada e configurada localmente. Com ela os dados de cada questionário podem ser inseridos de forma mais rápida e prática e, pelo fato de estar \textit{online}, o trabalho poder ser mais facilmente entre os membros do grupo. Além disso, a ferramenta gera diversas estatísticas e desenha os respectivos gráficos.
