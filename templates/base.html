@@ -63,7 +63,11 @@
 			                        <a href="/projects" class="label">Projetos</a>
 		                        </li>
 		                        <li class="firstborn profile">
+                                {% if user.get_profile %}
 			                        <a href="{{ user.get_profile.get_absolute_url }}" class="label">Perfil</a>
+                                {% else %}
+                                    <a href={% url profiles_create_profile %} class="label">Perfil</a>
+                                {% endif %}
 		                        </li>
 	                        </ul>
                             <img id="capleft" alt="" src="{{ MEDIA_URL }}images/menudo_capleft.png"/>
