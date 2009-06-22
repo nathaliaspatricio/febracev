@@ -28,12 +28,12 @@ urlpatterns = patterns('projects.views',
         name='projects_favorite_projects'
     ),
     url(
-        r'^add/(?P<username>[a-z]+)/$',
+        r'^add/(?P<year>\d{4})/(?P<category>[A-Z]{3})/(?P<code>\d{3})/$',
         'add_favorite',
         name='projects_add_favorite',
     ),
     url(
-        r'^remove/(?P<username>[a-z]+)/$',
+        r'^remove/(?P<year>\d{4})/(?P<category>[A-Z]{3})/(?P<code>\d{3})/$',
         'remove_favorite',
         name='projects_remove_favorite',
     ),

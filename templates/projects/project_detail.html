@@ -18,14 +18,14 @@
             </div>
             {% if is_favorite %}
                 <div id="contact_switch" class="toolbar_item">
-                    <a href={% url projects_remove_favorite user.username %}>
+                    <a href={% url projects_remove_favorite project.edition project.category project.code %}>
                         <img src="{{ MEDIA_URL }}images/toolbar_remove.png" id="toolbar_add" alt="contact" /><br />
                         Remover
                     </a>
                 </div>
             {% else %}
                 <div id="contact_switch" class="toolbar_item">
-                    <a href={% url projects_add_favorite user.username %}>
+                    <a href={% url projects_add_favorite project.edition project.category project.code %}>
                         <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
                         Adicionar
                     </a>
