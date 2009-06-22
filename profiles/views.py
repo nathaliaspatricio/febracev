@@ -19,6 +19,7 @@ from profiles.forms import ProfileForm
 from profiles.forms import UserForm
 
 from friends import utils as friends_utils
+from projects import utils as projects_utils
 
 def create_profile(request, form_class=ProfileForm, success_url=None,
                    template_name='profiles/create_profile.html',
@@ -302,6 +303,7 @@ def profile_detail(request, username, public_profile_field=None,
     follower_list = friends_utils.get_follower_set(profile_obj)
     following_list = friends_utils.get_following_set(profile_obj)
     mutual_list = friends_utils.get_mutual_set(profile_obj)
+    favorite_projects = projects_utils.get_favorite_projects(profile_obj)
 
     return render_to_response(template_name,
                               { 'profile': profile_obj,
@@ -309,6 +311,7 @@ def profile_detail(request, username, public_profile_field=None,
                                 'follower_list': follower_list,
                                 'following_list': following_list,
                                 'mutual_list': mutual_list,
+                                'favorite_projects': favorite_projects,
                               },
                               context_instance=context)
 

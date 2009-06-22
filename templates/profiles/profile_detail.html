@@ -51,6 +51,10 @@
                     <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
                     <div id="formyportrait" style="display:none;width:300px;height:300px;">
                     </div>
+                {% else %}
+                    <img id="big_portrait" class="photo portrait" src="{{ MEDIA_URL }}images/sem_foto.png" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
+                    <div id="formyportrait" style="display:none;width:300px;height:300px;">
+                    </div>
                 {% endif %}
             </div>
         </div>
@@ -88,7 +92,7 @@
 
 	<div class="column" id="columnB">
 		<div class="columnBhead">
-            <h2>Amigos</h2>
+            <h2>Contatos</h2>
 			<div class="clear">&nbsp;</div>
 		</div>
 		<div class="subcolumns">
@@ -122,8 +126,24 @@
                 <a href={% url friends_mutual profile.user.username %}>mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>
+            
 		</div>
 		<div class="clear"></div>
+        <div class="columnBhead">
+            <h2>Projetos Favoritos</h2>
+			<div class="clear">&nbsp;</div>
+		</div>
+		<div class="subcolumns">
+			<div class="subcolumn" id="columnBleft">
+                <ul>
+                {% for project in favorite_projects %}
+                    <li><a href={{ project.get_absolute_url }}>{{ project.name }}</a></li>
+                {% endfor %}
+                </ul>
+                <a href={% url projects_favorite_projects profile.user.username %}>mais...</a>
+                    <div class="clear">&nbsp;</div>
+            </div>            
+		</div>
 	</div>
 
 {% endblock %}
