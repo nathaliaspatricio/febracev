@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib import admin
 from friends.utils import get_following_set
 from django.contrib.localflavor.br.br_states import STATE_CHOICES
+from institutions.models import Institution
 
 GENDER_CHOICES = (
     (u'M', u'Masculino'),
@@ -17,20 +17,6 @@ USER_TYPES = (
     (u'O', u'Orientador'),
     (u'V', u'Visitante'),
 )
-
-class Institution(models.Model):
-    name = models.CharField(max_length=50)
-    address = models.CharField(max_length=100, blank=True)
-    city = models.CharField(max_length=50, blank=True)
-    state = models.CharField(max_length=2, choices=STATE_CHOICES, blank=True)
-    website = models.URLField(blank=True)
-
-    def __unicode__(self):
-        return self.name
-
-    @models.permalink
-    def get_absolute_url(self):
-        return ('profiles_institution_detail', (), { 'object_id': self.id })
 
 class UserProfile(models.Model):
     """
