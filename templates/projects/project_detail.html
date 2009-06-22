@@ -1,8 +1,7 @@
 {% extends "base.html" %}
-{% load comments %}
- 
+
 {% block title%} | Projetos | {{ project.code }}{% endblock %}
- 
+
 {% block header%}
     <h1>{{ project.name }}</h1>
 {% endblock %}
@@ -10,7 +9,7 @@
 {% block toolbar %}
     {% if user.is_authenticated %}
         <div id="toolbar">
-            <div class="toolbar_item" onmouseover="toolbar_roll('envelope',event)" onmouseout="toolbar_roll('envelope',event)">
+            <div class="toolbar_item">
                 <a href="">
                     <img src="{{ MEDIA_URL }}images/toolbar_envelope.png" id="toolbar_envelope" alt="share" /><br />
                     Mensagem
@@ -50,7 +49,7 @@
                     <div id="formyportrait" style="display:none;width:300px;height:300px;">
                     </div>
                 {% else %}
-                    <img id="big_portrait" class="photo portrait" src="{{ MEDIA_URL }}images/sem_foto.png" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
+                <img id="big_portrait" class="photo portrait" src="{{ MEDIA_URL }}images/sem_foto.png" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
                     <div id="formyportrait" style="display:none;width:300px;height:300px;">
                     </div>
                 {% endif %}
@@ -85,13 +84,14 @@
         <div class="columnBhead">
             <h2>Vídeo</h2>
 			<div class="clear">&nbsp;</div>
+            {% if project.video %}
                 <embed TYPE='application/x-mplayer2'
-    pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
-    SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
-    ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=288
-    LOOP='false'></embed> <br/>
+                pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
+                SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
+                ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=28 LOOP='false'>
+                </embed> <br/>
+            {% endif %}
 		</div>
-		
 	</div>
 
 {% endblock %}
@@ -104,22 +104,26 @@
 		</div>
 		<div class="subcolumns">
 			<div class="subcolumn" id="columnBleft">
-                {% if user.is_authenticated %}
-                    {% render_comment_form for project %}
-
-                    {% get_comment_list for project as comment_list %}
-
-                    {% get_comment_form for project as form %}
-                    <form action="{% comment_form_target %}" method="POST">
-                      {{ form.user }}
-                      <tr>
-                        <td></td>
-
-                      </tr>
-                    </form>
-                {% else %}
-                    {% render_comment_form for project %}
-                {% endif %}
+                {% load comments %}
+                {% get_comment_form for project as form %}
+                <form action="{% comment_form_target %}" method="POST">
+                    {% if user.is_anonymous %}
+                        <p><label for="id_name">Nome</label>{{ form.name }}</p>
+                        <p><label for="id_email">Email</label>{{ form.email }}</p>
+                    {% endif %}
+                    <p><label for="id_comment">Recado</label>{{ form.comment }}</p>
+                     <p style="display:none;">
+                         <label for="id_honeypot">Se você escrever algo aqui,
+                             seu recado será tratado como spam</label>
+                        {{ form.honeypot }}
+                    </p>
+                    {{ form.content_type }}
+                    {{ form.object_pk }}
+                    {{ form.timestamp }}
+                    {{ form.security_hash }}
+                    <input type="submit" value="Enviar recado" id="id_submit" />
+                </form>
+                {% get_comment_list for project as comment_list %}
                 <ul>
                     {% for comment in comment_list %}
                         <li> {{ comment.user_name }}</li>

@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load comments %}
 
 {% block title%} | Perfil{% endblock %}
 
@@ -11,7 +10,7 @@
     {% if user.is_authenticated %}
         {% ifnotequal user profile.user %}
             <div id="toolbar">
-                <div class="toolbar_item" onmouseover="toolbar_roll('envelope',event)" onmouseout="toolbar_roll('envelope',event)">
+                <div class="toolbar_item">
                     <a href="">
                         <img src="{{ MEDIA_URL }}images/toolbar_envelope.png" id="toolbar_envelope" alt="share" /><br />
                         Mensagem
@@ -156,22 +155,26 @@
 		</div>
 		<div class="subcolumns">
 			<div class="subcolumn" id="columnBleft">
-                {% if user.is_authenticated %}
-                    {% render_comment_form for profile %}
-
-                    {% get_comment_list for profile as comment_list %}
-
-                    {% get_comment_form for profile as form %}
-                    <form action="{% comment_form_target %}" method="POST">
-                      {{ form.user }}
-                      <tr>
-                        <td></td>
-
-                      </tr>
-                    </form>
-                {% else %}
-                    {% render_comment_form for profile %}
-                {% endif %}
+                {% load comments %}
+                {% get_comment_form for profile as form %}
+                <form action="{% comment_form_target %}" method="POST">
+                    {% if user.is_anonymous %}
+                        <p><label for="id_name">Nome</label>{{ form.name }}</p>
+                        <p><label for="id_email">Email</label>{{ form.email }}</p>
+                    {% endif %}
+                    <p><label for="id_comment">Recado</label>{{ form.comment }}</p>
+                     <p style="display:none;">
+                         <label for="id_honeypot">Se você escrever algo aqui,
+                             seu recado será tratado como spam</label>
+                        {{ form.honeypot }}
+                    </p>
+                    {{ form.content_type }}
+                    {{ form.object_pk }}
+                    {{ form.timestamp }}
+                    {{ form.security_hash }}
+                    <input type="submit" value="Enviar recado" id="id_submit" />
+                </form>
+                {% get_comment_list for profile as comment_list %}
                 <ul>
                     {% for comment in comment_list %}
                         <li> {{ comment.user_name }}</li>
