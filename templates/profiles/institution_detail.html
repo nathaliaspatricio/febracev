@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title%} | Instituições {% endblock %}
+
+{% block header%}
+    <h1>{{ object.name }}</h1>
+{% endblock %}
+
+{% block content %}
+
+    <div id="institution">
+        <br/>
+        Endereço: {{ object.address }} <br/>
+        Cidade: {{ object.city }} <br/>
+        Estado: {{ object.state }} <br/>
+        Website: <a href='{{ object.website }}'>{{ object.website }} </a><br/>
+    </div>
+
+{% endblock %}

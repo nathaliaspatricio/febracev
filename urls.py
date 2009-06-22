@@ -6,6 +6,8 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
+from profiles.models import Institution
+
 urlpatterns = patterns('',
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/(.*)', admin.site.root),
@@ -18,4 +20,19 @@ urlpatterns = patterns('',
     (r'^tags/', include('tagging.urls')),
     (r'^media/(.*)$', 'django.views.static.serve',
      {'document_root': settings.MEDIA_ROOT}),
+)
+
+urlpatterns += patterns('django.views.generic.list_detail',
+    url(
+        r'^institutions/$',
+        'object_list',
+        {'queryset': Institution.objects.all()},
+        name='profiles_institution_list',
+    ),
+    url(
+        r'^institutions/(?P<object_id>\d+)/$',
+        'object_detail',
+        {'queryset': Institution.objects.all()},
+        name='profiles_institution_detail',
+    )
 )

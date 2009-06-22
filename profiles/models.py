@@ -28,6 +28,10 @@ class Institution(models.Model):
     def __unicode__(self):
         return self.name
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('profiles_institution_detail', (), { 'object_id': self.id })
+
 class UserProfile(models.Model):
     """
     User class fields:
