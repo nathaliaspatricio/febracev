@@ -7,14 +7,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^febracev/', include('febracev.foo.urls')),
-
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
+    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/(.*)', admin.site.root),
     (r'^comments/', include('django.contrib.comments.urls')),
     (r'^accounts/', include('registration.urls')),
@@ -22,14 +15,7 @@ urlpatterns = patterns('',
     (r'^profiles/', include('profiles.urls')),
     (r'^projects/', include('projects.urls')),
     (r'^search/', include('search.urls')),
+    (r'^tags/', include('tagging.urls')),
     (r'^media/(.*)$', 'django.views.static.serve',
      {'document_root': settings.MEDIA_ROOT}),
-    (r'^tags/', include('tagging.urls')),
-#    (r'^tags/$',
-#     'django.views.generic.list_detail.object_list',
-#     { 'queryset': Tag.objects.all() }),
-#    (r'^tags/projects/(?P<tag>[-\w]+)/$',
-#     'tagging.views.tagged_object_list',
-#     { 'queryset_or_model': Project,
-#     'template_name': 'projects/projects_by_tag.html' }),
 )

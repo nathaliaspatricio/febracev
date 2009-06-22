@@ -47,9 +47,11 @@
         </div>
         <div class="portrait_area">
             <div class="portrait">
-                <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
-                <div id="formyportrait" style="display:none;width:300px;height:300px;">
-                </div>
+                {% if profile.mugshot %}
+                    <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
+                    <div id="formyportrait" style="display:none;width:300px;height:300px;">
+                    </div>
+                {% endif %}
             </div>
         </div>
 

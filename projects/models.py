@@ -4,15 +4,16 @@ from django.contrib.auth.models import User
 from django.contrib import admin
 from datetime import datetime
 from tagging.fields import TagField
+from profiles.models import Institution
 
 CATEGORIES = (
-        ('AGR', 'Ciências Agrárias'),
-        ('BIO', 'Ciências Biológicas'),
-        ('ENG', 'Engenharias'),
-        ('EXA', 'Ciências Exatas e da Terra'),
-        ('HUM', 'Ciências Humanas'),
-        ('SAU', 'Ciências da Saúde'),
-        ('SOC', 'Ciências Sociais Aplicadas'),
+        (u'AGR', u'Ciências Agrárias'),
+        (u'BIO', u'Ciências Biológicas'),
+        (u'ENG', u'Engenharias'),
+        (u'EXA', u'Ciências Exatas e da Terra'),
+        (u'HUM', u'Ciências Humanas'),
+        (u'SAU', u'Ciências da Saúde'),
+        (u'SOC', u'Ciências Sociais Aplicadas'),
 )
 
 class Project(models.Model):
@@ -20,9 +21,8 @@ class Project(models.Model):
     abstract = models.TextField()
     students = models.ManyToManyField(User, related_name='students')
     advisors = models.ManyToManyField(User, related_name='advisors')
-    institution = models.CharField(max_length=100)
+    institution = models.ForeignKey(Institution)
     category = models.CharField(max_length=3, choices=CATEGORIES)
-    #subcategory = models.CharField(max_length=50)
     keywords = TagField()
 
     edition = models.CharField(max_length=4)
@@ -38,9 +38,17 @@ class Project(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('projects.views.project_detail', (), {'year': self.edition,
+        return ('projects_project_detail', (), {'year': self.edition,
                                                       'category': self.category,
                                                       'code': self.code})
+
+class Prize(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    institution = models.ForeignKey(Institution)
+    description = models.TextField(blank=True)
+
+    def __unicode__(self):
+        return self.name
 
 class ProjectLink(models.Model):
     user = models.ForeignKey(User)
@@ -52,3 +60,11 @@ class ProjectLink(models.Model):
 
     class Meta:
         unique_together = (('user', 'project'),)
+
+class PrizeLink(models.Model):
+    prize = models.ForeignKey(Prize)
+    project = models.ForeignKey(Project)
+    date_added = models.DateTimeField(default=datetime.now)
+
+    def __unicode__(self):
+        return u'%s recebeu o prêmio de %s' % (self.project.name, self.prize.name)

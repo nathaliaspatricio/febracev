@@ -20,9 +20,11 @@ urlpatterns = patterns('projects.views',
     url(
         r'^(?P<year>\d{4})/(?P<category>[A-Z]{3})/(?P<code>\d{3})/$',
         'project_detail',
+        name='projects_project_detail'
     ),
     url(
         r'^(?P<username>[a-z]+)/$',
         'favorite_projects',
+        name='projects_favorite_projects'
     ),
 )

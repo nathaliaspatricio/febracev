@@ -461,7 +461,7 @@ class Tag(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('tagging.views.tag_detail', (), {'tag': self.name})
+        return ('tagging_tag_detail', (), {'tag': self.name})
 
 class TaggedItem(models.Model):
     """
