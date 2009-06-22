@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 #from projects import views
-
+ 
 urlpatterns = patterns('projects.views',
     url(
         r'^$',
@@ -26,5 +26,15 @@ urlpatterns = patterns('projects.views',
         r'^(?P<username>[a-z]+)/$',
         'favorite_projects',
         name='projects_favorite_projects'
+    ),
+    url(
+        r'^add/(?P<username>[a-z]+)/$',
+        'add_favorite',
+        name='projects_add_favorite',
+    ),
+    url(
+        r'^remove/(?P<username>[a-z]+)/$',
+        'remove_favorite',
+        name='projects_remove_favorite',
     ),
 )
