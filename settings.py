@@ -90,6 +90,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.comments',
     'friends',
+    'institutions',
     'projects',
     'profiles',
     'registration',

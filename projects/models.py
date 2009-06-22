@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib import admin
 from datetime import datetime
 from tagging.fields import TagField
-from profiles.models import Institution
+from institutions.models import Institution
 
 CATEGORIES = (
         (u'AGR', u'Ciências Agrárias'),
