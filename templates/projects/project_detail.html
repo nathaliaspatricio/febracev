@@ -34,36 +34,100 @@
         </div>
     {% endif %}
 {% endblock %}
- 
+
 {% block content %}
- 
-    <embed TYPE='application/x-mplayer2'
+    <div class="column" id="column1A">
+
+        <div class="softcorners2" style="background:#f1f2e8;">
+            <div class="sosoft" style="background: url('{{ MEDIA_URL }}images/rounder_right_superior.gif') no-repeat top right; height: 15px;">
+                <div style="background: url('{{ MEDIA_URL }}images/rounder_left_superior.gif') no-repeat top left;  height: 15px;" ></div>
+            </div>
+        </div>
+        <div class="portrait_area">
+            <div class="portrait">
+                {% if profile.mugshot %}
+                    <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
+                    <div id="formyportrait" style="display:none;width:300px;height:300px;">
+                    </div>
+                {% else %}
+                    <img id="big_portrait" class="photo portrait" src="{{ MEDIA_URL }}images/sem_foto.png" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
+                    <div id="formyportrait" style="display:none;width:300px;height:300px;">
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="softcorners2" style="background:#f1f2e8;">
+            <div class="sosoft" style=" height: 15px;">
+                <div style=" height: 15px;"></div>
+            </div>
+            <div class="insides">
+                <div class="personal">
+                    <div class="where">
+                        <span class="locality"></span><br />
+                        <span class="url"><a href="">Editar Projeto</a>
+                        </span>
+                    </div>
+                    <div id="bio">
+                        <br/>
+                        Ano: {{ project.edition }} <br/>
+                        Área: {{ project.category }} <br/>
+                    </div>
+                </div>
+            </div>
+            <div class="sosoft" style="background: url('{{ MEDIA_URL }}images/rounder_right_inferior.gif') no-repeat bottom right; height: 15px;">
+                <div style="background: url('{{ MEDIA_URL }}images/rounder_left_inferior.gif') no-repeat bottom left;  height: 15px;" ></div>
+            </div>
+        </div>
+    </div>
+
+	<div class="column" id="columnB">
+        <div class="columnBhead">
+            <h2>Vídeo</h2>
+			<div class="clear">&nbsp;</div>
+                <embed TYPE='application/x-mplayer2'
     pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
     SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
     ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=288
     LOOP='false'></embed> <br/>
- 
-    {% if user.is_authenticated %}
-        {% render_comment_form for project %}
- 
-        {% get_comment_list for project as comment_list %}
- 
-        {% get_comment_form for project as form %}
-        <form action="{% comment_form_target %}" method="POST">
-          {{ form.user }}
-          <tr>
-            <td></td>
-            <td><input type="submit" name="preview" class="submit-post" value="Preview"></td>
-          </tr>
-        </form>
-    {% else %}
-        {% render_comment_form for project %}
-    {% endif %}
-    <ul>
-        {% for comment in comment_list %}
-            <li> {{ comment.user_name }}</li>
-            <li> {{ comment.comment }}</li>
-        {% endfor %}
-    </ul>
- 
+		</div>
+		
+	</div>
+
+{% endblock %}
+
+{% block columnB %}
+    <div class="column" id="columnB">
+		<div class="columnBhead">
+            <h2>Recados</h2>
+			<div class="clear">&nbsp;</div>
+		</div>
+		<div class="subcolumns">
+			<div class="subcolumn" id="columnBleft">
+                {% if user.is_authenticated %}
+                    {% render_comment_form for project %}
+
+                    {% get_comment_list for project as comment_list %}
+
+                    {% get_comment_form for project as form %}
+                    <form action="{% comment_form_target %}" method="POST">
+                      {{ form.user }}
+                      <tr>
+                        <td></td>
+
+                      </tr>
+                    </form>
+                {% else %}
+                    {% render_comment_form for project %}
+                {% endif %}
+                <ul>
+                    {% for comment in comment_list %}
+                        <li> {{ comment.user_name }}</li>
+                        <li> {{ comment.comment }}</li>
+                    {% endfor %}
+                </ul>
+			    <div class="clear">&nbsp;</div>
+	        </div>
+        </div>
+    </div>
 {% endblock %}
