@@ -172,6 +172,7 @@
                     {{ form.object_pk }}
                     {{ form.timestamp }}
                     {{ form.security_hash }}
+                    <input type="hidden" name="next" value="{{ profile.get_absolute_url }}" />
                     <input type="submit" value="Enviar recado" id="id_submit" />
                 </form>
                 {% get_comment_list for profile as comment_list %}
