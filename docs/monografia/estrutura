@@ -4,8 +4,18 @@
 - Ficha catalográfica
 
 - Dedicatória
+"Aos meus pais Solange e Vanderlei por toda a dedicação. À minha irmã Carol pelo incentivo e compreensão. Ao Fernando pelo constante apoio."
+Nathalia Sautchuk Patrício
+
 - Agradecimentos
+-- pessoal do LSI: Ale, Irene e demais
+-- orientadoras roseli e selma
+-- Paulo Blikstein (comentários no questionário)
+-- família e amigos
+-- professores (algum em específico?)
+
 - Epígrafe
+"O trabalho deve começar com a concepção do homem" (Leonardo da Vinci)
 
 - Resumo
 - Abstract
@@ -47,10 +57,12 @@
        - Cap.3: Planning
 
     - Django Framework
+      - MTV
+      - ProDjango
+      - Livro do Marinho
       - Django Book
-      - Artigos
-
-    - Bancos de dados (ORM, metodologia de testes)
+      - ORM
+      - Unittest, django-client e Selenium tests
 
 - Resultados e Discussão
   - Análise dos dados de usuários
@@ -63,10 +75,8 @@
 
   - Arquitetura
   - Levantamento de histórias
-  - Iterações e Retrospectivas
   - Page flow
-
-  - Banco de dados
+  - Iterações e Retrospectivas
 
 - Conclusões
   - Trabalho futuros
