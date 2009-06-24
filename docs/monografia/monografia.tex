@@ -1,6 +1,6 @@
 %monografia.tex - monografia final do projeto para a disciplina PSI2594
 
-\documentclass[a4paper,12pt,font=plain,header=plain,pagestart=folhaderosto]{abnt}
+\documentclass[a4paper,12pt,font=plain,header=plain,pagestart=folhaderosto,floatnumber=chapter,tocpage=plain]{abnt}
 
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
@@ -26,7 +26,12 @@
 \renewcommand{\ABNTchapterfont}{\bfseries\sffamily\fontseries{sbc}\selectfont}
 \renewcommand{\ABNTsectionfont}{\bfseries\sffamily}
 
+\usepackage{float}
+\newfloat{grafico}{thp}{ldg}[chapter]
+\floatname{grafico}{Gráfico}
+
 \begin{document}
+\renewcommand{\listfigurename}{Lista de Ilustrações}
 
   \capa
   \folhaderosto
@@ -34,6 +39,8 @@
   \input{agradecimentos}
   \input{epigrafe}
   \input{resumo}
+  \listof{grafico}{Lista de Gráficos}
+  \listadefiguras
   \sumario
   \input{introducao}
   \input{metodologia}
