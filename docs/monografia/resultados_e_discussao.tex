@@ -232,6 +232,16 @@ apenas cerca de 10\% discordam da idéia. Isso reforça que a idéia do presente
   Na camada Template é definida a forma de apresentação dos dados que a View envia. Com o sistema de templates do Django é possível criar heranças, ou seja, um template base contendo a estrutura básica do sistema e templates específicos que herdam as características deste template base e atribuem/criam suas próprias características.
 
   Com o uso do framework Django, um projeto é um conjunto de aplicações. Uma Aplicação é uma determinada funcionalidade que compõe um projeto. Por causa disso, há a idéia de aplicações plugáveis no Django que é uma aplicação que pode ser usada em mais de um projeto com nenhuma ou quase nenhuma alteração de código. Isso quer dizer que a aplicação deve ter seus próprios Models, suas próprias Views, seus próprios Templates e encapsular o máximo possível de código que não se enquadre em um desses elementos.
+  
+  Na figura~\ref{django_arquitetura} está ilustrada a arquitetura do Django.
+
+  \begin{figure}
+      \begin{center}
+	\includegraphics[width=1.0\linewidth]{arquivos/django_arquitetura.png}
+      \end{center}
+      \caption{Arquitetura MTV do Django}
+      \label{django_arquitetura}
+  \end{figure}
 
   Tendo em vista essa arquitetura, espera-se ao longo do primeiro semestre desenvolver a primeira versão do projeto. Essa primeira versão contemplará as seguintes aplicações:
 
