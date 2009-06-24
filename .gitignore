@@ -14,6 +14,9 @@
 *.toc
 *.dvi
 *.ps
+*.ldg
+*.lof
+*.lot
 #temporários do bibtex
 *.blg
 *.bbl
