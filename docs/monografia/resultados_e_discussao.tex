@@ -2,125 +2,129 @@
 
 \chapter{Resultados e discussão}
 
-\section{Análise dos dados de usuários}
+\section{Análise dos questionários de perfil de usuário}
 
-  Como dito anteriormente, foi feita uma pesquisa com os participantes da FEBRACE desse ano, uma vez que são potenciais usuários do sistema proposto
-nesse projeto de formatura. Foram recolhidos 520 questionários, sendo que esta representa uma amostra significativa dos participantes. Segundo 
-estatísticas dos organizadores do evento desse ano, participaram 886 pessoas, entre alunos finalistas, orientadores e coorientadores.
+    A FEBRACE ocorreu nos dias 17, 18 e 19 de março de 2009 e durante esse período foram aplicados questionários para alunos e professores participantes, principais usuários potenciais do sistema proposto, além de visitantes da feira. Foram respondidos 520 questionários, uma excelente amostra já que, segundo os organizadores do evento, participaram da sétima edição da FEBRACE 886 pessoas entre alunos finalistas, orientadores e coorientadores, grupo no qual se concentrou a pesquisa. Já o número de questionários respondidos por visitantes foi menor que 1\% do total, não representando uma amostra significativa desse grupo.
 
-  Com o intuito de levantar o perfil socioeconômico dos participantes, foi perguntado sobre o tipo de instituição a qual estão vinculados. Como se 
-pode ver no gráfico~\ref{escola}, quase 50\% dos participantes são provenientes de escolas públicas e 15\% são de fundações educacionais, o que mostra
-que grande parte dos participantes são das classes baixa e média brasileira.
+  \subsection{Automação do processamento de dados coletados}
+    O método escolhido para a aplicação do questionário foi em papel. Porém, com o objetivo de facilitar tanto a inserção de dados no computador quanto a compilação desses dados decidiu-se pelo uso de alguma ferramenta baseada na rede.
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/escola.png}
-      \end{center}
-      \caption{Tipo de escola dos participantes}
-      \label{escola}
-  \end{grafico}
+    A ferramenta escolhida foi o LimeSurvey, uma \textit{webapp} de código aberto que foi instalada e configurada localmente. Com ela os dados de cada questionário puderam ser inseridos de forma mais rápida e prática e, pelo fato de estar disponível \textit{online} e acessível via \textit{webrowsers}, o trabalho pôde ser mais facilmente entre os membros do grupo. Além disso, a ferramenta possibilita a geração diversas estatísticas e renderiza os respectivos gráficos. Os dados colhidos pela aplicação podem também ser exportados para diversos formatos. Essa foi a alternativa escolhida, e a análise dos dados foi realidada no \textit{software} OpenOffice Spreadsheets.
 
-  Para ter um perfil etário de possíveis usuários do sistema, foi feito um levantamento dos tipos de participantes que responderam ao questionário. 
-Segundo o gráfico~\ref{participante}, cerca de 70\% dos potenciais usuários são jovens com até 25 anos.
+  \subsection{Análise dos dados}
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/participante.png}
-      \end{center}
-      \caption{Tipo de participantes}
-      \label{participante}
-  \end{grafico}
+    Com o intuito de levantar o perfil socioeconômico dos participantes, foi perguntado sobre o tipo de instituição a qual estão vinculados. Como se pode ver no gráfico~\ref{escola}, quase 50\% dos participantes são provenientes de escolas públicas e 15\% são de fundações educacionais, o que mostra que grande parte dos participantes são das classes baixa e média brasileira.
 
-  O gráfico~\ref{local} mostra uma compilação da frequência de uso da internet em alguns locais. Pode-se constatar algumas coisas interessantes a partir 
-da análise desse gráfico. É provável que os 12\% dos participantes que não acessam a Internet em casa não o façam por não ter acesso devido a 
-condições financeiras, seja acesso discado ou banda larga, e é possível que nem possuam computador em casa. Mas dentre aqueles que possuem computador 
-e acesso a internet, pode-se perceber que a frequência: quase 60\% dizem acessar a internet diaramente. Mais de 70\% dos participantes possuem 
-acesso a Internet na escola, enquanto apenas cerca de 12\% não possuem acesso na escola, o que pode ser devido a não existir sala de informática 
-ou à falta da conexão em si. É possível perceber que é baixa a frequencia de uso em espaços como lan houses e espaços públicos (nesse caso, foram 
-considerados espaços públicos telecentros e bibliotecas; as escolas públicas não entraram), ou seja, menos de 10\% dos participantes fazem uso frequente 
-desses locais para acessar a internet. 
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/escola.png}
+        \end{center}
+        \caption{Tipo de escola dos participantes}
+        \label{escola}
+    \end{grafico}
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/local.png}
-      \end{center}
-      \caption{Frequência de uso da Internet em locais}
-      \label{local}
-  \end{grafico}
+    Para ter um perfil etário de possíveis usuários do sistema, foi feito um levantamento dos tipos de participantes que responderam ao questionário. Segundo o gráfico~\ref{participante}, cerca de 70\% dos potenciais usuários são jovens com até 25 anos.
 
-  Quanto aos aparelhos utilizados no acesso a internet, pode-se perceber pelo gráfico~\ref{dispositivo} que a grande parcela dos acessos são feitos 
-ainda por computadores \textit{desktop}, apesar de ter um número considerável de usuários de \textit{laptops}. Os dispositivos móveis, como celular 
-e \textit{handhelds} possuem uma penetração ainda baixa; apenas cerca de 30\% dos participantes dizem já terem os usados para acessar 
-a internet, sendo que mais da metade desse valor são de acessos esporádicos (de vez em quando).
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/participante.png}
+        \end{center}
+        \caption{Tipo de participantes}
+        \label{participante}
+    \end{grafico}
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/dispositivo.png}
-      \end{center}
-      \caption{Frequência de utilização de aparelhos para acesso a Internet}
-      \label{dispositivo}
-  \end{grafico}
+    O gráfico~\ref{local} mostra uma compilação da frequência de uso da internet em alguns locais. Pode-se constatar algumas coisas interessantes a partir da análise desse gráfico. É provável que os 12\% dos participantes que não acessam a Internet em casa não o façam por não ter acesso devido a condições financeiras, seja acesso discado ou banda larga, e é possível que nem possuam computador em casa. Mas dentre aqueles que possuem computador e acesso a internet, pode-se perceber que a frequência: quase 60\% dizem acessar a internet diaramente. Mais de 70\% dos participantes possuem acesso a Internet na escola, enquanto apenas cerca de 12\% não possuem acesso na escola, o que pode ser devido a não existir sala de informática ou à falta da conexão em si. É possível perceber que é baixa a frequencia de uso em espaços como lan houses e espaços públicos (nesse caso, foram considerados espaços públicos telecentros e bibliotecas; as escolas públicas não entraram), ou seja, menos de 10\% dos participantes fazem uso frequente desses locais para acessar a internet.
 
-  No gráfico~\ref{atividade}, percebe-se que o \textit{e-mail} é o serviço acesso que os participantes acessam com maior frequência: mais de 50\% 
-faz uso dele diariamente. O segundo serviço mais acessado diariamente são os mensageiros instantâneos, como o MSN \textit{messenger} e o GTalk, 
-com quase 40\%  das pessoas fazendo uso diário dele. Ao contrário do que é senso comum, as redes sociais são o quarto serviço em utilização diária 
-com apenas pouco mais de 20\% dos participantes. Como pode-se constatar jogos, blogs, fóruns e chat possuem acesso esporádico entre os participantes 
-da FEBRACE, sendo grande a porcentagem de pessoas que dizem nunca fazer uso deles. O acesso a vídeos, apesar de esporádico (com mais de 40\% das 
-pessoas dizendo que usam "de vez em quando"), possui uma baixa porcentagem de participantes que não fazem uso desse serviço.
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/local.png}
+        \end{center}
+        \caption{Frequência de uso da Internet em locais}
+        \label{local}
+    \end{grafico}
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/atividade.png}
-      \end{center}
-      \caption{Frequência de acesso a serviços na Internet}
-      \label{atividade}
-  \end{grafico}
+    Quanto aos aparelhos utilizados no acesso a internet, pode-se perceber pelo gráfico~\ref{dispositivo} que a grande parcela dos acessos são feitos ainda por computadores \textit{desktop}, apesar de ter um número considerável de usuários de \textit{laptops}. Os dispositivos móveis, como celular e \textit{handhelds} possuem uma penetração ainda baixa; apenas cerca de 30\% dos participantes dizem já terem os usados para acessar a internet, sendo que mais da metade desse valor são de acessos esporádicos (de vez em quando).
 
-  Quanto às redes sociais mais usadas, segundo o gráfico~\ref{rede_social}, mais de 75\% dos participantes possuem conta na rede social Orkut, do 
-Google. Em todas as demais, os participantes que as possuem não chega nem aos 10\%. Cerca de 15\% dos participantes afirmam não participar de redes 
-sociais.
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/dispositivo.png}
+        \end{center}
+        \caption{Frequência de utilização de aparelhos para acesso a Internet}
+        \label{dispositivo}
+    \end{grafico}
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/rede_social.png}
-      \end{center}
-      \caption{Redes Sociais mais utilizadas}
-      \label{rede_social}
-  \end{grafico}
+    No gráfico~\ref{atividade}, percebe-se que o \textit{e-mail} é o serviço acesso que os participantes acessam com maior frequência: mais de 50\% faz uso dele diariamente. O segundo serviço mais acessado diariamente são os mensageiros instantâneos, como o MSN \textit{messenger} e o GTalk, com quase 40\%  das pessoas fazendo uso diário dele. Ao contrário do que é senso comum, as redes sociais são o quarto serviço em utilização diária com apenas pouco mais de 20\% dos participantes. Como pode-se constatar jogos, blogs, fóruns e chat possuem acesso esporádico entre os participantes da FEBRACE, sendo grande a porcentagem de pessoas que dizem nunca fazer uso deles. O acesso a vídeos, apesar de esporádico (com mais de 40\% das pessoas dizendo que usam "de vez em quando"), possui uma baixa porcentagem de participantes que não fazem uso desse serviço.
 
-  Como pode-se ver no gráfico~\ref{contato} para mais de 85\% dos participantes é importante manter contato com os demais participantes da feira após 
-seu término. Isso reforça a idéia que um espaço para o encontro desses participantes seria muito bem vindo.
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/atividade.png}
+        \end{center}
+        \caption{Frequência de acesso a serviços na Internet}
+        \label{atividade}
+    \end{grafico}
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/contato.png}
-      \end{center}
-      \caption{Participantes que acham importante poder manter contato com os outros da feira após o fim da Febrace}
-      \label{contato}
-  \end{grafico}
+    Quanto às redes sociais mais usadas, segundo o gráfico~\ref{rede_social}, mais de 75\% dos participantes possuem conta na rede social Orkut, do Google. Em todas as demais, os participantes que as possuem não chega nem aos 10\%. Cerca de 15\% dos participantes afirmam não participar de redes sociais.
 
-  Mais de 60\% dos participantes, de acordo com o gráfico~\ref{feira_virtual}, acham que é possível que um grupo trabalhe num mesmo projeto sem 
-estar na mesma cidade, através do uso da Internet. Apesar desse não ser o foco do atual projeto, mostra uma potencialidade para extensão no futuro, 
-agregando funcionalidades que apóiem essa possibilidade.
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/rede_social.png}
+        \end{center}
+        \caption{Redes Sociais mais utilizadas}
+        \label{rede_social}
+    \end{grafico}
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/trabalho_online.png}
-      \end{center}
-      \caption{Participantes que acham possível um grupo trabalhar num mesmo projeto sem estar na mesma cidade, pela Internet}
-      \label{trabalho_online}
-  \end{grafico}
+    Como pode-se ver no gráfico~\ref{contato} para mais de 85\% dos participantes é importante manter contato com os demais participantes da feira após seu término. Isso reforça a idéia que um espaço para o encontro desses participantes seria muito bem vindo.
 
-  De acordo com o gráfico~\ref{feira_virtual} mais de 60\% dos participantes acham que a idéia de uma feira de ciências virtual é interessante, enquanto 
-apenas cerca de 10\% discordam da idéia. Isso reforça que a idéia do presente projeto apresenta relevância entre pessoas interessadas na temática.
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/contato.png}
+        \end{center}
+        \caption{Participantes que acham importante poder manter contato com os outros da feira após o fim da Febrace}
+        \label{contato}
+    \end{grafico}
 
-  \begin{grafico}
-      \begin{center}
-	\includegraphics[width=0.7\linewidth]{arquivos/feira_virtual.png}
-      \end{center}
-      \caption{Participantes que acham a idéia de uma feira de ciências virtual na internet interessante}
-      \label{feira_virtual}
-  \end{grafico}
+    Mais de 60\% dos participantes, de acordo com o gráfico~\ref{feira_virtual}, acham que é possível que um grupo trabalhe num mesmo projeto sem estar na mesma cidade, através do uso da Internet. Apesar desse não ser o foco do atual projeto, mostra uma potencialidade para extensão no futuro, agregando funcionalidades que apóiem essa possibilidade.
+
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/trabalho_online.png}
+        \end{center}
+        \caption{Participantes que acham possível um grupo trabalhar num mesmo projeto sem estar na mesma cidade, pela Internet}
+        \label{trabalho_online}
+    \end{grafico}
+
+    De acordo com o gráfico~\ref{feira_virtual} mais de 60\% dos participantes acham que a idéia de uma feira de ciências virtual é interessante, enquanto apenas cerca de 10\% discordam da idéia. Isso reforça que a idéia do presente projeto apresenta relevância entre pessoas interessadas na temática.
+
+    \begin{grafico}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/feira_virtual.png}
+        \end{center}
+        \caption{Participantes que acham a idéia de uma feira de ciências virtual na internet interessante}
+        \label{feira_virtual}
+    \end{grafico}
+
+\section{Relato do processo de desenvolvimento}
+
+	\subsection{Programação extrema na Febrace\textsuperscript{V}}
+    Em consequência dos motivos apresentados na sessão anterior, uma série de adaptações foi necessária para adequar a utilização da programação extrema ao contexto do projeto. As principais são descritas a seguir.
+
+    \subsubsection{Espaço de trabalho compartilhado virtual}
+      Não será possível dispor de um espaço de trabalho fixo para a realização das atividades referentes ao projeto. Na tentativa de suprir essa necessidade, será feito uso de um conjunto de ferramentas de trabalho colaborativo pela Internet, entre elas um "quadro branco" virtual e uma ferramenta de acompanhamento de \textit{bugs}. Mais detalhes sobre algumas dessas ferramentas são apresentados na sessão \textbf{Tecnologias utilizadas}.
+
+    \subsubsection{Semana de 10 horas}
+      Espera-se que a semana de trabalho da equipe seja de 10 horas.
+
+    \subsubsection{Iterações}
+      O tempo escolhido para cada iteração foi de três semanas. Assim, serão realizadas quatro iterações até o fim do primeiro semestre.
+
+    \subsubsection{Cliente}
+      O papel do cliente foi designado a um pesquisador do NATE-LSI que participa da organização da Febrace. Ele não estará sempre presente durante o desenvolvimento do projeto, mas serão realizadas reuniões semanais com ele.
+
+    \subsubsection{Programação pareada}
+      Todo o código de produção será escrito em sessões de programação pareada.
+
+    \subsubsection{Retrospectivas}
+      A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
 
 \section{Levantamento de Histórias}
 
@@ -207,41 +211,7 @@ apenas cerca de 10\% discordam da idéia. Isso reforça que a idéia do presente
 
     A duração de cada iteração será de três semanas e após esse período será feita uma entrega para o cliente que avaliará os resultados obtidos e definirá a iteração seguinte.
 
-\section{Tecnologias utilizadas}
-
-  O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
-
-  O código do projeto será gerenciado por meio de um sistema descentralizado de controle de versões, o Git. Como será produzido um sistema com código fonte aberto, o mesmo será disponibilizado no GitHub, onde o projeto já se encontra hospedado\footnote{http://www.github.com/nathaliaspatricio/febracev}. Como forma de registro do andamento do projeto foi criado um blog\footnote{http://febracev.wordpress.com} para o mesmo no Wordpress, e para a compilação de referências bibliográficas estão sendo usados um disco virtual\footnote{http://febracev.4shared.com} e o CiteULike\footnote{http://www.citeulike.org/groupfunc/9663} da Springer. Como uma forma de ajudar no gerenciamento do projeto está sendo usado o site Producteev, e para a coleta e relato de \textit{bugs} será usado o Trac\footnote{http://www.lsi.usp.br/nate/trac}. Para fazer a compilação dos dados coletados com os questionários de perfil de uso está sendo usado o LimeSurvey\footnote{http://www.lsi.usp.br/nate/febracev}.
-
-  As tecnologias foram escolhidas com base na experiência prévia e habilidades técnicas da equipe.
-
 \section{Arquitetura do sistema}
-
-  Como consequência do uso do framework para desenvolvimento web Django, a arquitetura do sistema deverá ser aquela especificada pelo Django.
-
-  O Django usa uma arquitetura conhecida como MTV (Model, Template, View) que nada mais é que uma variação do modelo MVC (Model, View, Controller). No MVC, separam-se as regras de negócios (Controller), os dados e métodos de acessos aos mesmos (Model) e as regras de apresentação (View).
-
-  No caso da arquitetura MTV, o framework Django é o que faz as vezes de controlador da arquitetura MVC. Sendo assim, na arquitetura MTV, o Controller não é responsável pela lógica do negócio e sim pelo funcionamento do sistema. Além de models, views e templates, no Django há também url dispatchers, middlewares e handlers e são estes que são encarados como Controller.
-
-  No Model, são escritas as classes que designarão as tabelas no banco de dados. A manipulação dessas tabelas ocorre através do ORM (mapeamento objeto relacional) e, por isso, não é necessária a escrita de querys em SQL para a persistência dos dados. Uma outra vantagem é baixa preocupação com qual sistema gerenciador de banco de dados será usado, uma vez que o ORM suporta vários sistemas.
-
-  Na camada Model também devem ser escritas as regras de acesso às informações, regras para os eventos de cada modelo (métodos save, delete, etc.), e também regras genéricas para eventos que podem ser usados em mais de um modelo (signals). Toda a lógica de manipulação da informação de uma aplicação estará em seu Model.
-
-  Na camada View, são escritas as regras de negócio e as regras de apresentação do sistema.
-
-  Na camada Template é definida a forma de apresentação dos dados que a View envia. Com o sistema de templates do Django é possível criar heranças, ou seja, um template base contendo a estrutura básica do sistema e templates específicos que herdam as características deste template base e atribuem/criam suas próprias características.
-
-  Com o uso do framework Django, um projeto é um conjunto de aplicações. Uma Aplicação é uma determinada funcionalidade que compõe um projeto. Por causa disso, há a idéia de aplicações plugáveis no Django que é uma aplicação que pode ser usada em mais de um projeto com nenhuma ou quase nenhuma alteração de código. Isso quer dizer que a aplicação deve ter seus próprios Models, suas próprias Views, seus próprios Templates e encapsular o máximo possível de código que não se enquadre em um desses elementos.
-  
-  Na figura~\ref{django_arquitetura} está ilustrada a arquitetura do Django.
-
-  \begin{figure}
-      \begin{center}
-	\includegraphics[width=1.0\linewidth]{arquivos/django_arquitetura.png}
-      \end{center}
-      \caption{Arquitetura MTV do Django}
-      \label{django_arquitetura}
-  \end{figure}
 
   Tendo em vista essa arquitetura, espera-se ao longo do primeiro semestre desenvolver a primeira versão do projeto. Essa primeira versão contemplará as seguintes aplicações:
 

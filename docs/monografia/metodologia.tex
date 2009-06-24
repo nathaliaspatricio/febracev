@@ -116,27 +116,6 @@
     \subsubsection{Formas de avaliação}
       Grande parte das avaliações realizadas nas disciplinas de projeto de conclusão de curso é baseada na documentação levantada por etapas das metodologias tradicionais. A criação desses documentos não é parte do processo das metodologias ágeis e outros critérios de avaliação apropriados a esse contexto foram necessários nas experiências apresentadas.
 
-	\subsection{Programação extrema na Febrace\textsuperscript{V}}
-    Em consequência dos motivos apresentados na sessão anterior, uma série de adaptações foi necessária para adequar a utilização da programação extrema ao contexto do projeto. As principais são descritas a seguir.
-
-    \subsubsection{Espaço de trabalho compartilhado virtual}
-      Não será possível dispor de um espaço de trabalho fixo para a realização das atividades referentes ao projeto. Na tentativa de suprir essa necessidade, será feito uso de um conjunto de ferramentas de trabalho colaborativo pela Internet, entre elas um "quadro branco" virtual e uma ferramenta de acompanhamento de \textit{bugs}. Mais detalhes sobre algumas dessas ferramentas são apresentados na sessão \textbf{Tecnologias utilizadas}.
-
-    \subsubsection{Semana de 10 horas}
-      Espera-se que a semana de trabalho da equipe seja de 10 horas.
-
-    \subsubsection{Iterações}
-      O tempo escolhido para cada iteração foi de três semanas. Assim, serão realizadas quatro iterações até o fim do primeiro semestre.
-
-    \subsubsection{Cliente}
-      O papel do cliente foi designado a um pesquisador do NATE-LSI que participa da organização da Febrace. Ele não estará sempre presente durante o desenvolvimento do projeto, mas serão realizadas reuniões semanais com ele.
-
-    \subsubsection{Programação pareada}
-      Todo o código de produção será escrito em sessões de programação pareada.
-
-    \subsubsection{Retrospectivas}
-      A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
-
 \section{Levantamento do perfil dos usuários}
   Um dos objetivos do projeto é o estudo dos conceitos de usabilidade, aplicando-os no desenvolvimento da Febrace\textsuperscript{V}. Para se fazer um estudo de usabilidade verificou-se como necessário um levantamento prévio com possíveis usuários do sistema para verificar o seu perfil de uso e suas reais necessidades em relação a uma nova ferramenta computacional. Como a sétima edição da FEBRACE ocorreria no primeiro semestre, viu-se a possibilidade de fazer esse levantamento com os participantes da feira que são potenciais usuários da rede social. O método escolhido para fazer esse levantamento foi através de questionário aplicados a finalistas, orientadores e visitantes durante a feira.
 
@@ -145,10 +124,38 @@
 
     O questionário final, apresentado no Apêndice 1, apresenta três partes. A primeira tem por objetivo colher alguns dados demográficos, como idade, local de residência e escolaridade. Na segunda parte há perguntas que procuram identificar o perfil de uso da internet do usuário (de onde e com qual frequência ocorre o acesso, quais serviços são utilizados, etc.). O objetivo da terceira parte é saber a opinião dos usuários sobre sua atual experiência com os serviços web da FEBRACE e sobre seu interesse nas possíveis ferramentas oferecidas pela Febrace\textsuperscript{v}.
 
-  \subsection{Aplicação do questionário}
-    A FEBRACE ocorreu nos dias 17, 18 e 19 de março e durante esse período foram aplicados questionários para alunos e professores participantes, além de visitantes da feira. Foram respondidos 520 questionários. Até o presento momento foram compilados 136 questionários, 26\% do total.
+\section{Tecnologias utilizadas}
 
-  \subsection{Automação do processamento de dados coletados}
-    O método escolhido para a aplicação do questionário foi em papel. Porém, com o objetivo de facilitar tanto a inserção de dados no computador quanto a compilação desses dados decidiu-se pelo uso de alguma ferramenta online. O questionário começou a ser transposto para o SurveyMonkey, porém a conta gratuita desse serviço é restrita a dez perguntas no questinário e cem questionários respondidos, limitações que tornam o serviço aquém das necessidades.
+  O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
 
-    Mais adequada é a ferramenta LimeSurvey, uma \textit{webapp} de código aberto que foi instalada e configurada localmente. Com ela os dados de cada questionário podem ser inseridos de forma mais rápida e prática e, pelo fato de estar \textit{online}, o trabalho poder ser mais facilmente entre os membros do grupo. Além disso, a ferramenta gera diversas estatísticas e desenha os respectivos gráficos.
+  O código do projeto será gerenciado por meio de um sistema descentralizado de controle de versões, o Git. Como será produzido um sistema com código fonte aberto, o mesmo será disponibilizado no GitHub, onde o projeto já se encontra hospedado\footnote{http://www.github.com/nathaliaspatricio/febracev}. Como forma de registro do andamento do projeto foi criado um blog\footnote{http://febracev.wordpress.com} para o mesmo no Wordpress, e para a compilação de referências bibliográficas estão sendo usados um disco virtual\footnote{http://febracev.4shared.com} e o CiteULike\footnote{http://www.citeulike.org/groupfunc/9663} da Springer. Como uma forma de ajudar no gerenciamento do projeto está sendo usado o site Producteev, e para a coleta e relato de \textit{bugs} será usado o Trac\footnote{http://www.lsi.usp.br/nate/trac}. Para fazer a compilação dos dados coletados com os questionários de perfil de uso está sendo usado o LimeSurvey\footnote{http://www.lsi.usp.br/nate/febracev}.
+
+  As tecnologias foram escolhidas com base na experiência prévia e habilidades técnicas da equipe.
+
+  \subsection{Framework de desenvolvimento Django}
+
+    Como consequência do uso do framework para desenvolvimento web Django, a arquitetura do sistema deverá ser aquela especificada pelo Django.
+
+    O Django usa uma arquitetura conhecida como MTV (Model, Template, View) que nada mais é que uma variação do modelo MVC (Model, View, Controller). No MVC, separam-se as regras de negócios (Controller), os dados e métodos de acessos aos mesmos (Model) e as regras de apresentação (View).
+
+    No caso da arquitetura MTV, o framework Django é o que faz as vezes de controlador da arquitetura MVC. Sendo assim, na arquitetura MTV, o Controller não é responsável pela lógica do negócio e sim pelo funcionamento do sistema. Além de models, views e templates, no Django há também url dispatchers, middlewares e handlers e são estes que são encarados como Controller.
+
+    No Model, são escritas as classes que designarão as tabelas no banco de dados. A manipulação dessas tabelas ocorre através do ORM (mapeamento objeto relacional) e, por isso, não é necessária a escrita de querys em SQL para a persistência dos dados. Uma outra vantagem é baixa preocupação com qual sistema gerenciador de banco de dados será usado, uma vez que o ORM suporta vários sistemas.
+
+    Na camada Model também devem ser escritas as regras de acesso às informações, regras para os eventos de cada modelo (métodos save, delete, etc.), e também regras genéricas para eventos que podem ser usados em mais de um modelo (signals). Toda a lógica de manipulação da informação de uma aplicação estará em seu Model.
+
+    Na camada View, são escritas as regras de negócio e as regras de apresentação do sistema.
+
+    Na camada Template é definida a forma de apresentação dos dados que a View envia. Com o sistema de templates do Django é possível criar heranças, ou seja, um template base contendo a estrutura básica do sistema e templates específicos que herdam as características deste template base e atribuem/criam suas próprias características.
+
+    Com o uso do framework Django, um projeto é um conjunto de aplicações. Uma Aplicação é uma determinada funcionalidade que compõe um projeto. Por causa disso, há a idéia de aplicações plugáveis no Django que é uma aplicação que pode ser usada em mais de um projeto com nenhuma ou quase nenhuma alteração de código. Isso quer dizer que a aplicação deve ter seus próprios Models, suas próprias Views, seus próprios Templates e encapsular o máximo possível de código que não se enquadre em um desses elementos.
+    
+    Na figura~\ref{django_arquitetura} está ilustrada a arquitetura do Django.
+
+    \begin{figure}
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/django_arquitetura.png}
+        \end{center}
+        \caption{Arquitetura MTV do Django}
+        \label{django_arquitetura}
+    \end{figure}
