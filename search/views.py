@@ -17,9 +17,9 @@ def search(request, search_input):
     tags = Tag.objects.none()
 
     for term in search_terms:
-        projects = projects | Project.objects.filter(name__contains=term)
-        users = users | User.objects.filter(username__contains=term)
-        tags = tags | Tag.objects.filter(name__contains=term)
+        projects = projects & Project.objects.filter(name__contains=term)
+        users = users & User.objects.filter(username__contains=term)
+        tags = tags & Tag.objects.filter(name__contains=term)
 
     return render_to_response('search/search_results.html',
                               {'title': unicode(search_input),

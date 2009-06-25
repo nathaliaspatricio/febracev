@@ -4,7 +4,7 @@
 
 \section{Análise dos questionários de perfil de usuário}
 
-    A FEBRACE ocorreu nos dias 17, 18 e 19 de março de 2009 e durante esse período foram aplicados questionários para alunos e professores participantes, principais usuários potenciais do sistema proposto, além de visitantes da feira. Foram respondidos 520 questionários, uma excelente amostra já que, segundo os organizadores do evento, participaram da sétima edição da FEBRACE 886 pessoas entre alunos finalistas, orientadores e coorientadores, grupo no qual se concentrou a pesquisa. Já o número de questionários respondidos por visitantes foi menor que 1\% do total, não representando uma amostra significativa desse grupo.
+    A FEBRACE ocorreu nos dias 17, 18 e 19 de março de 2009 e durante esse período foram aplicados questionários para alunos e professores participantes, principais usuários potenciais do sistema proposto, além de visitantes da feira. Foram respondidos 520 questionários, uma excelente amostra já que, segundo os organizadores do evento, participaram da sétima edição da FEBRACE 886 pessoas entre alunos finalistas, orientadores e coorientadores, grupo no qual se concentrou a pesquisa. Já o número de questionários respondidos por visitantes foi menor que 1\% do total, não representando uma amostra significativa desse grupo, estimado em mais de 12.000 pessoas.
 
   \subsection{Automação do processamento de dados coletados}
     O método escolhido para a aplicação do questionário foi em papel. Porém, com o objetivo de facilitar tanto a inserção de dados no computador quanto a compilação desses dados decidiu-se pelo uso de alguma ferramenta baseada na rede.
@@ -105,6 +105,12 @@
 
 \section{Relato do processo de desenvolvimento}
 
+%  - Relato do processo de desenvolvimento
+%    - Adaptações necessárias à metodologia
+%    - Pareamento
+%    - Tracking
+%    - Testes
+
 	\subsection{Programação extrema na Febrace\textsuperscript{V}}
     Em consequência dos motivos apresentados na sessão anterior, uma série de adaptações foi necessária para adequar a utilização da programação extrema ao contexto do projeto. As principais são descritas a seguir.
 
@@ -126,130 +132,11 @@
     \subsubsection{Retrospectivas}
       A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
 
-\section{Levantamento de Histórias}
-
-  O planejamento em XP feito com Histórias escritas em pequenos cartões. Cada cartão é escrito pelo cliente e deve descrever uma unidade de funcionalidade, que geralmente representa um requisito funcional desejado\cite{sato07}.
-
-  Como uma forma de especificar o sistema a ser desenvolvido durante o projeto de formatura optou-se por descrever as histórias levantadas. As histórias foram escritas em conjunto com o cliente.
-
-	\begin{enumerate}
-    \item Convite a ex-participantes \\
-      Quero, como administrador do sistema, que seja enviado automaticamente um convite para participação na rede social para todos os participantes de edições anteriores da FEBRACE (cadastrados em um banco de dados legado). Caso o ex-participante crie seu perfil na rede social, o projeto dele deve ser criado automaticamente e associado a ele.
-    \item Autenticação no sistema \\
-      Quero, como usuário, acessar a página inicial com meu e-mail e senha para me autenticar no sistema. Caso esqueça minha senha, quero informar o sistema e pedir que envie uma nova senha para meu e-mail. Se não for um usuário registrado, quero que me seja apresentada a tela de cadastro de novo usuário.
-    \item Cadastro de Usuário \\
-      Quero poder criar um perfil no sistema através de cadastro no sistema fornecendo um e-mail válido e uma senha para o acesso.
-    \item Edição de Perfil \\
-      Quero, como usuário registrado, poder editar a página de meu perfil pessoal, alterando, inserindo e excluindo os dados lá presentes, e escolhendo quais usuários podem ter acesso a determinadas informações minhas.
-    \item Visualização de Perfil \\
-      Quero, como usuário, poder visualizar meu perfil e de meus amigos, bem como, via sistema de busca, visualizar os perfis de quem o permita a qualquer usuário.
-    \item Cancelamento de Cadastro \\
-      Quero, como usuário, poder quando assim desejar cancelar meu cadastro do sistema.
-    \item Visualização de Projeto \\
-      Quero, como usuário, ver as informações de cada projeto, como seu nome e resumo, sua área do conhecimento, participantes e demais informações relevantes.
-    \item Visualização de Participantes de um projeto \\
-      Quero, como usuário, ver na página de um projeto quais são seus participantes, e ter acesso a seus perfis. Gostaria de saber também qual seu papel na Feira (estudante, orientador, etc.) e a instituição a qual pertence.
-    \item Visualização de Vídeo de um projeto \\
-      Quero, como usuário, poder ver na página de um projeto, quando disponível, seu vídeo oficial, feito na própria FEBRACE, hospedado em um site dedicado como a IPTV-USP ou o Youtube.
-    \item Visualização de prêmios de um projeto \\
-      Quero, como usuário, saber quais prêmios foram ganhos por algum projeto na edição da feira em que participou. Quero também poder acessar mais informações sobre esses prêmios.
-    \item Edição dos Conteúdos de um projeto \\
-      Quero, como participante de um projeto, poder inserir novas informações em sua página, como textos (relatório, diário de bordo, etc.), fotos e vídeos relacionados com ele, entre outros. Quero também poder editar esses conteúdos por mim adicionados, modificando-os ou apagando-os.
-    \item Edição de Diário de Bordo de um projeto \\
-      Quero que cada projeto tenha a ele associado uma ferramenta que permita a criação de um diário de bordo online, com o formato de \textit{weblog}.
-    \item Adicionar amigos \\
-      Quero, como usuário, escolher quais outros usuários são meus amigos, dando a eles permissão de me escrever mensagens, entre outras operações.
-    \item Adicionar projetos prediletos \\
-      Quero, como usuário, fazer uma lista de projetos que mais me chamaram atenção na feira. Quero poder fazer um comentário que justifique minha indicação, se assim o desejar.
-    \item Postar em fórum \\
-      Quero, como usuário, ter um espaço que permita postar perguntas que outros usuários possam responder, avisos, notícias e quaisquer outro tipo de texto relacionado.
-    \item Comentar em caixas de comentários \\
-      Quero, como usuário, poder deixar comentários nas diversas páginas da rede social, como projetos, artigos e diários de bordo. Caso eu tenha feito o comentário estando logado, ele deve ser identificado e deve haver um link para meu perfil nele. Comentários de visitantes podem ou não ser aceitos a critério de quem administra o conteúdo comentado.
-    \item Enviar mensagens a outros usuários \\
-      Quero, como usuário, enviar mensagens privadas de texto a outros usuários e receber mensagens enviadas por ele. Quero também poder escolher quais usuários podem ou não me escrever.
-    \item Buscar conteúdos do sistema \\
-      Quero, como usuário, ter acesso a  um sistema de busca que permita encontrar projetos pesquisando pelo seu nome, área de conhecimento, local de origem, integrantes, entre outros. Quero também poder usá-lo para encontrar outros usuários.
-    \item Notificação de novos conteúdos \\
-      Quero, como usuário, ser notificado caso novos conteúdos (entradas em Diários de Bordo, colunas, etc.) sejam criados na rede social.
-    \item Visualização de Coluna da Equipe FEBRACE \\
-      Quero, como usuário, uma área na rede social na qual possa ler textos escritos por pessoas ligadas a feira, como a equipe da FEBRACE, avaliadores, ex-participantes, etc.
-    \item Interface de escrita de colunas \\
-      Quero, como participante da equipe da Febrace ter acesso a uma interface no qual o texto das colunas possam ser criados e inseridos no sistema.
-    \item Estatísticas do uso do sistema \\
-      Quero, como usuário, ter um espaço no site no qual possa ver quais são os artigos mais lidos, os projetos mais visitados, os projetos que mais são escolhidos como prediletos, os usuários mais ativos, conteúdos mais acompanhados, etc.
-    \item Interface Administrativa \\
-      Quero, como administrador do sistema, uma interface auxiliar ao da rede social que permita a realização de tarefas administrativas.
-    \item Moderação de conteúdos \\
-      Quero, como usuário moderador, poder tirar do ar conteúdos impróprios postados por usuários. Quando um conteúdo for excluído ou editado, quero que o sistema envie uma mensagem para esse usuário informando o motivo dessa ação.
-    \item Gerenciamento de Usuários \\
-      Quero, como administrador do sistema, poder inserir usuários, modificar suas informações e excluí-los do sistema. Quero também editar permissões de cada usuário, determinando o tipo de uso que ele pode fazer do sistema.
-    \item Gerenciamento de conteúdo \\
-      Quero, como administrador do sistema, inserir, editar e excluir quaisquer conteúdos (como colunas e páginas de projeto).
-    \item Estatísticas do sistema \\
-      Quero, como administrador do sistema, ter uma página que indique quais são as páginas mais visitadas do site, os usuários mais ativos e as requisições que ocupam maior tempo de processamento do servidor.
-    \item Visualização de Prêmios \\
-      Quero, como usuário, saber quais prêmios foram oferecidos na FEBRACE, por qual empresa/instituição e a quais projetos. Quero assim que os projetos contemplados ofereçam um link para a página do respectivo prêmio, e quero encontrar nessa página mais informações sobre eles.
-    \item Visualização de Instituições \\
-      Quero, como usuário, que as diversas instituições ligadas à FEBRACE, como escolas, centros técnicos, patrocinadores, entre outros, tenham sua página no portal, contendo mais informações sobre elas.
-    \item Cadastro de novo projeto \\
-      Quero, como usuário registrado, poder cadastrar um novo projeto em andamento para ser submetido para a próxima edição da FEBRACE. Posso escolher a opção de criar um diário de bordo para meu projeto, além de poder convidar outras pessoas para participar do projeto criado.
-	\end{enumerate}
-
-  \subsection{1\textsuperscript{a} iteração}
-    Antes do início de uma iteração é necessário que se definam quais serão as histórias a serem implementadas nesse ciclo de desenvolvimento. Essa escolha se dá por meio do \textit{Planning Game}, ou Jogo do Planejamento. No \textit{Planning Game}, desenvolvedores e clientes sentam-se juntos, e têm a frente o conjunto de histórias escritas até o momento. Os clientes definem a prioridade das histórias, enquanto os desenvolvedores definem a complexidade (dificuldade de implementação) de cada uma. Levando em consideração esses dois parâmetros, os envolvidos escolhem um subconjunto de histórias, cuja prioridade seja mais alta e cuja complexidade seja possível de lidar no período de desenvolvimento. Assim definem-se as histórias a serem trabalhadas em uma iteração.
-
-    Através do \textit{Planning Game} realizado com o cliente foi definida a primeira iteração do projeto. Fazem parte da primeira iteração as seguintes histórias:
-
-    \begin{itemize}
-      \item Autenticação no sistema
-      \item Cadastro de usuário
-      \item Visualização de Projeto
-      \item Visualização de Participantes de um projeto
-      \item Edição dos Conteúdos de um projeto
-      \item Cadastro de novo projeto
-    \end{itemize}
-
-    A duração de cada iteração será de três semanas e após esse período será feita uma entrega para o cliente que avaliará os resultados obtidos e definirá a iteração seguinte.
-
-\section{Arquitetura do sistema}
-
-  Tendo em vista essa arquitetura, espera-se ao longo do primeiro semestre desenvolver a primeira versão do projeto. Essa primeira versão contemplará as seguintes aplicações:
-
-  \subsection{Projetos}
-    O principal módulo da aplicação é o de projetos. Nele são reunidas e apresentadas ao público informações sobre um projeto, como, entre outras, descrição, autores, orientadores e região de origem. O módulo de projetos deve oferecer integração com um serviço de vídeo sob demanda (como o IPTV-USP), onde serão armazenados vídeos dos projetos. São nas páginas geradas por esse módulo que ocorrem a maior parte das interações entre os usuários, pois dão acesso aos módulos de comentários e mensagens.
-
-  \subsection{Perfis}
-    Cada usuário tem seu perfil na aplicação com suas informações pessoais. Esse módulo tem a função de gerir a apresentação desses perfis bem como oferecer as funcionalidades de edição e exclusão.
-
-  \subsection{Comentários}
-    Várias das páginas geradas pela aplicação, tais como as de projeto e de artigos, têm agregadas caixas de comentários que podem ser usadas pelos visitantes (cadastrados ou não). Esse módulo oferece essa funcionalidade.
-
-  \subsection{Fórum}
-    Pelas páginas geradas por esse módulo os usuários podem perguntar e responder uns aos outros questões relacionadas à feira e aos seus projetos. O fórum será composto por diversas áreas, cada uma relativa à área de conhecimento correspondente na Feira.
-
-  \subsection{Blog}
-    Esse módulo oferece, atrelado a cada projeto, uma ferramenta de Blog, ou Diário de Bordo virtual, na qual os participantes podem relatar o processo do desenvolvimento de seus projetos, sua experiência na feira ou qualquer outro assunto que achem pertinentes. Os blogs, tais como outros serviços de módulos com conteúdos dinâmicos, devem prover serviço de RSS.
-
-  \subsection{Mensagens}
-    Os usuários registrados podem enviar mensagens privadas a outros usuários, e esse módulo oferece essa funcionalidade. Haverá também um sistema de mensagens públicas (\textit{scrap}).
-
-  \subsection{Colunas}
-    O módulo de colunas possibilita a inserção de conteúdo proveniente da equipe da FEBRACE ou de seus colaboradores, em páginas com esse fim.
-
-  \subsection{Busca}
-    Além do acesso ao conteúdo da aplicação pelos menus correspondentes, é possível filtrá-lo por palavras-chave na ferramenta de busca.
-
-  \subsection{Login}
-    Módulo no qual usuários registrados autenticam sua entrada, e os não registrados têm a oportunidade de criar uma conta.
-
-  \subsection{Administração}
-    Interface administrativa da aplicação, que permite operações de moderação, gerenciamento de usuários e conteúdo, etc.
-
-\section{Atividades realizadas}
-  As atividades realizadas nos últimos meses dividem-se em três grupos: 1) Compilação parcial dos questionários para levantamento do perfil do público-alvo do projeto, 2) Fase de exploração do Febrace\textsuperscript{V} e 3) Implementação da primeira iteração. Essas atividades são descritas a seguir.
-
-  \subsection{Compilação parcial dos questionários}
-    Durante a última edição da FEBRACE, foram distribuídos cerca de 1000 questionários para seus participantes, e seu preenchimento era facultativo. Foram preenchidos, ao todo, 520 questionários. Esses dados estão sendo inseridos aos poucos na ferramenta \textit{LimeSurvey}, e no presente momento já foram processados 126 questionários.
+%  - Arquitetura
+%  - Levantamento de histórias
+%  - Page flow
+%  - Iterações e Retrospectivas
+\section{Especificação e desenvolvimento}
 
   \subsection{Fase de exploração}
     A primeira fase de um projeto de XP é a fase de exploração\cite{beck04}, que abrange a tomada inicial de histórias, o levantamento inicial de aspectos relativos à arquitetura do sistema a ser desenvolvido e a escolha e familiarização com as tecnologias a serem utilizadas no projeto.
@@ -257,7 +144,7 @@
 
     \begin{itemize}
       \item
-        Levantamento das histórias do projeto;
+        Levantamento inicial das histórias do projeto;
       \item
         Definição da arquitetura do projeto;
       \item
@@ -266,24 +153,291 @@
         Realização do primeiro \textit{Planning game}
     \end{itemize}
 
-    A descrição dessas atividades encontra-se nas seções anteriores.
+  \subsection{Levantamento inicial de Histórias}
 
-  \subsection{Primeira iteração}
-    A primeira iteração, com duração de três semanas, foi realizada entre 20 de abril e 8 de maio, teve como resultado a implementação de cinco histórias. A descrição de cada uma delas é feita abaixo.
+    O planejamento em XP feito com Histórias escritas em pequenos cartões. Cada cartão é escrito pelo cliente e deve descrever uma unidade de funcionalidade, que geralmente representa um requisito funcional desejado\cite{sato07}.
+
+    Como uma forma de especificar o sistema a ser desenvolvido durante o projeto de formatura optou-se por descrever as histórias levantadas. As histórias foram escritas em conjunto com o cliente.
+
+    \begin{enumerate}
+      \item Convite a ex-participantes \\
+        Quero, como administrador do sistema, que seja enviado automaticamente um convite para participação na rede social para todos os participantes de edições anteriores da FEBRACE (cadastrados em um banco de dados legado). Caso o ex-participante crie seu perfil na rede social, o projeto dele deve ser criado automaticamente e associado a ele.
+      \item Autenticação no sistema \\
+        Quero, como usuário, acessar a página inicial com meu e-mail e senha para me autenticar no sistema. Caso esqueça minha senha, quero informar o sistema e pedir que envie uma nova senha para meu e-mail. Se não for um usuário registrado, quero que me seja apresentada a tela de cadastro de novo usuário.
+      \item Cadastro de Usuário \\
+        Quero poder criar um perfil no sistema através de cadastro no sistema fornecendo um e-mail válido e uma senha para o acesso.
+      \item Edição de Perfil \\
+        Quero, como usuário registrado, poder editar a página de meu perfil pessoal, alterando, inserindo e excluindo os dados lá presentes, e escolhendo quais usuários podem ter acesso a determinadas informações minhas.
+      \item Visualização de Perfil \\
+        Quero, como usuário, poder visualizar meu perfil e de meus amigos, bem como, via sistema de busca, visualizar os perfis de quem o permita a qualquer usuário.
+      \item Cancelamento de Cadastro \\
+        Quero, como usuário, poder quando assim desejar cancelar meu cadastro do sistema.
+      \item Visualização de Projeto \\
+        Quero, como usuário, ver as informações de cada projeto, como seu nome e resumo, sua área do conhecimento, participantes e demais informações relevantes.
+      \item Visualização de Participantes de um projeto \\
+        Quero, como usuário, ver na página de um projeto quais são seus participantes, e ter acesso a seus perfis. Gostaria de saber também qual seu papel na Feira (estudante, orientador, etc.) e a instituição a qual pertence.
+      \item Visualização de Vídeo de um projeto \\
+        Quero, como usuário, poder ver na página de um projeto, quando disponível, seu vídeo oficial, feito na própria FEBRACE, hospedado em um site dedicado como a IPTV-USP ou o Youtube.
+      \item Visualização de prêmios de um projeto \\
+        Quero, como usuário, saber quais prêmios foram ganhos por algum projeto na edição da feira em que participou. Quero também poder acessar mais informações sobre esses prêmios.
+      \item Edição dos Conteúdos de um projeto \\
+        Quero, como participante de um projeto, poder inserir novas informações em sua página, como textos (relatório, diário de bordo, etc.), fotos e vídeos relacionados com ele, entre outros. Quero também poder editar esses conteúdos por mim adicionados, modificando-os ou apagando-os.
+      \item Edição de Diário de Bordo de um projeto \\
+        Quero que cada projeto tenha a ele associado uma ferramenta que permita a criação de um diário de bordo online, com o formato de \textit{weblog}.
+      \item Adicionar amigos \\
+        Quero, como usuário, escolher quais outros usuários são meus amigos, dando a eles permissão de me escrever mensagens, entre outras operações.
+      \item Adicionar projetos prediletos \\
+        Quero, como usuário, fazer uma lista de projetos que mais me chamaram atenção na feira. Quero poder fazer um comentário que justifique minha indicação, se assim o desejar.
+      \item Postar em fórum \\
+        Quero, como usuário, ter um espaço que permita postar perguntas que outros usuários possam responder, avisos, notícias e quaisquer outro tipo de texto relacionado.
+      \item Comentar em caixas de comentários \\
+        Quero, como usuário, poder deixar comentários nas diversas páginas da rede social, como projetos, artigos e diários de bordo. Caso eu tenha feito o comentário estando autenticado, ele deve ser identificado e deve haver um link para meu perfil nele. Comentários de visitantes podem ou não ser aceitos a critério de quem administra o conteúdo comentado.
+      \item Enviar mensagens a outros usuários \\
+        Quero, como usuário, enviar mensagens privadas de texto a outros usuários e receber mensagens enviadas por ele. Quero também poder escolher quais usuários podem ou não me escrever.
+      \item Buscar conteúdos do sistema \\
+        Quero, como usuário, ter acesso a  um sistema de busca que permita encontrar projetos pesquisando pelo seu nome, área de conhecimento, local de origem, integrantes, entre outros. Quero também poder usá-lo para encontrar outros usuários.
+      \item Notificação de novos conteúdos \\
+        Quero, como usuário, ser notificado caso novos conteúdos (entradas em Diários de Bordo, colunas, etc.) sejam criados na rede social.
+      \item Visualização de Coluna da Equipe FEBRACE \\
+        Quero, como usuário, uma área na rede social na qual possa ler textos escritos por pessoas ligadas a feira, como a equipe da FEBRACE, avaliadores, ex-participantes, etc.
+      \item Estatísticas do uso do sistema \\
+        Quero, como usuário, ter um espaço no site no qual possa ver quais são os artigos mais lidos, os projetos mais visitados, os projetos que mais são escolhidos como prediletos, os usuários mais ativos, conteúdos mais acompanhados, etc.
+      \item Interface Administrativa \\
+        Quero, como administrador do sistema, uma interface auxiliar ao da rede social que permita a realização de tarefas administrativas.
+      \item Moderação de conteúdos \\
+        Quero, como usuário moderador, poder tirar do ar conteúdos impróprios postados por usuários. Quando um conteúdo for excluído ou editado, quero que o sistema envie uma mensagem para esse usuário informando o motivo dessa ação.
+      \item Gerenciamento de Usuários \\
+        Quero, como administrador do sistema, poder inserir usuários, modificar suas informações e excluí-los do sistema. Quero também editar permissões de cada usuário, determinando o tipo de uso que ele pode fazer do sistema.
+      \item Gerenciamento de conteúdo \\
+        Quero, como administrador do sistema, inserir, editar e excluir quaisquer conteúdos (como colunas e páginas de projeto).
+      \item Estatísticas do sistema \\
+        Quero, como administrador do sistema, ter uma página que indique quais são as páginas mais visitadas do site, os usuários mais ativos e as requisições que ocupam maior tempo de processamento do servidor.
+      \item Visualização de Prêmios \\
+        Quero, como usuário, saber quais prêmios foram oferecidos na FEBRACE, por qual empresa/instituição e a quais projetos. Quero assim que os projetos contemplados ofereçam um link para a página do respectivo prêmio, e quero encontrar nessa página mais informações sobre eles.
+      \item Visualização de Instituições \\
+        Quero, como usuário, que as diversas instituições ligadas à FEBRACE, como escolas, centros técnicos, patrocinadores, entre outros, tenham sua página no portal, contendo mais informações sobre elas.
+      \item Cadastro de novo projeto \\
+        Quero, como usuário registrado, poder cadastrar um novo projeto em andamento para ser submetido para a próxima edição da FEBRACE. Posso escolher a opção de criar um diário de bordo para meu projeto, além de poder convidar outras pessoas para participar do projeto criado.
+      \item Interface de escrita de colunas \\
+        Quero, como participante da equipe da Febrace ter acesso a uma interface no qual o texto das colunas possam ser criados e inseridos no sistema.
+    \end{enumerate}
+
+  \subsection{Arquitetura do sistema}
+
+    Tendo em vista essa arquitetura, espera-se ao longo do primeiro semestre desenvolver a primeira versão do projeto. Essa primeira versão contemplará as seguintes aplicações:
+
+    \subsubsection{Projetos}
+      O principal módulo da aplicação é o de projetos. Nele são reunidas e apresentadas ao público informações sobre um projeto, como, entre outras, descrição, autores, orientadores e região de origem. O módulo de projetos deve oferecer integração com um serviço de vídeo sob demanda (como o IPTV-USP), onde serão armazenados vídeos dos projetos. São nas páginas geradas por esse módulo que ocorrem a maior parte das interações entre os usuários, pois dão acesso aos módulos de comentários e mensagens.
+
+    \subsubsection{Perfis}
+      Cada usuário tem seu perfil na aplicação com suas informações pessoais. Esse módulo tem a função de gerir a apresentação desses perfis bem como oferecer as funcionalidades de edição e exclusão.
+
+    \subsubsection{Comentários}
+      Várias das páginas geradas pela aplicação, tais como as de projeto e de artigos, têm agregadas caixas de comentários que podem ser usadas pelos visitantes (cadastrados ou não). Esse módulo oferece essa funcionalidade.
+
+    \subsubsection{Fórum}
+      Pelas páginas geradas por esse módulo os usuários podem perguntar e responder uns aos outros questões relacionadas à feira e aos seus projetos. O fórum será composto por diversas áreas, cada uma relativa à área de conhecimento correspondente na Feira.
+
+    \subsubsection{Blog}
+      Esse módulo oferece, atrelado a cada projeto, uma ferramenta de Blog, ou Diário de Bordo virtual, na qual os participantes podem relatar o processo do desenvolvimento de seus projetos, sua experiência na feira ou qualquer outro assunto que achem pertinentes. Os blogs, tais como outros serviços de módulos com conteúdos dinâmicos, devem prover serviço de RSS.
+
+    \subsubsection{Mensagens}
+      Os usuários registrados podem enviar mensagens privadas a outros usuários, e esse módulo oferece essa funcionalidade. Haverá também um sistema de mensagens públicas (\textit{scrap}).
+
+    \subsubsection{Colunas}
+      O módulo de colunas possibilita a inserção de conteúdo proveniente da equipe da FEBRACE ou de seus colaboradores, em páginas com esse fim.
+
+    \subsubsection{Busca}
+      Além do acesso ao conteúdo da aplicação pelos menus correspondentes, é possível filtrá-lo por palavras-chave na ferramenta de busca.
+
+    \subsubsection{Login}
+      Módulo no qual usuários registrados autenticam sua entrada, e os não registrados têm a oportunidade de criar uma conta.
+
+    \subsubsection{Administração}
+      Interface administrativa da aplicação, que permite operações de moderação, gerenciamento de usuários e conteúdo, etc.
+
+    \subsection{1\textsuperscript{a} iteração}
+      Antes do início de uma iteração é necessário que se definam quais serão as histórias a serem implementadas nesse ciclo de desenvolvimento. Essa escolha se dá por meio do \textit{Planning Game}, ou Jogo do Planejamento. No \textit{Planning Game}, desenvolvedores e clientes sentam-se juntos, e têm a frente o conjunto de histórias escritas até o momento. Os clientes definem a prioridade das histórias, enquanto os desenvolvedores definem a complexidade (dificuldade de implementação) de cada uma. Levando em consideração esses dois parâmetros, os envolvidos escolhem um subconjunto de histórias, cuja prioridade seja mais alta e cuja complexidade seja possível de lidar no período de desenvolvimento. Assim definem-se as histórias a serem trabalhadas em uma iteração.
+
+      Através do \textit{Planning Game} realizado com o cliente foi definida a primeira iteração do projeto. Fazem parte da primeira iteração as seguintes histórias:
+
+      \begin{itemize}
+        \item Autenticação no sistema
+        \item Cadastro de usuário
+        \item Visualização de Projeto
+        \item Visualização de Participantes de um projeto
+        \item Edição dos Conteúdos de um projeto
+        \item Cadastro de novo projeto
+      \end{itemize}
+
+      A duração de cada iteração será de três semanas e após esse período será feita uma entrega para o cliente que avaliará os resultados obtidos e definirá a iteração seguinte.
+
+  \subsection{Implementação da primeira iteração}
+    A primeira iteração, com duração de três semanas, foi realizada entre 20 de abril e 8 de maio, e teve como resultado a implementação de cinco histórias. A descrição de cada uma delas é feita abaixo.
 
     \subsubsection{História 2 - Autenticação no sistema}
-      Parte do código do módulo de Login deve oferecer a funcionalidade de autenticação no sistema. Foram desenvolvidas as telas de \textit{login} e \textit{logout} do Febrace\textsuperscript{V}, e a elas foi integrada a lógica de autenticação de usuários e o mecanismo de validação de sessões.
+      Parte do código do módulo de Login deve oferecer a funcionalidade de autenticação no sistema. Foram desenvolvidas as telas de \textit{login} e \textit{logout} do Febrace\textsuperscript{V}, e a elas foi integrada a lógica de autenticação de usuários e o mecanismo de validação de sessões. Para iniciar a sessão, o usuário deve acessar a página de login e entrar corretamente com seu nome de usuário e senha. Caso as informações sejam incorretas, ele recebe a notificação do problema. Em caso contrário, o usuário acessa o sistema e é redirecionado para a página de seu perfil (caso já o tenha criado).
 
     \subsubsection{História 3 - Cadastro de usuário}
-      A segunda parte do módulo de Login é o cadastro de usuários. Para se cadastrar, o usuário deve entrar com seu nome de usuário desejado e senha, além de um email válido. Ao término do cadastro, um email é enviado para o usuário. Ele deve então clicar no link presente nesse email para ativar sua conta. Sua chave de ativação é válida por sete dias.
+      A segunda parte do módulo de Login é o cadastro de usuários. Para se cadastrar, o usuário deve entrar com seu nome de usuário desejado e senha, além de um email válido. Ao término do cadastro, um email contendo um link com sua chave de ativação é enviado para o usuário. Ele deve então clicar nesse link para ativar sua conta. Após sete dias, a chave de ativação perde a validade, e o usuário necessita realizar novamente o cadastro caso queira ter acesso ao sistema.
 
     \subsubsection{História 4 - Edição de perfil}
-      Após a realização do cadastro, na primeira vez que o usuário entra no sistema ele tem opção de completar sua página de perfil. A edição do perfil não precisa ser realizada naquele momento, uma vez que qualquer usuário logado no sistema pode visualizar e alterar as informações presentes em seu perfil.
+      Cada usuário pode ter associado a si um perfil, que contém diversas informações adicionais, como foto, data de nascimento, entre outros, e possibilita a interação com outros usuários do sistema. Após a realização do cadastro, no primeiro acesso do usuário ao sistema é solicitado que ele complete sua página de perfil. O usuário pode optar por não fazê-lo, bastando ignorar o formulário e continuar navegando pelo site normalmente. Caso opte por criá-lo, o usuário deve preencher as informações que desejar. Caso as informações sejam válidas, o perfil é criado e o usuário é direcionado para sua página de perfil.
+
+      O usuário pode posteriormente editar as informações presentes no seu perfil, bastanto par isso estar autenticado no sistema e selecionar a opção "Editar perfil".
+
+      Um usuário que ainda não criou um perfil será perguntado se o deseja fazer cada vez que acessar o sistema.
 
     \subsubsection{História 5 - Visualização de perfil}
-      Cada usuário do sistema tem uma página pessoal, com seu perfil. Essa página pode ser acessada por qualquer visitante do Febrace\textsuperscript{V}, anônimo ou não. Posteriormente será criada a funcionalidade da alteração dos níveis de exibição dos dados do perfil (configuração de privacidade).
+      Cada usuário do sistema tem uma página pessoal, com seu perfil. Essa página pode ser acessada por qualquer visitante da Febrace\textsuperscript{V}, anônimo ou não. A página de perfil contém diversas informações sobre um usuário, como seus contatos, seus projetos predileto e informações pessoais. É também na página de perfil que está o mural de recados.
 
     \subsubsection{História 22 - Interface administrativa}
-      Foi ativada a interface administrativa, que permite o gerenciamento de usuários e conteúdos do Febrace\textsuperscript{V}.
+      O framework Django conta com uma interface administrativa padrão, que apresenta funcionalidades de criação, edição, visualização e deleção de quaisquer objetos do sistema que tenham sido cadastrados nessa interface, e pode ser personalizada para atender às diferentes necessidades de cada projeto. Na primeira iteração essa interface foi ativada e configurada para funcionar com a Febrace\textsuperscript{V}.
 
-    No segundo \textit{Planning Game}, programado para ocorrer no dia 11 de maio, serão definidas as histórias que serão desenvolvidas na segunda iteração.
+      Somente usuários com status de Administrador podem acessar essa funcionalidade.
+
+  \subsection{Implementação da segunda iteração}
+    A segunda iteração, com duração de duas semanas, de 11 a 22 de maio, teve como resultado a implementação das quatro histórias descritas à seguir:
+
+    \subsubsection{História 7 - Visualização de projeto}
+      Cada projeto cadastrado no sistema tem uma página no sistema, a partir da qual podem ser acessadas diversas de suas informações. Essa página também oferece links para a página da edição da Febrace que ele participou e para a página da categoria na qual está cadastrado, bem como para as páginas referentes às suas palavras-chave.
+
+      Os demais elementos presentes na página de projetos são descritos em outros cartões relacionados ao tema.
+
+    \subsubsection{História 8 - Listar participantes de um projeto}
+      Cada projeto está associado aos usuários de seus participantes, alunos e orientadores. Esses participantes são mostrados na página de seu projeto, e suas representações (fotos ou nomes) são links para as páginas de perfil desses usuários.
+
+    \subsubsection{História 9 - Suporte a vídeo no projeto}
+      Outro elemento que pode estar associado a um projeto é um vídeo. Caso o projeto tenha um vídeo cadastrado, um \textit{player} é carregado na sua página, e o visitante desse projeto tem a opção de assistir a esse vídeo.
+
+      Os vídeos da Febrace estão, até o presente momento, hospedados no portal IPTV Experimental\footnote{http://iptv.usp.br} da USP, e seu \textit{player} embarcado (\textit{embedded player}) é carregado junto às páginas do Febrace\textsuperscript{V}. Para visualizá-lo, o usuário precisa ter instalado em seu \textit{browser} um \textit{plugin} que o permita assistir um \textit{streaming} de vídeo no formato WMV (Windows Media Video). Há \textit{plugins} desse tipo para a maioria dos sistemas operacionais, incluindo Linux, MacOs e Windows.
+
+      Se os vídeos da Febrace forem hospedados em outro serviço (como o YouTube\footnote{http://www.youtube.com} ou o Vimeo\footnote{http://www.vimeo.com}), alterações muito simples no sistema permitem adaptá-lo para esses casos.
+
+    \subsubsection{História 24 - Gerenciamento de usuários no admin}
+      É possível criar, editar, visualizar e apagar usuários pela interface administrativa. O mesmo se aplica aos modelos referentes a perfis. Nessa interface é também possível editar as permissões desse usuário, bem como seu status no sistema (ativo/inativo, administrador/usuário comum, etc.).
+
+  \subsection{Implementação da terceira iteração}
+    A terceira iteração foi realizada na quinzena de 25 de maio a 5 de junho. Nela foram implementadas as sete histórias à seguir:
+
+    \subsubsection{História 13 - Amigos}
+      Um aspecto muito importante das redes sociais é a possibilidade da criação de associações entre os usuários, e essa funcionalidade é oferecida na Febrace\textsuperscript{V}. Escolheu-se por adotar um modelo de associação baseado em "seguidores", tais como em redes como o Twitter\footnote{http://www.twitter.com} e o Stoa\footnote{http://stoa.usp.br}. Nesse modelo, um usuário não precisa solicitar a associação a um outro usuário, simplesmente escolhe seguí-lo. O usuário seguido pode ou não retribuir a associação. Caso o faça, surge a possibilidade da troca de mensagens privadas entre eles.
+
+      No sistema desenvolvido um usuário autenticado, ao visitar a página de perfil de algum outro usuário, tem a opção de adicionar esse usuário como um amigo, selecionando o botão "Adicionar" presente em sua página.
+
+      De volta à sua página, o usuário pode ver listados todas as pessoas que ele segue (perfis que ele selecionou como amigo), todas as pessoas que o seguem (pessoas que adicionaram seu perfil como amigo) a todas as relações mútuas (pessoas que o seguem e que são seguidas por ele).
+
+      A qualquer momento ele pode deixar de seguir um usuário qualquer. Para isso, deve visitar o perfil desse usuário e selecionar a opção "Remover".
+
+    \subsubsection{História 14 - Projetos prediletos}
+      Um usuário autenticado pode também escolher quais são seus projetos prediletos na Febrace\textsuperscript{V}. As operações de adição ou remoção de um projeto predileto funcionam de maneira análoga à adição ou remoção de amigos. Ao visitar a página de um projeto, um usuário pode adicioná-lo como predileto clicando em "Adicionar". Se quiser desfazer a associação, deve visitar novamente a página desse projeto e clicar em "Remover".
+
+      É mostrado no perfil de um usuário quais são seus projetos prediletos. Da mesma forma, é mostrada na página de um projeto a lista de usuários que o tem como predileto.
+
+    \subsubsection{História 25 - Gerenciamento de conteúdo no admin}
+      Além do gerenciamento de usuários e perfis (descrito na história 24), a interface administrativa pode ser utilizada para a gerencia de quaisquer outros conteúdos. No momento, é possível por essa interface criar, editar, visualizar e remover os seguintes tipos de objetos:
+
+      \begin{multicols}{3}
+      \begin{itemize}
+        \item{Comentários}
+        \item{Páginas planas}
+        \item{Links de amizade}
+        \item{Instituições}
+        \item{Links de prêmios}
+        \item{Prêmios}
+        \item{Projetos}
+        \item{Links de projetos}
+        \item{Tags}
+        \item{Associação de Tags}
+      \end{itemize}
+      \end{multicols}
+
+    \subsubsection{História 27 - Prêmios}
+      Cada prêmio oferecido na Febrace tem sua página no sistema. Nessa página, além da descrição do prêmio, são listados todos os projetos que, em diferentes edições da Febrace, foram contemplados com ele. O vínculo de um prêmio a um projeto deve ser feito na interface administrativa.
+
+    \subsubsection{História 28 - Instituições}
+      Também as instituições (escolas, institutos, empresas patrocinadores, etc.) tem páginas com suas informações no sistema. Caso seja uma instituição que tenha levado alunos para expor projetos na Febrace, é disponibilizada em sua página a lista de projetos daquela instituição.
+
+    \subsubsection{História 36 - Suporte a tags}
+      Quaisquer objetos do sistema podem ser marcados com \textit{tags}, ou palavras-chave. As \textit{tags} tem por função, desse modo, agregar diferentes tipos de conteúdos sob categorias.
+
+      As \textit{tags} podem ser inseridas pela interface administrativa, ou podem ser criadas diretamente ao serem utilizadas para marcar um objeto pela primeira vez.
+
+      No momento, as \textit{tags} marcam apenas projetos e colunas, mas serão utilizadas para marcar outros conteúdos, como entradas de um diário de bordo.
+
+    \subsubsection{História 38 - Criação de páginas estáticas}
+      A maioria das páginas que compõe a Febrace\textsuperscript{V} são dinâmicas, ou seja, são renderizadas conforme um contexto e uma requisição específicos. Há um conjunto de páginas, porém, que tem seus conteúdos e formas de exibição sempre iguais. Algumas das páginas do sistema são estáticas, como as páginas de "Mapa do site" e de "Termos de Uso".
+
+      Há no \textit{framework} uma aplicação que facilita a criação e organização dessas páginas estáticas (páginas planas), que foi instalado e configurado para prover as páginas planas necessárias ao projeto.
+
+  \subsection{Implementação da quarta iteração}
+    A quarta iteração, com duração de duas semanas, foi realizada entre 8 e 19 de junho, e teve como resultado a implementação de dez histórias. A descrição de cada uma delas é feita abaixo.
+
+    \subsubsection{História 6 - Cancelamento de cadastro}
+      Um usuário que não deseja mais fazer parte da rede social pode solicitar a remoção de seu perfil do sistema. Para isso, uma vez autenticado deve selecionar a opção de edição de perfil e, na página de edição, selecionar apagar conta. Caso realmente deseje apagar a conta, o usuário deverá confirmar novamente a opção.
+
+      Dessa maneira, o perfil do usuário e quaisquer conteúdos ligados a ele serão removidos. Conteúdos gerados por esse usuário em outros lugares do sistema (comentários em projetos, por exemplo) serão porém mantidos.
+
+    \subsubsection{História 10 - Visualização dos prêmios de um projeto}
+      Na página de detalhes de um projeto são listados os prêmios que esse projeto ganhou na edição da Febrace em que participou. Ao clicar nos prêmios, tem-se acesso a sua página de detalhes, descrita na História 27.
+
+    \subsubsection{História 20 - Colunas}
+      Membros da equipe da Febrace contam com uma região do sistema na qual podem, sempre que quiserem, criar textos que desejem ser compartilhados com os outros integrantes da rede social. É a sessão de colunas, que pode ser lida e comentada por qualquer usuário, autenticado ou não.
+
+    \subsubsection{História 16 - Recados/Caixas de comentários}
+      Um dos componentes das páginas de perfil de usuário é o mural de recados. Nele, outros usuários podem deixar pequenas mensagens de texto para o dono do perfil. Os recados podem ser tanto escritos por usuários autenticado quanto por visitantes. No caso de um usuário autenticado, o recado é automaticamente vinculado a ele. No caso de um visitante, é solicitado o preenchimento de um pequeno formulário contendo nome e email válido.
+
+      A mesma funcionalidade é oferecida nas páginas de projeto.
+
+    \subsubsection{História 18 - Busca}
+      Há no menu principal do site uma ferramenta de busca. Ao se digitar um texto e selecionar o botão enviar, o sistema realiza a busca dos termos procurados, e devolve uma página com elementos que atendam a essa requisição. No momento, a busca retorna três tipos de objetos: projetos, perfis de usuário e \textit{tags}. O sistema poderá ser expandido futuramente para suportar outros tipos de objetos.
+
+      A sintaxe da busca é semelhante à de mecanismos de busca como o Google, por exemplo. Se mais de um elemento for inserido, a busca procura ocorrências dos termos simultâneamente, em qualquer ordem. Termos envoltos por aspas duplas são procurados tal como digitados, na ordem e em ocorrência simultânea.
+
+    \subsubsection{História 30 - Interface de escrita de colunas}
+      Para que os membros da Equipe da Febrace possam criar novos textos para a seção de colunas, eles devem acessar a interface administrativa. Lá eles contam com uma ferramenta que os permitem editar seus textos e gerenciar textos escritos anteriormente.
+
+    \subsubsection{História 32 - Preenchimento dos bancos de dados}
+      Para a apresentação do projeto, foi necessário popular o banco de dados do sistema com projetos de edições anteriores da feira. Buscou-se incluir no sistema projetos de categorias variadas, priorizando-se os projetos que tenham sido premiados na feira. A entrada desses dados foi realizada manualmente.
+
+    \subsubsection{História 34 - Home page}
+      Foi criada a \textit{homepage} para o projeto (figura~\ref{homepage}), que apresenta cinco sessões principais. A primeira é o menu presente em todas as outras páginas, pelo qual é possível cadastrar-se, realizar o login, realizar buscas ou acessar algumas sessões do site. Outra é o conjunto de textos que explicam a finalidade do Febrace\textsuperscript{V} e convidam o visitante a conhecer mais a respeito. Em seguida temos uma sessão com notícias e outras atividades recentes. No rodapé, tem-se acesso ao conjunto de páginas estáticas (mapa, termos de uso, etc.) e a outros sites ligados ao sistema, como o blog do desenvolvimento, o repositório de código e a página da Febrace. No centro da página, tem-se acesso a um projeto ou conteúdo de destaque.
+
+    \begin{figure}
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/home.png}
+        \end{center}
+        \caption{Página principal do Febrace\textsuperscript{V}}
+        \label{homepage}
+    \end{figure}
+
+    \subsubsection{História 35 - Listagens}
+      A maioria dos objetos presentes no sistema tem páginas individuais, como é o caso de projetos, perfis, instituições, prêmios e \textit{tags}. Para que a navegação seja consistente, entratanto, não basta que só os objeto tenham suas páginas relativas, sendo necessário que cada grupo de objetos tenha uma página agregadora. Por isso foram desenvolvidas as páginas de listagem.
+
+      Para perfis, prêmios, instituições e \textit{tags}, as páginas de listagem operam de maneira análoga, gerando listas com os nomes de todos os objetos daquele grupo, com o respectivo \textit{link} para sua página de detalhes. Para projetos o funcionamento é um pouco diferente. São disponibilizadas, nesse caso, dois tipos distintos de listagem, um que agrega projetos conforme a edição da Febrace em que participaram, outro que os agrega conforme sua categoria.
+
+      Um caso particular é a página de detalhes de uma \textit{tag}, que é também uma listagem, dos elementos que foram marcados por essa \textit{tag}.
+
+    \subsubsection{História 37 - Criação de templates}
+
+    \subsubsection{Cartões sem fazer, prometidos}
+      \begin{itemize}
+        %médios
+        \item{1 - Convite a ex-participantes}
+        \item{11 - Conteúdos adicionais de projetos}
+        \item{17 - Mensagens}
+        \item{18 - Notificação de conteúdo dinâmico}
+        \item{29 - Solicitação de novo projeto}
+        %difíceis
+        \item{12 - Diário de bordo}
+        \item{15 - Fórum}
+        \item{21 - Estatísticas}
+        \item{23 - Moderação de conteúdos}
+        \item{26 - Estatísticas de uso do sistema}
+      \end{itemize}
+
+    \subsubsection{Cartões sem fazer, novos}
+      \begin{itemize}
+        \item{31 - Alteração de senha}
+        \item{33 - Permissões de visualização}
+      \end{itemize}
