@@ -87,7 +87,7 @@
       O design de um sistema deve ser trabalhado diariamente, levando-se em consideração o melhor a ser feito naquele momento.
     \end{description}
 
-	\subsection{Programação extrema no contexto acadêmico}
+	\subsection{Programação extrema no contexto acadêmico}\label{xp_e_universidade}
     Uma das metas do projeto é testar a validade de um conjunto de práticas propostas pela programação extrema, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetiva-se também documentar essa experiência de forma que outros alunos que também queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias nesse caso em particular.
 
     Tendo isso em vista, realizou-se uma pesquisa por artigos que descrevessem experiências semelhantes de aplicação de metodologias ágeis na graduação. Foram encontrados diversos relatos dessa natureza, muitos deles descrevendo a utilização dessas metodologias em projetos de conclusão de curso.
@@ -102,7 +102,9 @@
       Os laboratórios das universidades, assim como suas salas de aula, não foram projetados para possibilitar a colaboração entre seus alunos. Um espaço de trabalho coletivo e informativo, preconizado pelo XP, não está a disposição das equipes.
 
     \subsubsection{Disponibilidade de tempo}
-      Por ser dirigido ao ambiente corporativo, o XP define uma semana de trabalho de 40 horas, de impossível reprodução num curso universitário.
+      Na programação extrema, os programadores devem ao máximo tentar cumprir duas metas referentes a dedicação de tempo a um projeto. A primeira é não ultrapassar as 40 horas de trabalho semanais no desenvolvimento de um projeto, pois acredita-se que um programador que realize muitas horas-extras não terá a motivação e disposição necessários para o trabalho. A outra é que um programador deve se envolver com o menor número possível de projetos simultâneamente, pois quanto mais exclusiva é sua dedicação a um projeto melhor os resultados que ele vai alcançar nele. Perde-se muito tempo e energia na troca de contextos. 
+
+      Essas recomendações, já difíceis de serem cumpridas no ambiente corporativo, são de reprodução quase impossível num curso universitário. Especialmente com relação a troca de contextos, pois não pode-se esperar a dedicação integral a uma ou outra atividade do curso. Os horários dos alunos são em geral muito mais fragmentados que de um programador profissional.
 
     \subsubsection{Presença do cliente}
       A presença do cliente na equipe de XP, incomum mesmo em empresas, é ainda mais difícil na universidade.
@@ -113,7 +115,7 @@
     \subsubsection{Testes}
       As experiências relatam dificuldades na utilização de testes automáticos, seja por problemas culturais (como a pouca importância dada a esse tópico no restante do currículo), seja por aspectos técnicos.
 
-    \subsubsection{Formas de avaliação}
+    \subsubsection{Formas de apresentação e avaliação}
       Grande parte das avaliações realizadas nas disciplinas de projeto de conclusão de curso é baseada na documentação levantada por etapas das metodologias tradicionais. A criação desses documentos não é parte do processo das metodologias ágeis e outros critérios de avaliação apropriados a esse contexto foram necessários nas experiências apresentadas.
 
 \section{Levantamento do perfil dos usuários}
@@ -124,11 +126,11 @@
 
     O questionário final, apresentado no Apêndice 1, apresenta três partes. A primeira tem por objetivo colher alguns dados demográficos, como idade, local de residência e escolaridade. Na segunda parte há perguntas que procuram identificar o perfil de uso da internet do usuário (de onde e com qual frequência ocorre o acesso, quais serviços são utilizados, etc.). O objetivo da terceira parte é saber a opinião dos usuários sobre sua atual experiência com os serviços web da FEBRACE e sobre seu interesse nas possíveis ferramentas oferecidas pela Febrace\textsuperscript{v}.
 
-\section{Tecnologias utilizadas}
+\section{Tecnologias utilizadas}\label{tecnologias}
 
   O projeto será desenvolvido em plataforma Linux, usando o servidor web Apache. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. Serão usadas ferramentas para teste automatizado de código como o PyUnit, o Twil e o Selenium. Uma possibilidade levantada pelo grupo é a do uso de componentes reusáveis do Django Plugables. O banco de dados a ser utilizado ainda está em aberto, sendo que para se decidir serão testados os desempenhos dos bancos de dados MySQL e PostgreSQL.
 
-  O código do projeto será gerenciado por meio de um sistema descentralizado de controle de versões, o Git. Como será produzido um sistema com código fonte aberto, o mesmo será disponibilizado no GitHub, onde o projeto já se encontra hospedado\footnote{http://www.github.com/nathaliaspatricio/febracev}. Como forma de registro do andamento do projeto foi criado um blog\footnote{http://febracev.wordpress.com} para o mesmo no Wordpress, e para a compilação de referências bibliográficas estão sendo usados um disco virtual\footnote{http://febracev.4shared.com} e o CiteULike\footnote{http://www.citeulike.org/groupfunc/9663} da Springer. Como uma forma de ajudar no gerenciamento do projeto está sendo usado o site Producteev, e para a coleta e relato de \textit{bugs} será usado o Trac\footnote{http://www.lsi.usp.br/nate/trac}. Para fazer a compilação dos dados coletados com os questionários de perfil de uso está sendo usado o LimeSurvey\footnote{http://www.lsi.usp.br/nate/febracev}.
+  O código do projeto será gerenciado por meio de um sistema descentralizado de controle de versões, o Git. Como será produzido um sistema com código fonte aberto, o mesmo será disponibilizado no GitHub, onde o projeto já se encontra hospedado\footnote{http://www.github.com/nathaliaspatricio/febracev}. Como forma de registro do andamento do projeto foi criado um blog\footnote{http://febracev.wordpress.com} para o mesmo no Wordpress, e para a compilação de referências bibliográficas estão sendo usados um disco virtual\footnote{http://febracev.4shared.com} e o CiteULike\footnote{http://www.citeulike.org/groupfunc/9663} da Springer. Como uma forma de ajudar no gerenciamento do projeto, suprindo a falta de um espaço físico que disponibilize lousas e quadros de notas, está sendo usado o site Producteev, um sistema de gerenciamento de tarefas. Para coleta e relato de \textit{bugs} será usado o Trac\footnote{http://www.lsi.usp.br/nate/trac}. Para fazer a compilação dos dados coletados com os questionários de perfil de uso está sendo usado o LimeSurvey\footnote{http://www.lsi.usp.br/nate/febracev}.
 
   As tecnologias foram escolhidas com base na experiência prévia e habilidades técnicas da equipe.
 
