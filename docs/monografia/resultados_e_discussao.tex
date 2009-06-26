@@ -133,7 +133,7 @@
   \subsection{Programação pareada}
     A dificuldade da prática de programação pareada em projetos acadêmicos se dá por dois motivos principais. Um é o estranhamento causado por essa prática incomum, que gera resistência de sua adoção pelos programadores. Outra são os horários fragmentados dos alunos, que nem sempre tem agendas coincidentes.
 
-    Nesse projeto, o primeiro motivo foi rapidamente sanado, pois a resistência ao pareamento é enfraquecida nas primeiras sessões, devido aos benefícios trazidos pela prática, como redução dos erros inseridos no código e a maior rapidez na resolução de tarefas complexas. Já o problema dos horários não pode ser completamente contornado. Das 8 horas semanais dedicadas ao projeto, 5 foram dedicadas à programação pareada, e demais se deram por trabalho cooperativo à distância.
+    Nesse projeto, o primeiro motivo foi rapidamente sanado, pois a resistência ao pareamento é enfraquecida nas primeiras sessões, devido aos benefícios trazidos pela prática, como redução dos erros inseridos no código e a maior rapidez na resolução de tarefas complexas. Já o problema dos horários não pode ser completamente contornado. Das oito horas semanais dedicadas ao projeto, cinco foram dedicadas à programação pareada, e demais se deram por trabalho cooperativo à distância.
 
   \subsection{Testes}
 
@@ -141,22 +141,11 @@
 %  - Levantamento de histórias
 %  - Page flow
 %  - Iterações e Retrospectivas
-\section{Especificação e desenvolvimento}
+\section{Projeto}
 
-  \subsection{Fase de exploração}
-    A primeira fase de um projeto de XP é a fase de exploração\cite{beck04}, que abrange a tomada inicial de histórias, o levantamento inicial de aspectos relativos à arquitetura do sistema a ser desenvolvido e a escolha e familiarização com as tecnologias a serem utilizadas no projeto.
-    A fase de exploração do Febrace\textsuperscript{V} ocorreu nas três primeiras semanas de abril, e nela foram realizadas as seguintes atividades:
+  A primeira fase de um projeto de XP é a fase de exploração\cite{beck04}, que abrange a tomada inicial de histórias, o levantamento inicial de aspectos relativos à arquitetura do sistema a ser desenvolvido e a escolha e familiarização com as tecnologias a serem utilizadas no projeto.
 
-    \begin{itemize}
-      \item
-        Levantamento inicial das histórias do projeto;
-      \item
-        Definição da arquitetura do projeto;
-      \item
-        Escolha das tecnologias utilizadas;
-      \item
-        Realização do primeiro \textit{Planning game}
-    \end{itemize}
+  A fase de exploração do Febrace\textsuperscript{V} ocorreu nas três primeiras semanas de abril, e nela foram realizadas as atividades descritas nas seções a seguir.
 
   \subsection{Levantamento inicial de Histórias}
 
@@ -229,6 +218,10 @@
 
   \subsection{Arquitetura do sistema}
 
+    Os cartões de história descritos na seção anterior foram agrupados em módulos que compõe o projeto. Cada um desses módulos representa uma aplicação presente no projeto. Uma aplicação é um conjunto de modelos, lógica de negócio e regras de exibição de dados. Outro importante elemento de uma aplicação é o conjunto de regras que definem quais \textit{url} do projeto ativam suas funcionalides.
+
+    O módulos planejados para o projeto são:
+
     \subsubsection{Projetos}
       O principal módulo da aplicação é o de projetos. Nele são reunidas e apresentadas ao público informações sobre um projeto, como, entre outras, descrição, autores, orientadores e região de origem. O módulo de projetos deve oferecer integração com um serviço de vídeo sob demanda (como o IPTV-USP), onde serão armazenados vídeos dos projetos. São nas páginas geradas por esse módulo que ocorrem a maior parte das interações entre os usuários, pois dão acesso aos módulos de comentários e mensagens.
 
@@ -259,21 +252,22 @@
     \subsubsection{Administração}
       Interface administrativa da aplicação, que permite operações de moderação, gerenciamento de usuários e conteúdo, etc.
 
-    \subsection{1\textsuperscript{a} iteração}
-      Antes do início de uma iteração é necessário que se definam quais serão as histórias a serem implementadas nesse ciclo de desenvolvimento. Essa escolha se dá por meio do \textit{Planning Game}, ou Jogo do Planejamento. No \textit{Planning Game}, desenvolvedores e clientes sentam-se juntos, e têm a frente o conjunto de histórias escritas até o momento. Os clientes definem a prioridade das histórias, enquanto os desenvolvedores definem a complexidade (dificuldade de implementação) de cada uma. Levando em consideração esses dois parâmetros, os envolvidos escolhem um subconjunto de histórias, cuja prioridade seja mais alta e cuja complexidade seja possível de lidar no período de desenvolvimento. Assim definem-se as histórias a serem trabalhadas em uma iteração.
+  \subsection{Tecnologias utilizadas}\label{tecnologias}
 
-      Através do \textit{Planning Game} realizado com o cliente foi definida a primeira iteração do projeto. Fazem parte da primeira iteração as seguintes histórias:
+    O projeto foi desenvolvido em plataforma Linux, sob as distribuições Ubuntu e ArchLinux. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. No desenvolvimento de testes automáticos, foram utilizados a biblioteca \texttt{PyUnit}, componente integrante do Python, a ferramenta \texttt{test-client}, parte do \textit{Framework} Djago e o kit de testes de aplicações Web \texttt{Selenium}, por meio de seu plugin para Firefox. Fez-se também o uso de alguns componentes reusáveis hospedados no Django Plugables\footnote{http://www.djangopluggables.com}, como o \texttt{django-registration}, \texttt{django-tagging} e \texttt{django-profiles}.
 
-      \begin{itemize}
-        \item Autenticação no sistema
-        \item Cadastro de usuário
-        \item Visualização de Projeto
-        \item Visualização de Participantes de um projeto
-        \item Edição dos Conteúdos de um projeto
-        \item Cadastro de novo projeto
-      \end{itemize}
+    Durante o desenvolvimento, foi utilizado o servidor Web integrado do Django, que permite a alteração das aplicações em tempo real, sem a necessidade de reinício de servidor. Ele não é, entretanto, um servidor apropriado para sistema em produção (não consegue processar requisições simultâneas, por exemplo), e o produto final utilizada o servidor Web Apache. O mesmo ocorre com o sistema de banco de dados. Durante o desenvolvimento, foi utilizado o SQLite3, mas no sistema de produção é utilizado o PostgreSQL.
 
-      A duração de cada iteração será de três semanas e após esse período será feita uma entrega para o cliente que avaliará os resultados obtidos e definirá a iteração seguinte.
+    O código do projeto é gerenciado por meio de um sistema descentralizado de controle de versões, o Git. Como será o Febrace\textsuperscript{V} é um sistema com código fonte aberto, o mesmo foi desenvolvido com suporte no GitHub, onde o projeto se encontra hospedado\footnote{http://www.github.com/nathaliaspatricio/febracev}. Como forma de registro do andamento do projeto foi criado um blog\footnote{http://febracev.wordpress.com} com esse fim no Wordpress, e para a compilação de referências bibliográficas estão sendo usados um disco virtual\footnote{http://febracev.4shared.com} e o CiteULike\footnote{http://www.citeulike.org/groupfunc/9663} da Springer. Como uma forma de ajudar no gerenciamento do projeto, suprindo a falta de um espaço físico que disponibilize lousas e quadros de notas, está sendo usado o site Producteev, um sistema de gerenciamento de tarefas. Para coleta e relato de \textit{bugs} será usado o Trac\footnote{http://www.lsi.usp.br/nate/trac}. Para fazer a compilação dos dados coletados com os questionários de perfil de uso utilizou-se o LimeSurvey\footnote{http://www.lsi.usp.br/nate/febracev}.
+
+    As tecnologias foram escolhidas com base na experiência prévia e habilidades técnicas da equipe.
+
+  \subsection{\textit{Planning game}}
+    Antes do início de uma iteração é necessário que se definam quais serão as histórias a serem implementadas nesse ciclo de desenvolvimento. Essa escolha se dá por meio do \textit{Planning Game}, ou Jogo do Planejamento. No \textit{Planning Game}, desenvolvedores e clientes sentam-se juntos, e têm a frente o conjunto de histórias escritas até o momento. Os clientes definem a prioridade das histórias, enquanto os desenvolvedores definem a complexidade (dificuldade de implementação) de cada uma. Levando em consideração esses dois parâmetros, os envolvidos escolhem um subconjunto de histórias, cuja prioridade seja mais alta e cuja complexidade seja possível de lidar no período de desenvolvimento. Assim definem-se as histórias a serem trabalhadas em uma iteração.
+
+    Ao longo do projeto foram realizados quatro \textit{planning games}, nos quais determinou as atividades a serem desenvolvidas em cada uma das iterações descritas na seção~\ref{iteracoes}.
+
+\section{Desenvolvimento}\label{iteracoes}
 
   \subsection{Implementação da primeira iteração}
     A primeira iteração, com duração de três semanas, foi realizada entre 20 de abril e 8 de maio, e teve como resultado a implementação de cinco histórias. A descrição de cada uma delas é feita abaixo.
