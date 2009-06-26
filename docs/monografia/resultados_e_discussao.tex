@@ -105,44 +105,37 @@
 
 \section{Relato do processo de desenvolvimento}
 
-%  - Relato do processo de desenvolvimento
-%    - Adaptações necessárias à metodologia
-%    - Pareamento
-%    - Tracking
-%    - Testes
+  A adoção de metodologias ágeis em projetos universitários é ainda incomum em todo o mundo, e no Brasil em particular. Há entretanto diversas iniciativas nessa direção, conforme relatado na seção~\ref{xp_e_universidade}, e o presente trabalho visa ser uma dessas iniciativas, representando um estudo de caso da adoção da programação extrema em projeto de graduação em Engenharia. Por esse motivo, essa seção busca relatar algumas das práticas que guiaram o desenvolvimento do projeto.
 
-	\subsection{Adaptação das práticas do XP}
-    Conforme relatado na seção~\ref{xp_e_universidade}, as práticas da programação extrema podem ser adotadas facilmente nas universidades para melhorar o processo de desenvolvimento de \textit{software}. Um conjunto delas, entretanto, precisa ser adaptada para o contexto acadêmico, pois foram concebidas voltadas ao contexto do desenvolvimento comercial de \textit{software}. Com base nas experiências de outros grupos que adotaram essa metodologia ágil em disciplinas de graduação, uma série de práticas do XP foram adaptadas no processo de desenvolvimento da Febrace\textsuperscript{V}. Essa seção relata essas adaptações.
+  Muitas das práticas da programação extrema podem ser adotadas facilmente nas universidades para melhorar o processo de desenvolvimento de \textit{software}. Um conjunto delas, entretanto, precisa ser adaptada para o contexto acadêmico, pois foram concebidas voltadas ao contexto do desenvolvimento comercial de \textit{software}. Com base nas experiências de outros grupos que adotaram essa metodologia ágil em disciplinas de graduação, uma série de práticas do XP foram adaptadas no processo de desenvolvimento da Febrace\textsuperscript{V}. Essa seção relata as práticas de XP adotadas pela equipe, e as adaptações realizadas, quando necessárias.
 
-    \subsubsection{Espaço de trabalho compartilhado virtual}
-      Não foi possível dispor de um espaço de trabalho fixo para a realização das atividades referentes ao projeto. Na tentativa de suprir essa necessidade, foi feito o uso de um conjunto de ferramentas de trabalho colaborativo pela Internet, entre elas um quadro branco virtual e uma ferramenta de acompanhamento de \textit{bugs}. Mais detalhes sobre algumas dessas ferramentas foram apresentados na seção~\ref{tecnologias}.
+  \subsection{Espaço de trabalho compartilhado virtual}
+    Não foi possível dispor de um espaço de trabalho fixo para a realização das atividades referentes ao projeto. Na tentativa de suprir essa necessidade, foi feito o uso de um conjunto de ferramentas de trabalho colaborativo pela Internet, entre elas um quadro branco virtual e uma ferramenta de acompanhamento de \textit{bugs}. Mais detalhes sobre algumas dessas ferramentas foram apresentados na seção~\ref{tecnologias}.
 
-      Essas ferramentas supriram a contento as alternativas normalmente adotadas num projeto de XP no gerenciamento de histórias e organização e planejamento da equipe.
+    Essas ferramentas supriram a contento as alternativas normalmente adotadas num projeto de XP no gerenciamento de histórias e organização e planejamento da equipe.
 
-    \subsubsection{Disponibilidade de tempo}
-      Sendo impossível a dedicação exclusiva ao projeto, buscou-se em compensação manter um carga de trabalho semanal de 8 horas.
+  \subsection{Disponibilidade de tempo}
+    Sendo impossível a dedicação exclusiva ao projeto, buscou-se em compensação manter um carga de trabalho semanal de 8 horas.
 
-    \subsubsection{Presença do cliente}
-      O papel do cliente foi designado a um pesquisador do NATE-LSI que participa da organização da Febrace, e em conjunto com ele foram escritas os cartões de histórias O cliente participou também dos \textit{Planning games}, atribuindo prioridade às histórias e definindo o conjunto de cartões a serem implementados numa iteração, e das retrospectivas, nas quais foram apresentadas a funcionalidades desenvolvidas.
+  \subsection{Presença do cliente}
+    O papel do cliente foi designado a um pesquisador do NATE-LSI que participa da organização da Febrace, e em conjunto com ele foram escritas os cartões de histórias O cliente participou também dos \textit{Planning games}, atribuindo prioridade às histórias e definindo o conjunto de cartões a serem implementados numa iteração, e das retrospectivas, nas quais foram apresentadas a funcionalidades desenvolvidas.
 
-    \subsubsection{Necessidade de \textit{coaching}}
-      A falta
+  \subsection{Ciclos curtos}
+    O trabalho em ciclos curtos é incentivado em XP, e o ciclo de uma semana é considerado ideal no ambiente corporativo. Mas isso se dá porque com 40 horas de trabalho semanal, um volume de trabalho grande é realizado. Como no projeto dedicou-se menos do que 25\% desse número de horas semanais, foi necessário encontrar um ciclo de tamanho adequado.
 
-    \subsubsection{Formas de apresentação e avaliação}
+    Um ciclo de quatro semanas foi considerado, para manter a proporção de horas por ciclo de um projeto XP ideal. Um ciclo de quatro semanas é porém muito longo, e ciclos curtos são fundamentais para o acompanhamento correto do projeto. Ciclos curtos evitam atrasos, pois forçam a reflexão constante sobre o andamento do projeto, e trazem a possibilidade do replanejamento e redefinição de escopo, quando necessário. Um ciclo de quatro semanas teria possibilitado a realização de apenas dois ciclos durante o projeto, o que permitiria pouco tempo de avaliação e replanejamento.
 
-	\subsection{Práticas}
+  Tendo isso em vista, optou-se por um ciclo de desenvolvimento de duas semanas, que apresentou uma relação equilibrada entre tarefas realizadas num ciclo e ciclos realizados no projeto.
 
-    \subsubsection{Testes}
+  \subsection{Retrospectivas}
+    A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorreriam mensalmente.
 
-    \subsubsection{Iterações}
-      Uma iteração é um ciclo que inclui 
-      O trabalho em ciclos curtos é incentivado em XP.
+  \subsection{Programação pareada}
+    A dificuldade da prática de programação pareada em projetos acadêmicos se dá por dois motivos principais. Um é o estranhamento causado por essa prática incomum, que gera resistência de sua adoção pelos programadores. Outra são os horários fragmentados dos alunos, que nem sempre tem agendas coincidentes.
 
-    \subsubsection{Programação pareada}
-      Todo o código de produção será escrito em sessões de programação pareada.
+    Nesse projeto, o primeiro motivo foi rapidamente sanado, pois a resistência ao pareamento é enfraquecida nas primeiras sessões, devido aos benefícios trazidos pela prática, como redução dos erros inseridos no código e a maior rapidez na resolução de tarefas complexas. Já o problema dos horários não pode ser completamente contornado. Das 8 horas semanais dedicadas ao projeto, 5 foram dedicadas à programação pareada, e demais se deram por trabalho cooperativo à distância.
 
-    \subsubsection{Retrospectivas}
-      A restropectiva é uma reunião periódica na qual é avaliado o período anterior do projeto (entre aquela retrospectiva e a anterior). Nessa reunião participa toda a equipe de desenvolvimento e nela procura-se levantar coisas que deram certo naquele período, coisas que precisam ser melhoradas e idéias (desde do projeto em si até coisas referentes ao ambiente de trabalho) que possam ter surgidos durante esse período. Não há um tempo pré-determinado entre retrospectivas, mas para equipes que trabalham em período integral juntas é aconselhável que sejam quinzenais, enquanto não é ideal que demorem mais que um mês para ocorrer. Como uma adaptação ao processo, foi decidido que no caso do projeto em questão essas restrospectivas ocorrerão mensalmente e com base nelas serão escritos os documentos de acompanhamento a serem entregues na disciplina.
+  \subsection{Testes}
 
 %  - Arquitetura
 %  - Levantamento de histórias
@@ -345,7 +338,7 @@
       É mostrado no perfil de um usuário quais são seus projetos prediletos. Da mesma forma, é mostrada na página de um projeto a lista de usuários que o tem como predileto.
 
     \subsubsection{História 25 - Gerenciamento de conteúdo no admin}
-      Além do gerenciamento de usuários e perfis (descrito na história 24), a interface administrativa pode ser utilizada para a gerencia de quaisquer outros conteúdos. No momento, é possível por essa interface criar, editar, visualizar e remover os seguintes tipos de objetos:
+      Além do gerenciamento de usuários e perfis (descrito na história 24), a interface administrativa pode ser utilizada para a gerencia de quaisquer outros conteúdos, como pode ser visto na figura~\ref{admin}. No momento, é possível por essa interface criar, editar, visualizar e remover os seguintes tipos de objetos:
 
       \begin{multicols}{3}
       \begin{itemize}
@@ -361,6 +354,14 @@
         \item{Associação de Tags}
       \end{itemize}
       \end{multicols}
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/admin.png}
+        \end{center}
+        \caption{Interface administrativa do Febrace\textsuperscript{V}}
+        \label{admin}
+    \end{figure}
 
     \subsubsection{História 27 - Prêmios}
       Cada prêmio oferecido na Febrace tem sua página no sistema. Nessa página, além da descrição do prêmio, são listados todos os projetos que, em diferentes edições da Febrace, foram contemplados com ele. O vínculo de um prêmio a um projeto deve ser feito na interface administrativa.
@@ -428,7 +429,10 @@
 
       Um caso particular é a página de detalhes de uma \textit{tag}, que é também uma listagem, dos elementos que foram marcados por essa \textit{tag}.
 
-    \subsubsection{História 37 - Criação de templates}
+    \subsubsection{História 37 - Criação de \textit{templates}}
+      \textit{Templates} são os componentes que determinam a apresentação do projeto, e por eles definem-se quais componentes estarão presentes em quais páginas, e de que forma.
+
+      Para evitar a repetição de código, os \textit{templates} foram organizados seguindo uma hierarquia. Elementos presentes em todas as páginas, como o menu principal, o logotipo e o rodapé das páginas, estão definidos em um template na base dessa hierarquia. Seguindo o paradigma de orientação a objetos, esse \textit{template} base é herdado pelos outros templates. Caso haja atributos presentes nele que não são desejados nos herdeiros, eles podem redefinir a implementação, reescrevendo ou estendendo os elementos herdados.
 
     \subsubsection{Cartões sem fazer, prometidos}
       \begin{itemize}
@@ -438,7 +442,7 @@
         \item{17 - Mensagens}
         \item{18 - Notificação de conteúdo dinâmico}
         \item{29 - Solicitação de novo projeto}
-        %difíceis
+        %difíceik
         \item{12 - Diário de bordo}
         \item{15 - Fórum}
         \item{21 - Estatísticas}
