@@ -269,6 +269,10 @@
 
 \section{Desenvolvimento}\label{iteracoes}
 
+  Essa seção descreve as iterações de desenvolvimento do projeto e as histórias implementadas em cada uma delas.
+
+  Ao longo do desenvolvimento, houve algumas mudanças de escopo do projeto. Cartões não planejados inicialmente e que representavam funcionalidades necessárias ao sistema foram adicionados, num total de sete novas histórias. A adição dessas histórias tornou necessário o replanejamento das histórias que seria implementadas até o final desse semestre. Das histórias planejadas inicialmente, vinte foram implementadas e dez serão implementadas em versões futuras do sistema. De 37 histórias levantadas 27 foram implementadas, ou seja, 73\% de histórias foram atendidas no total.
+
   \subsection{Implementação da primeira iteração}
     A primeira iteração, com duração de três semanas, foi realizada entre 20 de abril e 8 de maio, e teve como resultado a implementação de cinco histórias. A descrição de cada uma delas é feita abaixo.
 
@@ -370,10 +374,14 @@
 
       No momento, as \textit{tags} marcam apenas projetos e colunas, mas serão utilizadas para marcar outros conteúdos, como entradas de um diário de bordo.
 
-    \subsubsection{História 38 - Criação de páginas estáticas}
+  Esse cartão não planejado no levantamento inicial de histórias.
+
+    \subsubsection{História 35 - Criação de páginas estáticas}
       A maioria das páginas que compõe a Febrace\textsuperscript{V} são dinâmicas, ou seja, são renderizadas conforme um contexto e uma requisição específicos. Há um conjunto de páginas, porém, que tem seus conteúdos e formas de exibição sempre iguais. Algumas das páginas do sistema são estáticas, como as páginas de "Mapa do site" e de "Termos de Uso".
 
       Há no \textit{framework} uma aplicação que facilita a criação e organização dessas páginas estáticas (páginas planas), que foi instalado e configurado para prover as páginas planas necessárias ao projeto.
+
+  Esse cartão não planejado no levantamento inicial de histórias.
 
   \subsection{Implementação da quarta iteração}
     A quarta iteração, com duração de duas semanas, foi realizada entre 8 e 19 de junho, e teve como resultado a implementação de dez histórias. A descrição de cada uma delas é feita abaixo.
@@ -405,8 +413,12 @@
     \subsubsection{História 32 - Preenchimento dos bancos de dados}
       Para a apresentação do projeto, foi necessário popular o banco de dados do sistema com projetos de edições anteriores da feira. Buscou-se incluir no sistema projetos de categorias variadas, priorizando-se os projetos que tenham sido premiados na feira. A entrada desses dados foi realizada manualmente.
 
+  Esse cartão não planejado no levantamento inicial de histórias.
+
     \subsubsection{História 34 - Home page}
       Foi criada a \textit{homepage} para o projeto (figura~\ref{homepage}), que apresenta cinco sessões principais. A primeira é o menu presente em todas as outras páginas, pelo qual é possível cadastrar-se, realizar o login, realizar buscas ou acessar algumas sessões do site. Outra é o conjunto de textos que explicam a finalidade do Febrace\textsuperscript{V} e convidam o visitante a conhecer mais a respeito. Em seguida temos uma sessão com notícias e outras atividades recentes. No rodapé, tem-se acesso ao conjunto de páginas estáticas (mapa, termos de uso, etc.) e a outros sites ligados ao sistema, como o blog do desenvolvimento, o repositório de código e a página da Febrace. No centro da página, tem-se acesso a um projeto ou conteúdo de destaque.
+
+  Esse cartão não planejado no levantamento inicial de histórias.
 
     \begin{figure}
         \begin{center}
@@ -416,17 +428,21 @@
         \label{homepage}
     \end{figure}
 
-    \subsubsection{História 35 - Listagens}
+    \subsubsection{História 31 - Listagens}
       A maioria dos objetos presentes no sistema tem páginas individuais, como é o caso de projetos, perfis, instituições, prêmios e \textit{tags}. Para que a navegação seja consistente, entratanto, não basta que só os objeto tenham suas páginas relativas, sendo necessário que cada grupo de objetos tenha uma página agregadora. Por isso foram desenvolvidas as páginas de listagem.
 
       Para perfis, prêmios, instituições e \textit{tags}, as páginas de listagem operam de maneira análoga, gerando listas com os nomes de todos os objetos daquele grupo, com o respectivo \textit{link} para sua página de detalhes. Para projetos o funcionamento é um pouco diferente. São disponibilizadas, nesse caso, dois tipos distintos de listagem, um que agrega projetos conforme a edição da Febrace em que participaram, outro que os agrega conforme sua categoria.
 
       Um caso particular é a página de detalhes de uma \textit{tag}, que é também uma listagem, dos elementos que foram marcados por essa \textit{tag}.
 
-    \subsubsection{História 37 - Criação de \textit{templates}}
+  Esse cartão não planejado no levantamento inicial de histórias.
+
+    \subsubsection{História 33 - Criação de \textit{templates}}
       \textit{Templates} são os componentes que determinam a apresentação do projeto, e por eles definem-se quais componentes estarão presentes em quais páginas, e de que forma.
 
       Para evitar a repetição de código, os \textit{templates} foram organizados seguindo uma hierarquia. Elementos presentes em todas as páginas, como o menu principal, o logotipo e o rodapé das páginas, estão definidos em um template na base dessa hierarquia. Seguindo o paradigma de orientação a objetos, esse \textit{template} base é herdado pelos outros templates. Caso haja atributos presentes nele que não são desejados nos herdeiros, eles podem redefinir a implementação, reescrevendo ou estendendo os elementos herdados.
+
+  Esse cartão não planejado no levantamento inicial de histórias.
 
     \subsubsection{Cartões sem fazer, prometidos}
       \begin{itemize}
@@ -446,6 +462,6 @@
 
     \subsubsection{Cartões sem fazer, novos}
       \begin{itemize}
-        \item{31 - Alteração de senha}
-        \item{33 - Permissões de visualização}
+        \item{37 - Alteração de senha}
+        \item{38 - Permissões de visualização}
       \end{itemize}
