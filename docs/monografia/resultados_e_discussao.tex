@@ -332,14 +332,14 @@
     \subsubsection{História 13 - Amigos}
       Um aspecto muito importante das redes sociais é a possibilidade da criação de associações entre os usuários, e essa funcionalidade é oferecida na Febrace\textsuperscript{V}. Escolheu-se por adotar um modelo de associação baseado em "seguidores", tais como em redes como o Twitter\footnote{http://www.twitter.com} e o Stoa\footnote{http://stoa.usp.br}. Nesse modelo, um usuário não precisa solicitar a associação a um outro usuário, simplesmente escolhe seguí-lo. O usuário seguido pode ou não retribuir a associação. Caso o faça, surge a possibilidade da troca de mensagens privadas entre eles.
 
-      No sistema desenvolvido um usuário autenticado, ao visitar a página de perfil de algum outro usuário, tem a opção de adicionar esse usuário como um amigo, selecionando o botão "Adicionar" presente em sua página.
+      No sistema desenvolvido um usuário autenticado, ao visitar a página de perfil de algum outro usuário, tem a opção de adicionar esse usuário como um amigo, selecionando o botão “Adicionar" presente em sua página.
 
       De volta à sua página, o usuário pode ver listados todas as pessoas que ele segue (perfis que ele selecionou como amigo), todas as pessoas que o seguem (pessoas que adicionaram seu perfil como amigo) a todas as relações mútuas (pessoas que o seguem e que são seguidas por ele).
 
-      A qualquer momento ele pode deixar de seguir um usuário qualquer. Para isso, deve visitar o perfil desse usuário e selecionar a opção "Remover".
+      A qualquer momento ele pode deixar de seguir um usuário qualquer. Para isso, deve visitar o perfil desse usuário e selecionar a opção “Remover".
 
     \subsubsection{História 14 - Projetos prediletos}
-      Um usuário autenticado pode também escolher quais são seus projetos prediletos na Febrace\textsuperscript{V}. As operações de adição ou remoção de um projeto predileto funcionam de maneira análoga à adição ou remoção de amigos. Ao visitar a página de um projeto, um usuário pode adicioná-lo como predileto clicando em "Adicionar". Se quiser desfazer a associação, deve visitar novamente a página desse projeto e clicar em "Remover".
+      Um usuário autenticado pode também escolher quais são seus projetos prediletos na Febrace\textsuperscript{V}. As operações de adição ou remoção de um projeto predileto funcionam de maneira análoga à adição ou remoção de amigos. Ao visitar a página de um projeto, um usuário pode adicioná-lo como predileto clicando em “Adicionar". Se quiser desfazer a associação, deve visitar novamente a página desse projeto e clicar em “Remover".
 
       É mostrado no perfil de um usuário quais são seus projetos prediletos. Da mesma forma, é mostrada na página de um projeto a lista de usuários que o tem como predileto.
 
@@ -385,7 +385,7 @@
   Esse cartão não planejado no levantamento inicial de histórias.
 
     \subsubsection{História 35 - Criação de páginas estáticas}
-      A maioria das páginas que compõe a Febrace\textsuperscript{V} são dinâmicas, ou seja, são renderizadas conforme um contexto e uma requisição específicos. Há um conjunto de páginas, porém, que tem seus conteúdos e formas de exibição sempre iguais. Algumas das páginas do sistema são estáticas, como as páginas de "Mapa do site" e de "Termos de Uso".
+      A maioria das páginas que compõe a Febrace\textsuperscript{V} são dinâmicas, ou seja, são renderizadas conforme um contexto e uma requisição específicos. Há um conjunto de páginas, porém, que tem seus conteúdos e formas de exibição sempre iguais. Algumas das páginas do sistema são estáticas, como as páginas de “Mapa do site" e de “Termos de Uso".
 
       Há no \textit{framework} uma aplicação que facilita a criação e organização dessas páginas estáticas (páginas planas), que foi instalado e configurado para prover as páginas planas necessárias ao projeto.
 
@@ -426,7 +426,7 @@
     \subsubsection{História 34 - Home page}
       Foi criada a \textit{homepage} para o projeto (figura~\ref{homepage}), que apresenta cinco sessões principais. A primeira é o menu presente em todas as outras páginas, pelo qual é possível cadastrar-se, realizar o login, realizar buscas ou acessar algumas sessões do site. Outra é o conjunto de textos que explicam a finalidade do Febrace\textsuperscript{V} e convidam o visitante a conhecer mais a respeito. Em seguida temos uma sessão com notícias e outras atividades recentes. No rodapé, tem-se acesso ao conjunto de páginas estáticas (mapa, termos de uso, etc.) e a outros sites ligados ao sistema, como o blog do desenvolvimento, o repositório de código e a página da Febrace. No centro da página, tem-se acesso a um projeto ou conteúdo de destaque.
 
-  Esse cartão não planejado no levantamento inicial de histórias.
+  Esse cartão não havia sido planejado no levantamento inicial de histórias.
 
     \begin{figure}
         \begin{center}
@@ -437,13 +437,13 @@
     \end{figure}
 
     \subsubsection{História 31 - Listagens}
-      A maioria dos objetos presentes no sistema tem páginas individuais, como é o caso de projetos, perfis, instituições, prêmios e \textit{tags}. Para que a navegação seja consistente, entratanto, não basta que só os objeto tenham suas páginas relativas, sendo necessário que cada grupo de objetos tenha uma página agregadora. Por isso foram desenvolvidas as páginas de listagem.
+      A maioria dos objetos presentes no sistema tem páginas individuais, como é o caso de projetos, perfis, instituições, prêmios e \textit{tags}. Para que a navegação seja consistente, entretanto, não basta que só os objeto tenham suas páginas relativas, sendo necessário que cada grupo de objetos tenha uma página agregadora. Por isso foram desenvolvidas as páginas de listagem.
 
       Para perfis, prêmios, instituições e \textit{tags}, as páginas de listagem operam de maneira análoga, gerando listas com os nomes de todos os objetos daquele grupo, com o respectivo \textit{link} para sua página de detalhes. Para projetos o funcionamento é um pouco diferente. São disponibilizadas, nesse caso, dois tipos distintos de listagem, um que agrega projetos conforme a edição da Febrace em que participaram, outro que os agrega conforme sua categoria.
 
       Um caso particular é a página de detalhes de uma \textit{tag}, que é também uma listagem, dos elementos que foram marcados por essa \textit{tag}.
 
-  Esse cartão não planejado no levantamento inicial de histórias.
+  Esse cartão não havia sido planejado no levantamento inicial de histórias.
 
     \subsubsection{História 33 - Criação de \textit{templates}}
       \textit{Templates} são os componentes que determinam a apresentação do projeto, e por eles definem-se quais componentes estarão presentes em quais páginas, e de que forma.
