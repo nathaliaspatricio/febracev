@@ -96,6 +96,7 @@ INSTALLED_APPS = (
     'registration',
     'search',
     'tagging',
+    'home',
 )
 
 #User profile

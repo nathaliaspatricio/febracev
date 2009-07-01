@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     (r'^projects/', include('projects.urls')),
     (r'^search/', include('search.urls')),
     (r'^tags/', include('tagging.urls')),
+    (r'^$', include('home.urls')),
     (r'^media/(.*)$', 'django.views.static.serve',
      {'document_root': settings.MEDIA_ROOT}),
 )
