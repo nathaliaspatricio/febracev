@@ -28,6 +28,7 @@ class Project(models.Model):
     code = models.CharField(max_length=3)
 
     video = models.CharField(max_length=47, blank=True)
+    is_local = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.name
