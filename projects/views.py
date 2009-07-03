@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 from projects.models import Project, ProjectLink, CATEGORIES
-from projects.utils import get_favorite_projects, is_favorite
+from projects.utils import get_favorite_projects, is_favorite, get_prizes
 
 def projects_main(request):
     years = range(2003,2010)
@@ -48,10 +48,16 @@ def project_detail(request, year, category, code):
     else:
         is_fav = False
 
+    student_list = project.students.all()
+    advisor_list = project.advisors.all()
+    prize_list   = get_prizes(project)
 
     return render_to_response('projects/project_detail.html',
                               { 'project': project,
                                 'is_favorite': is_fav,
+                                'student_list': student_list,
+                                'advisor_list': advisor_list, 
+                                'prize_list': prize_list,
                               },
                               context_instance=RequestContext(request))
 
