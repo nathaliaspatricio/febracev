@@ -40,17 +40,25 @@
             <div class="portrait">
                 Autores: 
                 {% for student in student_list %}
-                    <a href="/profiles/{{ student.username }}"> {{ student.first_name }} {{ student.last_name }}</a><br/>
+                    {% if student.get_profile %}
+                        <a href="/profiles/{{ student.username }}"> {{ student.username }}</a><br/>
+                    {% else %}
+                        {{ student.username }}<br/>
+                    {% endif %}
                 {% endfor %} 
                 Orientador: 
                 {% for advisor in advisor_list %}
-                    <a href="/profiles/{{ advisor.username }}">{{ advisor.first_name }} {{ advisor.last_name }}</a><br/>
+                    {% if adivisor.get_profile %}
+                        <a href="/profiles/{{ advisor.username }}">{{ advisor.username }}</a><br/>
+                    {% else %}
+                        {{ advisor.username }}<br/>
+                    {% endif %}
                 {% endfor %} 
                 Instituição: <a href="/institutions/{{ project.institution.id }}">{{ project.institution }}</a> <br/>
                 Ano: <a href="/projects/{{ project.edition }}">{{ project.edition }} </a><br/>
                 Área: <a href="/projects/{{ project.category }}">{{ project.category }} </a><br/>
                 Palavras-chave: {{ project.keywords }} <br/>
-                Resumo: {{ project.abstract }} <br/>
+                {# Resumo: {{ project.abstract }} <br/> #}
                 Prêmios: 
                 {% for prize in prize_list %}
                     {{ prize.name }}<br/>
@@ -74,11 +82,16 @@
             <h2>Vídeo</h2>
 			<div class="clear">&nbsp;</div>
             {% if project.video %}
-                <embed TYPE='application/x-mplayer2'
-                pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
-                SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
-                ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=288 LOOP='false'>
-                </embed> <br/>
+                {% if project.is_local %}
+                    <video src="{{ MEDIA_URL }}/video/{{ project.video }}"
+                    controls="true" width="352" height="288"></video>
+                {% else %}
+                    <embed TYPE='application/x-mplayer2'
+                    pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
+                    SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
+                    ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=288 LOOP='false'>
+                    </embed> <br/>
+                {% endif %}
             {% endif %}
 		</div>
 		<div class="columnBhead">
