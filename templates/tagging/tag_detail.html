@@ -10,7 +10,11 @@
 
     <ul>
     {% for object in object_list %}
-        <li><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></li>
+        {% if object.name %}
+            <li><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></li>
+        {% else %}
+            <li><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></li>
+        {% endif %}
     {% endfor %}
     </ul>
 
