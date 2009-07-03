@@ -59,12 +59,18 @@
 		<div id="clips">
 			<ul class="videos">
 				<li class="top">
-			<a href=""><div class="thumbnail"></div></a>
+			<a href="/projects/{{ project.edition }}/{{ project.category }}/{{ project.code }}"><div class="thumbnail"></div></a>
 			<div class="digest">
-				<h3><a href="">Projeto Carbono e CO2: uma nova fonte de energia</a></h3>
-				<div class="byline">Autores: <a href="">Diallyson Wilter Morais Maia, Cesar Henrique Rocha Freitas e Jorge Elias Araujo Ferraz</a></div>
-                <div class="byline">Orientador: <a href="">Cibele Pimenta Tiradentes</a></div>
-				<div class="description">Tendo em vista a constante ação do homem sobre a biota terrestre, evidenciada pela ação de poluentes particulados ou não, queremos propor uma opção, através de pesquisas científicas alternativas que dimensionem esse impacto e que acima de tudo possam amenizá-lo&hellip;</div>
+				<h3><a href="/projects/{{ project.edition }}/{{ project.category }}/{{ project.code }}">{{ project.name }}</a></h3>
+				<div class="byline">Autores:  
+                {% for student in student_list %}
+                    <a href="/profiles/{{ student.username }}"> {{ student.first_name }} {{ student.last_name }}</a>
+                {% endfor %} </div>
+                <div class="byline">Orientador: 
+                {% for advisor in advisor_list %}
+                    <a href="/profiles/{{ advisor.username }}">{{ advisor.first_name }} {{ advisor.last_name }}</a>
+                {% endfor %} </div>
+				<div class="description">{{ project.abstract }}</div>
 			</div>
 
 			<div class="clear"></div>
