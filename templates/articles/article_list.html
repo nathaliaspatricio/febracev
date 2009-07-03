@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title%} | Artigos {% endblock %}
+
+{% block header%}
+    <h1>Artigos</h1>
+{% endblock %}
+
+{% block content %}
+
+    <ul>
+    {% for article in object_list %}
+        <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

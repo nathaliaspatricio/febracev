@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title%} | Colunas {% endblock %}
+
+{% block header%}
+    <h1>{{ object.title }}</h1>
+{% endblock %}
+
+{% block content %}
+
+    <div id="body">
+        <br/>
+        {{ object.body|safe }}
+    </div>
+
+    <div id="meta">
+        <br/>
+        {% if object.author.get_profile %}
+        <p>Escrito por <a href="{{ object.author.get_profile.get_absolute_url }}">{{ object.author.username }}</a> em {{ object.pub_date|date:"d/M/Y" }}<br/></p>
+        {% else %}
+            <p>Escrito por {{ object.author.username }} em {{ object.pub_date|date:"d/M/Y" }}<br/></p>
+        {% endif %}
+    </div>
+
+{% endblock %}
