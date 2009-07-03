@@ -62,15 +62,13 @@
             </div>
             <div class="insides">
                 <div class="personal">
-                    <div class="where">
-                        <span class="locality"></span><br />
-                        <span class="url"><a href="">Editar Projeto</a>
-                        </span>
-                    </div>
                     <div id="bio">
                         <br/>
                         Ano: {{ project.edition }} <br/>
                         Área: {{ project.category }} <br/>
+                        Instituição: {{ project.institution }} <br/>
+                        Palavras-chave: {{ project.keywords }} <br/>
+                        Resumo: {{ project.abstract }} <br/>
                     </div>
                 </div>
             </div>
@@ -88,16 +86,10 @@
                 <embed TYPE='application/x-mplayer2'
                 pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
                 SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
-                ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=28 LOOP='false'>
+                ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=288 LOOP='false'>
                 </embed> <br/>
             {% endif %}
 		</div>
-	</div>
-
-{% endblock %}
-
-{% block columnB %}
-    <div class="column" id="columnB">
 		<div class="columnBhead">
             <h2>Recados</h2>
 			<div class="clear">&nbsp;</div>

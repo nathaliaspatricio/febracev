@@ -91,6 +91,115 @@
         }
     },
     {
+        "pk": 6, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false,
+            "title": "O quê?",
+            "url": "/what/", 
+            "sites": [1],
+            "template_name": "",
+            "content": "<h1>O quê?</h1>",
+            "enable_comments": false
+        }
+    },
+    {
+        "pk": 7, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false,
+            "title": "Por quê?",
+            "url": "/why/", 
+            "sites": [1],
+            "template_name": "",
+            "content": "<h1>Por quê?</h1>",
+            "enable_comments": false
+        }
+    },
+    {
+        "pk": 8, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false,
+            "title": "Como",
+            "url": "/how/", 
+            "sites": [1],
+            "template_name": "",
+            "content": "<h1>Como</h1>",
+            "enable_comments": false
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "articles.article", 
+        "fields": {
+            "title": "Divulgue a FEBRACE",
+            "slug": "febrace",
+            "author": 1, 
+            "excerpt": "Divulgue a FEBRACE em sua escola, em seu bairro",
+            "body": "Divulgue a FEBRACE em sua escola, em seu bairro",
+            "pub_date": "2009-07-02 23:40",
+            "enable_comments": false,
+            "tags": "febrace"            
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "articles.article", 
+        "fields": {
+            "title": "Um espaço para os estudantes",
+            "slug": "febrace",
+            "author": 1, 
+            "excerpt": "Escreva sua história e participe do FEBRACE Acontece",
+            "body": "Escreva sua história e participe do FEBRACE Acontece",
+            "pub_date": "2009-07-02 23:40",
+            "enable_comments": false,
+            "tags": "febrace"            
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "articles.article", 
+        "fields": {
+            "title": "Visite o Criatividade e Inovação",
+            "slug": "febrace",
+            "author": 1, 
+            "excerpt": "Reune informações sobre feiras de ciências no Brasil e no mundo",
+            "body": "Reune informações sobre feiras de ciências no Brasil e no mundo",
+            "pub_date": "2009-07-02 23:40",
+            "enable_comments": false,
+            "tags": "febrace"            
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "articles.article", 
+        "fields": {
+            "title": "Invista em jovens inovadores",
+            "slug": "febrace",
+            "author": 1, 
+            "excerpt": "Estimule a cultura de inovação e empreendedorismo na Educação Básica",
+            "body": "Estimule a cultura de inovação e empreendedorismo na Educação Básica",
+            "pub_date": "2009-07-02 23:40",
+            "enable_comments": false,
+            "tags": "febrace"            
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "articles.article", 
+        "fields": {
+            "title": "Brasil na Intel ISEF",
+            "slug": "febrace",
+            "author": 1, 
+            "excerpt": "Estudantes brasileiros trazem 5 prêmios para o Brasil",
+            "body": "Estudantes brasileiros trazem 5 prêmios para o Brasil",
+            "pub_date": "2009-07-02 23:40",
+            "enable_comments": false,
+            "tags": "febrace"            
+        }
+    }, 
+    {
         "pk": 1, 
         "model": "projects.prize", 
         "fields": {
