@@ -9,12 +9,6 @@
 {% block toolbar %}
     {% if user.is_authenticated %}
         <div id="toolbar">
-            <div class="toolbar_item">
-                <a href="">
-                    <img src="{{ MEDIA_URL }}images/toolbar_envelope.png" id="toolbar_envelope" alt="share" /><br />
-                    Mensagem
-                </a>
-            </div>
             {% if is_favorite %}
                 <div id="contact_switch" class="toolbar_item">
                     <a href={% url projects_remove_favorite project.edition project.category project.code %}>
@@ -44,33 +38,30 @@
         </div>
         <div class="portrait_area">
             <div class="portrait">
-                {% if profile.mugshot %}
-                    <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
-                    <div id="formyportrait" style="display:none;width:300px;height:300px;">
-                    </div>
-                {% else %}
-                <img id="big_portrait" class="photo portrait" src="{{ MEDIA_URL }}images/sem_foto.png" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
-                    <div id="formyportrait" style="display:none;width:300px;height:300px;">
-                    </div>
-                {% endif %}
+                Autores: 
+                {% for student in student_list %}
+                    <a href="/profiles/{{ student.username }}"> {{ student.first_name }} {{ student.last_name }}</a><br/>
+                {% endfor %} 
+                Orientador: 
+                {% for advisor in advisor_list %}
+                    <a href="/profiles/{{ advisor.username }}">{{ advisor.first_name }} {{ advisor.last_name }}</a><br/>
+                {% endfor %} 
+                Instituição: <a href="/institutions/{{ project.institution.id }}">{{ project.institution }}</a> <br/>
+                Ano: <a href="/projects/{{ project.edition }}">{{ project.edition }} </a><br/>
+                Área: <a href="/projects/{{ project.category }}">{{ project.category }} </a><br/>
+                Palavras-chave: {{ project.keywords }} <br/>
+                Resumo: {{ project.abstract }} <br/>
+                Prêmios: 
+                {% for prize in prize_list %}
+                    {{ prize.name }}<br/>
+                {% endfor %} 
+                <br/>
             </div>
         </div>
 
         <div class="softcorners2" style="background:#f1f2e8;">
             <div class="sosoft" style=" height: 15px;">
                 <div style=" height: 15px;"></div>
-            </div>
-            <div class="insides">
-                <div class="personal">
-                    <div id="bio">
-                        <br/>
-                        Ano: {{ project.edition }} <br/>
-                        Área: {{ project.category }} <br/>
-                        Instituição: {{ project.institution }} <br/>
-                        Palavras-chave: {{ project.keywords }} <br/>
-                        Resumo: {{ project.abstract }} <br/>
-                    </div>
-                </div>
             </div>
             <div class="sosoft" style="background: url('{{ MEDIA_URL }}images/rounder_right_inferior.gif') no-repeat bottom right; height: 15px;">
                 <div style="background: url('{{ MEDIA_URL }}images/rounder_left_inferior.gif') no-repeat bottom left;  height: 15px;" ></div>

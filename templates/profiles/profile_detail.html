@@ -10,12 +10,6 @@
     {% if user.is_authenticated %}
         {% ifnotequal user profile.user %}
             <div id="toolbar">
-                <div class="toolbar_item">
-                    <a href="">
-                        <img src="{{ MEDIA_URL }}images/toolbar_envelope.png" id="toolbar_envelope" alt="share" /><br />
-                        Mensagem
-                    </a>
-                </div>
                 {% if is_friend %}
                     <div id="contact_switch" class="toolbar_item">
                         <a href={% url friends_remove_friend profile.user.username %}>
