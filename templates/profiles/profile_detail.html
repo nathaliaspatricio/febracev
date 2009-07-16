@@ -130,7 +130,7 @@
 			<div class="subcolumn" id="columnBleft">
                 <ul>
                 {% for project in favorite_projects %}
-                    <li><a href={{ project.get_absolute_url }}>{{ project.name }}</a></li>
+                    <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
                 {% endfor %}
                 </ul>
                 <a href={% url projects_favorite_projects profile.user.username %}>mais...</a>

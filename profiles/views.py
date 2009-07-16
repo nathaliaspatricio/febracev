@@ -304,10 +304,10 @@ def profile_detail(request, username, public_profile_field=None,
     else:
         is_friend = False
 
-    follower_list = friends_utils.get_follower_set(profile_obj)
-    following_list = friends_utils.get_following_set(profile_obj)
-    mutual_list = friends_utils.get_mutual_set(profile_obj)
-    favorite_projects = projects_utils.get_favorite_projects(profile_obj)
+    follower_list = friends_utils.get_follower_set(user)
+    following_list = friends_utils.get_following_set(user)
+    mutual_list = friends_utils.get_mutual_set(user)
+    favorite_projects = projects_utils.get_favorite_projects(user)
 
     return render_to_response(template_name,
                               { 'profile': profile_obj,

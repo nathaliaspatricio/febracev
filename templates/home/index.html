@@ -62,22 +62,30 @@
 			<a href="/projects/{{ project.edition }}/{{ project.category }}/{{ project.code }}"><div class="thumbnail"></div></a>
 			<div class="digest">
 				<h3><a href="/projects/{{ project.edition }}/{{ project.category }}/{{ project.code }}">{{ project.name }}</a></h3>
-				<div class="byline">Autores:  
+				<div class="byline">Autores:
                 {% for student in student_list %}
-                    <a href="/profiles/{{ student.username }}"> {{ student.first_name }} {{ student.last_name }}</a>
+                    {% if student.get_profile %}
+                        <a href="/profiles/{{ student.username }}"> {{ student.username }}</a>
+                    {% else %}
+                        {{ student.username }}
+                    {% endif %}
                 {% endfor %} </div>
                 <div class="byline">Orientador: 
                 {% for advisor in advisor_list %}
-                    <a href="/profiles/{{ advisor.username }}">{{ advisor.first_name }} {{ advisor.last_name }}</a>
+                    {% if advisor.get_profile %}
+                        <a href="/profiles/{{ advisor.username }}">{{ advisor.username }}</a>
+                    {% else %}
+                        {{ advisor.username }}
+                    {% endif %}
                 {% endfor %} </div>
 				<div class="description">{{ project.abstract }}</div>
 			</div>
 
 			<div class="clear"></div>
-		</li>									
+		</li>
     </ul>
 
-									</div>			
+									</div>
 	</div>	
 		<div class="sosoft" style="background: url('{{ MEDIA_URL }}images/rounder_br_10_ffffff_e6e6dc.gif') no-repeat bottom right; height: 10px;">
 		<div style="background: url('{{ MEDIA_URL }}images/rounder_bl_10_ffffff_e6e6dc.gif') no-repeat bottom left;  height: 10px;" ></div>
