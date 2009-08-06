@@ -8,12 +8,24 @@ from basic.blog.models import *
 import datetime
 import re
 
+def add_post(request, edition, category, code, **kwargs):
+    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+    logged_user = request.user
+    user_projects = list(logged_user.students.all()) + list(logged_user.advisors.all())
+    if not project in user_projects:
+        raise Http404
+    else:
+        return list_detail.object_list(
+            request,
+            queryset = Post.objects.published(project),
+            **kwargs
+        )
 
-def post_list(request, year, category, code, page=0, **kwargs):
-    project = Project.objects.get(edition=year, category=category, code=code)
+def post_list(request, edition, category, code, page=0, **kwargs):
+    project = get_object_or_404(Project, edition=edition, category=category, code=code)
     return list_detail.object_list(
         request,
-        queryset = Post.objects.filter(project=project).published(),
+        queryset = Post.objects.published(project),
         paginate_by = 20,
         page = page,
         **kwargs
@@ -21,44 +33,48 @@ def post_list(request, year, category, code, page=0, **kwargs):
 post_list.__doc__ = list_detail.object_list.__doc__
 
 
-def post_archive_year(request, year, **kwargs):
+def post_archive_year(request, edition, category, code, year, **kwargs):
+    project = get_object_or_404(Project, edition=edition, category=category, code=code)
     return date_based.archive_year(
         request,
         year = year,
         date_field = 'publish',
-        queryset = Post.objects.published(),
+        queryset = Post.objects.published(project),
         make_object_list = True,
         **kwargs
     )
 post_archive_year.__doc__ = date_based.archive_year.__doc__
 
 
-def post_archive_month(request, year, month, **kwargs):
+def post_archive_month(request, edition, category, code, year, month, **kwargs):
+    project = get_object_or_404(Project, edition=edition, category=category, code=code)
     return date_based.archive_month(
         request,
         year = year,
         month = month,
         date_field = 'publish',
-        queryset = Post.objects.published(),
+        queryset = Post.objects.published(project),
         **kwargs
     )
 post_archive_month.__doc__ = date_based.archive_month.__doc__
 
 
-def post_archive_day(request, year, month, day, **kwargs):
+def post_archive_day(request, edition, category, code, year, month, day, **kwargs):
+    project = get_object_or_404(Project, edition=edition, category=category, code=code)
     return date_based.archive_day(
         request,
         year = year,
         month = month,
         day = day,
         date_field = 'publish',
-        queryset = Post.objects.published(),
+        queryset = Post.objects.published(project),
         **kwargs
     )
 post_archive_day.__doc__ = date_based.archive_day.__doc__
 
 
-def post_detail(request, slug, year, month, day, **kwargs):
+def post_detail(request, edition, category, code, slug, year, month, day, **kwargs):
+    project = get_object_or_404(Project, edition=edition, category=category, code=code)
     return date_based.object_detail(
         request,
         year = year,
@@ -66,7 +82,7 @@ def post_detail(request, slug, year, month, day, **kwargs):
         day = day,
         date_field = 'publish',
         slug = slug,
-        queryset = Post.objects.published(),
+        queryset = Post.objects.published(project),
         **kwargs
     )
 post_detail.__doc__ = date_based.object_detail.__doc__
