@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.db.models import permalink
 from django.contrib.auth.models import User
 from tagging.fields import TagField
-from basic.blog.managers import PublicManager
+from blog.managers import PublicManager
 from febracev.projects.models import Project
 
 import tagging
