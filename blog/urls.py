@@ -3,6 +3,10 @@ from blog import views as blog_views
 
 
 urlpatterns = patterns('',
+    url(r'^(?P<edition>\d{4})/(?P<category>[A-Z]{3})/(?P<code>\d{3})/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{1,2})/(?P<slug>[-\w]+)/edit/$',
+        view=blog_views.edit_post,
+        name='blog_edit_post'),    
+
     url(r'^(?P<edition>\d{4})/(?P<category>[A-Z]{3})/(?P<code>\d{3})/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{1,2})/(?P<slug>[-\w]+)/$',
         view=blog_views.post_detail,
         name='blog_detail'),
@@ -41,5 +45,5 @@ urlpatterns = patterns('',
 
     url(r'^(?P<edition>\d{4})/(?P<category>[A-Z]{3})/(?P<code>\d{3})/add/$',
         view=blog_views.add_post,
-        name='add_post'),
+        name='blog_add_post'),
 )

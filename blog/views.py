@@ -5,11 +5,14 @@ from django.views.generic import date_based, list_detail
 from django.db.models import Q
 from django.db import IntegrityError
 from blog.models import *
-from blog.forms import AddPostForm
+from blog.forms import AddPostForm, EditPostForm
+from django.contrib.auth.decorators import login_required
 
 import datetime
+import time
 import re
 
+@login_required
 def add_post(request, edition, category, code, **kwargs):
     project = get_object_or_404(Project, edition=edition, category=category, code=code)
     logged_user = request.user
@@ -35,6 +38,25 @@ def add_post(request, edition, category, code, **kwargs):
         return render_to_response('blog/add_post.html',
                                   { 'form': form },
                                     context_instance=RequestContext(request))
+@login_required
+def edit_post(request, edition, category, code, slug, year, month, day, **kwargs):
+    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+    tt = time.strptime('%s%s%s' % (year, month, day) , '%Y%b%d')
+    date = datetime.date(*tt[:3])
+    post_list = Post.objects.published(project).filter(slug=slug, publish__year=date.year, publish__month=date.month, publish__day=date.day)
+    post = post_list[0]
+
+    if request.method == 'POST':
+        form = EditPostForm(data=request.POST, instance=post)
+        if form.is_valid():
+            post = form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = EditPostForm(instance=post)
+
+    return render_to_response('blog/add_post.html',
+                              { 'form': form },
+                                context_instance=RequestContext(request))
 
 def post_list(request, edition, category, code, page=0, **kwargs):
     project = get_object_or_404(Project, edition=edition, category=category, code=code)
