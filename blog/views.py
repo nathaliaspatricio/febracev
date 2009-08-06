@@ -1,9 +1,11 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.views.generic import date_based, list_detail
 from django.db.models import Q
+from django.db import IntegrityError
 from blog.models import *
+from blog.forms import AddPostForm
 
 import datetime
 import re
@@ -15,11 +17,24 @@ def add_post(request, edition, category, code, **kwargs):
     if not project in user_projects:
         raise Http404
     else:
-        return list_detail.object_list(
-            request,
-            queryset = Post.objects.published(project),
-            **kwargs
-        )
+        if request.method == 'POST':
+            form = AddPostForm(data=request.POST)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.author = request.user
+                post.project = project
+                post.publish = datetime.date.today()
+                try:
+                    post.save()
+                    return HttpResponseRedirect('/')
+                except IntegrityError:
+                    form.errors['slug'] = [u'Slug repetido.']
+        else:
+            form = AddPostForm()
+
+        return render_to_response('blog/add_post.html',
+                                  { 'form': form },
+                                    context_instance=RequestContext(request))
 
 def post_list(request, edition, category, code, page=0, **kwargs):
     project = get_object_or_404(Project, edition=edition, category=category, code=code)
