@@ -42,8 +42,8 @@ def projects_by_category(request, category):
 def project_detail(request, year, category, code):
     project = get_object_or_404(Project, edition=year, category=category, code=code)
 
-    if request.user.is_authenticated():
-        visitor = request.user
+    visitor = request.user
+    if visitor.is_authenticated():
         is_fav = is_favorite(visitor, project)
     else:
         is_fav = False
@@ -52,9 +52,13 @@ def project_detail(request, year, category, code):
     advisor_list = project.advisors.all()
     prize_list   = get_prizes(project)
 
+    users = list(student_list)+list(advisor_list)
+    is_owner = visitor in users
+
     return render_to_response('projects/project_detail.html',
                               { 'project': project,
                                 'is_favorite': is_fav,
+                                'is_owner': is_owner,
                                 'student_list': student_list,
                                 'advisor_list': advisor_list, 
                                 'prize_list': prize_list,

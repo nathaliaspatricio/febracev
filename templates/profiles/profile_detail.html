@@ -96,7 +96,7 @@
                     <li><a href={{ following.get_profile.get_absolute_url }}>{{ following.username }}</a></li>
                 {% endfor %}
                 </ul>
-                    <a href={% url friends_following profile.user.username %}>mais...</a>
+                    <a href={% url friends_following username=profile.user.username %}>mais...</a>
                     <div class="clear">&nbsp;</div>
             </div>
 			<div class="subcolumn" id="columnBright">
@@ -106,7 +106,7 @@
                     <li><a href={{ follower.get_profile.get_absolute_url }}>{{ follower.username }}</a></li>
                 {% endfor %}
                 </ul>
-                <a href={% url friends_followers profile.user.username %}>mais...</a>
+                <a href={% url friends_followers username=profile.user.username %}>mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>
 			<div class="subcolumn" id="columnBright">
@@ -116,7 +116,7 @@
                     <li><a href={{ mutual.get_profile.get_absolute_url }}>{{ mutual.username }}</a></li>
                 {% endfor %}
                 </ul>
-                <a href={% url friends_mutual profile.user.username %}>mais...</a>
+                <a href={% url friends_mutual username=profile.user.username %}>mais...</a>
                 <div class="clear">&nbsp;</div>
 			</div>
             
@@ -133,7 +133,7 @@
                     <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
                 {% endfor %}
                 </ul>
-                <a href={% url projects_favorite_projects profile.user.username %}>mais...</a>
+                <a href={% url projects_favorite_projects username=profile.user.username %}>mais...</a>
                     <div class="clear">&nbsp;</div>
             </div>            
 		</div>

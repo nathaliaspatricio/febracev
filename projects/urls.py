@@ -23,7 +23,7 @@ urlpatterns = patterns('projects.views',
         name='projects_project_detail'
     ),
     url(
-        r'^(?P<username>[a-z]+)/$',
+        r'^(?P<username>\w+)/$',
         'favorite_projects',
         name='projects_favorite_projects'
     ),
