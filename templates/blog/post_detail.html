@@ -7,6 +7,12 @@
 
 
 {% block content_title %}
+
+{% endblock %}
+
+
+{% block content %}
+  {% load blog markup comments tagging_tags %}
   <h2>{{ object.title }}</h2>
   <p class="other_posts">
     {% if object.get_previous_by_publish %}
@@ -14,16 +20,14 @@
     {% endif %}
     {% if object.get_next_by_publish %}
     | <a class="next" href="{{ object.get_next_post.get_absolute_url }}">{{ object.get_next_post }} &raquo;</a> 
+    {% endif %}  
+    {% if is_owner %}
+        <br/>
+        <a href={% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
     {% endif %}
   </p>
-{% endblock %}
-
-
-{% block content %}
-  {% load blog markup comments tagging_tags %}
-  
   <p class="date">{{ object.publish|date:"j F Y" }}</p>
-  
+
   <div class="body">
     {{ object.body|markdown:"safe" }}
   </div>

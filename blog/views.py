@@ -41,22 +41,33 @@ def add_post(request, edition, category, code, **kwargs):
 @login_required
 def edit_post(request, edition, category, code, slug, year, month, day, **kwargs):
     project = get_object_or_404(Project, edition=edition, category=category, code=code)
-    tt = time.strptime('%s%s%s' % (year, month, day) , '%Y%b%d')
-    date = datetime.date(*tt[:3])
-    post_list = Post.objects.published(project).filter(slug=slug, publish__year=date.year, publish__month=date.month, publish__day=date.day)
-    post = post_list[0]
 
-    if request.method == 'POST':
-        form = EditPostForm(data=request.POST, instance=post)
-        if form.is_valid():
-            post = form.save()
-            return HttpResponseRedirect('/')
+    visitor = request.user
+    student_list = project.students.all()
+    advisor_list = project.advisors.all()
+
+    users = list(student_list)+list(advisor_list)
+    is_owner = visitor in users
+
+    if is_owner:
+        tt = time.strptime('%s%s%s' % (year, month, day) , '%Y%b%d')
+        date = datetime.date(*tt[:3])
+        post_list = Post.objects.published(project).filter(slug=slug, publish__year=date.year, publish__month=date.month, publish__day=date.day)
+        post = post_list[0]
+
+        if request.method == 'POST':
+            form = EditPostForm(data=request.POST, instance=post)
+            if form.is_valid():
+                post = form.save()
+                return HttpResponseRedirect('/')
+        else:
+            form = EditPostForm(instance=post)
+
+        return render_to_response('blog/add_post.html',
+                                  { 'form': form },
+                                    context_instance=RequestContext(request))
     else:
-        form = EditPostForm(instance=post)
-
-    return render_to_response('blog/add_post.html',
-                              { 'form': form },
-                                context_instance=RequestContext(request))
+        raise Http404
 
 def post_list(request, edition, category, code, page=0, **kwargs):
     project = get_object_or_404(Project, edition=edition, category=category, code=code)
@@ -112,6 +123,13 @@ post_archive_day.__doc__ = date_based.archive_day.__doc__
 
 def post_detail(request, edition, category, code, slug, year, month, day, **kwargs):
     project = get_object_or_404(Project, edition=edition, category=category, code=code)
+    visitor = request.user
+    student_list = project.students.all()
+    advisor_list = project.advisors.all()
+
+    users = list(student_list)+list(advisor_list)
+    is_owner = visitor in users
+
     return date_based.object_detail(
         request,
         year = year,
@@ -120,6 +138,7 @@ def post_detail(request, edition, category, code, slug, year, month, day, **kwar
         date_field = 'publish',
         slug = slug,
         queryset = Post.objects.published(project),
+        extra_context= {'is_owner': is_owner, 'project': project, 'month': month},
         **kwargs
     )
 post_detail.__doc__ = date_based.object_detail.__doc__

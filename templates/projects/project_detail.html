@@ -64,8 +64,9 @@
                     {{ prize.name }}<br/>
                 {% endfor %} 
                 <br/>
+                <a href={% url blog_index edition=project.edition category=project.category code=project.code %}>Diário de Bordo</a><br/>
                 {% if is_owner %}
-                    Hello!!!
+                    <a href={% url blog_add_post edition=project.edition category=project.category code=project.code %}>adicionar post</a><br/>
                 {% endif %}
             </div>
         </div>
