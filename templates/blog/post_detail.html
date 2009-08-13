@@ -44,6 +44,9 @@
   {% get_comment_list for object as comment_list %}
   {% if comment_list %}
   <div id="comments">
+{% load comments %}
+
+
     <a name="comments"></a>
     <h3 class="comments_title">Comments</h3>
     {% for comment in comment_list %}
@@ -61,11 +64,29 @@
   </div>
   {% endif %}
   {% if object.allow_comments %}
-    {% render_comment_form for object %}
+    {% get_comment_form for object as form %}
+    <form action="{% comment_form_target %}" method="POST">
+        {% if user.is_anonymous %}
+            <p><label for="id_name">Nome</label>{{ form.name }}</p>
+            <p><label for="id_email">Email</label>{{ form.email }}</p>
+        {% endif %}
+        <p><label for="id_comment">Recado</label>{{ form.comment }}</p>
+         <p style="display:none;">
+             <label for="id_honeypot">Se você escrever algo aqui,
+                 seu recado será tratado como spam</label>
+            {{ form.honeypot }}
+        </p>
+        {{ form.content_type }}
+        {{ form.object_pk }}
+        {{ form.timestamp }}
+        {{ form.security_hash }}
+        <input type="hidden" name="next" value="{{ object.get_absolute_url }}" />
+        <input type="submit" value="Enviar recado" id="id_submit" />
+    </form>
   {% else %}
     <div id="comment_form">
-      <h3>Comments are closed.</h3>
-      <p>Comments have been close for this post.</p>
+      <h3>Caixa de comentários fechada.</h3>
+      <p>Esse post não permite comentários.</p>
     </div>
   {% endif %}
 {% endblock %}
