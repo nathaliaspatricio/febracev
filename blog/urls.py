@@ -1,5 +1,10 @@
 from django.conf.urls.defaults import *
 from blog import views as blog_views
+from blog.feeds import BlogPostsFeed
+
+feeds = {
+    'latest': BlogPostsFeed,
+}
 
 
 urlpatterns = patterns('',
@@ -46,4 +51,9 @@ urlpatterns = patterns('',
     url(r'^(?P<edition>\d{4})/(?P<category>[A-Z]{3})/(?P<code>\d{3})/add/$',
         view=blog_views.add_post,
         name='blog_add_post'),
+
+    url(r'^feed/(?P<url>.*)/$', 
+        'django.contrib.syndication.views.feed', 
+        {'feed_dict': feeds},
+        name='blog_feed'),
 )

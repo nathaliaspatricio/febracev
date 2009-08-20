@@ -2,6 +2,10 @@
 
 {% block title%} | Artigos {% endblock %}
 
+{% block head%}
+    <link rel="alternate" type="application/rss+xml" title="Coluna da FEBRACE - RSS" href={% url articles_feed %} />
+{% endblock %}
+
 {% block header%}
     <h1>Artigos</h1>
 {% endblock %}

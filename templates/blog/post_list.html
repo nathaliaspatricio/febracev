@@ -4,6 +4,9 @@
 {% block title %}Post archive{% endblock %}
 {% block body_class %}{{ block.super }} post_list{% endblock %}
 
+{% block head%}
+    <link rel="alternate" type="application/rss+xml" title="Diário de bordo - RSS" href={% url blog_feed url=feed_url %} />
+{% endblock %}
 
 {% block content_title %}
   <h2>Post archive</h2>

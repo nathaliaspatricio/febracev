@@ -26,7 +26,7 @@ def add_post(request, edition, category, code, **kwargs):
                 post = form.save(commit=False)
                 post.author = request.user
                 post.project = project
-                post.publish = datetime.date.today()
+                post.publish = datetime.datetime.now()
                 try:
                     post.save()
                     return HttpResponseRedirect('/')
@@ -71,11 +71,13 @@ def edit_post(request, edition, category, code, slug, year, month, day, **kwargs
 
 def post_list(request, edition, category, code, page=0, **kwargs):
     project = get_object_or_404(Project, edition=edition, category=category, code=code)
+    feed_url = "latest/%s/%s/%s" % (edition, category, code)
     return list_detail.object_list(
         request,
         queryset = Post.objects.published(project),
         paginate_by = 20,
         page = page,
+        extra_context= {'feed_url': feed_url},
         **kwargs
     )
 post_list.__doc__ = list_detail.object_list.__doc__

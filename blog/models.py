@@ -45,7 +45,7 @@ class Post(models.Model):
     tease           = models.TextField(_('tease'), blank=True)
     status          = models.IntegerField(_('status'), choices=STATUS_CHOICES, default=2)
     allow_comments  = models.BooleanField(_('allow comments'), default=True)
-    publish         = models.DateField(_('publish'))
+    publish         = models.DateTimeField(_('publish'))
     created         = models.DateTimeField(_('created'), auto_now_add=True)
     modified        = models.DateTimeField(_('modified'), auto_now=True)
     categories      = models.ManyToManyField(Category, blank=True)
