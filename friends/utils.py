@@ -24,3 +24,6 @@ def get_mutual_set(user):
 
 def is_friend(visitor, user):
     return user in get_following_set(visitor)
+
+def is_mutual(visitor, user):
+    return user in get_mutual_set(visitor)

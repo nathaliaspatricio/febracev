@@ -301,8 +301,10 @@ def profile_detail(request, username, public_profile_field=None,
     if request.user.is_authenticated():
         visitor = request.user
         is_friend = friends_utils.is_friend(visitor, user)
+        is_mutual = friends_utils.is_mutual(visitor, user)
     else:
         is_friend = False
+        is_mutual = False
 
     follower_list = friends_utils.get_follower_set(user)
     following_list = friends_utils.get_following_set(user)
@@ -312,6 +314,7 @@ def profile_detail(request, username, public_profile_field=None,
     return render_to_response(template_name,
                               { 'profile': profile_obj,
                                 'is_friend': is_friend,
+                                'is_mutual': is_mutual,
                                 'follower_list': follower_list,
                                 'following_list': following_list,
                                 'mutual_list': mutual_list,

@@ -25,6 +25,14 @@
                         </a>
                     </div>
                 {% endif %}
+                {% if is_mutual %}
+                    <div id="contact_switch" class="toolbar_item">
+                        <a href={% url messages_compose_to profile.user.username %}>
+                            <img src="{{ MEDIA_URL }}images/toolbar_envelope.png" id="toolbar_add" alt="contact" /><br />
+                            Mensagem
+                        </a>
+                    </div>
+                {% endif %}
             </div>
         {% endifnotequal %}
     {% endif %}
@@ -62,8 +70,10 @@
                         {% ifequal user profile.user %}
                             <div class="where">
                                 <span class="locality"></span><br />
-                                <span class="url"><a href={% url profiles_edit_profile %}>Editar Perfil</a>
-                                </span>
+                                <span class="url"><a href={% url profiles_edit_profile %}>Editar Perfil</a></span><br/>
+                                <span class="url"><a href={% url messages_inbox %}>Mensagens Recebidas</a></span><br/>
+                                <span class="url"><a href={% url messages_outbox %}>Mensagens Enviadas</a></span><br/>
+                                <span class="url"><a href={% url messages_trash %}>Mensagens Apagadas</a></span><br/>
                             </div>
                         {% endifequal %}
                     {% endif %}

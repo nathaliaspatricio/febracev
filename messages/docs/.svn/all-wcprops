@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/104/trunk/docs
+END
+usage.txt
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/103/trunk/docs/usage.txt
+END
+install.txt
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/91/trunk/docs/install.txt
+END
+index.txt
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/104/trunk/docs/index.txt
+END
+customizing.txt
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/91/trunk/docs/customizing.txt
+END
+conf.py
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/100/trunk/docs/conf.py
+END
