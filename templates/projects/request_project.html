@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title%} | Solicitar Projeto{% endblock %}
+
+{% block header%}
+    <h1>Solicitar Projeto</h1>
+{% endblock %}
+
+{% block content %}
+    Você tem certeza? <br/>
+
+    <a href={% url projects_new_project %}>Sim</a><br/>
+    <a href={{ visitor.get_absolute_url }}>Não</a><br/>
+
+{% endblock %}

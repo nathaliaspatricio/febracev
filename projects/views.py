@@ -1,12 +1,13 @@
 from django.views.generic import list_detail
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.template import RequestContext
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 from projects.models import Project, ProjectLink, CATEGORIES
 from projects.utils import get_favorite_projects, is_favorite, get_prizes
+from projects.forms import ProjectForm
 
 def projects_main(request):
     years = range(2003,2010)
@@ -39,8 +40,11 @@ def projects_by_category(request, category):
                    extra_context = {'title': categories[category]}
                )
 
-def project_detail(request, year, category, code):
-    project = get_object_or_404(Project, edition=year, category=category, code=code)
+def project_detail(request, year=None, category=None, code=None, slug=None):
+    if slug:    
+        project = get_object_or_404(Project, slug=slug)
+    else:
+        project = get_object_or_404(Project, edition=year, category=category, code=code)
 
     visitor = request.user
     if visitor.is_authenticated():
@@ -88,3 +92,23 @@ def remove_favorite(request, year, category, code):
     project = get_object_or_404(Project, edition=year, category=category, code=code)
     ProjectLink.objects.get(user=visitor, project=project).delete()
     return redirect(project)
+
+@login_required
+def request_project(request):
+    return render_to_response('projects/request_project.html',
+                              {'visitor': request.user.get_profile() },
+                              context_instance = RequestContext(request))
+
+@login_required
+def new_project(request):
+    if request.method == 'POST':
+        form = ProjectForm(data=request.POST, files=request.FILES)
+        if form.is_valid():
+            project = form.save() 
+            return HttpResponseRedirect(project.get_absolute_url)
+    else:
+        form = ProjectForm()  
+    return render_to_response('projects/new_project.html',
+                              {'form': form},
+                              context_instance = RequestContext(request))
+

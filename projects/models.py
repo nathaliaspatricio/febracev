@@ -16,16 +16,17 @@ CATEGORIES = (
 )
 
 class Project(models.Model):
-    name = models.CharField(max_length=200)
-    abstract = models.TextField()
+    slug = models.SlugField(unique=True, null=True, blank=True)
+    name = models.CharField(max_length=255, blank=True)
+    abstract = models.TextField(blank=True)
     students = models.ManyToManyField(User, related_name='students')
     advisors = models.ManyToManyField(User, related_name='advisors')
-    institution = models.ForeignKey(Institution)
-    category = models.CharField(max_length=3, choices=CATEGORIES)
+    institution = models.ForeignKey(Institution, blank=True, null=True)
     keywords = TagField()
 
-    edition = models.CharField(max_length=4)
-    code = models.CharField(max_length=3)
+    category = models.CharField(max_length=3, choices=CATEGORIES, blank=True, null=True)
+    edition = models.CharField(max_length=4, null=True)
+    code = models.CharField(max_length=3, null=True)
 
     video = models.CharField(max_length=47, blank=True)
     is_local = models.BooleanField(default=True)
@@ -39,8 +40,8 @@ class Project(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('projects_project_detail', (), {'year': self.edition,
-                                                      'category': self.category,
-                                                      'code': self.code})
+                                                'category': self.category,
+                                                'code': self.code})
 
 class Prize(models.Model):
     name = models.CharField(max_length=100, unique=True)
