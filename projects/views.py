@@ -47,17 +47,20 @@ def project_detail(request, year=None, category=None, code=None, slug=None):
         project = get_object_or_404(Project, edition=year, category=category, code=code)
 
     visitor = request.user
-    if visitor.is_authenticated():
-        is_fav = is_favorite(visitor, project)
-    else:
-        is_fav = False
-
     student_list = project.students.all()
     advisor_list = project.advisors.all()
     prize_list   = get_prizes(project)
 
     users = list(student_list)+list(advisor_list)
-    is_owner = visitor in users
+
+    if visitor.is_authenticated():
+        is_fav = is_favorite(visitor, project)
+        is_owner = visitor.get_profile() in users
+    else:
+        is_fav = is_owner = False
+
+    
+
 
     return render_to_response('projects/project_detail.html',
                               { 'project': project,
@@ -112,9 +115,9 @@ def new_project(request):
         if form.is_valid():
             project = form.save()
             if request.POST.get("role") == "O": 
-                project.advisors.add(request.user)
+                project.advisors.add(request.user.get_profile())
             if request.POST.get("role") == "E":
-                project.students.add(request.user)
+                project.students.add(request.user.get_profile())
             project.save()
             return HttpResponseRedirect(project.get_absolute_url)
     else:

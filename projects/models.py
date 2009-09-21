@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from tagging.fields import TagField
 from institutions.models import Institution
+from profiles.models import UserProfile
 
 CATEGORIES = (
         (u'AGR', u'Ciências Agrárias'),
@@ -19,8 +20,8 @@ class Project(models.Model):
     slug = models.SlugField(unique=True, null=True, blank=True)
     name = models.CharField(max_length=255, blank=True)
     abstract = models.TextField(blank=True)
-    students = models.ManyToManyField(User, related_name='students')
-    advisors = models.ManyToManyField(User, related_name='advisors')
+    students = models.ManyToManyField(UserProfile, related_name='students')
+    advisors = models.ManyToManyField(UserProfile, related_name='advisors')
     institution = models.ForeignKey(Institution, blank=True, null=True)
     keywords = TagField()
 

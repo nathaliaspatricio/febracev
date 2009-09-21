@@ -55,19 +55,19 @@
                 Autores: 
                 <br/>
                 {% for student in student_list %}
-                    {% if student.get_profile %}
-                        <a href="/profiles/{{ student.username }}"> {{ student.username }}</a><br/>
+                    {% if student.user.is_active %}
+                        <a href={% url profiles_profile_detail student.user.username %}> {{ student.name }}</a><br/>
                     {% else %}
-                        {{ student.username }}<br/>
+                        {{ student.name }}<br/>
                     {% endif %}
                 {% endfor %}
                 Orientador: 
                 <br/>
                 {% for advisor in advisor_list %}
-                    {% if adivisor.get_profile %}
-                        <a href="/profiles/{{ advisor.username }}">{{ advisor.username }}</a><br/>
+                    {% if adivisor.user.is_active %}
+                        <a href={% url profiles_profile_detail advisor.user.username %}>{{ advisor.name }}</a><br/>
                     {% else %}
-                        {{ advisor.username }}<br/>
+                        {{ advisor.name }}<br/>
                     {% endif %}
                 {% endfor %} 
                 Instituição: <a href="/institutions/{{ project.institution.id }}">{{ project.institution }}</a> <br/>

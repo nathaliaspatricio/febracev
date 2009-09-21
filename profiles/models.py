@@ -27,8 +27,9 @@ class UserProfile(models.Model):
 
     """
 
-    user = models.ForeignKey(User, unique=True)
+    user = models.ForeignKey(User, unique=True, blank=True, null=True)
     user_type = models.CharField(max_length=1, choices=USER_TYPES, blank=True)
+    name = models.CharField(max_length=255)
 
     city = models.CharField(max_length=100, blank=True)
     state =  models.CharField(max_length=2, choices=STATE_CHOICES, blank=True)
@@ -37,9 +38,10 @@ class UserProfile(models.Model):
 
     institution = models.ForeignKey(Institution, blank=True, null=True)
     mugshot = models.ImageField(upload_to='uploads/', blank=True)
+    is_active = models.BooleanField(default=True)
 
     def __unicode__(self):
-        return self.user.username
+        return self.name
 
     @models.permalink
     def get_absolute_url(self):
