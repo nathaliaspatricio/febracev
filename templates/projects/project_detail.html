@@ -11,17 +11,31 @@
         <div id="toolbar">
             {% if is_favorite %}
                 <div id="contact_switch" class="toolbar_item">
-                    <a href={% url projects_remove_favorite project.edition project.category project.code %}>
-                        <img src="{{ MEDIA_URL }}images/toolbar_remove.png" id="toolbar_add" alt="contact" /><br />
-                        Remover
-                    </a>
+                    {% if project.slug %}
+                        <a href={% url projects_remove_favorite_slug project.slug %}>
+                            <img src="{{ MEDIA_URL }}images/toolbar_remove.png" id="toolbar_add" alt="contact" /><br />
+                            Remover
+                        </a>
+                    {% else %}
+                        <a href={% url projects_remove_favorite project.edition project.category project.code %}>
+                            <img src="{{ MEDIA_URL }}images/toolbar_remove.png" id="toolbar_add" alt="contact" /><br />
+                            Remover
+                        </a>
+                    {% endif %}
                 </div>
             {% else %}
                 <div id="contact_switch" class="toolbar_item">
-                    <a href={% url projects_add_favorite project.edition project.category project.code %}>
-                        <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
-                        Adicionar
-                    </a>
+                    {% if project.slug %}
+                        <a href={% url projects_add_favorite_slug project.slug %}>
+                            <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
+                            Remover
+                        </a>
+                    {% else %}
+                        <a href={% url projects_add_favorite project.edition project.category project.code %}>
+                            <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
+                            Remover
+                        </a>
+                    {% endif %}
                 </div>
             {% endif %}
         </div>
@@ -39,14 +53,16 @@
         <div class="portrait_area">
             <div class="portrait">
                 Autores: 
+                <br/>
                 {% for student in student_list %}
                     {% if student.get_profile %}
                         <a href="/profiles/{{ student.username }}"> {{ student.username }}</a><br/>
                     {% else %}
                         {{ student.username }}<br/>
                     {% endif %}
-                {% endfor %} 
+                {% endfor %}
                 Orientador: 
+                <br/>
                 {% for advisor in advisor_list %}
                     {% if adivisor.get_profile %}
                         <a href="/profiles/{{ advisor.username }}">{{ advisor.username }}</a><br/>
@@ -55,7 +71,9 @@
                     {% endif %}
                 {% endfor %} 
                 Instituição: <a href="/institutions/{{ project.institution.id }}">{{ project.institution }}</a> <br/>
-                Ano: <a href="/projects/{{ project.edition }}">{{ project.edition }} </a><br/>
+                {% if project.edition %}
+                    Ano: <a href="/projects/{{ project.edition }}">{{ project.edition }} </a><br/>
+                {% endif %}
                 Área: <a href="/projects/{{ project.category }}">{{ project.category }} </a><br/>
                 Palavras-chave: {{ project.keywords }} <br/>
                 {# Resumo: {{ project.abstract }} <br/> #}
@@ -64,9 +82,16 @@
                     {{ prize.name }}<br/>
                 {% endfor %} 
                 <br/>
-                <a href={% url blog_index edition=project.edition category=project.category code=project.code %}>Diário de Bordo</a><br/>
-                {% if is_owner %}
-                    <a href={% url blog_add_post edition=project.edition category=project.category code=project.code %}>adicionar post</a><br/>
+                {% if project.slug %}
+                    <a href={% url blog_index_slug project_slug=project.slug %}>Diário de Bordo</a><br/>
+                    {% if is_owner %}
+                        <a href={% url blog_add_post_slug project_slug=project.slug %}>adicionar post</a><br/>
+                    {% endif %}
+                {% else %}
+                    <a href={% url blog_index edition=project.edition category=project.category code=project.code %}>Diário de Bordo</a><br/>
+                    {% if is_owner %}
+                        <a href={% url blog_add_post edition=project.edition category=project.category code=project.code %}>adicionar post</a><br/>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>

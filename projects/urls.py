@@ -23,7 +23,7 @@ urlpatterns = patterns('projects.views',
         name='projects_project_detail'
     ),
     url(
-        r'^(?P<slug>[a-z0-9-_]+)/$',
+        r'^slug/(?P<slug>[a-z0-9-_]+)/$',
         'project_detail',
         name='projects_project_detail_slug'
     ),
@@ -42,6 +42,16 @@ urlpatterns = patterns('projects.views',
         'remove_favorite',
         name='projects_remove_favorite',
     ),
+    url(
+        r'^favorites/add/(?P<slug>[a-z0-9-_]+)/$',
+        'add_favorite',
+        name='projects_add_favorite_slug',
+    ),
+    url(
+        r'^favorites/remove/(?P<slug>[a-z0-9-_]+)/$',
+        'remove_favorite',
+        name='projects_remove_favorite_slug',
+    ),
 )
 urlpatterns += patterns('projects.views',
     url(
@@ -55,7 +65,7 @@ urlpatterns += patterns('projects.views',
         name='projects_new_project'
     ),
 #    url(
-#        r'^(?P<slug>[a-z0-9-_]+)/edit/$',
+#        r'^slug/(?P<slug>[a-z0-9-_]+)/edit/$',
 #        'edit_project',
 #        name='projects_edit_project'
 #    ),

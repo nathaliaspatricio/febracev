@@ -13,8 +13,11 @@ import time
 import re
 
 @login_required
-def add_post(request, edition, category, code, **kwargs):
-    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+def add_post(request, edition=None, category=None, code=None, project_slug=None, **kwargs):
+    if project_slug:    
+        project = get_object_or_404(Project, slug=project_slug)
+    else:
+        project = get_object_or_404(Project, edition=edition, category=category, code=code)
     logged_user = request.user
     user_projects = list(logged_user.students.all()) + list(logged_user.advisors.all())
     if not project in user_projects:
@@ -39,8 +42,11 @@ def add_post(request, edition, category, code, **kwargs):
                                   { 'form': form },
                                     context_instance=RequestContext(request))
 @login_required
-def edit_post(request, edition, category, code, slug, year, month, day, **kwargs):
-    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+def edit_post(request, slug, year, month, day, edition=None, category=None, code=None, project_slug=None, **kwargs):
+    if project_slug:    
+        project = get_object_or_404(Project, slug=project_slug)
+    else:
+        project = get_object_or_404(Project, edition=edition, category=category, code=code)
 
     visitor = request.user
     student_list = project.students.all()
@@ -69,8 +75,12 @@ def edit_post(request, edition, category, code, slug, year, month, day, **kwargs
     else:
         raise Http404
 
-def post_list(request, edition, category, code, page=0, **kwargs):
-    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+def post_list(request, edition=None, category=None, code=None, project_slug=None, page=0, **kwargs):
+    if project_slug:    
+        project = get_object_or_404(Project, slug=project_slug)
+    else:
+        project = get_object_or_404(Project, edition=edition, category=category, code=code)
+
     feed_url = "latest/%s/%s/%s" % (edition, category, code)
     return list_detail.object_list(
         request,
@@ -83,8 +93,12 @@ def post_list(request, edition, category, code, page=0, **kwargs):
 post_list.__doc__ = list_detail.object_list.__doc__
 
 
-def post_archive_year(request, edition, category, code, year, **kwargs):
-    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+def post_archive_year(request, year, edition=None, category=None, code=None, project_slug=None, **kwargs):
+    if project_slug:    
+        project = get_object_or_404(Project, slug=project_slug)
+    else:
+        project = get_object_or_404(Project, edition=edition, category=category, code=code)
+
     return date_based.archive_year(
         request,
         year = year,
@@ -96,8 +110,12 @@ def post_archive_year(request, edition, category, code, year, **kwargs):
 post_archive_year.__doc__ = date_based.archive_year.__doc__
 
 
-def post_archive_month(request, edition, category, code, year, month, **kwargs):
-    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+def post_archive_month(request, year, month, edition=None, category=None, code=None, project_slug=None, **kwargs):
+    if project_slug:    
+        project = get_object_or_404(Project, slug=project_slug)
+    else:
+        project = get_object_or_404(Project, edition=edition, category=category, code=code)
+
     return date_based.archive_month(
         request,
         year = year,
@@ -109,8 +127,12 @@ def post_archive_month(request, edition, category, code, year, month, **kwargs):
 post_archive_month.__doc__ = date_based.archive_month.__doc__
 
 
-def post_archive_day(request, edition, category, code, year, month, day, **kwargs):
-    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+def post_archive_day(request, year, month, day, edition=None, category=None, code=None, project_slug=None, **kwargs):
+    if project_slug:    
+        project = get_object_or_404(Project, slug=project_slug)
+    else:
+        project = get_object_or_404(Project, edition=edition, category=category, code=code)
+
     return date_based.archive_day(
         request,
         year = year,
@@ -123,8 +145,12 @@ def post_archive_day(request, edition, category, code, year, month, day, **kwarg
 post_archive_day.__doc__ = date_based.archive_day.__doc__
 
 
-def post_detail(request, edition, category, code, slug, year, month, day, **kwargs):
-    project = get_object_or_404(Project, edition=edition, category=category, code=code)
+def post_detail(request, slug, year, month, day, edition=None, category=None, code=None, project_slug=None, **kwargs):
+    if project_slug:    
+        project = get_object_or_404(Project, slug=project_slug)
+    else:
+        project = get_object_or_404(Project, edition=edition, category=category, code=code)
+
     visitor = request.user
     student_list = project.students.all()
     advisor_list = project.advisors.all()

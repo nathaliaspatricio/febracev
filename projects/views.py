@@ -80,16 +80,22 @@ def favorite_projects(request, username):
             )
 
 @login_required
-def add_favorite(request, year, category, code):
+def add_favorite(request, year=None, category=None, code=None, slug=None):
     visitor = request.user
-    project = get_object_or_404(Project, edition=year, category=category, code=code)
+    if slug:    
+        project = get_object_or_404(Project, slug=slug)
+    else:
+        project = get_object_or_404(Project, edition=year, category=category, code=code)
     ProjectLink.objects.get_or_create(user=visitor, project=project)
     return redirect(project)
 
 @login_required
-def remove_favorite(request, year, category, code):
+def remove_favorite(request, year=None, category=None, code=None, slug=None):
     visitor = request.user
-    project = get_object_or_404(Project, edition=year, category=category, code=code)
+    if slug:    
+        project = get_object_or_404(Project, slug=slug)
+    else:
+        project = get_object_or_404(Project, edition=year, category=category, code=code)
     ProjectLink.objects.get(user=visitor, project=project).delete()
     return redirect(project)
 
@@ -104,7 +110,12 @@ def new_project(request):
     if request.method == 'POST':
         form = ProjectForm(data=request.POST, files=request.FILES)
         if form.is_valid():
-            project = form.save() 
+            project = form.save()
+            if request.POST.get("role") == "O": 
+                project.advisors.add(request.user)
+            if request.POST.get("role") == "E":
+                project.students.add(request.user)
+            project.save()
             return HttpResponseRedirect(project.get_absolute_url)
     else:
         form = ProjectForm()  

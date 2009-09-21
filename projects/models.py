@@ -39,9 +39,12 @@ class Project(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('projects_project_detail', (), {'year': self.edition,
-                                                'category': self.category,
-                                                'code': self.code})
+        if self.slug:
+            return ('projects_project_detail_slug', (), {'slug': self.slug})
+        else:
+            return ('projects_project_detail', (), {'year': self.edition,
+                                                    'category': self.category,
+                                                    'code': self.code})
 
 class Prize(models.Model):
     name = models.CharField(max_length=100, unique=True)

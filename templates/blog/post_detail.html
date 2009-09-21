@@ -23,7 +23,11 @@
     {% endif %}  
     {% if is_owner %}
         <br/>
-        <a href={% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
+        {% if project.slug %}
+            <a href={% url blog_edit_post_slug project_slug=project.slug year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
+        {% else %}
+            <a href={% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
+        {% endif %}
     {% endif %}
   </p>
   <p class="date">{{ object.publish|date:"j F Y" }}</p>

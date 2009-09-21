@@ -70,15 +70,24 @@ class Post(models.Model):
 
     @permalink
     def get_absolute_url(self):
-        return ('blog_detail', None, {
-            'edition': self.project.edition,
-            'category': self.project.category,
-            'code': self.project.code,
-            'year': self.publish.year,
-            'month': self.publish.strftime('%b').lower(),
-            'day': self.publish.day,
-            'slug': self.slug
-        })
+        if self.project.slug:
+            return ('blog_detail_slug', None, {
+                'project_slug': self.project.slug,
+                'year': self.publish.year,
+                'month': self.publish.strftime('%b').lower(),
+                'day': self.publish.day,
+                'slug': self.slug
+            })
+        else:
+            return ('blog_detail', None, {
+                'edition': self.project.edition,
+                'category': self.project.category,
+                'code': self.project.code,
+                'year': self.publish.year,
+                'month': self.publish.strftime('%b').lower(),
+                'day': self.publish.day,
+                'slug': self.slug
+            }) 
     
     def get_previous_post(self):
         return self.get_previous_by_publish(status__gte=2)
