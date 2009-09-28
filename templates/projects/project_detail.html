@@ -55,8 +55,8 @@
                 Autores: 
                 <br/>
                 {% for student in student_list %}
-                    {% if student.user.is_active %}
-                        <a href={% url profiles_profile_detail student.user.username %}> {{ student.name }}</a><br/>
+                    {% if student.is_active %}
+                        <a href={{ student.get_absolute_url }}> {{ student.name }}</a><br/>
                     {% else %}
                         {{ student.name }}<br/>
                     {% endif %}
@@ -64,8 +64,8 @@
                 Orientador: 
                 <br/>
                 {% for advisor in advisor_list %}
-                    {% if adivisor.user.is_active %}
-                        <a href={% url profiles_profile_detail advisor.user.username %}>{{ advisor.name }}</a><br/>
+                    {% if adivisor.is_active %}
+                        <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}</a><br/>
                     {% else %}
                         {{ advisor.name }}<br/>
                     {% endif %}

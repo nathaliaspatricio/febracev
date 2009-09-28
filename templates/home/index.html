@@ -64,18 +64,18 @@
 				<h3><a href="/projects/{{ project.edition }}/{{ project.category }}/{{ project.code }}">{{ project.name }}</a></h3>
 				<div class="byline">Autores:
                 {% for student in student_list %}
-                    {% if student.get_profile %}
-                        <a href="/profiles/{{ student.username }}"> {{ student.username }}</a>
+                    {% if student.is_active %}
+                        <a href={{ student.get_absolute_url }}> {{ student.name }}</a>
                     {% else %}
-                        {{ student.username }}
+                        {{ student.name }}
                     {% endif %}
                 {% endfor %} </div>
                 <div class="byline">Orientador: 
                 {% for advisor in advisor_list %}
-                    {% if advisor.get_profile %}
-                        <a href="/profiles/{{ advisor.username }}">{{ advisor.username }}</a>
+                    {% if advisor.is_active %}
+                        <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}</a>
                     {% else %}
-                        {{ advisor.username }}
+                        {{ advisor.name }}
                     {% endif %}
                 {% endfor %} </div>
 				<div class="description">{{ project.abstract }}</div>

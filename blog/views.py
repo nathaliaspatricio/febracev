@@ -18,8 +18,8 @@ def add_post(request, edition=None, category=None, code=None, project_slug=None,
         project = get_object_or_404(Project, slug=project_slug)
     else:
         project = get_object_or_404(Project, edition=edition, category=category, code=code)
-    logged_user = request.user
-    user_projects = list(logged_user.students.all()) + list(logged_user.advisors.all())
+    user_profile = request.user.get_profile()
+    user_projects = list(user_profile.students.all()) + list(user_profile.advisors.all())
     if not project in user_projects:
         raise Http404
     else:

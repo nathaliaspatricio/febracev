@@ -17,8 +17,10 @@
 
     <h2>Usuários</h2>
     <ul>
-    {% for user in user_list %}
-        <li><a href="{{ user.get_profile.get_absolute_url }}">{{ user.username }}</a></li>
+    {% for profile in profile_list %}
+        {% if profile.user %}
+            <li><a href="{{ profile.get_absolute_url }}">{{ profile.name }}</a></li>
+        {% endif %}
     {% endfor %}
     </ul>
 
@@ -36,4 +38,10 @@
     {% endfor %}
     </ul>
 
+    <h2>Posts</h2>
+    <ul>
+    {% for post in post_list %}
+        <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
 {% endblock %}

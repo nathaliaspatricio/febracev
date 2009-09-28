@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title%} | Apagar Perfil{% endblock %}
+
+{% block header%}
+    <h1>Apagar Perfil</h1>
+{% endblock %}
+
+{% block content %}
+    Você tem certeza? <br/>
+
+    <a href={% url profiles_delete_profile_confirm %}>Sim</a><br/>
+    <a href={{ visitor.get_absolute_url }}>Não</a><br/>
+
+{% endblock %}

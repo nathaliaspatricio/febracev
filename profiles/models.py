@@ -28,7 +28,7 @@ class UserProfile(models.Model):
     """
 
     user = models.ForeignKey(User, unique=True, blank=True, null=True)
-    user_type = models.CharField(max_length=1, choices=USER_TYPES, blank=True)
+    user_type = models.CharField(max_length=1, choices=USER_TYPES, blank=True, default='V')
     name = models.CharField(max_length=255)
 
     city = models.CharField(max_length=100, blank=True)
@@ -45,4 +45,7 @@ class UserProfile(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('profiles_profile_detail', (), { 'username': self.user.username })
+        try:    
+            return ('profiles_profile_detail', (), { 'username': self.user.username })
+        except:
+            return ('index', (), {})

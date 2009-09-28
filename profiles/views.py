@@ -13,6 +13,7 @@ from django.shortcuts import get_object_or_404
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.generic.list_detail import object_list
+from django.contrib.auth import logout
 
 from profiles import utils
 from profiles.forms import ProfileForm
@@ -20,6 +21,8 @@ from profiles.forms import UserForm
 
 from friends import utils as friends_utils
 from projects import utils as projects_utils
+
+from friends.models import FriendLink
 
 def create_profile(request, form_class=ProfileForm, success_url=None,
                    template_name='profiles/create_profile.html',
@@ -311,16 +314,19 @@ def profile_detail(request, username, public_profile_field=None,
     mutual_list = friends_utils.get_mutual_set(user)
     favorite_projects = projects_utils.get_favorite_projects(user)
 
-    return render_to_response(template_name,
-                              { 'profile': profile_obj,
-                                'is_friend': is_friend,
-                                'is_mutual': is_mutual,
-                                'follower_list': follower_list,
-                                'following_list': following_list,
-                                'mutual_list': mutual_list,
-                                'favorite_projects': favorite_projects,
-                              },
-                              context_instance=context)
+    if profile_obj.is_active:
+        return render_to_response(template_name,
+                                  { 'profile': profile_obj,
+                                    'is_friend': is_friend,
+                                    'is_mutual': is_mutual,
+                                    'follower_list': follower_list,
+                                    'following_list': following_list,
+                                    'mutual_list': mutual_list,
+                                    'favorite_projects': favorite_projects,
+                                  },
+                                  context_instance=context)
+    else:
+        raise Http404
 
 def profile_list(request, public_profile_field=None,
                  template_name='profiles/profile_list.html', **kwargs):
@@ -373,3 +379,29 @@ def profile_list(request, public_profile_field=None,
         queryset = queryset.filter(**{ public_profile_field: True })
     kwargs['queryset'] = queryset
     return object_list(request, template_name=template_name, **kwargs)
+
+@login_required
+def delete_profile(request):
+    return render_to_response('profiles/delete_profile.html',
+                              {'visitor': request.user.get_profile() },
+                              context_instance = RequestContext(request))
+
+@login_required
+def delete_profile_confirm(request):
+    user = request.user
+    profile = request.user.get_profile()
+
+    friend_links = ( list(FriendLink.objects.filter(from_user=user)) + 
+                     list(FriendLink.objects.filter(to_user=user)) )
+    
+    for friend_link in friend_links:
+        friend_link.delete()
+
+    user.is_active = False
+    profile.is_active = False
+    profile.save()
+    user.save()
+
+    logout(request)
+
+    return HttpResponseRedirect(reverse('index'))

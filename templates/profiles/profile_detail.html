@@ -3,7 +3,7 @@
 {% block title%} | Perfil{% endblock %}
 
 {% block header%}
-    <h1>{{ profile.user.first_name }} {{ profile.user.last_name }}</h1>
+    <h1>{{ profile.name }}</h1>
 {% endblock %}
 
 {% block toolbar %}
@@ -49,11 +49,11 @@
         <div class="portrait_area">
             <div class="portrait">
                 {% if profile.mugshot %}
-                    <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
+                    <img id="big_portrait" class="photo portrait" src="{{ profile.mugshot.url }}" alt="{{ profile.name }}" />
                     <div id="formyportrait" style="display:none;width:300px;height:300px;">
                     </div>
                 {% else %}
-                    <img id="big_portrait" class="photo portrait" src="{{ MEDIA_URL }}images/sem_foto.png" alt="{{ profile.user.first_name }} {{ profile.user.last_name }}" />
+                    <img id="big_portrait" class="photo portrait" src="{{ MEDIA_URL }}images/sem_foto.png" alt="{{ profile.name }}s" />
                     <div id="formyportrait" style="display:none;width:300px;height:300px;">
                     </div>
                 {% endif %}
@@ -70,6 +70,7 @@
                         {% ifequal user profile.user %}
                             <div class="where">
                                 <span class="locality"></span><br />
+                                <span class="url"><a href={% url profiles_delete_profile %}>Apagar Perfil</a></span><br/>
                                 <span class="url"><a href={% url profiles_edit_profile %}>Editar Perfil</a></span><br/>
                                 <span class="url"><a href={% url messages_inbox %}>Mensagens Recebidas</a></span><br/>
                                 <span class="url"><a href={% url messages_outbox %}>Mensagens Enviadas</a></span><br/>
