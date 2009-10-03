@@ -1,0 +1,288 @@
+%atividade_5.tex - Relatório de acompanhamento para a disciplina PCS20450
+
+\documentclass[a4paper,12pt,font=plain,header=plain]{abnt}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage[num]{abntcite}
+\usepackage{tabularx}
+
+\autor{Leandro Coletto Biazon\protect\\Nathalia Sautchuk Patrício}
+\titulo{Febrace\textsuperscript{V}:\\Feira Brasileira Virtual de Ciências e
+Engenharia}
+\orientador[Orientadoras:\\]{Profª. Drª. Roseli de Deus Lopes\protect\\Profª. Drª. Selma
+Shin Shimizu Melnikoff}
+\instituicao{Escola Politécnica da Universidade de São Paulo\par Departamento de Sistemas Digitais}
+\local{São Paulo}
+\data{Outubro de 2009}
+
+\renewcommand{\ABNTchapterfont}{\bfseries\sffamily\fontseries{sbc}\selectfont}
+\renewcommand{\ABNTsectionfont}{\bfseries\sffamily}
+
+\begin{document}
+%  \setcounter{secnumdepth}{-1}
+  \capa
+  %\folhaderosto
+
+	\renewenvironment{center}{}{}
+	\section*{PCS 20450 - PROJETO DE FORMATURA II}
+	
+	\begin{tabular}[|l|]{ |r|l| }
+	\hline
+				Equipe 07 & Nathalia S. Patrício, nathalia.sautchuk@gmail.com, (11)9678-1667 \\
+			\hline
+				& Leandro Coletto Biazon, leandrobiazon@gmail.com, (11)8961-4159 \\
+			\hline
+					Orientadora & Profª. Drª. Selma S. S. Melnikoff, selma.melnikoff@poli.usp.br \\
+			\hline
+				Co-Orientadora & Profª. Drª. Roseli de Deus Lopes, roseli@lsi.usp.br \\
+			\hline
+			\end{tabular} \\
+	
+			RA1 – Relatório de Acompanhamento (versão: 07/10/2009) \\
+	
+			\begin{tabular}{ |r|r|r| }
+	
+			\hline
+				\multicolumn{3}{|c|}{Campos a serem preenchidos pelo orientador, secretaria e comitê gestor} \\
+			\hline
+				Orientador & Data de Entrega &  \\
+			\hline
+				& De acordo &  \\
+			\hline
+				& &  \\
+			\hline
+				Secretaria & Data e hora de entrega &  \\
+			\hline
+				&  &  \\
+			\hline
+				Comitê Gestor &  &  \\
+			\hline
+			&  &  \\
+			\hline
+				\multicolumn{3}{|l|}{Comentários} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+			\hline
+			\end{tabular}
+
+	\chapter{Introdução}
+	
+	A Febrace (Feira Brasileira de Ciências e Engenharia), realizada todos os anos na Escola Politécnica da USP e organizada pelo Nate-LSI (Núcleo de Aprendizagem, Trabalho e Entretenimento do Laboratório de Sistemas Integráveis), é um projeto de ação contínua com o objetivo de estimular a criatividade, a reflexão, o aprofundamento e o raciocínio crítico nas atividades desenvolvidas por estudantes dos Ensinos Fundamental, Médio e Técnico, por meio da indução em realizar projetos investigativos em Ciências, Engenharia e suas aplicações.
+	
+	Com o intuito de aumentar o alcance da Feira, levando-a por mais tempo a mais pessoas, e estimulando a criação de redes entre elas, o presente projeto propõe a criação de uma aplicação Web que possibilite o desenvolvimento e exposição dos projetos na Internet e que ofereça ferramentas que viabilizem maior interação entre os diversos envolvidos na Febrace (alunos participantes, professores orientadores, organizadores da Feira, avaliadores e público interessado).
+	
+	Assim, propõe-se:
+	
+	\begin{itemize}
+	\item{
+		Desenvolver e disponibilizar uma aplicação de código aberto que ofereça ferramentas para a exposição virtual de projetos de Ciência e Engenharia;
+	}
+	\item{
+		Agregar à exposição virtual uma rede social que permita a interação entre os participantes da feira e que estes possam se ajudar com seus projetos e dirimir dúvidas de visitantes interessados em participar de suas futuras edições e
+	}
+	\item{
+		Estudar e utilizar conceitos de usabilidade, acessibilidade e práticas de desenvolvimento web 2.0, aplicando metódos ágeis de desenvolvimento de \textit{software}.
+	}
+	\end{itemize}
+
+\chapter{Desenvolvimento}
+
+  Essa seção descreve as iterações de desenvolvimento do projeto e as histórias implementadas em cada uma delas.
+
+  Ao longo do desenvolvimento, houve algumas mudanças de escopo do projeto. Cartões não planejados inicialmente e que representavam funcionalidades necessárias ao sistema foram adicionados, num total de sete novas histórias. A adição dessas histórias tornou necessário o replanejamento das histórias que seriam implementadas. Das histórias planejadas inicialmente, vinte foram implementadas e dez serão implementadas em versões futuras do sistema. De 37 histórias levantadas 27 já foram implementadas, ou seja, 73\% de histórias foram atendidas no total.
+
+  \section{Implementação da primeira iteração}
+    A primeira iteração, com duração de três semanas, foi realizada entre 20 de abril e 8 de maio, e teve como resultado a implementação de cinco histórias. A descrição de cada uma delas é feita abaixo.
+
+    \subsubsection{História 2 - Autenticação no sistema}
+      Parte do código do módulo de Login deve oferecer a funcionalidade de autenticação no sistema. Foram desenvolvidas as telas de \textit{login} e \textit{logout} do Febrace\textsuperscript{V}, e a elas foi integrada a lógica de autenticação de usuários e o mecanismo de validação de sessões. Para iniciar a sessão, o usuário deve acessar a página de login e entrar corretamente com seu nome de usuário e senha. Caso as informações sejam incorretas, ele recebe a notificação do problema. Em caso contrário, o usuário acessa o sistema e é redirecionado para a página de seu perfil (caso já o tenha criado).
+
+    \subsubsection{História 3 - Cadastro de usuário}
+      A segunda parte do módulo de Login é o cadastro de usuários. Para se cadastrar, o usuário deve entrar com seu nome de usuário desejado e senha, além de um email válido. Ao término do cadastro, um email contendo um link com sua chave de ativação é enviado para o usuário. Ele deve então clicar nesse link para ativar sua conta. Após sete dias, a chave de ativação perde a validade, e o usuário necessita realizar novamente o cadastro caso queira ter acesso ao sistema.
+
+    \subsubsection{História 4 - Edição de perfil}
+      Cada usuário pode ter associado a si um perfil, que contém diversas informações adicionais, como foto, data de nascimento, entre outros, e possibilita a interação com outros usuários do sistema. Após a realização do cadastro, no primeiro acesso do usuário ao sistema é solicitado que ele complete sua página de perfil. O usuário pode optar por não fazê-lo, bastando ignorar o formulário e continuar navegando pelo site normalmente. Caso opte por criá-lo, o usuário deve preencher as informações que desejar. Caso as informações sejam válidas, o perfil é criado e o usuário é direcionado para sua página de perfil.
+
+      O usuário pode posteriormente editar as informações presentes no seu perfil, bastanto par isso estar autenticado no sistema e selecionar a opção "Editar perfil".
+
+      Um usuário que ainda não criou um perfil será perguntado se o deseja fazer cada vez que acessar o sistema.
+
+    \subsubsection{História 5 - Visualização de perfil}
+      Cada usuário do sistema tem uma página pessoal, com seu perfil. Essa página pode ser acessada por qualquer visitante da Febrace\textsuperscript{V}, anônimo ou não. A página de perfil contém diversas informações sobre um usuário, como seus contatos, seus projetos predileto e informações pessoais. É também na página de perfil que está o mural de recados.
+
+    \subsubsection{História 22 - Interface administrativa}
+      O framework Django conta com uma interface administrativa padrão, que apresenta funcionalidades de criação, edição, visualização e deleção de quaisquer objetos do sistema que tenham sido cadastrados nessa interface, e pode ser personalizada para atender às diferentes necessidades de cada projeto. Na primeira iteração essa interface foi ativada e configurada para funcionar com a Febrace\textsuperscript{V}.
+
+      Somente usuários com status de Administrador podem acessar essa funcionalidade.
+
+  \section{Implementação da segunda iteração}
+    A segunda iteração, com duração de duas semanas, de 11 a 22 de maio, teve como resultado a implementação das quatro histórias descritas à seguir:
+
+    \subsubsection{História 7 - Visualização de projeto}
+      Cada projeto cadastrado no sistema tem uma página no sistema, a partir da qual podem ser acessadas diversas de suas informações. Essa página também oferece links para a página da edição da Febrace que ele participou e para a página da categoria na qual está cadastrado, bem como para as páginas referentes às suas palavras-chave.
+
+      Os demais elementos presentes na página de projetos são descritos em outros cartões relacionados ao tema.
+
+    \subsubsection{História 8 - Listar participantes de um projeto}
+      Cada projeto está associado aos usuários de seus participantes, alunos e orientadores. Esses participantes são mostrados na página de seu projeto, e suas representações (fotos ou nomes) são links para as páginas de perfil desses usuários.
+
+    \subsubsection{História 9 - Suporte a vídeo no projeto}
+      Outro elemento que pode estar associado a um projeto é um vídeo. Caso o projeto tenha um vídeo cadastrado, um \textit{player} é carregado na sua página, e o visitante desse projeto tem a opção de assistir a esse vídeo.
+
+      Os vídeos da Febrace estão, até o presente momento, hospedados no portal IPTV Experimental\footnote{http://iptv.usp.br} da USP, e seu \textit{player} embarcado (\textit{embedded player}) é carregado junto às páginas do Febrace\textsuperscript{V}. Para visualizá-lo, o usuário precisa ter instalado em seu \textit{browser} um \textit{plugin} que o permita assistir um \textit{streaming} de vídeo no formato WMV (Windows Media Video). Há \textit{plugins} desse tipo para a maioria dos sistemas operacionais, incluindo Linux, MacOs e Windows.
+
+      Se os vídeos da Febrace forem hospedados em outro serviço (como o YouTube\footnote{http://www.youtube.com} ou o Vimeo\footnote{http://www.vimeo.com}), alterações muito simples no sistema permitem adaptá-lo para esses casos.
+
+    \subsubsection{História 24 - Gerenciamento de usuários no admin}
+      É possível criar, editar, visualizar e apagar usuários pela interface administrativa. O mesmo se aplica aos modelos referentes a perfis. Nessa interface é também possível editar as permissões desse usuário, bem como seu status no sistema (ativo/inativo, administrador/usuário comum, etc.).
+
+  \section{Implementação da terceira iteração}
+    A terceira iteração foi realizada na quinzena de 25 de maio a 5 de junho. Nela foram implementadas as sete histórias à seguir:
+
+    \subsubsection{História 13 - Amigos}
+      Um aspecto muito importante das redes sociais é a possibilidade da criação de associações entre os usuários, e essa funcionalidade é oferecida na Febrace\textsuperscript{V}. Escolheu-se por adotar um modelo de associação baseado em "seguidores", tais como em redes como o Twitter\footnote{http://www.twitter.com} e o Stoa\footnote{http://stoa.usp.br}. Nesse modelo, um usuário não precisa solicitar a associação a um outro usuário, simplesmente escolhe seguí-lo. O usuário seguido pode ou não retribuir a associação. Caso o faça, surge a possibilidade da troca de mensagens privadas entre eles.
+
+      No sistema desenvolvido um usuário autenticado, ao visitar a página de perfil de algum outro usuário, tem a opção de adicionar esse usuário como um amigo, selecionando o botão “Adicionar" presente em sua página.
+
+      De volta à sua página, o usuário pode ver listados todas as pessoas que ele segue (perfis que ele selecionou como amigo), todas as pessoas que o seguem (pessoas que adicionaram seu perfil como amigo) a todas as relações mútuas (pessoas que o seguem e que são seguidas por ele).
+
+      A qualquer momento ele pode deixar de seguir um usuário qualquer. Para isso, deve visitar o perfil desse usuário e selecionar a opção “Remover".
+
+    \subsubsection{História 14 - Projetos prediletos}
+      Um usuário autenticado pode também escolher quais são seus projetos prediletos na Febrace\textsuperscript{V}. As operações de adição ou remoção de um projeto predileto funcionam de maneira análoga à adição ou remoção de amigos. Ao visitar a página de um projeto, um usuário pode adicioná-lo como predileto clicando em “Adicionar". Se quiser desfazer a associação, deve visitar novamente a página desse projeto e clicar em “Remover".
+
+      É mostrado no perfil de um usuário quais são seus projetos prediletos. Da mesma forma, é mostrada na página de um projeto a lista de usuários que o tem como predileto.
+
+    \subsubsection{História 25 - Gerenciamento de conteúdo no admin}
+      Além do gerenciamento de usuários e perfis (descrito na história 24), a interface administrativa pode ser utilizada para a gerencia de quaisquer outros conteúdos. No momento, é possível por essa interface criar, editar, visualizar e remover os seguintes tipos de objetos:
+
+      \begin{multicols}{3}
+      \begin{itemize}
+        \item{Comentários}
+        \item{Páginas planas}
+        \item{Links de amizade}
+        \item{Instituições}
+        \item{Links de prêmios}
+        \item{Prêmios}
+        \item{Projetos}
+        \item{Links de projetos}
+        \item{Tags}
+        \item{Associação de Tags}
+      \end{itemize}
+      \end{multicols}
+
+    \subsubsection{História 27 - Prêmios}
+      Cada prêmio oferecido na Febrace tem sua página no sistema. Nessa página, além da descrição do prêmio, são listados todos os projetos que, em diferentes edições da Febrace, foram contemplados com ele. O vínculo de um prêmio a um projeto deve ser feito na interface administrativa.
+
+    \subsubsection{História 28 - Instituições}
+      Também as instituições (escolas, institutos, empresas patrocinadores, etc.) tem páginas com suas informações no sistema. Caso seja uma instituição que tenha levado alunos para expor projetos na Febrace, é disponibilizada em sua página a lista de projetos daquela instituição.
+
+    \subsubsection{História 36 - Suporte a tags}
+      Quaisquer objetos do sistema podem ser marcados com \textit{tags}, ou palavras-chave. As \textit{tags} tem por função, desse modo, agregar diferentes tipos de conteúdos sob categorias.
+
+      As \textit{tags} podem ser inseridas pela interface administrativa, ou podem ser criadas diretamente ao serem utilizadas para marcar um objeto pela primeira vez.
+
+      No momento, as \textit{tags} marcam apenas projetos e colunas, mas serão utilizadas para marcar outros conteúdos, como entradas de um diário de bordo.
+
+  Esse cartão não havia sido planejado no levantamento inicial de histórias.
+
+    \subsubsection{História 35 - Criação de páginas estáticas}
+      A maioria das páginas que compõe a Febrace\textsuperscript{V} são dinâmicas, ou seja, são renderizadas conforme um contexto e uma requisição específicos. Há um conjunto de páginas, porém, que tem seus conteúdos e formas de exibição sempre iguais. Algumas das páginas do sistema são estáticas, como as páginas de “Mapa do site" e de “Termos de Uso".
+
+      Há no \textit{framework} uma aplicação que facilita a criação e organização dessas páginas estáticas (páginas planas), que foi instalado e configurado para prover as páginas planas necessárias ao projeto.
+
+  Esse cartão não havia sido planejado no levantamento inicial de histórias.
+
+  \section{Implementação da quarta iteração}
+    A quarta iteração, com duração de duas semanas, foi realizada entre 8 e 19 de junho, e teve como resultado a implementação de dez histórias. A descrição de cada uma delas é feita abaixo.
+
+    \subsubsection{História 10 - Visualização dos prêmios de um projeto}
+      Na página de detalhes de um projeto são listados os prêmios que esse projeto ganhou na edição da Febrace em que participou. Ao clicar nos prêmios, tem-se acesso a sua página de detalhes, descrita na História 27.
+
+    \subsubsection{História 20 - Colunas}
+      Membros da equipe da Febrace contam com uma região do sistema na qual podem, sempre que quiserem, criar textos que desejem ser compartilhados com os outros integrantes da rede social. É a sessão de colunas, que pode ser lida e comentada por qualquer usuário, autenticado ou não.
+
+    \subsubsection{História 16 - Recados/Caixas de comentários}
+      Um dos componentes das páginas de perfil de usuário é o mural de recados. Nele, outros usuários podem deixar pequenas mensagens de texto para o dono do perfil. Os recados podem ser tanto escritos por usuários autenticado quanto por visitantes. No caso de um usuário autenticado, o recado é automaticamente vinculado a ele. No caso de um visitante, é solicitado o preenchimento de um pequeno formulário contendo nome e email válido.
+
+      A mesma funcionalidade é oferecida nas páginas de projeto.
+
+    \subsubsection{História 18 - Busca}
+      Há no menu principal do site uma ferramenta de busca. Ao se digitar um texto e selecionar o botão enviar, o sistema realiza a busca dos termos procurados, e devolve uma página com elementos que atendam a essa requisição. No momento, a busca retorna três tipos de objetos: projetos, perfis de usuário e \textit{tags}. O sistema poderá ser expandido futuramente para suportar outros tipos de objetos.
+
+      A sintaxe da busca é semelhante à de mecanismos de busca como o Google, por exemplo. Se mais de um elemento for inserido, a busca procura ocorrências dos termos simultâneamente, em qualquer ordem. Termos envoltos por aspas duplas são procurados tal como digitados, na ordem e em ocorrência simultânea.
+
+    \subsubsection{História 30 - Interface de escrita de colunas}
+      Para que os membros da Equipe da Febrace possam criar novos textos para a seção de colunas, eles devem acessar a interface administrativa. Lá eles contam com uma ferramenta que os permitem editar seus textos e gerenciar textos escritos anteriormente.
+
+    \subsubsection{História 32 - Preenchimento dos bancos de dados}
+      Para a apresentação do projeto, foi necessário popular o banco de dados do sistema com projetos de edições anteriores da feira. Buscou-se incluir no sistema projetos de categorias variadas, priorizando-se os projetos que tenham sido premiados na feira. A entrada desses dados foi realizada manualmente.
+
+  Esse cartão não havia sido planejado no levantamento inicial de histórias.
+
+    \subsubsection{História 34 - Home page}
+      Foi criada a \textit{homepage} para o projeto, que apresenta cinco sessões principais. A primeira é o menu presente em todas as outras páginas, pelo qual é possível cadastrar-se, realizar o login, realizar buscas ou acessar algumas sessões do site. Outra é o conjunto de textos que explicam a finalidade do Febrace\textsuperscript{V} e convidam o visitante a conhecer mais a respeito. Em seguida temos uma sessão com notícias e outras atividades recentes. No rodapé, tem-se acesso ao conjunto de páginas estáticas (mapa, termos de uso, etc.) e a outros sites ligados ao sistema, como o blog do desenvolvimento, o repositório de código e a página da Febrace. No centro da página, tem-se acesso a um projeto ou conteúdo de destaque.
+
+  Esse cartão não havia sido planejado no levantamento inicial de histórias.
+
+    \subsubsection{História 31 - Listagens}
+      A maioria dos objetos presentes no sistema tem páginas individuais, como é o caso de projetos, perfis, instituições, prêmios e \textit{tags}. Para que a navegação seja consistente, entretanto, não basta que só os objeto tenham suas páginas relativas, sendo necessário que cada grupo de objetos tenha uma página agregadora. Por isso foram desenvolvidas as páginas de listagem.
+
+      Para perfis, prêmios, instituições e \textit{tags}, as páginas de listagem operam de maneira análoga, gerando listas com os nomes de todos os objetos daquele grupo, com o respectivo \textit{link} para sua página de detalhes. Para projetos o funcionamento é um pouco diferente. São disponibilizadas, nesse caso, dois tipos distintos de listagem, um que agrega projetos conforme a edição da Febrace em que participaram, outro que os agrega conforme sua categoria.
+
+      Um caso particular é a página de detalhes de uma \textit{tag}, que é também uma listagem, dos elementos que foram marcados por essa \textit{tag}.
+
+  Esse cartão não havia sido planejado no levantamento inicial de histórias.
+
+    \subsubsection{História 33 - Criação de \textit{templates}}
+      \textit{Templates} são os componentes que determinam a apresentação do projeto, e por eles definem-se quais componentes estarão presentes em quais páginas, e de que forma.
+
+      Para evitar a repetição de código, os \textit{templates} foram organizados seguindo uma hierarquia. Elementos presentes em todas as páginas, como o menu principal, o logotipo e o rodapé das páginas, estão definidos em um template na base dessa hierarquia. Seguindo o paradigma de orientação a objetos, esse \textit{template} base é herdado pelos outros templates. Caso haja atributos presentes nele que não são desejados nos herdeiros, eles podem redefinir a implementação, reescrevendo ou estendendo os elementos herdados.
+
+  Esse cartão não planejado no levantamento inicial de histórias.
+
+ \section{Implementação da quinta iteração}
+    A quarta iteração, com duração de duas semanas, foi realizada entre 8 e 19 de junho, e teve como resultado a implementação de dez histórias. A descrição de cada uma delas é feita abaixo.
+
+    \subsubsection{História 6 - Cancelamento de cadastro}
+      Um usuário que não deseja mais fazer parte da rede social pode solicitar a remoção de seu perfil do sistema. Para isso, uma vez autenticado deve selecionar a opção de edição de perfil e, na página de edição, selecionar apagar conta. Caso realmente deseje apagar a conta, o usuário deverá confirmar novamente a opção.
+
+      Dessa maneira, o perfil do usuário e quaisquer conteúdos ligados a ele serão removidos. Conteúdos gerados por esse usuário em outros lugares do sistema (comentários em projetos, por exemplo) serão porém mantidos.
+
+
+  	\chapter{Cronograma}
+
+	\begin{tabularx}{0.9\linewidth}[|l|]{ |r|X|l|X| }
+	\hline
+		\multicolumn{2}{|c|}{\textbf{Atividades planejadas}} \\
+	\hline
+		07/10 & entrega do 5º documento de acompanhamento \\
+	\hline
+		09/10 & 5ª apresentação \\
+	\hline
+		01/07-31/08 & testes de usabilidade e avaliação \\
+	\hline
+		01/09-27/11 & implementação com base nos resultados dos testes \\
+	\hline
+		14/12 & Demonstração prática do projeto de Formatura no PCS \\
+	\hline
+		15/12 & Banca do Projeto de Formatura no PCS \\
+	\hline
+	\end{tabularx} \\
+
+\end{document}
