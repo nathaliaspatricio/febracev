@@ -104,7 +104,7 @@ Shin Shimizu Melnikoff}
 
   Essa seção descreve as iterações de desenvolvimento do projeto e as histórias implementadas em cada uma delas.
 
-  Ao longo do desenvolvimento, houve algumas mudanças de escopo do projeto. Cartões não planejados inicialmente e que representavam funcionalidades necessárias ao sistema foram adicionados, num total de sete novas histórias. A adição dessas histórias tornou necessário o replanejamento das histórias que seriam implementadas. Das histórias planejadas inicialmente, vinte foram implementadas e dez serão implementadas em versões futuras do sistema. De 37 histórias levantadas 27 já foram implementadas, ou seja, 73\% de histórias foram atendidas no total.
+  Ao longo do desenvolvimento, houve algumas mudanças de escopo do projeto. Cartões não planejados inicialmente e que representavam funcionalidades necessárias ao sistema foram adicionados, num total de sete novas histórias. A adição dessas histórias tornou necessário o replanejamento das histórias que seriam implementadas. Das histórias planejadas inicialmente, vinte e quatro foram implementadas e seis serão implementadas em versões futuras do sistema. De 37 histórias levantadas 31 já foram implementadas, ou seja, 83\% de histórias foram atendidas no total.
 
   \section{Implementação da primeira iteração}
     A primeira iteração, com duração de três semanas, foi realizada entre 20 de abril e 8 de maio, e teve como resultado a implementação de cinco histórias. A descrição de cada uma delas é feita abaixo.
@@ -197,7 +197,7 @@ Shin Shimizu Melnikoff}
 
       As \textit{tags} podem ser inseridas pela interface administrativa, ou podem ser criadas diretamente ao serem utilizadas para marcar um objeto pela primeira vez.
 
-      No momento, as \textit{tags} marcam apenas projetos e colunas, mas serão utilizadas para marcar outros conteúdos, como entradas de um diário de bordo.
+      No momento, as \textit{tags} marcam projetos, colunas e entradas de um diário de bordo.
 
   Esse cartão não havia sido planejado no levantamento inicial de histórias.
 
@@ -223,15 +223,15 @@ Shin Shimizu Melnikoff}
       A mesma funcionalidade é oferecida nas páginas de projeto.
 
     \subsubsection{História 18 - Busca}
-      Há no menu principal do site uma ferramenta de busca. Ao se digitar um texto e selecionar o botão enviar, o sistema realiza a busca dos termos procurados, e devolve uma página com elementos que atendam a essa requisição. No momento, a busca retorna três tipos de objetos: projetos, perfis de usuário e \textit{tags}. O sistema poderá ser expandido futuramente para suportar outros tipos de objetos.
+      Há no menu principal do site uma ferramenta de busca. Ao se digitar um texto e selecionar o botão enviar, o sistema realiza a busca dos termos procurados, e devolve uma página com elementos que atendam a essa requisição. No momento, a busca retorna cinco tipos de objetos: projetos, perfis de usuário, colunas, \textit{tags} e entradas de diários de bordo. O sistema poderá ser expandido futuramente para suportar outros tipos de objetos.
 
-      A sintaxe da busca é semelhante à de mecanismos de busca como o Google, por exemplo. Se mais de um elemento for inserido, a busca procura ocorrências dos termos simultâneamente, em qualquer ordem. Termos envoltos por aspas duplas são procurados tal como digitados, na ordem e em ocorrência simultânea.
+      A sintaxe da busca é semelhante à de mecanismos de busca como o Google, por exemplo. Se mais de um elemento for inserido, a busca procura ocorrências dos termos simultaneamente, em qualquer ordem. Termos envoltos por aspas duplas são procurados tal como digitados, na ordem e em ocorrência simultânea.
 
     \subsubsection{História 30 - Interface de escrita de colunas}
       Para que os membros da Equipe da Febrace possam criar novos textos para a seção de colunas, eles devem acessar a interface administrativa. Lá eles contam com uma ferramenta que os permitem editar seus textos e gerenciar textos escritos anteriormente.
 
     \subsubsection{História 32 - Preenchimento dos bancos de dados}
-      Para a apresentação do projeto, foi necessário popular o banco de dados do sistema com projetos de edições anteriores da feira. Buscou-se incluir no sistema projetos de categorias variadas, priorizando-se os projetos que tenham sido premiados na feira. A entrada desses dados foi realizada manualmente.
+      Para a apresentação do projeto no PSI, foi necessário popular o banco de dados do sistema com projetos de edições anteriores da feira. Buscou-se incluir no sistema projetos de categorias variadas, priorizando-se os projetos que tenham sido premiados na feira. A entrada desses dados foi realizada manualmente.
 
   Esse cartão não havia sido planejado no levantamento inicial de histórias.
 
@@ -258,28 +258,28 @@ Shin Shimizu Melnikoff}
 
 
  \section{Implementação da quinta iteração}
-    A quinta iteração, com duração de duas semanas, foi realizada entre 27 de julho e 6 de agosto, e teve como resultado a implementação de duas histórias. A descrição de cada uma delas é feita abaixo.
+    A quinta iteração, com duração de duas semanas, foi realizada entre 27 de julho e 13 de agosto, e teve como resultado a implementação de duas histórias. A descrição de cada uma delas é feita abaixo.
 
     \subsubsection{História 12 - Edição de Diário de Bordo de um projeto}
-  %\1) Diário de bordo
+      Cada projeto tem seu diário de bordo, que é um blog no qual os participantes podem postar quaisquer questões relacionadas ao projeto. A criação de novas entradas e a edição das entradas já criadas em um diário de bordo só podem ser feitas pelos integrantes do projeto. Tanto usuários logados quanto deslogados podem deixar comentários em um diário de bordo.
 
     \subsubsection{História 19 - Notificação de novos conteúdos}
-  %\2) RSS(colunas, diários de bordo)
-
+      Cada diário de bordo tem seu próprio RSS, sendo que os usuários interessados em acompanhar aquele diário de bordo podem cadastrá-lo em seu leitor de RSS favorito. Assim, cada vez que for postada uma nova entrada no diário de bordo, o usuário ficará sabendo e poderá lê-la.
+      
  \section{Implementação da sexta iteração}
-    A sexta iteração, com duração de duas semanas, foi realizada entre 7 e 20 de agosto, e teve como resultado a implementação de duas histórias. A descrição de cada uma delas é feita abaixo.
+    A sexta iteração, com duração de duas semanas, foi realizada entre 14 de agosto e 3 de setembro, e teve como resultado a implementação de duas histórias. A descrição de cada uma delas é feita abaixo.
 
     \subsubsection{História 29 - Cadastro de novo projeto}
-  %\5) Solicitação de novos projetos
+      Todo o projeto já apresentado em algumas das edições da FEBRACE existirá também no FEBRACE\textsuperscript{V}, como uma forma de divulgação da feira e seus projetos. Porém, também é possível cadastrar um novo projeto que não foi ainda apresentado na feira. Para o usuário cadastrar um novo projeto ele deve fornecer alguns dados e uma \textit{slug} que servirá para identificar o diário de bordo do projeto. Uma vez cadastrado o projeto ele possui as mesmas funcionalidades de qualquer outro projeto.
+
+      Em uma versão futura haverá uma integração entre essa funcionalidade e o sistema de submissão de projetos para FEBRACE para que projetos criados no FEBRACE\textsuperscript{V} possam ser submitidos diretamente para a FEBRACE sem a necessidade de que se preencha todos os dados novamente.
 
     \subsubsection{História 17 - Enviar mensagens a outros usuários}
-  %\3) Mensagens diretas
-
+      Para que um usuário tenha a permissão de enviar uma mensagem direta a um outro usuário do sistema, é necessário que haja uma relação mútua entre eles (os usuários devem seguir um ao outro). O usuário tem a possibilidade de ver as mensagens recebidas de seus amigos, as mensagens enviadas por ele e as mensagens que foram enviadas para a lixeira. Quando uma mensagem é apagada da caixa de entrada ou da caixa de saída ela é enviada para a lixeira. Com uma certa frequência, as mensagens na lixeira são apagadas automaticamente.
 
  \section{Implementação da sétima iteração}
-    A sexta iteração, com duração de duas semanas, foi realizada entre 21 de agosto e 3 de setembro, e teve como resultado a implementação de uma história. A descrição de cada uma delas é feita abaixo.
+    A sexta iteração, com duração de duas semanas, foi realizada entre 4 a 24 de setembro, e teve como resultado a implementação de uma história. A descrição de cada uma delas é feita abaixo.
 
-  %\4) Cancelamento de cadastro
     \subsubsection{História 6 - Cancelamento de cadastro}
       Um usuário que não deseja mais fazer parte da rede social pode solicitar a remoção de seu perfil do sistema. Para isso, uma vez autenticado deve selecionar a opção de edição de perfil e, na página de edição, selecionar apagar conta. Caso realmente deseje apagar a conta, o usuário deverá confirmar novamente a opção.
 
@@ -296,7 +296,19 @@ Shin Shimizu Melnikoff}
 	\hline
 		09/10 & 5ª apresentação \\
 	\hline
-		09/10-13/12 & testes de usabilidade e avaliação \\
+		25/09-15/10 & 8ª iteração \\
+	\hline
+		16/10-30/11 & estudos de usabilidade \\
+	\hline
+		01/11-15/11 & Confecção do Pôster, \textit{Press Releases} e Página de Internet \\
+	\hline
+		16/11 & Entrega do Pôster, \textit{Press Releases} e Página de Internet \\
+	\hline
+		01/12-06/12 & Finalização da monografia do Projeto de Formatura \\
+	\hline
+		01/12-06/12 & Finalização da monografia do Projeto de Formatura \\
+	\hline
+		07/12 & Entrega da monografia do Projeto de Formatura \\
 	\hline
 		14/12 & Demonstração prática do projeto de Formatura no PCS \\
 	\hline
