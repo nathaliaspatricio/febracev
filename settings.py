@@ -101,6 +101,7 @@ INSTALLED_APPS = (
     'tagging',
     'home',
     'messages',
+    'photologue',
 )
 
 #User profile

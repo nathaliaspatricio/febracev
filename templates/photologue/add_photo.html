@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title%} | Adicionar Foto{% endblock %}
+
+{% block header%}
+    <h1>Adicionar Foto</h1>
+{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <p style="color: red;">
+            Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
+        </p>
+    {% endif %}
+
+    <form enctype="multipart/form-data" method="post" action="">
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}

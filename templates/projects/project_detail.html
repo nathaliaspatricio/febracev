@@ -89,8 +89,10 @@
                     {% endif %}
                 {% else %}
                     <a href={% url blog_index edition=project.edition category=project.category code=project.code %}>Diário de Bordo</a><br/>
+                    <a href={% url pl-project-gallery edition=project.edition category=project.category code=project.code %}>Galeria de fotos</a><br/>
                     {% if is_owner %}
                         <a href={% url blog_add_post edition=project.edition category=project.category code=project.code %}>adicionar post</a><br/>
+                        <a href={% url pl-add-photo edition=project.edition category=project.category code=project.code %}>adicionar foto</a><br/>
                     {% endif %}
                 {% endif %}
             </div>

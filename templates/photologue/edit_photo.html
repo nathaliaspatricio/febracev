@@ -1,0 +1,28 @@
+{% extends "photologue/root.html" %}
+
+{% load photologue_tags %}
+
+{% block title %}Editar foto{% endblock %}
+
+{% block content %}
+
+<h1>{{ object.title }}</h1>
+<div class="gallery-photo">
+    <a href="{{ object.image.url }}"><img src="{{ object.get_display_url }}" alt="{{ object.title }}"/></a>
+    {% if object.caption %}<p>{{ object.caption }}</p>{% endif %}
+</div>
+
+{% if form.errors %}
+    <p style="color: red;">
+        Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
+    </p>
+{% endif %}
+
+<form enctype="multipart/form-data" method="post" action="">
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}

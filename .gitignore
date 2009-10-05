@@ -26,3 +26,5 @@
 #apps externas
 #registration/*
 #profiles/*
+#arquivos de controle SVN
+*.svn
