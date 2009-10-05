@@ -46,6 +46,7 @@ class Project(models.Model):
             return ('projects_project_detail', (), {'year': self.edition,
                                                     'category': self.category,
                                                     'code': self.code})
+            
 
 class Prize(models.Model):
     name = models.CharField(max_length=100, unique=True)

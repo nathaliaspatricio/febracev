@@ -26,8 +26,12 @@ def gallery_detail(request, edition, category, code):
 def add_photo(request, edition=None, category=None, code=None, project_slug=None):
     if project_slug:    
         project = get_object_or_404(Project, slug=project_slug)
+        kwargs = { 'slug': project_slug }
+        return_url = reverse('pl-gallery', kwargs=kwargs )
     else:
         project = get_object_or_404(Project, edition=edition, category=category, code=code)
+        kwargs = { 'edition': edition, 'category': category, 'code': code }
+        return_url = reverse('pl-project-gallery', kwargs=kwargs )
 
     gallery = get_object_or_404(Gallery, project=project)
 
@@ -44,8 +48,7 @@ def add_photo(request, edition=None, category=None, code=None, project_slug=None
                     photo = form.save()
                     gallery.photos.add(photo)
                     gallery.save()
-                    kwargs = { 'edition': edition, 'category': category, 'code': code }
-                    return HttpResponseRedirect( reverse('pl-project-gallery', kwargs=kwargs ))
+                    return HttpResponseRedirect(return_url)
                 except IntegrityError:
                     form.errors['title_slug'] = [u'Slug repetido.']
         else:

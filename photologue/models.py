@@ -16,7 +16,8 @@ from django.utils.encoding import smart_str, force_unicode
 from django.utils.functional import curry
 from django.utils.translation import ugettext_lazy as _
 
-from febracev.projects.models import Project
+from django.db.models.signals import post_save
+from projects.models import Project
 
 # Required PIL classes may or may not be available from the root namespace
 # depending on the installation method used.
@@ -179,6 +180,11 @@ class Gallery(models.Model):
 
     def public(self):
         return self.photos.filter(is_public=True)
+
+def handler(sender, **kwargs):
+    print 'OPA!'
+
+post_save.connect( handler, sender=Project )
 
 
 class GalleryUpload(models.Model):

@@ -28,6 +28,10 @@ urlpatterns += patterns('photologue.views',
         'add_photo',
         name='pl-add-photo'
     ),
+    url(r'^gallery/(?P<project_slug>[\-\d\w]+)/add/$',
+        'add_photo',
+        name='pl-add-photo-slug'
+    ),
     url(r'^photo/(?P<slug>[\-\d\w]+)/edit/$',
         'edit_photo', 
         name='pl-edit-photo'
