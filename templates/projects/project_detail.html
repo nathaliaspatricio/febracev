@@ -28,12 +28,12 @@
                     {% if project.slug %}
                         <a href={% url projects_add_favorite_slug project.slug %}>
                             <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
-                            Remover
+                            Adicionar
                         </a>
                     {% else %}
                         <a href={% url projects_add_favorite project.edition project.category project.code %}>
                             <img src="{{ MEDIA_URL }}images/toolbar_add.png" id="toolbar_add" alt="contact" /><br />
-                            Remover
+                            Adicionar
                         </a>
                     {% endif %}
                 </div>
