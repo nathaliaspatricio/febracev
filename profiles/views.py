@@ -18,6 +18,7 @@ from django.contrib.auth import logout
 from profiles import utils
 from profiles.forms import ProfileForm
 from profiles.forms import UserForm
+from profiles.models import UserProfile
 
 from friends import utils as friends_utils
 from projects import utils as projects_utils
@@ -103,6 +104,7 @@ def create_profile(request, form_class=ProfileForm, success_url=None,
                               kwargs={ 'username': request.user.username })
     if form_class is None:
         form_class = utils.get_profile_form()
+
     if request.method == 'POST':
         profile_form = form_class(data=request.POST, files=request.FILES)
         user_form = UserForm(data=request.POST, files=request.FILES,
@@ -119,7 +121,8 @@ def create_profile(request, form_class=ProfileForm, success_url=None,
             return HttpResponseRedirect(success_url)
     else:
         user_form = UserForm(instance=request.user)
-        profile_form = form_class()
+        profile_obj = UserProfile.objects.create(user=request.user)
+        profile_form = form_class(instance=profile_obj)
 
     if extra_context is None:
         extra_context = {}
