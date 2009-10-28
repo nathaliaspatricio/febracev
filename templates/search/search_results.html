@@ -14,6 +14,7 @@
         <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
     {% endfor %}
     </ul>
+    <br/>
 
     <h2>Usuários</h2>
     <ul>
@@ -23,6 +24,7 @@
         {% endif %}
     {% endfor %}
     </ul>
+    <br/>
 
     <h2>Colunas</h2>
     <ul>
@@ -30,6 +32,7 @@
         <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
     {% endfor %}
     </ul>
+    <br/>
 
     <h2>Tags</h2>
     <ul>
@@ -37,7 +40,8 @@
         <li><a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a></li>
     {% endfor %}
     </ul>
-
+    <br/>
+    
     <h2>Posts</h2>
     <ul>
     {% for post in post_list %}

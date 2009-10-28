@@ -102,6 +102,7 @@ INSTALLED_APPS = (
     'home',
     'messages',
     'photologue',
+    'status',
 )
 
 #User profile
