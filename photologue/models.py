@@ -182,7 +182,9 @@ class Gallery(models.Model):
         return self.photos.filter(is_public=True)
 
 def handler(sender, **kwargs):
-    print 'OPA!'
+    instance = kwargs['instance']
+    if not Gallery.objects.filter(project=instance):
+        Gallery.objects.create(project=instance, title=instance.name, title_slug=instance.edition+instance.category+instance.code)
 
 post_save.connect( handler, sender=Project )
 
