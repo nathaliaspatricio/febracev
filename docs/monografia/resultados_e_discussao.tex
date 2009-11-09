@@ -466,10 +466,40 @@
       Para que um usuário tenha a permissão de enviar uma mensagem direta a um outro usuário do sistema, é necessário que haja uma relação mútua entre eles (os usuários devem seguir um ao outro). O usuário tem a possibilidade de ver as mensagens recebidas de seus amigos, as mensagens enviadas por ele e as mensagens que foram enviadas para a lixeira. Quando uma mensagem é apagada da caixa de entrada ou da caixa de saída ela é enviada para a lixeira. Com uma certa frequência, as mensagens na lixeira são apagadas automaticamente.
 
  \subsection{Implementação da sétima iteração}
-    A sexta iteração, com duração de duas semanas, foi realizada entre 4 a 24 de setembro, e teve como resultado a implementação de uma história. A descrição de cada uma delas é feita abaixo.
+    A sétima iteração, com duração de três semanas, foi realizada entre 4 a 24 de setembro, e teve como resultado a implementação de uma história. A descrição dela é feita abaixo.
 
     \subsubsection{História 6 - Cancelamento de cadastro}
       Um usuário que não deseja mais fazer parte da rede social pode solicitar a remoção de seu perfil do sistema. Para isso, uma vez autenticado deve selecionar a opção de edição de perfil e, na página de edição, selecionar apagar conta. Caso realmente deseje apagar a conta, o usuário deverá confirmar novamente a opção.
 
       Dessa maneira, o perfil do usuário e quaisquer conteúdos ligados a ele serão removidos. Conteúdos gerados por esse usuário em outros lugares do sistema (comentários em projetos, por exemplo) serão porém mantidos.
 
+ \section{Implementação da oitava iteração}
+    A oitava iteração, com duração de três semanas, foi realizada entre 25 de setembro a 15 de outubro, e teve como resultado a implementação de uma história. A descrição de cada uma delas é feita abaixo. 
+
+    \subsubsection{História 11 - Edição dos Conteúdos de um projeto}
+
+      Um usuário participante de um projeto pode querer inserir mais informações sobre seu projeto. Para isso, foi criado um módulo de galeria de fotos relacionada a cada projeto, sendo que o participante pode inserir e deletar fotos desse álbum. 
+      
+      Há também uma interface para a visualização das fotos de um projeto e qualquer usuário tem acesso a ela.
+
+      Um outro conteúdo adicional que pode ser inserido em um projeto é o relatório do projeto. São aceitos arquivos de texto em diferentes formatos (pdf, odt, doc).
+
+    \subsubsection{História 21 - Estatísticas do uso do sistema}
+
+        Foi criada uma página simples que mostra algumas estatísticas do sistema. Essa página é de acesso público, sendo que não precisa estar logado para ver seu conteúdo. São mostradas quatro estatísticas:
+	\begin{itemize}
+	  \item{
+		Projetos mais seguidos
+	  }
+	  \item{
+		Usuários mais seguidos
+	  }
+	  \item{ 
+	    Projetos mais comentados 
+	  }
+	  \item{ 
+	    Posts mais comentados
+	  }
+	\end{itemize}
+
+        A idéia é a de mostrar a relevância dos conteúdos existentes na rede social.

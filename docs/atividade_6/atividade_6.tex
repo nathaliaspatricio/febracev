@@ -1,0 +1,177 @@
+%atividade_6.tex - Relatório de acompanhamento para a disciplina PCS20450
+
+\documentclass[a4paper,12pt,font=plain,header=plain]{abnt}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage[num]{abntcite}
+\usepackage{tabularx}
+
+\autor{Leandro Coletto Biazon\protect\\Nathalia Sautchuk Patrício}
+\titulo{Febrace\textsuperscript{V}:\\Feira Brasileira Virtual de Ciências e
+Engenharia}
+\orientador[Orientadoras:\\]{Profª. Drª. Roseli de Deus Lopes\protect\\Profª. Drª. Selma
+Shin Shimizu Melnikoff}
+\instituicao{Escola Politécnica da Universidade de São Paulo\par Departamento de Sistemas Digitais}
+\local{São Paulo}
+\data{Novembro de 2009}
+
+\renewcommand{\ABNTchapterfont}{\bfseries\sffamily\fontseries{sbc}\selectfont}
+\renewcommand{\ABNTsectionfont}{\bfseries\sffamily}
+
+\begin{document}
+%  \setcounter{secnumdepth}{-1}
+  \capa
+  %\folhaderosto
+
+	\renewenvironment{center}{}{}
+	\section*{PCS 2050 - PROJETO DE FORMATURA II}
+	
+	\begin{tabular}[|l|]{ |r|l| }
+	\hline
+				Equipe 07 & Nathalia S. Patrício, nathalia.sautchuk@gmail.com, (11)9678-1667 \\
+			\hline
+				& Leandro Coletto Biazon, leandrobiazon@gmail.com, (11)8961-4159 \\
+			\hline
+					Orientadora & Profª. Drª. Selma S. S. Melnikoff, selma.melnikoff@poli.usp.br \\
+			\hline
+				Co-Orientadora & Profª. Drª. Roseli de Deus Lopes, roseli@lsi.usp.br \\
+			\hline
+			\end{tabular} \\
+	
+			RA5 – Relatório de Acompanhamento (versão: 11/11/2009) \\
+	
+			\begin{tabular}{ |r|r|r| }
+	
+			\hline
+				\multicolumn{3}{|c|}{Campos a serem preenchidos pelo orientador, secretaria e comitê gestor} \\
+			\hline
+				Orientador & Data de Entrega &  \\
+			\hline
+				& De acordo &  \\
+			\hline
+				& &  \\
+			\hline
+				Secretaria & Data e hora de entrega &  \\
+			\hline
+				&  &  \\
+			\hline
+				Comitê Gestor &  &  \\
+			\hline25/09-15/10
+			&  &  \\
+			\hline
+				\multicolumn{3}{|l|}{Comentários} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+				\multicolumn{3}{|l|}{} \\
+			\hline
+			\end{tabular}
+
+	\chapter{Introdução}
+	
+	A Febrace (Feira Brasileira de Ciências e Engenharia), realizada todos os anos na Escola Politécnica da USP e organizada pelo Nate-LSI (Núcleo de Aprendizagem, Trabalho e Entretenimento do Laboratório de Sistemas Integráveis), é um projeto de ação contínua com o objetivo de estimular a criatividade, a reflexão, o aprofundamento e o raciocínio crítico nas atividades desenvolvidas por estudantes dos Ensinos Fundamental, Médio e Técnico, por meio da indução em realizar projetos investigativos em Ciências, Engenharia e suas aplicações.
+	
+	Com o intuito de aumentar o alcance da Feira, levando-a por mais tempo a mais pessoas, e estimulando a criação de redes entre elas, o presente projeto propõe a criação de uma aplicação Web que possibilite o desenvolvimento e exposição dos projetos na Internet e que ofereça ferramentas que viabilizem maior interação entre os diversos envolvidos na Febrace (alunos participantes, professores orientadores, organizadores da Feira, avaliadores e público interessado).
+	
+	Assim, propõe-se:
+	
+	\begin{itemize}
+	\item{
+		Desenvolver e disponibilizar uma aplicação de código aberto que ofereça ferramentas para a exposição virtual de projetos de Ciência e Engenharia;
+	}
+	\item{
+		Agregar à exposição virtual uma rede social que permita a interação entre os participantes da feira e que estes possam se ajudar com seus projetos e dirimir dúvidas de visitantes interessados em participar de suas futuras edições e
+	}
+	\item{
+		Estudar e utilizar conceitos de usabilidade, acessibilidade e práticas de desenvolvimento web 2.0, aplicando metódos ágeis de desenvolvimento de \textit{software}.
+	}
+	\end{itemize}
+
+\chapter{Desenvolvimento}
+
+  Essa seção descreve o desenvolvimento do projeto ocorrido entre as reuniões de acompanhamento, bem como as histórias implementadas. Ao longo do desenvolvimento, houve algumas mudanças de escopo do projeto e estas serão explicadas mais adiante.
+
+ \section{Implementação da oitava iteração}
+    A oitava iteração, com duração de três semanas, foi realizada entre 25 de setembro a 15 de outubro, e teve como resultado a implementação de uma história. A descrição de cada uma delas é feita abaixo. 
+
+    \subsubsection{História 11 - Edição dos Conteúdos de um projeto}
+
+      Um usuário participante de um projeto pode querer inserir mais informações sobre seu projeto. Para isso, foi criado um módulo de galeria de fotos relacionada a cada projeto, sendo que o participante pode inserir e deletar fotos desse álbum. 
+      
+      Há também uma interface para a visualização das fotos de um projeto e qualquer usuário tem acesso a ela.
+
+      Um outro conteúdo adicional que pode ser inserido em um projeto é o relatório do projeto. São aceitos arquivos de texto em diferentes formatos (pdf, odt, doc).
+
+    \subsubsection{História 21 - Estatísticas do uso do sistema}
+
+        Foi criada uma página simples que mostra algumas estatísticas do sistema. Essa página é de acesso público, sendo que não precisa estar logado para ver seu conteúdo. São mostradas quatro estatísticas:
+	\begin{itemize}
+	  \item{
+		Projetos mais seguidos
+	  }
+	  \item{
+		Usuários mais seguidos
+	  }
+	  \item{ 
+	    Projetos mais comentados 
+	  }
+	  \item{ 
+	    Posts mais comentados
+	  }
+	\end{itemize}
+
+        A idéia é a de mostrar a relevância dos conteúdos existentes na rede social.
+
+ \section{Redefinição de escopo}
+
+    Juntamente com a orientadora do projeto e com o cliente, foi avaliado o andamento do trabalho e foi redefinido o escopo do projeto com base em prioridades. Assim, quatro cartões inicialmente levantados foram suprimidos:
+
+      \begin{itemize}
+	\item Convite automático a ex-participantes para participação na rede social: esse cartão está relacionado com a fase de implantação do projeto e não com seu desenvolvimento 
+	\item Postar em fórum: esse cartão foi considerado de baixa prioridade e com baixo valor agregado, já que a rede social começará com poucos usuários e para se ter um fórum de relevância é necessário ter uma grande massa de dados. 
+	\item Moderação de conteúdos: esse cartão foi considerado de baixa prioridade e com baixo valor agregado, já que a rede social começará com poucos usuários. 
+	\item Estatísticas do servidor que roda o sistema: esse cartão está relacionado com a fase de implantação do projeto e não com seu desenvolvimento 
+      \end{itemize}
+
+  	\chapter{Cronograma}
+
+	\begin{tabularx}{0.9\linewidth}[|l|]{ |r|X|l|X| }
+	\hline
+		\multicolumn{2}{|c|}{\textbf{Atividades planejadas}} \\
+	\hline
+		16/10-30/11 & Estudos de usabilidade \\
+	\hline
+		01/11-15/11 & Confecção do Pôster, \textit{Press Releases} e Página de Internet \\
+	\hline
+		11/11 & Entrega do 6º documento de acompanhamento \\
+	\hline
+		16/11 & Entrega do Pôster, \textit{Press Releases} e Página de Internet \\
+	\hline
+		18/11 & 6ª apresentação \\
+	\hline
+		01/12-06/12 & Finalização da monografia do Projeto de Formatura \\
+	\hline
+		01/12-06/12 & Finalização da monografia do Projeto de Formatura \\
+	\hline
+		07/12 & Entrega da monografia do Projeto de Formatura \\
+	\hline
+		14/12 & Demonstração prática do projeto de Formatura no PCS \\
+	\hline
+		15/12 & Banca do Projeto de Formatura no PCS \\
+	\hline
+	\end{tabularx} \\
+
+\end{document}
