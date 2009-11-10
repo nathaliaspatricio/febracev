@@ -27,18 +27,18 @@ class UserProfile(models.Model):
 
     """
 
-    user = models.ForeignKey(User, unique=True, blank=True, null=True)
-    user_type = models.CharField(max_length=1, choices=USER_TYPES, blank=True, default='V')
-    name = models.CharField(max_length=255)
+    user = models.ForeignKey(User, unique=True, blank=True, null=True, verbose_name='Usuário')
+    user_type = models.CharField(max_length=1, choices=USER_TYPES, blank=True, default='V', verbose_name='Tipo de Usuário')
+    name = models.CharField(max_length=255, verbose_name='Nome')
 
-    city = models.CharField(max_length=100, blank=True)
-    state =  models.CharField(max_length=2, choices=STATE_CHOICES, blank=True)
-    birthdate = models.DateField(null=True, blank=True)
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=True )
+    city = models.CharField(max_length=100, blank=True, verbose_name='Cidade')
+    state =  models.CharField(max_length=2, choices=STATE_CHOICES, blank=True, verbose_name='Estado')
+    birthdate = models.DateField(null=True, blank=True, verbose_name='Data de Nascimento')
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=True, verbose_name='Sexo')
 
-    institution = models.ForeignKey(Institution, blank=True, null=True)
-    mugshot = models.ImageField(upload_to='uploads/', blank=True)
-    is_active = models.BooleanField(default=True)
+    institution = models.ForeignKey(Institution, blank=True, null=True, verbose_name='Instituição')
+    mugshot = models.ImageField(upload_to='uploads/', blank=True, verbose_name='Foto')
+    is_active = models.BooleanField(default=True, verbose_name='Ativo?')
 
     def __unicode__(self):
         return self.name
@@ -49,3 +49,7 @@ class UserProfile(models.Model):
             return ('profiles_profile_detail', (), { 'username': self.user.username })
         except:
             return ('index', (), {})
+
+    class Meta:
+        verbose_name='Perfil'
+        verbose_name_plural='Perfis'

@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 from datetime import datetime
 
 class FriendLink(models.Model):
-    from_user = models.ForeignKey(User, related_name='from_user')
-    to_user = models.ForeignKey(User, related_name='to_user')
-    date_added = models.DateTimeField(default=datetime.now)
+    from_user = models.ForeignKey(User, related_name='from_user', verbose_name='Usuário que está seguindo')
+    to_user = models.ForeignKey(User, related_name='to_user', verbose_name='Usuário seguido')
+    date_added = models.DateTimeField(default=datetime.now, verbose_name='Data de Adição')
 
     def __unicode__(self):
         return u'%s está seguindo %s' % (self.from_user.username, self.to_user.username)
@@ -19,3 +19,4 @@ class FriendLink(models.Model):
 
     class Meta:
         unique_together = (('from_user', 'to_user'),)
+        verbose_name='Amigo'

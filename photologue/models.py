@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import random
 import shutil
@@ -127,23 +128,22 @@ IMAGE_FILTERS_HELP_TEXT = _('Chain multiple filters using the following pattern 
 
 
 class Gallery(models.Model):
-    date_added = models.DateTimeField(_('date published'), default=datetime.now)
+    date_added = models.DateTimeField(default=datetime.now, verbose_name='Data de Adição')
     title = models.CharField(_('title'), max_length=100, unique=True)
-    title_slug = models.SlugField(_('title slug'), unique=True,
+    title_slug = models.SlugField(unique=True, verbose_name='Slug',
                                   help_text=_('A "slug" is a unique URL-friendly title for an object.'))
-    project = models.ForeignKey(Project)
-    description = models.TextField(_('description'), blank=True)
+    project = models.ForeignKey(Project, verbose_name='Projeto')
+    description = models.TextField(blank=True, verbose_name='Descrição')
     is_public = models.BooleanField(_('is public'), default=True,
                                     help_text=_('Public galleries will be displayed in the default views.'))
-    photos = models.ManyToManyField('Photo', related_name='galleries', verbose_name=_('photos'),
+    photos = models.ManyToManyField('Photo', related_name='galleries', verbose_name='Fotos',
                                     null=True, blank=True)
-    tags = TagField(help_text=tagfield_help_text, verbose_name=_('tags'))
+    tags = TagField(help_text=tagfield_help_text, verbose_name='Palavras-chave')
 
     class Meta:
         ordering = ['-date_added']
         get_latest_by = 'date_added'
-        verbose_name = _('gallery')
-        verbose_name_plural = _('galleries')
+        verbose_name = 'Galeria'
 
     def __unicode__(self):
         return self.title
@@ -190,18 +190,18 @@ post_save.connect( handler, sender=Project )
 
 
 class GalleryUpload(models.Model):
-    zip_file = models.FileField(_('images file (.zip)'), upload_to=PHOTOLOGUE_DIR+"/temp",
-                                help_text=_('Select a .zip file of images to upload into a new Gallery.'))
-    gallery = models.ForeignKey(Gallery, null=True, blank=True, help_text=_('Select a gallery to add these images to. leave this empty to create a new gallery from the supplied title.'))
+    zip_file = models.FileField(upload_to=PHOTOLOGUE_DIR+"/temp",
+                                help_text=_('Select a .zip file of images to upload into a new Gallery.'), verbose_name='Arquivo de imagens (.zip)')
+    gallery = models.ForeignKey(Gallery, null=True, blank=True, help_text=_('Select a gallery to add these images to. leave this empty to create a new gallery from the supplied title.'), verbose_name='Galeria')
     title = models.CharField(_('title'), max_length=75, help_text=_('All photos in the gallery will be given a title made up of the gallery title + a sequential number.'))
-    caption = models.TextField(_('caption'), blank=True, help_text=_('Caption will be added to all photos.'))
-    description = models.TextField(_('description'), blank=True, help_text=_('A description of this Gallery.'))
+    caption = models.TextField(blank=True, help_text=_('Caption will be added to all photos.'), verbose_name='Legenda')
+    description = models.TextField(blank=True, help_text=_('A description of this Gallery.'), verbose_name='Descrição')
     is_public = models.BooleanField(_('is public'), default=True, help_text=_('Uncheck this to make the uploaded gallery and included photographs private.'))
-    tags = models.CharField(max_length=255, blank=True, help_text=tagfield_help_text, verbose_name=_('tags'))
+    tags = models.CharField(max_length=255, blank=True, help_text=tagfield_help_text, verbose_name='Palavras-chave')
 
     class Meta:
-        verbose_name = _('gallery upload')
-        verbose_name_plural = _('gallery uploads')
+        verbose_name = 'Upload de Galeria'
+        verbose_name_plural = 'Uploads de Galeria'
 
     def save(self, *args, **kwargs):
         super(GalleryUpload, self).save(*args, **kwargs)
@@ -495,16 +495,15 @@ class Photo(ImageModel):
     title = models.CharField(_('title'), max_length=100, unique=True)
     title_slug = models.SlugField(_('slug'), unique=True,
                                   help_text=('A "slug" is a unique URL-friendly title for an object.'))
-    caption = models.TextField(_('caption'), blank=True)
-    date_added = models.DateTimeField(_('date added'), default=datetime.now, editable=False)
-    is_public = models.BooleanField(_('is public'), default=True, help_text=_('Public photographs will be displayed in the default views.'))
-    tags = TagField(help_text=tagfield_help_text, verbose_name=_('tags'))
+    caption = models.TextField(blank=True, verbose_name='Legenda')
+    date_added = models.DateTimeField(default=datetime.now, editable=False, verbose_name='Data de Adição')
+    is_public = models.BooleanField(default=True, help_text=_('Public photographs will be displayed in the default views.'), verbose_name='É Público?')
+    tags = TagField(help_text=tagfield_help_text, verbose_name='Palavras-chave')
 
     class Meta:
         ordering = ['-date_added']
         get_latest_by = 'date_added'
-        verbose_name = _("photo")
-        verbose_name_plural = _("photos")
+        verbose_name = "Foto"
 
     def __unicode__(self):
         return self.title
@@ -612,19 +611,18 @@ class BaseEffect(models.Model):
 
 class PhotoEffect(BaseEffect):
     """ A pre-defined effect to apply to photos """
-    transpose_method = models.CharField(_('rotate or flip'), max_length=15, blank=True, choices=IMAGE_TRANSPOSE_CHOICES)
-    color = models.FloatField(_('color'), default=1.0, help_text=_("A factor of 0.0 gives a black and white image, a factor of 1.0 gives the original image."))
-    brightness = models.FloatField(_('brightness'), default=1.0, help_text=_("A factor of 0.0 gives a black image, a factor of 1.0 gives the original image."))
-    contrast = models.FloatField(_('contrast'), default=1.0, help_text=_("A factor of 0.0 gives a solid grey image, a factor of 1.0 gives the original image."))
+    transpose_method = models.CharField(max_length=15, blank=True, choices=IMAGE_TRANSPOSE_CHOICES, verbose_name = "Rodar ou Flipar")
+    color = models.FloatField(default=1.0, help_text=_("A factor of 0.0 gives a black and white image, a factor of 1.0 gives the original image."), verbose_name = "Cor")
+    brightness = models.FloatField(default=1.0, help_text=_("A factor of 0.0 gives a black image, a factor of 1.0 gives the original image."), verbose_name = "Brilho")
+    contrast = models.FloatField(default=1.0, help_text=_("A factor of 0.0 gives a solid grey image, a factor of 1.0 gives the original image."), verbose_name = "Contraste")
     sharpness = models.FloatField(_('sharpness'), default=1.0, help_text=_("A factor of 0.0 gives a blurred image, a factor of 1.0 gives the original image."))
-    filters = models.CharField(_('filters'), max_length=200, blank=True, help_text=_(IMAGE_FILTERS_HELP_TEXT))
-    reflection_size = models.FloatField(_('size'), default=0, help_text=_("The height of the reflection as a percentage of the orignal image. A factor of 0.0 adds no reflection, a factor of 1.0 adds a reflection equal to the height of the orignal image."))
-    reflection_strength = models.FloatField(_('strength'), default=0.6, help_text=_("The initial opacity of the reflection gradient."))
-    background_color = models.CharField(_('color'), max_length=7, default="#FFFFFF", help_text=_("The background color of the reflection gradient. Set this to match the background color of your page."))
+    filters = models.CharField(max_length=200, blank=True, help_text=_(IMAGE_FILTERS_HELP_TEXT), verbose_name = "Filtros")
+    reflection_size = models.FloatField(default=0, help_text=_("The height of the reflection as a percentage of the orignal image. A factor of 0.0 adds no reflection, a factor of 1.0 adds a reflection equal to the height of the orignal image."), verbose_name = "Tamanho")
+    reflection_strength = models.FloatField(default=0.6, help_text=_("The initial opacity of the reflection gradient."), verbose_name = "Opacidade")
+    background_color = models.CharField(max_length=7, default="#FFFFFF", help_text=_("The background color of the reflection gradient. Set this to match the background color of your page."), verbose_name = "Cor")
 
     class Meta:
-        verbose_name = _("photo effect")
-        verbose_name_plural = _("photo effects")
+        verbose_name = "Efeito"
 
     def pre_process(self, im):
         if self.transpose_method != '':
@@ -652,13 +650,13 @@ class PhotoEffect(BaseEffect):
 
 
 class Watermark(BaseEffect):
-    image = models.ImageField(_('image'), upload_to=PHOTOLOGUE_DIR+"/watermarks")
-    style = models.CharField(_('style'), max_length=5, choices=WATERMARK_STYLE_CHOICES, default='scale')
-    opacity = models.FloatField(_('opacity'), default=1, help_text=_("The opacity of the overlay."))
+    image = models.ImageField(upload_to=PHOTOLOGUE_DIR+"/watermarks", verbose_name = "Imagem")
+    style = models.CharField(max_length=5, choices=WATERMARK_STYLE_CHOICES, default='scale', verbose_name = "Estilo")
+    opacity = models.FloatField(default=1, help_text=_("The opacity of the overlay."), verbose_name = "Opacidade")
 
     class Meta:
-        verbose_name = _('watermark')
-        verbose_name_plural = _('watermarks')
+        verbose_name = 'Marca D\'água'
+        verbose_name_plural = 'Marcas D\'água'
 
     def post_process(self, im):
         mark = Image.open(self.image.path)
@@ -667,20 +665,20 @@ class Watermark(BaseEffect):
 
 class PhotoSize(models.Model):
     name = models.CharField(_('name'), max_length=20, unique=True, help_text=_('Photo size name should contain only letters, numbers and underscores. Examples: "thumbnail", "display", "small", "main_page_widget".'))
-    width = models.PositiveIntegerField(_('width'), default=0, help_text=_('If width is set to "0" the image will be scaled to the supplied height.'))
-    height = models.PositiveIntegerField(_('height'), default=0, help_text=_('If height is set to "0" the image will be scaled to the supplied width'))
-    quality = models.PositiveIntegerField(_('quality'), choices=JPEG_QUALITY_CHOICES, default=70, help_text=_('JPEG image quality.'))
+    width = models.PositiveIntegerField(default=0, help_text=_('If width is set to "0" the image will be scaled to the supplied height.'), verbose_name='Largura')
+    height = models.PositiveIntegerField(default=0, help_text=_('If height is set to "0" the image will be scaled to the supplied width'), verbose_name='Altura')
+    quality = models.PositiveIntegerField(choices=JPEG_QUALITY_CHOICES, default=70, help_text=_('JPEG image quality.'), verbose_name='Qualidade')
     upscale = models.BooleanField(_('upscale images?'), default=False, help_text=_('If selected the image will be scaled up if necessary to fit the supplied dimensions. Cropped sizes will be upscaled regardless of this setting.'))
     crop = models.BooleanField(_('crop to fit?'), default=False, help_text=_('If selected the image will be scaled and cropped to fit the supplied dimensions.'))
     pre_cache = models.BooleanField(_('pre-cache?'), default=False, help_text=_('If selected this photo size will be pre-cached as photos are added.'))
     increment_count = models.BooleanField(_('increment view count?'), default=False, help_text=_('If selected the image\'s "view_count" will be incremented when this photo size is displayed.'))
-    effect = models.ForeignKey('PhotoEffect', null=True, blank=True, related_name='photo_sizes', verbose_name=_('photo effect'))
-    watermark = models.ForeignKey('Watermark', null=True, blank=True, related_name='photo_sizes', verbose_name=_('watermark image'))
+    effect = models.ForeignKey('PhotoEffect', null=True, blank=True, related_name='photo_sizes', verbose_name='Efeito')
+    watermark = models.ForeignKey('Watermark', null=True, blank=True, related_name='photo_sizes', verbose_name='Marca D\'água')
 
     class Meta:
         ordering = ['width', 'height']
-        verbose_name = _('photo size')
-        verbose_name_plural = _('photo sizes')
+        verbose_name = 'Tamanho de foto'
+        verbose_name_plural = 'Tamanhos de foto'
 
     def __unicode__(self):
         return self.name

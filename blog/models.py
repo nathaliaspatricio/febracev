@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import permalink
@@ -15,8 +16,7 @@ class Category(models.Model):
     slug        = models.SlugField(_('slug'), unique=True)
 
     class Meta:
-        verbose_name = _('category')
-        verbose_name_plural = _('categories')
+        verbose_name = 'Categoria'
         db_table = 'blog_categories'
         ordering = ('title',)
 
@@ -34,27 +34,27 @@ class Category(models.Model):
 class Post(models.Model):
     """Post model."""
     STATUS_CHOICES = (
-        (1, _('Draft')),
-        (2, _('Public')),
+        (1, 'Rascunho'),
+        (2, 'Público'),
     )
     title           = models.CharField(_('title'), max_length=200)
     slug            = models.SlugField(_('slug'), unique_for_date='publish')
-    author          = models.ForeignKey(User)
-    project         = models.ForeignKey(Project)
-    body            = models.TextField(_('body'))
-    tease           = models.TextField(_('tease'), blank=True)
+    author          = models.ForeignKey(User, verbose_name='Autor')
+    project         = models.ForeignKey(Project, verbose_name='Projeto')
+    body            = models.TextField(verbose_name='Texto')
+    tease           = models.TextField(blank=True, verbose_name='Resumo')
     status          = models.IntegerField(_('status'), choices=STATUS_CHOICES, default=2)
-    allow_comments  = models.BooleanField(_('allow comments'), default=True)
-    publish         = models.DateTimeField(_('publish'))
-    created         = models.DateTimeField(_('created'), auto_now_add=True)
-    modified        = models.DateTimeField(_('modified'), auto_now=True)
-    categories      = models.ManyToManyField(Category, blank=True)
-    tags            = TagField()
+    allow_comments  = models.BooleanField(default=True, verbose_name='Permite comentários?')
+    publish         = models.DateTimeField(verbose_name='Data de Publicação')
+    created         = models.DateTimeField(auto_now_add=True, verbose_name='Data de Criação')
+    modified        = models.DateTimeField(auto_now=True, verbose_name='Data de Modificação')
+    categories      = models.ManyToManyField(Category, blank=True, verbose_name='Categorias')
+    tags            = TagField(verbose_name='Palavras-chave')
     objects         = PublicManager()
 
     class Meta:
-        verbose_name = _('post')
-        verbose_name_plural = _('posts')
+        verbose_name = 'Post'
+        verbose_name_plural = 'Posts'
         db_table  = 'blog_posts'
         ordering  = ('-created',)
         get_latest_by = 'created'

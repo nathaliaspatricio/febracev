@@ -6,17 +6,18 @@ from datetime import datetime
 from tagging.fields import TagField
 
 class Article(models.Model):
-    title = models.CharField(max_length=250)
-    slug = models.SlugField(unique_for_date='pub_date')
-    author = models.ForeignKey(User)
-    excerpt = models.TextField(blank=True)
-    body = models.TextField()
-    pub_date = models.DateTimeField(default=datetime.now)
-    enable_comments = models.BooleanField(default=True)
-    tags = TagField()
+    title = models.CharField(max_length=250, verbose_name='Título')
+    slug = models.SlugField(unique_for_date='pub_date', verbose_name='Slug')
+    author = models.ForeignKey(User, verbose_name='Autor')
+    excerpt = models.TextField(blank=True, verbose_name='Resumo')
+    body = models.TextField(verbose_name='Texto')
+    pub_date = models.DateTimeField(default=datetime.now, verbose_name='Data de Publicação')
+    enable_comments = models.BooleanField(default=True, verbose_name='Permitir comentários?')
+    tags = TagField(verbose_name='Palavras-chave')
 
     class Meta:
         ordering = ['-pub_date']
+        verbose_name='Artigo'
 
     def __unicode__(self):
         return self.title
