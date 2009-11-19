@@ -160,3 +160,49 @@
     Na camada \textit{Template} é definida a forma de apresentação dos dados que a \textit{View} envia. Com o sistema de \textit{templates} do Django é possível criar heranças, ou seja, um template base contendo a estrutura básica do sistema e templates específicos que herdam as características deste template base e atribuem/criam suas próprias características.
 
     Com o uso do \textit{framework} Django, um projeto é um conjunto de aplicações. Uma aplicação é uma determinada funcionalidade que compõe um projeto. Por causa disso, há a idéia de aplicações plugáveis no Django que é uma aplicação que pode ser usada em mais de um projeto com nenhuma ou quase nenhuma alteração de código. Isso quer dizer que a aplicação deve ter seus próprios modelos, suas próprias \textit{views}, seus próprios \textit{templates} e encapsular o máximo possível de código que não se enquadre em um desses elementos.
+
+\section{Usabilidade}
+
+Segundo \citeonline{nielsen93}, usabilidade é um atributo qualitativo que avalia a facilidade de uso de uma interface de usuário. Também se refere ao método de melhorar essa facilidade durante o processo de \textit{design} de uma interface.
+
+A usabilidade é definida por cinco componentes qualitativos:
+    \begin{enumerate}
+        \item Aprendizado \\
+            Facilidade dos usuários em realizar tarefas básicas na primeira vez que eles se defrontam com a interface.
+        \item Eficiência \\
+            Rapidez com a qual os usuários podem realizar as tarefas, uma vez que os usuários aprenderam como funciona a interface.
+        \item Memorização \\
+            Facilidade de restabelecer a proficiência quando os usuários retornam à interface após um período sem usá-la.
+        \item Erros \\
+            Número de erros cometidos pelos usuários. Gravidade e facilidade de recuperação desses erros.
+        \item Satisfação \\
+            A interface é agradável de ser usada.
+    \end{enumerate}
+
+Há outros atributos qualitativos importantes. Um deles é a utilidade, que remete para a funcionalidade da interface. Usabilidade e utilidade são igualmente importantes: para um usuário não importa que algo seja fácil de fazer, se não é o que ele necessita. 
+
+Na \textit{web}, a usabilidade é uma condição necessária para a sobrevivência. Segundo \citeonline{krug06}, o usuário deve ser capaz de entender uma interface (o que ela é e como usá-la) sem desprender esforço nisso. Ou seja, ela deve ser evidente por si só e auto-explicativa. Se o usuário achar difícil usar um \textit{site}, ele simplesmente não o usará mais e procurará outro que ofereça a mesma funcionalidade. Se a página principal não transmitir claramente o que ele faz e para que serve, o usuário não entenderá e irá embora. Se o usuário se sentir perdido ou se as informações forem difíceis de ler ou de entender, ele sairá do \textit{site}. Enfim, se o usuário encontrar dificuldades em usar um \textit{site}, ele simplesmente o abandonará sem maiores constrangimentos. Isso mostra a importância do \textit{design} da interface na retenção de usuários na \textit{web}.
+
+Um das abordagens para se fazer um estudo de usabilidade do \textit{design} de uma interface é o uso de padrões de usabilidade (\textit{usability design patterns}).
+
+Segundo \citeonline{tidwell05}, \textit{patterns} são recursos estruturais e comportamentais que melhoram a "habitabilidade" de alguma coisa, como uma interface de usuário, um \textit{site}, um programa orientado a objetos ou até um edifício. Eles tornam as coisas mais simples de entender ou mais bonitas; fazem com que as ferramentas sejam mais úteis e usáveis.
+
+Sendo assim, pode-se dizer que \textit{usability design patterns} são boas práticas ou soluções comprovadas para um problema em um determinado contexto de \textit{design}. Apesar disso, eles não são componentes "de prateleira" (\textit{off-the-shelf}), uma vez que cada implementação de um \textit{pattern} difere um pouco de outra. 
+
+\citeonline{welie00} apresentam uma das estruturas possíveis de um padrão de usabilidade:
+    \begin{enumerate}
+        \item Problema \\
+            Relaciona-se com o uso do sistema e sua descrição deve ser do ponto de vista do usuário.
+        \item Princípio de usabilidade \\
+            Um \textit{pattern} é baseado em um princípio de usabilidade. Os princípios de usabilidade podem ser agrupados de acordo com as categorias de problemas de usuário: visibilidade, affordance, mapeamento natural, restrições, modelos conceituais, \textit{feedback}, segurança e flexibilidade.
+        \item Contexto \\
+            Também é focado no ponto de vista do usuário. Identifica as características de contexto de uso e para quais usuários e ambientes o \textit{pattern} pode ser aplicado.
+        \item Solução \\
+            É uma descrição concreta e não deve apresentar novos problemas. Além disso, deve descrever somente o núcleo da solução e outros \textit{patterns} podem ser necessários para resolver sub-problemas e devem ser referenciados.
+        \item Fundamentação \\
+            Descreve como o \textit{pattern} realmente funciona, porque funciona e porque ele é bom. A fundamentação fornece uma argumentação lógica para o impacto específico sobre a usabilidade quando um \textit{pattern} é aplicado. Ele descreve os aspectos de usabilidade que foram melhorados e quais tornaram-se piores. É normal que um \textit{pattern} otimize um ou dois aspectos, enquanto outros são sacrificados.
+        \item Exemplos \\
+            Devem mostrar como um \textit{pattern} pode ser usado com sucesso em um sistema. Normalmente, coloca-se uma \textit{screenshot} e uma explicação do contexto daquela solução particular.
+    \end{enumerate}
+
+Caso um desenvolvedor de interface identifique problemas de usabilidade pode consultar os padrões de usabilidade em catálogos existentes para encontrar possíveis soluções e como aplicá-las. Essa foi a metodologia usada durante os estuidos de usabilidade da Febrace\textsuperscript{V}.
