@@ -540,3 +540,24 @@ No projeto foram usadas duas abordagens em conjunto: mudança de cor do elemento
         \label{rollover_effect}
     \end{figure}
 
+\subsection{Escolhas memorizadas}
+
+Uma das tarefas comuns em \textit{site} é o preenchimento de formulários. Algumas vezes, o usuário deseja ou é obrigado a voltar a telas de formulários. Nesse caso, é interessante que as escolhas feitas anteriormente estejam salvas para que ele não precise refazer todo trabalho. 
+
+Para exemplificar, suponha que o usuário digitou um dado em formato incorreto, tentou enviar e uma mensagem de erro foi devolvida na tela. Nessa situação, o usuário não deseja perder as escolhas e textos digitados anteriormente e que estavam corretos, mas apenas corrigir seu erro e prosseguir. Se ele tiver que relembrar suas escolhas já feitas há uma chance de desistir da tarefa e ficar insatisfeito com o \textit{site}.
+
+Há várias técnicas para memorizar as escolhas feitas anteriormente. A mais simples é o uso do valor anterior do componente do formulário como valor padrão. Isso funciona para todos os tipos de componentes: campos de texto, \textit{dropdowns}, \textit{radio buttons}, listas, etc.
+
+Uma outra abordagem pode ser aplicado quando a interface apresenta um campo de texto. A idéia é transformá-lo em um \textit{combo box} (que é uma combinação de um campo de texto e um \textit{dropdown}). Cada vez que o usuário digita um valor único no campo do texto, um novo item é inserido no \textit{dropdown}. Uma solução ainda melhor é usar os itens do \textit{dropdown} para fazer o preenchimento automático do que o usuário está digitando!
+
+A técnica mais complexa é aquela que permite que o usuário salve uma página inteira de configurações, dando um nome a ela. Mais tarde, ele pode escolher para carregar essas configurações pelo nome escolhido.
+
+No caso da Febrace\textsuperscript{V} foi usada a abordagem de usar o valor anterior como valor padrão do componente de formulário. (figura ~\ref{remembered_choices}).
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/remembered_choices.png}
+        \end{center}
+        \caption{Escolhas memorizadas no caso de preenchimento incorreto em formulário}
+        \label{remembered_choices}
+    \end{figure}
