@@ -1,9 +1,7 @@
-{% extends "base.html" %}
-
-{% block title%} | Projetos | {{ title }}{% endblock %}
+{% extends "projects/base.html" %}
 
 {% block header%}
-    <h1>Projetos | {{ title }}</h1>
+    <h1>{{ block.super }} {{ title }}</h1> 
 {% endblock %}
 
 {% block content %}

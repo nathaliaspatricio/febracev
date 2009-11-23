@@ -7,45 +7,139 @@
 {% endblock %}
 
 {% block content %}
-
-    <h2>Projetos</h2>
-    <ul>
-    {% for project in project_list %}
-        <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
-    {% endfor %}
-    </ul>
-    <br/>
-
-    <h2>Usuários</h2>
-    <ul>
-    {% for profile in profile_list %}
-        {% if profile.user %}
-            <li><a href="{{ profile.get_absolute_url }}">{{ profile.name }}</a></li>
+    {% if site  %}
+        <h2>Projetos</h2><br/>
+        <ul>
+        {% for project in project_list|slice:":5" %}
+            <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+        {% if project_list|slice:"5:" %}
+            <a href={% url search_projects search_input=title %}>mais...</a>
+            <br/><br/>
         {% endif %}
-    {% endfor %}
-    </ul>
-    <br/>
 
-    <h2>Colunas</h2>
-    <ul>
-    {% for article in article_list %}
-        <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
-    {% endfor %}
-    </ul>
-    <br/>
+        <h2>Usuários</h2><br/>
+        <ul>
+        {% for profile in profile_list|slice:":5" %}
+            {% if profile.user %}
+                <li><a href="{{ profile.get_absolute_url }}">{{ profile.name }}</a></li>
+            {% else %}
+                <li>{{ profile.name }}</li>
+            {% endif %}
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+        {% if profile_list|slice:"5:" %}
+            <a href={% url search_profiles search_input=title %}>mais...</a>
+            <br/><br/>
+        {% endif %}
 
-    <h2>Tags</h2>
-    <ul>
-    {% for tag in tag_list %}
-        <li><a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a></li>
-    {% endfor %}
-    </ul>
-    <br/>
-    
-    <h2>Posts</h2>
-    <ul>
-    {% for post in post_list %}
-        <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
+        <h2>Colunas</h2>
+        <ul>
+        {% for article in article_list|slice:":5" %}
+            <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+        {% if article_list|slice:"5:" %}
+            <a href={% url search_articles search_input=title %}>mais...</a>
+            <br/><br/>
+        {% endif %}
+
+        <h2>Tags</h2><br/>
+        <ul>
+        {% for tag in tag_list|slice:":5" %}
+            <li><a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a></li>
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+        {% if tag_list|slice:"5:" %}
+            <a href={% url search_tags search_input=title %}>mais...</a>
+            <br/><br/>
+        {% endif %}
+        
+        <h2>Posts</h2><br/>
+        <ul>
+        {% for post in post_list|slice:":5" %}
+            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+        {% if post_list|slice:"5:" %}
+            <a href={% url search_posts search_input=title %}>mais...</a>
+            <br/><br/>
+        {% endif %}
+        
+    {% endif %}
+    {% if projects %}
+        <h2>Projetos</h2><br/>
+        <ul>
+        {% for project in project_list %}
+            <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+    {% endif %}
+    {% if profiles %}
+        <h2>Usuários</h2><br/>
+        <ul>
+        {% for profile in profile_list %}
+            {% if profile.user %}
+                <li><a href="{{ profile.get_absolute_url }}">{{ profile.name }}</a></li>
+            {% else %}
+                <li>{{ profile.name }}</li>
+            {% endif %}
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+    {% endif %}
+    {% if articles %}
+        <h2>Colunas</h2>
+        <ul>
+        {% for article in article_list %}
+            <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+    {% endif %}
+    {% if tags %}
+        <h2>Tags</h2><br/>
+        <ul>
+        {% for tag in tag_list %}
+            <li><a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a></li>
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+    {% endif %}
+    {% if posts %}
+        <h2>Posts</h2><br/>
+        <ul>
+        {% for post in post_list %}
+            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        {% empty %}
+            Não há itens encontrados.
+        {% endfor %}
+        </ul>
+        <br/>
+    {% endif %}
 {% endblock %}

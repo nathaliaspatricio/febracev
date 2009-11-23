@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title%} | Projetos | {{ title }}{% endblock %}
+
+{% block header%}
+    Projetos | 
+{% endblock %}
+
+{% block breadcrumbs%}
+<h4>
+    {% if code %}
+        <a href='../../../'>Projetos</a> >
+        <a href='../../'>{{ year }}</a> >
+        <a href='../'>{{ category }}</a> >
+        {{ code }}
+    {% else %}
+        {% if category %}
+            <a href='../../'>Projetos</a> >
+            <a href='../'>{{ year }}</a> >
+            {{ category }}
+        {% else %}
+            {% if year %}
+                <a href='../'>Projetos</a> >
+                {{ year }}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+</h4>
+{% endblock %}

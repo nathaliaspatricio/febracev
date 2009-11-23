@@ -14,5 +14,5 @@ function menudo_search_click(){
 
 function menudo_search(){
   var f=encodeURIComponent(document.getElementById('menudo_search_field').value);
-  location.href='/search/'+f;
+  location.href='/search/site/'+f;
 }

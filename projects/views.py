@@ -25,8 +25,25 @@ def projects_by_year(request, year):
                    request,
                    queryset = Project.objects.filter(edition=year),
                    template_object_name = 'project',
-                   extra_context = {'title': year}
+                   extra_context = {'title': year, 'year': year}
                )
+
+def project_by_year_and_category(request, year, category):
+    if (int(year) < 2003 or int(year) > 2009):
+        raise Http404
+    categories = dict(CATEGORIES)
+    if (category not in categories.keys()):
+        raise Http404
+    else:
+        return list_detail.object_list(
+           request,
+           queryset = Project.objects.filter(category=category, edition=year),
+           template_object_name = 'project',
+           extra_context = {'title': year + " | " +categories[category],
+                            'year': year,
+                            'category': category
+                            }
+       )
 
 def projects_by_category(request, category):
     categories = dict(CATEGORIES)
@@ -59,9 +76,6 @@ def project_detail(request, year=None, category=None, code=None, slug=None):
     else:
         is_fav = is_owner = False
 
-    
-
-
     return render_to_response('projects/project_detail.html',
                               { 'project': project,
                                 'is_favorite': is_fav,
@@ -69,6 +83,10 @@ def project_detail(request, year=None, category=None, code=None, slug=None):
                                 'student_list': student_list,
                                 'advisor_list': advisor_list, 
                                 'prize_list': prize_list,
+                                'title': project.name,
+                                'year': project.edition,
+                                'category': project.category,
+                                'code': project.code,
                               },
                               context_instance=RequestContext(request))
 

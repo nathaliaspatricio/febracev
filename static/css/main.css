@@ -36,7 +36,7 @@ list-style-type:none;
 li {
 list-style-type:none;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
 font-family:arial,sans-serif;
 }
 #everything {
@@ -3156,6 +3156,9 @@ width:980px;
 }
 #main #header h1 {
 padding:0 20px;
+}
+#main #header h4 {
+padding: 5px 20px;
 }
 #main div.column {
 position:relative;

@@ -13,6 +13,11 @@ urlpatterns = patterns('projects.views',
         name='projects_by_year'
     ),
     url(
+        r'^(?P<year>\d{4})/(?P<category>[A-Z]{3})/$',
+        'project_by_year_and_category',
+        name='projects_project_by_year_and_category'
+    ),
+    url(
         r'^(?P<category>[A-Z]{3})/$',
        'projects_by_category',
         name='projects_by_category'
