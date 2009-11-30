@@ -552,7 +552,7 @@ Uma outra abordagem pode ser aplicado quando a interface apresenta um campo de t
 
 A técnica mais complexa é aquela que permite que o usuário salve uma página inteira de configurações, dando um nome a ela. Mais tarde, ele pode escolher para carregar essas configurações pelo nome escolhido.
 
-No caso da Febrace\textsuperscript{V} foi usada a abordagem de usar o valor anterior como valor padrão do componente de formulário. (figura ~\ref{remembered_choices}).
+No caso da Febrace\textsuperscript{V} foi usada a abordagem de usar o valor anterior como valor padrão do componente de formulário (figura ~\ref{remembered_choices}).
 
     \begin{figure}[h]
         \begin{center}
@@ -561,3 +561,67 @@ No caso da Febrace\textsuperscript{V} foi usada a abordagem de usar o valor ante
         \caption{Escolhas memorizadas no caso de preenchimento incorreto em formulário}
         \label{remembered_choices}
     \end{figure}
+
+\subsection{Esquecendo os formatos}
+
+Quando um usuário está em um \textit{site}, ele quer executar alguma tarefa e para isso não ter que fazer escolhas complicadas para realizá-la. Já os computadores são bons em manipular entradas de dado de diferentes tipos. É uma combinação perfeita: deixar o usuário digitar o que ele precisa e o \textit{software} fazer a coisa certa com o que foi digitado.
+
+Isso pode ajudar a simplificar a interface do usuário, até mesmo eliminando a exigência de uma sugestão de entrada, embora muitas vezes possam ser vistos juntos.
+
+Um exemplo na Febrace\textsuperscript{V} é o campo de busca na barra de navegação superior. O usuário digita a palavra que deseja, o \textit{software} busca nos diversos objetos existentes (projetos, perfis de usuário, colunas, \textit{tags} e entradas de diários de bordo) e é mostrado um resumo dos resultados para cada objeto (figura ~\ref{forgiving_formats}).
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/forgiving_formats.png}
+        \end{center}
+        \caption{Página de resultados da busca}
+        \label{forgiving_formats}
+    \end{figure}
+
+O uso desse \textit{pattern} transforma um problema de interface em um problema de programação. É necessário pensar sobre quais coisas são comumente digitadas por um usuário. Por isso, cada caso é único e deve-se testar bastante para ver se o \textit{software} atende as necessidades.
+
+\subsection{\textit{Breadcrumbs}}
+
+Um usuário precisa conseguir se localizar em um \textit{site}: em que página está, por onde ele já passou e onde ele irá depois. Ou seja, ele deve entender o fluxo e a hierarquia das páginas para se sentir perdido e encontrar as informações desejadas.
+
+A solução proposta por esse \textit{pattern} é prover uma lista de \textit{links} lado a lado que dê aos usuários a sensação de onde estiveram ou estão e como isso se encaixa na estrutura geral do \textit{site}. Essa lista é chamada de \textit{breadcrumbs}
+
+Há dois tipos de \textit{breadcrumbs}:
+
+    \begin{enumerate}
+        \item Estruturais \\
+            Usados quando o \textit{site} tem uma estrutura lógica de passos ou uma hierarquia em que o usuário pode se perder se não houver uma ajuda mostrando-lhes onde está.
+        \item Históricos \\
+            Usados quando é importante ou útil para o usuário saber onde ele esteve em um \textit{site}. Mostra ao usuário onde ele foi ou que páginas já visitou e permite que revejam-nas através de um histórico pessoal.
+    \end{enumerate}
+
+No caso da Febrace\textsuperscript{V} foram escolhidos os \textit{breadcrumbs} estruturais para serem implementados (figura ~\ref{breadcrumbs}).
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/breadcrumbs.png}
+        \end{center}
+        \caption{\textit{Breadcrumbs} na listagem de projetos}
+        \label{breadcrumbs}
+    \end{figure}
+
+Os \textit{breadcrumbs} estruturais normalmente devem ser colocados no canto superior esquerdo da página, como é a convenção e os usuários esperam encontrá-los. A lista deve ser orientada horizontalmente, com a página de maior nível na estrutura a esquerda e as de nível inferior aparecendo a direita dela. O último item da lista deve ser a página atual e não precisa ser um \textit{link} como os demais.
+
+\subsection{Barra superior de navegação}
+
+O uso de barra superior de navegação é uma convenção muito bem estabelecida na \textit{web}, tanto que os usuários já esperam por ela. Porém, o mais importante é que a barra contenha um conjunto de links ou botões que reflitam a estrutura do \textit{site}. Isso dá uma visão geral ao usuário e o ajuda a encontrar o que ele precisa. Isso também facilita a exploração e a movimentação, colocando cada seção a um \textit{click} de distância a partir de qualquer página.
+
+É importante manter a coerência na barra superior de navegação. Para isso, o número de seções deve caber no espaço disponível, e seus nomes não devem usar muitas palavras, devendo ser significativas para o usuário. A barra deve ter a mesma aparência em todas as páginas do \textit{site} e estar localizada no mesmo lugar.
+
+Para mostrar ao usuário onde ele está, basta fazer com que o \textit{link} da seção atual tenha uma aparência diferente das demais. Use uma cor contrastante ou uma figura menos intrusiva como uma flecha.
+
+Na Febrace\textsuperscript{V} há uma barra superior de navegação e os nomes de cada seção possuem apenas uma palavra que remete às funcionalidades correspondentes (figura ~\ref{home}). Optou-se ainda por diferenciar a seção em que o usuário está alterando a cor do \textit{link} na barra daquela seção. 
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=0.7\linewidth]{arquivos/home.png}
+        \end{center}
+        \caption{Barra superior de navegação}
+        \label{home}
+    \end{figure}
+
