@@ -252,13 +252,46 @@
 
   \subsection{Tecnologias utilizadas}\label{tecnologias}
 
-    O projeto foi desenvolvido em plataforma Linux, sob as distribuições Ubuntu e ArchLinux. A linguagem de programação escolhida foi o Python, com o uso do framework Django para a construção de aplicações web. No desenvolvimento de testes automáticos, foram utilizados a biblioteca \texttt{PyUnit}, componente integrante do Python, a ferramenta \texttt{test-client}, parte do \textit{Framework} Django e o kit de testes de aplicações Web \texttt{Selenium}, por meio de seu plugin para Firefox. Fez-se também o uso de alguns componentes reusáveis hospedados no Django Plugables\footnote{http://www.djangopluggables.com}, como o \texttt{django-registration}, \texttt{django-tagging} e \texttt{django-profiles}.
+O projeto foi desenvolvido em plataforma Linux, sob as distribuições Ubuntu e ArchLinux. A linguagem de programação escolhida foi o Python, com o uso do \textit{framework} Django para a construção de aplicações \textit{web}. No desenvolvimento de testes automáticos, foram utilizados a biblioteca \texttt{PyUnit}, componente integrante do Python, a ferramenta \texttt{test-client}, parte do \textit{Framework} Django e o kit de testes de aplicações \textit{web} \texttt{Selenium}, por meio de seu plugin para Firefox. 
 
-    Durante o desenvolvimento, foi utilizado o servidor Web integrado do Django, que permite a alteração das aplicações em tempo real, sem a necessidade de reinício de servidor. Ele não é, entretanto, um servidor apropriado para sistema em produção (não consegue processar requisições simultâneas, por exemplo), e o produto final utiliza o servidor Web Apache. O mesmo ocorre com o sistema de banco de dados. Durante o desenvolvimento, foi utilizado o SQLite3, mas no sistema de produção é utilizado o PostgreSQL.
+O Django possibilita o uso de componentes. Em \citeonline{brown96}, um componente é descrito como "uma não-trivial, quase independente, e substituível parte de um sistema que cumpre uma função clara no contexto de uma arquitetura bem definida". Pode-se generalizar dizendo que componentes são definidos para oferecer um certo nível de serviço. No caso dos componentes "comerciais de prateleira" (\textit{commercial off-the-shelf} ou Cots), não há a necessidade do desenvolvedor conhecer sobre seu funcionamento interno. Ao invés disso, a interface externa deve ser bem definida e a partir dela o desenvolvedor pode fazer a integração com outras partes de um sistema segundo suas necessidades. 
 
-    O código do projeto é gerenciado por meio de um sistema descentralizado de controle de versões, o Git. Como será o Febrace\textsuperscript{V} é um sistema com código fonte aberto, o mesmo foi desenvolvido com suporte no GitHub, onde o projeto se encontra hospedado\footnote{http://www.github.com/nathaliaspatricio/febracev}. Como forma de registro do andamento do projeto foi criado um blog\footnote{http://febracev.wordpress.com} com esse fim no Wordpress, e para a compilação de referências bibliográficas estão sendo usados um disco virtual\footnote{http://febracev.4shared.com} e o CiteULike\footnote{http://www.citeulike.org/groupfunc/9663} da Springer. Como uma forma de ajudar no gerenciamento do projeto, suprindo a falta de um espaço físico que disponibilize lousas e quadros de notas, está sendo usado o site Producteev\footnote{http://www.producteev.com}, um sistema de gerenciamento de tarefas. Para coleta e relato de \textit{bugs} será usado o Trac\footnote{http://www.lsi.usp.br/nate/trac}. Para fazer a compilação dos dados coletados com os questionários de perfil de uso utilizou-se o LimeSurvey\footnote{http://www.lsi.usp.br/nate/febracev}.
+Na Febrace\textsuperscript{V} foi feito o uso de alguns componentes:
 
-    As tecnologias foram escolhidas com base na experiência prévia e habilidades técnicas da equipe.
+	\begin{itemize}
+	  \item{
+		\texttt{django-profiles}: implementa a criação, edição e gerenciamento de perfis de redes sociais. Está disponível no Bit Bucket\footnote{http://bitbucket.org/ubernostrum/django-profiles};
+	  }
+	  \item{
+		\texttt{django-photologue}: implementa o gerenciamento de galerias de fotos. Está disponível no Google Code\footnote{http://code.google.com/p/django-photologue};
+	  }
+	  \item{ 
+	    \texttt{django-basic-blog}: implementa o gerenciamento de apenas um blog. Está disponível no Google Code\footnote{http://code.google.com/p/django-basic-apps};
+	  }
+	  \item{ 
+	    \texttt{django-tagging}: implementa a funcionalidade que permite associar \textit{tags} com algum conteúdo. Está disponível no Google Code\footnote{http://code.google.com/p/django-tagging};
+	  }
+      \item{
+        \texttt{django-registration}: implementa o cadastro de novo usuário e o \textit{login} em um sistema. Está disponível no Bit Bucket\footnote{http://bitbucket.org/ubernostrum/django-registration} e
+       }
+       \item{
+        \texttt{django-messages}: módulo para envio de mensagens diretas entre dois usuários. Possui uma caixa de entrada, uma caixa de saída e lixeira onde os usuários podem verificar suas mensagens e respondê-las. Está disponível no Google Code\footnote{http://code.google.com/p/django-messages}.
+       }
+	\end{itemize} 
+
+A vantagem de usar componentes é não ter que implementar novamente funcionalidades comuns a diversos aplicativos (componentes conhecidos como Cots). Por exemplo, redes sociais costumam possuir álbum de fotos e é interessante que isso seja um módulo reusável que pode ser usado em todas elas sem a necessidade de cada um reprogramar essa funcionalidade.
+
+No caso da Febrace\textsuperscript{V}, os componentes são todos de código fonte aberto. A vantagem disso é a possibilidade de alteração deles para que se adequem para o caso específico da rede social. Por exemplo, a Febrace\textsuperscript{V} possui galerias de fotos, porém foi necessário fazer algumas alterações no código fonte para que cada projeto pudesse ter a sua própria galeria e só os integrantes dele pudessem alterá-la.
+
+Durante o desenvolvimento, foi utilizado o servidor \textit{web} integrado do Django, que permite a alteração das aplicações em tempo real, sem a necessidade de reinício de servidor. Ele não é, entretanto, um servidor apropriado para sistema em produção (não consegue processar requisições simultâneas, por exemplo), e o produto final utiliza o servidor \textit{web} Apache. O mesmo ocorre com o sistema de banco de dados. Durante o desenvolvimento, foi utilizado o SQLite3, mas no sistema em produção é utilizado o PostgreSQL.
+
+Como a Febrace\textsuperscript{V} é um sistema com código fonte aberto, o código foi hospedado no GitHub\footnote{http://www.github.com/nathaliaspatricio/febracev}. O GitHub é um repositório público para projetos \textit{open source}. Ele usa o Git como sistema de controle de versão de código. 
+
+O Git é um sistema de código fonte aberto para controle de versão de forma distribuída. Originalmente era usada para o desenvolvimento do kernel do Linux, mas está se popularizando. Ele possui um repositório central e pode ter vários repositórios locais. Cada desenvolvedor pode ter um repositório local em sua máquina. O interessante é que o desenvolvedor pode fazer um \textit{commit} de uma versão só no seu repositório local, continuar trabalhando em cima do código e só depois enviar ao repositório central.
+
+Como forma de registro do andamento do projeto foi criado um blog\footnote{http://febracev.wordpress.com} com esse fim no Wordpress, e para a compilação de referências bibliográficas foram usados um disco virtual\footnote{http://febracev.4shared.com} e o CiteULike\footnote{http://www.citeulike.org/groupfunc/9663} da Springer. Como uma forma de ajudar no gerenciamento do projeto, suprindo a falta de um espaço físico que disponibilize lousas e quadros de notas, foi usado o site Producteev\footnote{http://www.producteev.com}, um sistema de gerenciamento de tarefas. Para coleta e relato de \textit{bugs} foi usado o Trac\footnote{http://www.lsi.usp.br/nate/trac}. Para fazer a compilação dos dados coletados com os questionários de perfil de uso utilizou-se o LimeSurvey\footnote{http://www.lsi.usp.br/nate/febracev}.
+
+As tecnologias foram escolhidas com base na experiência prévia e habilidades técnicas da equipe.
 
   \subsection{\textit{Planning game}}
     Antes do início de uma iteração é necessário que se definam quais serão as histórias a serem implementadas nesse ciclo de desenvolvimento. Essa escolha se dá por meio do \textit{Planning Game}, ou Jogo do Planejamento. No \textit{Planning Game}, desenvolvedores e clientes sentam-se juntos, e têm a frente o conjunto de histórias escritas até o momento. Os clientes definem a prioridade das histórias, enquanto os desenvolvedores definem a complexidade (dificuldade de implementação) de cada uma. Levando em consideração esses dois parâmetros, os envolvidos escolhem um subconjunto de histórias, cuja prioridade seja mais alta e cuja complexidade seja possível de lidar no período de desenvolvimento. Assim definem-se as histórias a serem trabalhadas em uma iteração.
