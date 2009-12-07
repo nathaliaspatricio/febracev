@@ -116,7 +116,7 @@ Uma equipe usando XP possui quatro papéis principais:
     \end{figure}
 
 	\subsection{Programação extrema no contexto acadêmico}\label{xp_e_universidade}
-    Uma das metas do projeto é testar a validade de um conjunto de práticas propostas pela programação extrema, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetiva-se também documentar essa experiência de forma que outros alunos que também queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias nesse caso em particular.
+    Uma das metas do projeto foi testar a validade de um conjunto de práticas propostas pela programação extrema, e experimentar sua consistência quando aplicada no contexto acadêmico. Objetivou-se também documentar essa experiência de forma que outros alunos que queiram trabalhar com essas metodologias em seus projetos na universidade tenham um relato no qual se basear, com possíveis heurísticas e adaptações que se fizeram necessárias nesse caso em particular.
 
     Tendo isso em vista, realizou-se uma pesquisa por artigos que descrevessem experiências semelhantes de aplicação de metodologias ágeis na graduação. Foram encontrados diversos relatos dessa natureza, muitos deles descrevendo a utilização dessas metodologias em projetos de conclusão de curso.
 
@@ -127,18 +127,18 @@ Uma equipe usando XP possui quatro papéis principais:
     Apesar das relatos positivos envolvendo a aplicação desse método ágil no contexto acadêmico, uma série de adaptações foi necessária para adequá-la aos cursos. As principais dificuldades citadas na utilização dessa metodologia na universidade foram:
 
     \subsubsection{Área de trabalho compartilhada}
-      Os laboratórios das universidades, assim como suas salas de aula, não foram projetados para possibilitar a colaboração entre seus alunos. Um espaço de trabalho coletivo e informativo, preconizado pelo XP, não está a disposição das equipes.
+      Os laboratórios das universidades, assim como suas salas de aula, não foram projetados para possibilitar a colaboração entre seus alunos. Um espaço de trabalho coletivo e informativo, preconizado pelo XP, não está, em geral, à disposição das equipes.
 
     \subsubsection{Disponibilidade de tempo}
-      Na programação extrema, os programadores devem ao máximo tentar cumprir duas metas referentes a dedicação de tempo a um projeto. A primeira é não ultrapassar as 40 horas de trabalho semanais no desenvolvimento de um projeto, pois acredita-se que um programador que realize muitas horas-extras não terá a motivação e disposição necessários para o trabalho. A outra é que um programador deve se envolver com o menor número possível de projetos simultaneamente, pois o resultado de um projeto é melhor quanto mais exclusiva é sua dedicação a ele. Perde-se muito tempo e energia na troca de contextos. 
+      Na programação extrema, os programadores devem ao máximo tentar cumprir duas metas referentes a dedicação de tempo a um projeto. A primeira é não ultrapassar as 40 horas de trabalho semanais no desenvolvimento de um projeto, pois acredita-se que um programador que realize muitas horas-extras não terá a motivação e disposição necessários para o trabalho. A outra é que um programador deve se envolver com o menor número possível de projetos simultaneamente, pois o resultado de um projeto é melhor quanto mais exclusiva é sua dedicação a ele. Perde-se muito tempo e energia na troca de contextos.
 
       Essas recomendações, já difíceis de serem cumpridas no ambiente corporativo, são de reprodução quase impossível num curso universitário. Especialmente com relação a troca de contextos, pois não se pode esperar a dedicação integral a uma ou outra atividade do curso. Os horários dos alunos são em geral mais fragmentados do que de um programador profissional.
 
     \subsubsection{Presença do cliente}
-      A presença do cliente na equipe de XP, incomum mesmo em empresas, é ainda mais difícil na universidade. Duas abordagens costumam ser adotadas nos grupos universitários para suprir essa necessidade. Uma delas é a realização de projetos para um cliente real, normalmente vinculado à alguma organização não-governamental ou entidade pública, buscando solucionar num projeto de graduação alguma demanda da sociedade. Outra é ter alguém da universidade que cumpra o papel de cliente, como algum aluno, professor ou pesquisador.
+      A presença do cliente na equipe de XP, prática que enfrenta resistência mesmo em empresas, é ainda mais difícil na universidade. Duas abordagens costumam ser adotadas nos grupos universitários para suprir essa necessidade. Uma delas é a realização de projetos para um cliente real, normalmente vinculado à alguma organização não-governamental ou entidade pública, buscando solucionar num projeto de graduação alguma demanda da sociedade. Outra é ter alguém da universidade que cumpra o papel de cliente, como algum aluno, professor ou pesquisador.
 
-    \subsubsection{Necessidade de \textit{coaching}}
-      Normalmente as equipes não tem nenhuma experiência anterior com o XP, e a presença do \textit{coach} é importante para a aprendizagem da metodologia.
+    \subsubsection{Necessidade de treinamento (\textit{coaching})}
+      Normalmente as equipes não tem nenhuma experiência anterior com o XP, pois metodologias ágeis não costumam ser abordadas nos currículos de Engenharia e Computação. Isso faz com que a presença do treinador (\textit{coach}) seja importante para a aprendizagem da metodologia.
 
     \subsubsection{Testes}
       As experiências relatam dificuldades na utilização de testes automáticos, seja por problemas culturais (como a pouca importância dada a esse tópico no restante do currículo), seja por aspectos técnicos.
@@ -148,9 +148,9 @@ Uma equipe usando XP possui quatro papéis principais:
 
 \section{Arquitetura do sistema}
 
-    Como consequência do uso do \textit{framework} para desenvolvimento \textit{web} Django, a arquitetura do sistema foi a especificada pelo Django.
+    A principal ferramenta para o desenvolvimento do projeto foi o \textit{framework} para desenvolvimento \textit{web} Django, que usa como arquitetura uma variação do modelo MVC (\textit{Model, View, Controller}). A arquitetura do sistema desenvolvido, por basear-se na arquitetura do \textit{framework}, adota também essa metáfora, descrita a seguir.
 
-    Segundo \citeonline{alchin08}, o Django usa uma arquitetura conhecida como MTV, \textit{Model, Template, View} (figura~\ref{django_arquitetura} que nada mais é que uma variação do modelo MVC (\textit{Model, View, Controller}), arquitetura na qual separam-se as regras de negócios (\textit{Controller}), os dados e métodos de acessos aos mesmos (\textit{Model}) e as regras de apresentação (\textit{View}). Essa separação tem por objetivo o desacoplamento da lógica entre essas camadas, de maneira que cada uma delas pode ser modificada sem alterar o funcionamento das outras. Essa arquitetura também facilita a modularidade do sistema.
+    Segundo \citeonline{alchin08}, o Django usa uma arquitetura conhecida como MTV, \textit{Model, Template, View} (figura~\ref{django_arquitetura} que nada mais é que uma variação do modelo MVC, arquitetura na qual separam-se as regras de negócios (\textit{Controller}), os dados e métodos de acessos aos mesmos (\textit{Model}) e as regras de apresentação (\textit{View}). Essa separação tem por objetivo o desacoplamento da lógica entre essas camadas, de maneira que cada uma delas pode ser modificada sem alterar o funcionamento das outras. Essa arquitetura também facilita a modularidade do sistema.
 
     \begin{figure}[h]
         \begin{center}
@@ -160,11 +160,11 @@ Uma equipe usando XP possui quatro papéis principais:
         \label{django_arquitetura}
     \end{figure}
 
-    No caso da arquitetura MTV, o \textit{framework} Django é o que faz as vezes de controlador da arquitetura MVC. Sendo assim, na arquitetura MTV, o \textit{Controller} não é responsável pela lógica do negócio e sim pelo funcionamento do sistema. Além de \textit{models}, \textit{views} e \textit{templates}, no Django há também o \textit{URL dispatcher},\textit{middlewares} e \textit{handlers} e são estes que são encarados como \textit{Controller}.
+    No caso da arquitetura MTV, um conjunto de componentes do \textit{framework} é que cumpre o papel de controlador da arquitetura MVC. Sendo assim, nessa arquitetura a camada denominada \textit{Controller} não é responsável pela lógica do negócio e sim pelo funcionamento do sistema. No Django, compõem o Controlador componentes como o \textit{URL dispatcher}, \textit{middlewares} e \textit{handlers}.
 
     O \textit{URL dispatcher} é o componente responsável em analisar os endereços requisitados pelo cliente e redirecionar essa requisição para a aplicação correta. Já o \textit{middleware} é um conjunto de componentes que realizam pré e pós filtragens nas requisições, o que possibilita funcionalidade como internacionalização de uma aplicação e gerenciamento de sessões autenticadas.
 
-    No \textit{Model}, são escritas as classes que designarão as tabelas no banco de dados. A manipulação dessas tabelas ocorre através do ORM (mapeamento objeto relacional) e, por isso, não é necessária a escrita de \textit{querys} em SQL para a persistência dos dados. Uma outra vantagem é baixa preocupação com qual sistema gerenciador de banco de dados será usado, uma vez que o ORM suporta vários sistemas. Há suporte atualmente para MySQL, PostgreSQL e SQLite.
+    No \textit{Model}, são escritas as classes que designarão as tabelas no banco de dados. A manipulação dessas tabelas ocorre através do ORM (mapeamento objeto relacional) e, por isso, não é necessária a escrita de \textit{querys} em SQL para a persistência dos dados. Essa prática entretando é possível em casos nas quais se mostre necessária. Uma outra vantagem é baixa preocupação com qual sistema gerenciador de banco de dados será usado, uma vez que o ORM suporta vários sistemas. Há suporte atualmente para MySQL, PostgreSQL e SQLite.
 
     Nessa camada também devem ser escritas as regras de acesso às informações, regras para os eventos de cada modelo (métodos \texttt{save}, \texttt{delete}, etc.), e também regras genéricas para eventos que podem ser usados em mais de um modelo (sinais). Toda a lógica de manipulação da informação de uma aplicação estará em seu modelo.
 
@@ -192,7 +192,7 @@ A usabilidade é definida por cinco componentes qualitativos:
             A interface é agradável de ser usada.
     \end{enumerate}
 
-Há outros atributos qualitativos importantes. Um deles é a utilidade, que remete para a funcionalidade da interface. Usabilidade e utilidade são igualmente importantes: para um usuário não importa que algo seja fácil de fazer, se não é o que ele necessita. 
+Há outros atributos qualitativos importantes. Um deles é a utilidade, que remete para a funcionalidade da interface. Usabilidade e utilidade são igualmente importantes: para um usuário não importa que algo seja fácil de fazer, se não é o que ele necessita.
 
 Na \textit{web}, a usabilidade é uma condição necessária para a sobrevivência. Segundo \citeonline{krug06}, o usuário deve ser capaz de entender uma interface (o que ela é e como usá-la) sem desprender esforço nisso. Ou seja, ela deve ser evidente por si só e auto-explicativa. Se o usuário achar difícil usar um \textit{site}, ele simplesmente não o usará mais e procurará outro que ofereça a mesma funcionalidade. Se a página principal não transmitir claramente o que ele faz e para que serve, o usuário não entenderá e irá embora. Se o usuário se sentir perdido ou se as informações forem difíceis de ler ou de entender, ele sairá do \textit{site}. Enfim, se o usuário encontrar dificuldades em usar um \textit{site}, ele simplesmente o abandonará sem maiores constrangimentos. Isso mostra a importância do \textit{design} da interface na retenção de usuários na \textit{web}.
 
@@ -200,7 +200,7 @@ Um das abordagens para se melhorar a usabilidade de uma interface é o uso de pa
 
 Segundo \citeonline{tidwell05}, \textit{patterns} são recursos estruturais e comportamentais que melhoram a "habitabilidade" de alguma coisa, como uma interface de usuário, um \textit{site}, um programa orientado a objetos ou até um edifício. Eles tornam as coisas mais simples de entender ou mais bonitas; fazem com que as ferramentas sejam mais úteis e usáveis.
 
-Sendo assim, pode-se dizer que \textit{usability design patterns} são boas práticas ou soluções comprovadas para um problema em um determinado contexto de \textit{design}. Apesar disso, eles não são componentes "de prateleira" (\textit{off-the-shelf}), uma vez que cada implementação de um \textit{pattern} difere um pouco de outra. 
+Sendo assim, pode-se dizer que \textit{usability design patterns} são boas práticas ou soluções comprovadas para um problema em um determinado contexto de \textit{design}. Apesar disso, eles não são componentes "de prateleira" (\textit{off-the-shelf}), uma vez que cada implementação de um \textit{pattern} difere um pouco de outra.
 
 \citeonline{welie00} apresentam uma das estruturas possíveis de um padrão de usabilidade:
     \begin{enumerate}
