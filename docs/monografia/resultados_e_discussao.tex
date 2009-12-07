@@ -613,11 +613,11 @@ As tecnologias foram escolhidas com base na experiência prévia e habilidades t
 
 \section{Análise das interfaces e aplicação de padrões de usabilidade}
 
-Os \textit{design patterns} usados para análise e aplicação nas interfaces foram consultados em Welie.com\footnote{http://www.welie.com}, Design Interfaces\footnote{http://designinginterfaces.com/} e Quince UX Design Patterns\footnote{http://quince.infragistics.com/}.
+Os \textit{design patterns} usados para aplicação nas interfaces foram consultados em \textit{sites} de especialistas no assunto: Welie.com\footnote{http://www.welie.com}, Design Interfaces\footnote{http://designinginterfaces.com/} e Quince UX Design Patterns\footnote{http://quince.infragistics.com/}.
 
 \subsection{Link para a página principal}
 
-É comum o usuário durante a navegação em um \textit{site} desejar retornar à página inicial. Para isso, deve existir um elemento fixo e conhecido que o permita em qualquer página fazer isso. Esse \textit{pattern} sugere que o link para a página inicial deve ser no logo do \textit{site} (caso possua um). Caso contrário, recomenda-se que se use um link de texto com a palavra "\textit{home}" ou com um ícone de uma casa. Em qualquer um dos casos, o link deve estar sempre na mesma posição em todas as páginas para evitar confusão do usuário.
+Durante a navegação em um \textit{site}, é comum o usuário desejar retornar à página inicial. Para isso, deve existir um elemento fixo e conhecido que permita em qualquer página fazer isso. Esse \textit{pattern} sugere que o link para a página inicial seja no logo do \textit{site} (caso possua um). Caso contrário, recomenda-se usar um \textit{link} de texto com a palavra \textit{home} ou com um ícone em formato de casa. Em qualquer um dos casos, o \textit{link} deve estar sempre na mesma posição em todas as páginas para evitar confusão do usuário.
 
 No caso da Febrace\textsuperscript{V} há um logo e portanto ele foi usado como o link para a página principal (figura ~\ref{home_link}).
 
@@ -631,11 +631,11 @@ No caso da Febrace\textsuperscript{V} há um logo e portanto ele foi usado como 
 
 \subsection{Efeito \textit{Rollover}}
 
-Algumas vezes, colocam-se elementos clicáveis na interface, mas não se quer que eles se pareçam com botões por diversos motivos: por ocuparem muito espaço, por não ficarem bem com os demais elementos da página ou porque a procura pelos objetos clicáveis ser parte da diversão para o usuário naquela interface. Para esses casos é indicado o uso do \textit{pattern} de \textit{rollover}.
+Algumas vezes, colocam-se elementos clicáveis na interface, mas não se quer que eles se pareçam com botões. São diversos os motivos para isso: por ocuparem muito espaço, por não ficarem bem com os demais elementos da página ou porque a procura pelos objetos clicáveis faz parte da diversão para o usuário naquela interface. Para esses casos é indicado o uso do \textit{pattern} de \textit{rollover}.
 
-Em geral, usuários sabem que se passarem o ponteiro do \textit{mouse} sobre um elemento da página e este se modificar isso quer dizer que ele é clicável.
+Em geral, os usuários sabem que se passarem o ponteiro do \textit{mouse} sobre um elemento da página e este se modificar isso quer dizer que ele é clicável.
 
-Existem diversas maneiras de se implementar o efeito \textit{rollover}, sendo que podem ser combinadas, o que permite obter um melhor resultado. Uma das possibilidades é a mudança de cor do objeto. Outra abordagem é a mudança de algum elemento próximo. Por exemplo, pode aparecer uma pequena descrição do item em um lugar determinado da página. Uma das mais comuns é a mudança do formato do ponteiro do \textit{mouse} como, por exemplo, para o formato de mão quando é um link. Outra opção não muito recomendada é a mudança do tamanho do objeto ou ele se tornar animado.
+Existem diversas maneiras de se implementar o efeito \textit{rollover}, sendo que podem ser combinadas, o que permite a obtenção de um melhor resultado. Uma das possibilidades é a mudança de cor do objeto. Outra abordagem é a mudança de algum elemento próximo. Por exemplo, pode aparecer uma pequena descrição do item em um lugar determinado da página. Uma das mais comuns é a mudança do formato do ponteiro do \textit{mouse} como, por exemplo, para o formato de mão quando é um \textit{link}. Outra opção não muito recomendada é a mudança do tamanho do objeto ou ele se tornar animado.
 
 No projeto foram usadas duas abordagens em conjunto: mudança de cor do elemento (no caso de textos clicáveis) e mudança do formato do ponteiro do \textit{mouse} (textos e imagens clicáveis). Isso pode ser visto na figura ~\ref{rollover_effect}.
 
@@ -649,13 +649,13 @@ No projeto foram usadas duas abordagens em conjunto: mudança de cor do elemento
 
 \subsection{Escolhas memorizadas}
 
-Uma das tarefas comuns em \textit{site} é o preenchimento de formulários. Algumas vezes, o usuário deseja ou é obrigado a voltar a telas de formulários. Nesse caso, é interessante que as escolhas feitas anteriormente estejam salvas para que ele não precise refazer todo trabalho. 
+Uma das tarefas comuns em \textit{site} é o preenchimento de formulários. Algumas vezes, o usuário deseja ou é obrigado a voltar a telas de formulários. Nesse caso, é interessante que as escolhas feitas anteriormente estejam salvas para que ele não precise refazer todo o trabalho. 
 
-Para exemplificar, suponha que o usuário digitou um dado em formato incorreto, tentou enviar e uma mensagem de erro foi devolvida na tela. Nessa situação, o usuário não deseja perder as escolhas e textos digitados anteriormente e que estavam corretos, mas apenas corrigir seu erro e prosseguir. Se ele tiver que relembrar suas escolhas já feitas há uma chance de desistir da tarefa e ficar insatisfeito com o \textit{site}.
+Para exemplificar, suponha que o usuário digitou um dado em formato incorreto, tentou enviar e uma mensagem de erro foi devolvida na tela. Nessa situação, o usuário não deseja perder as escolhas e textos digitados anteriormente e que estavam corretos, mas apenas corrigir seu erro e prosseguir. Se ele tiver que relembrar suas escolhas há uma chance de desistir da tarefa e ficar insatisfeito com o \textit{site}.
 
 Há várias técnicas para memorizar as escolhas feitas anteriormente. A mais simples é o uso do valor anterior do componente do formulário como valor padrão. Isso funciona para todos os tipos de componentes: campos de texto, \textit{dropdowns}, \textit{radio buttons}, listas, etc.
 
-Uma outra abordagem pode ser aplicado quando a interface apresenta um campo de texto. A idéia é transformá-lo em um \textit{combo box} (que é uma combinação de um campo de texto e um \textit{dropdown}). Cada vez que o usuário digita um valor único no campo do texto, um novo item é inserido no \textit{dropdown}. Uma solução ainda melhor é usar os itens do \textit{dropdown} para fazer o preenchimento automático do que o usuário está digitando!
+Uma outra abordagem pode ser aplicado quando a interface apresenta um campo de texto. A idéia é transformá-lo em um \textit{combo box} (que é uma combinação de um campo de texto e um \textit{dropdown}). Cada vez que o usuário digita um valor único no campo do texto, um novo item é inserido no \textit{dropdown}. Uma solução ainda melhor é usar os itens do \textit{dropdown} para fazer o preenchimento automático enquanto o usuário ainda está digitando.
 
 A técnica mais complexa é aquela que permite que o usuário salve uma página inteira de configurações, dando um nome a ela. Mais tarde, ele pode escolher para carregar essas configurações pelo nome escolhido.
 
@@ -671,11 +671,11 @@ No caso da Febrace\textsuperscript{V} foi usada a abordagem de usar o valor ante
 
 \subsection{Esquecendo os formatos}
 
-Quando um usuário está em um \textit{site}, ele quer executar alguma tarefa e para isso não ter que fazer escolhas complicadas para realizá-la. Já os computadores são bons em manipular entradas de dado de diferentes tipos. É uma combinação perfeita: deixar o usuário digitar o que ele precisa e o \textit{software} fazer a coisa certa com o que foi digitado.
+Quando um usuário está em um \textit{site}, ele quer executar alguma tarefa e, para realizá-la, não ter que fazer escolhas complicadas. Já os computadores são bons em manipular entradas de dado de diferentes tipos. É uma combinação perfeita: deixar o usuário digitar o que ele precisa e o \textit{software} fazer a coisa certa com o que foi digitado.
 
 Isso pode ajudar a simplificar a interface do usuário, até mesmo eliminando a exigência de uma sugestão de entrada, embora muitas vezes possam ser vistos juntos.
 
-Um exemplo na Febrace\textsuperscript{V} é o campo de busca na barra de navegação superior. O usuário digita a palavra que deseja, o \textit{software} busca nos diversos objetos existentes (projetos, perfis de usuário, colunas, \textit{tags} e entradas de diários de bordo) e é mostrado um resumo dos resultados para cada objeto (figura ~\ref{forgiving_formats}).
+Um exemplo na Febrace\textsuperscript{V} é o campo de busca na barra de navegação superior. O usuário digita a palavra que deseja, o \textit{site} busca nos diversos objetos existentes (projetos, perfis de usuário, colunas, \textit{tags} e entradas de diários de bordo) e é mostrado um resumo dos resultados para cada objeto (figura ~\ref{forgiving_formats}).
 
     \begin{figure}[h]
         \begin{center}
@@ -689,7 +689,7 @@ O uso desse \textit{pattern} transforma um problema de interface em um problema 
 
 \subsection{\textit{Breadcrumbs}}
 
-Um usuário precisa conseguir se localizar em um \textit{site}: em que página está, por onde ele já passou e onde ele irá depois. Ou seja, ele deve entender o fluxo e a hierarquia das páginas para se sentir perdido e encontrar as informações desejadas.
+Um usuário precisa conseguir se localizar em um \textit{site}: em que página está, por onde ele já passou e onde ele irá depois. Ou seja, ele deve entender o fluxo e a hierarquia das páginas para não se sentir perdido e encontrar as informações desejadas.
 
 A solução proposta por esse \textit{pattern} é prover uma lista de \textit{links} lado a lado que dê aos usuários a sensação de onde estiveram ou estão e como isso se encaixa na estrutura geral do \textit{site}. Essa lista é chamada de \textit{breadcrumbs}
 
@@ -712,15 +712,15 @@ No caso da Febrace\textsuperscript{V} foram escolhidos os \textit{breadcrumbs} e
         \label{breadcrumbs}
     \end{figure}
 
-Os \textit{breadcrumbs} estruturais normalmente devem ser colocados no canto superior esquerdo da página, como é a convenção e os usuários esperam encontrá-los. A lista deve ser orientada horizontalmente, com a página de maior nível na estrutura a esquerda e as de nível inferior aparecendo a direita dela. O último item da lista deve ser a página atual e não precisa ser um \textit{link} como os demais.
+Os \textit{breadcrumbs} estruturais normalmente devem ser colocados no canto superior esquerdo da página, como é a convenção e onde os usuários esperam encontrá-los. A lista deve ser orientada horizontalmente, com a página de maior nível na estrutura a esquerda e as de nível inferior aparecendo a direita dela. O último item da lista deve ser a página atual e não precisa ser um \textit{link} como os demais.
 
 \subsection{Barra superior de navegação}
 
-O uso de barra superior de navegação é uma convenção muito bem estabelecida na \textit{web}, tanto que os usuários já esperam por ela. Porém, o mais importante é que a barra contenha um conjunto de links ou botões que reflitam a estrutura do \textit{site}. Isso dá uma visão geral ao usuário e o ajuda a encontrar o que ele precisa. Isso também facilita a exploração e a movimentação, colocando cada seção a um \textit{click} de distância a partir de qualquer página.
+O uso de barra superior de navegação é uma convenção muito bem estabelecida na \textit{web}, tanto que os usuários já esperam por ela. Porém, o mais importante é que a barra contenha um conjunto de \textit{links} ou botões que reflitam a estrutura do \textit{site}. Isso dá uma visão geral ao usuário e o ajuda a encontrar o que ele precisa. Isso também facilita a exploração e a movimentação, colocando cada seção a um \textit{click} de distância a partir de qualquer página.
 
 É importante manter a coerência na barra superior de navegação. Para isso, o número de seções deve caber no espaço disponível, e seus nomes não devem usar muitas palavras, devendo ser significativas para o usuário. A barra deve ter a mesma aparência em todas as páginas do \textit{site} e estar localizada no mesmo lugar.
 
-Para mostrar ao usuário onde ele está, basta fazer com que o \textit{link} da seção atual tenha uma aparência diferente das demais. Use uma cor contrastante ou uma figura menos intrusiva como uma flecha.
+Para mostrar ao usuário onde ele está, basta fazer com que o \textit{link} da seção atual tenha uma aparência diferente das demais. Isso pode ser implementado usando uma cor contrastante ou uma figura menos intrusiva como uma flecha.
 
 Na Febrace\textsuperscript{V} há uma barra superior de navegação e os nomes de cada seção possuem apenas uma palavra que remete às funcionalidades correspondentes (figura ~\ref{home}). Optou-se ainda por diferenciar a seção em que o usuário está alterando a cor do \textit{link} na barra daquela seção. 
 
