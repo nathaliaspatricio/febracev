@@ -3,6 +3,834 @@
         "pk": 1, 
         "model": "auth.user", 
         "fields": {
+            "username": "daiane_diniz", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "daiane_diniz@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "leilane_diniz", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "leilane_diniz@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "auricelia_sodre", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "auricelia_sodre@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 5, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "isa_nascimento", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "isa_nascimento@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "tereza_colares", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "tereza_colares@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 7, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "andre_stadler", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "andre_stadler@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 8, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "haroldo_paula", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "haroldo_paula@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 9, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "wesley_ribeiro", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "wesley_ribeiro@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 10, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "sadraque_viana", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "sadraque_viana@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 11, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "romulo_carvalho", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "romulo_carvalho@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 12, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "rudison_lacerda", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "rudison_lacerda@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 13, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "joel_lima", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "joel_lima@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 14, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "wanderlei_freitas", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "wanderlei_freitas@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 15, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "karen_mariano", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "karen_mariano@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 16, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "luana_peres", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "luana_peres@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 17, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "erick_brito", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "erick_brito@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 18, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "silvia_pacheco", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "silvia_pacheco@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 19, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "carla_sena", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "carla_sena@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 20, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "veronica_costa", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "veronica_costa@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 21, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "domicio_rodrigues", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "domicio_rodrigues@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 22, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "guilherme_martins", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "guilherme_martins@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 23, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "jose_araujo", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "jose_araujo@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 24, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "diogo_goncalves", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "diogo_goncalves@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 25, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "gabriella_santos", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "gabriella_santos@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 26, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "marcos_silva", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "marcos_silva@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 27, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "lucas_reis", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "lucas_reis@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 28, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "fabio_bruschi", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "fabio_bruschi@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 29, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "helio_silva", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "helio_silva@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 30, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "gildasio_magalhaes", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "gildasio_magalhaes@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 31, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "martinha_magalhaes", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "martinha_magalhaes@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 32, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "bruno_buzzo", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "bruno_buzzo@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 33, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "jose_diotto", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "jose_diotto@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 34, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "lidia_faria", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "lidia_faria@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 35, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "suely_aversani", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "suely_aversani@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 36, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "durval_guimaraes", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "durval_guimaraes@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 37, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "dilermando_porto", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "dilermando_porto@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 38, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "alda_silva", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "alda_silva@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 39, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "maira_brum", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "maira_brum@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 40, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "edith_mielke", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "edith_mielke@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 41, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "vitoria_freitas", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "vitoria_freitas@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 42, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "fernanda_zem", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "fernanda_zem@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 43, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "anderson_cacao", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "anderson_cacao@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 44, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "alan_andrade", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "alan_andrade@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 45, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "camilla_bruzadelli", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "camilla_bruzadelli@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 46, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "deborah_asbahr", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "deborah_asbahr@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 47, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "sergio_delbianco", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2009-07-03 00:43:05", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$a1589$c29d13b527e49535abe69207362810e339eaa4ad", 
+            "email": "sergio_delbianco@teste.com", 
+            "date_joined": "2009-05-14 13:27:14"
+        }
+    },
+    {
+        "pk": 48, 
+        "model": "auth.user", 
+        "fields": {
             "username": "admin", 
             "first_name": "", 
             "last_name": "", 
@@ -21,736 +849,752 @@
         "pk": 1, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "daiane_diniz", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Daiane Diniz", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "A", 
+            "birthdate": "1992-02-12", 
+            "state": "SP", 
+            "user": 1, 
             "mugshot": "", 
-            "institution": null
+            "institution": 1
         }
     }, 
     {
         "pk": 2, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "leilane_diniz", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Leilane Diniz", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 2, 
             "mugshot": "", 
-            "institution": null
+            "institution": 2
         }
     }, 
     {
         "pk": 3, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "auricelia_sodre", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Auricelia Sodre", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 3, 
             "mugshot": "", 
-            "institution": null
+            "institution": 3
         }
     }, 
     {
         "pk": 5, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "isa_nascimento", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Isa Nascimento", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 5, 
             "mugshot": "", 
-            "institution": null
+            "institution": 4
         }
     }, 
     {
         "pk": 6, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "tereza_colares", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Tereza Colares", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 6, 
             "mugshot": "", 
-            "institution": null
+            "institution": 5
         }
     }, 
     {
         "pk": 7, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "andre_stadler", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Andre Stadler", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 7, 
             "mugshot": "", 
-            "institution": null
+            "institution": 6
         }
     }, 
     {
         "pk": 8, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "haroldo_paula", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Haroldo Paula", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 8, 
             "mugshot": "", 
-            "institution": null
+            "institution": 7
         }
     }, 
     {
         "pk": 9, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "wesley_ribeiro", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Wesley Ribeiro", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 9, 
             "mugshot": "", 
-            "institution": null
+            "institution": 8
         }
     }, 
     {
         "pk": 10, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "sadraque_viana", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Sadraque Viana", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 10, 
             "mugshot": "", 
-            "institution": null
+            "institution": 9
         }
     }, 
     {
         "pk": 11, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "romulo_carvalho", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Romulo Carvalho", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 11, 
             "mugshot": "", 
-            "institution": null
+            "institution": 10
         }
     }, 
     {
         "pk": 12, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "rudison_lacerda", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Rudison Lacerda", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 12, 
             "mugshot": "", 
-            "institution": null
+            "institution": 11
         }
     }, 
     {
         "pk": 13, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "joel_lima", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Joel Lima", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 13, 
             "mugshot": "", 
-            "institution": null
+            "institution": 12
         }
     }, 
     {
         "pk": 14, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "wanderlei_freitas", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Wanderlei Freitas", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 14, 
             "mugshot": "", 
-            "institution": null
+            "institution": 13
         }
     }, 
     {
         "pk": 15, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "karen_mariano", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Karen Mariano", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 15, 
             "mugshot": "", 
-            "institution": null
+            "institution": 14
         }
     }, 
     {
         "pk": 16, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "luana_peres", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Luana Peres", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 16, 
             "mugshot": "", 
-            "institution": null
+            "institution": 15
         }
     }, 
     {
         "pk": 17, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "erick_brito", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Erick Brito", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 17, 
             "mugshot": "", 
-            "institution": null
+            "institution": 1
         }
     }, 
     {
         "pk": 18, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "silvia_pacheco", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Silvia Pacheco", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 18, 
             "mugshot": "", 
-            "institution": null
+            "institution": 2
         }
     }, 
     {
         "pk": 19, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "carla_sena", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Carla Sena", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 19, 
             "mugshot": "", 
-            "institution": null
+            "institution": 3
         }
     }, 
     {
         "pk": 20, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "veronica_costa", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Veronica Costa", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 20, 
             "mugshot": "", 
-            "institution": null
+            "institution": 4
         }
     }, 
     {
         "pk": 21, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "domicio_rodrigues", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Domicio Rodrigues", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 21, 
             "mugshot": "", 
-            "institution": null
+            "institution": 5
         }
     }, 
     {
         "pk": 22, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "guilherme_martins", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Guilherme Martins", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 22, 
             "mugshot": "", 
-            "institution": null
+            "institution": 6
         }
     }, 
     {
         "pk": 23, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "jose_araujo", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Jose Araujo", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 23, 
             "mugshot": "", 
-            "institution": null
+            "institution": 7
         }
     }, 
     {
         "pk": 24, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "diogo_goncalves", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Diogo Goncalves", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 24, 
             "mugshot": "", 
-            "institution": null
+            "institution": 8
         }
     }, 
     {
         "pk": 25, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "gabriella_santos", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Gabriella Santos", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 25, 
             "mugshot": "", 
-            "institution": null
+            "institution": 9
         }
     }, 
     {
         "pk": 26, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "marcos_silva", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Marcos Silva", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 26, 
             "mugshot": "", 
-            "institution": null
+            "institution": 10
         }
     }, 
     {
         "pk": 27, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "lucas_reis", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Lucas Reis", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 27, 
             "mugshot": "", 
-            "institution": null
+            "institution": 11
         }
     }, 
     {
         "pk": 28, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "fabio_bruschi", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Fabio Bruschi", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 28, 
             "mugshot": "", 
-            "institution": null
+            "institution": 12
         }
     }, 
     {
         "pk": 29, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "helio_silva", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Helio Silva", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 29, 
             "mugshot": "", 
-            "institution": null
+            "institution": 13
         }
     }, 
     {
         "pk": 30, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "gildasio_magalhaes", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Gildasio Magalhaes", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 30, 
             "mugshot": "", 
-            "institution": null
+            "institution": 14
         }
     }, 
     {
         "pk": 31, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "martinha_magalhaes", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Martinha Magalhaes", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 31, 
             "mugshot": "", 
-            "institution": null
+            "institution": 15
         }
     }, 
     {
         "pk": 32, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "bruno_buzzo", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Bruno Buzzo", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 32, 
             "mugshot": "", 
-            "institution": null
+            "institution": 1
         }
     }, 
     {
         "pk": 33, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "jose_diotto", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Jose Diotto", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 33, 
             "mugshot": "", 
-            "institution": null
+            "institution": 2
         }
     }, 
     {
         "pk": 34, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "lidia_faria", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Lidia Faria", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 34, 
             "mugshot": "", 
-            "institution": null
+            "institution": 3
         }
     }, 
     {
         "pk": 35, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "suely_aversani", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Suely Aversani", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 35, 
             "mugshot": "", 
-            "institution": null
+            "institution": 4
         }
     }, 
     {
         "pk": 36, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "durval_guimaraes", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Durval Guimaraes", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 36, 
             "mugshot": "", 
-            "institution": null
+            "institution": 5
         }
     }, 
     {
         "pk": 37, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "dilermando_porto", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Dilermando Porto", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 37, 
             "mugshot": "", 
-            "institution": null
+            "institution": 6
         }
     }, 
     {
         "pk": 38, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "alda_silva", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Alda Silva", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 38, 
             "mugshot": "", 
-            "institution": null
+            "institution": 7
         }
     }, 
     {
         "pk": 39, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "maira_brum", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Maira Brum", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 39, 
             "mugshot": "", 
-            "institution": null
+            "institution": 8
         }
     }, 
     {
         "pk": 40, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "edith_mielke", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Edith Mielke", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 40, 
             "mugshot": "", 
-            "institution": null
+            "institution": 9
         }
     }, 
     {
         "pk": 41, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "vitoria_freitas", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Vitoria Freitas", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 41, 
             "mugshot": "", 
-            "institution": null
+            "institution": 10
         }
     }, 
     {
         "pk": 42, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "fernanda_zem", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Fernanda Zem", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 42, 
             "mugshot": "", 
-            "institution": null
+            "institution": 11
         }
     }, 
     {
         "pk": 43, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "anderson_cacao", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Anderson Cacao", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 43, 
             "mugshot": "", 
-            "institution": null
+            "institution": 12
         }
     }, 
     {
         "pk": 44, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "alan_andrade", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Alan Andrade", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 44, 
             "mugshot": "", 
-            "institution": null
+            "institution": 13
         }
     }, 
     {
         "pk": 45, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "camilla_bruzadelli", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Camilla Bruzadelli", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 45, 
             "mugshot": "", 
-            "institution": null
+            "institution": 14
         }
     }, 
     {
         "pk": 46, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "deborah_asbahr", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Deborah Asbahr", 
+            "gender": "F", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "F", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 46, 
             "mugshot": "", 
-            "institution": null
+            "institution": 15
         }
     }, 
     {
         "pk": 47, 
         "model": "profiles.userprofile", 
         "fields": {
-            "city": "", 
-            "name": "sergio_delbianco", 
-            "gender": "", 
+            "city": "São Paulo", 
+            "name": "Sergio Delbianco", 
+            "gender": "M", 
             "is_active": true, 
-            "user_type": "", 
-            "birthdate": null, 
-            "state": "", 
-            "user": null, 
+            "user_type": "O", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 47, 
             "mugshot": "", 
-            "institution": null
+            "institution": 1
+        }
+    },
+    {
+        "pk": 48, 
+        "model": "profiles.userprofile", 
+        "fields": {
+            "city": "São Paulo", 
+            "name": "Administrador", 
+            "gender": "M", 
+            "is_active": true, 
+            "user_type": "E", 
+            "birthdate": "1992-02-12",  
+            "state": "SP", 
+            "user": 48, 
+            "mugshot": "", 
+            "institution": 2
         }
     },
     {
@@ -770,7 +1614,7 @@
             "url": "/privacy/", 
             "sites": [1],
             "template_name": "",
-            "content": "<h1>Política de Privacidade</h1>",
+            "content": "<h1>Política de Privacidade</h1><br><br><p>POR FAVOR, LEIA COM ATENÇÃO ESTA POLÍTICA DE PRIVACIDADE. SE VOCÊ NÃO CONCORDA COM AS CONDIÇÕES ABAIXO, POR FAVOR NÃO COMPLETE O SEU CADASTRO NEM USE A FEBRACE<sup>V</sup> OU SUAS FERRAMENTAS. AO SE CADASTRAR OU USAR, INSTALAR, REGISTRAR OU BAIXAR (FAZER DOWNLOAD) DE QUALQUER FERRAMENTA DO Febrace<sup>V</sup>, VOCÊ RECONHECE A INTEGRIDADE DESTE DOCUMENTO E CONCORDA QUE SE VINCULOU AOS SEUS TERMOS DE FORMA ESPONTÂNEA.</p><br><p>A Febrace<sup>V</sup> valoriza a proteção da sua privacidade e dos dados pessoais e se compromete a usar tais informações de forma responsável e aderente a esta política de privacidade.</p><br><h2>Coleta de dados</h2><h3>Quais dados o Febrace<sup>V</sup> coleta?</h3><p>Ao usar as ferramentas da Febrace<sup>V</sup>, Você espontaneamente nos fornece informações cadastrais necessárias para estabelecermos um relacionamento pessoal e customizado.</p><br><p>Além disso, ao navegar nas paginas e ferramentas da Febrace<sup>V</sup>, certas informações podem ser coletadas principalmente para melhorar sua experiência no uso da Febrace<sup>V</sup> através da instalação de cookies. Os cookies podem também fornecer informações relacionadas às páginas da Febrace<sup>V</sup> que Você acessou, dados de IP e tipo de navegador adotado visando implementar melhorias, customizar as experiências dos usuários, consolidar informações a respeito dos serviços oferecidos pela Febrace<sup>V</sup> e traçar dados estatísticos.</p><br><h2>Atualizações de dados</h2><p>Você poderá, a qualquer momento, alterar e/ou editar os dados cadastrais, apenas fazendo o logon de seu perfil, com sua identidade e senha. Você é responsável pela veracidade e atualização de referidos dados.</p><br><p>A senha cadastrada é pessoal e intransferível, ficando a guarda desta sob a sua responsabilidade.</p><br><h2>Dados pessoais</h2><p>Os dados pessoais e outros por Você inseridos quando de seu cadastro no site são catalogados entre dados públicos e privados, ou seja, entre dados visíveis a qualquer usuário, parceiros e/ou colaboradores da Febrace<sup>V</sup>, dados visíveis apenas a parceiros e/ou colaboradores da Febrace<sup>V</sup> e, finalmente, dados visíveis apenas aos colaboradores da Febrace<sup>V</sup>.</p><br><p>Você pode disponibilizar alguns dados pessoais os quais, juntamente com as informações básicas e visíveis do seu perfil (incluindo seu nome, idade e outras informações), permanecerão públicos e acessíveis a qualquer usuário da Internet. Esteja atento aos dados que você quer tornar público. Os seus demais dados colaboradores e/ou parceiros da Febrace<sup>V</sup>, os quais também se encontram submetidos a esta política de privacidade.</p><br><p>A Febrace<sup>V</sup> poderá ainda contatá-lo para promover ações, promoções, seleções, facilidades ou ferramentas. Essas atividades podem ser desenvolvidas somente pela Febrace<sup>V</sup> ou em associação com parceiros. </p><br><p>A Febrace<sup>V</sup> também poderá fornecer para seus parceiros dados consolidados que não o identificam pessoalmente, para o fim de permitir a apuração de informações como, por exemplo, o percentual de usuários alunos do ensino médio ou superior, faixa etária, etc.</p><br><p>A consulta e utilização dos seus dados nos termos aqui expostos dependem do processamento desses dados, o que poderá ser feito pela própria Febrace<sup>V</sup>, pelos seus parceiros, colaboradores ou por terceiros, no Brasil ou no exterior. Em qualquer hipótese, as entidades envolvidas estarão submetidas aos termos desta política de privacidade, bem como às leis nacionais, internacionais ou comunitárias que disponham sobre proteção de banco de dados pessoais.</p><br><p>Excepcionalmente a Febrace<sup>V</sup> poderá disponibilizar e/ou revelar seus dados privados para terceiros outros que não seus parceiros e/ou colaboradores, no limite que se mostre necessário, nas hipóteses de: <br>(i) ordem judicial ou cumprimento de obrigação legal; <br>(ii) violação efetiva ou potencial, pelo usuário, das [Condições Gerais de Uso] da Febrace<sup>V</sup> e/ou dos demais documentos ali referidos, incluindo a presente política de privacidade; <br>(iii) violação de direitos de terceiros, usuários ou não da Febrace<sup>V</sup>.</p><br><p>A Febrace<sup>V</sup> utiliza tecnologia padrão de mercado para proteger os dados confiados por Você. Entretanto, nenhum método de transmissão via internet ou de armazenamento eletrônico é totalmente seguro, e, portanto, a Febrace<sup>V</sup>, não se responsabiliza por acessos não autorizados ou corrupção dos dados armazenados.</p><br><h2>Armazenamento de informações e rescisão contratual</h2><p>A Febrace<sup>V</sup> não garante o armazenamento (back-up) de quaisquer dos registros por Você inseridos na Febrace<sup>V</sup>, por qualquer período mínimo de tempo.</p><br><p>Você poderá, observadas as Condições Gerais de Uso do Febrace<sup>V</sup>, encerrar sua relação com a Febrace<sup>V</sup>, desativando a sua conta e removendo do site qualquer informação pessoal.</p><br><h2>Alterações desta Política de Privacidade</h2><p>A Febrace<sup>V</sup> poderá, a qualquer momento, alterar a presente política de privacidade, dispensada a sua notificação prévia, sendo sua responsabilidade visitar o presente documento freqüentemente, a fim de se atualizar acerca de suas alterações.</p>",
             "enable_comments": false
         }
     }, 
@@ -783,7 +1627,7 @@
             "url": "/about/", 
             "sites": [1],
             "template_name": "",
-            "content": "<h1>Sobre</h1>",
+            "content": "<h1>Sobre</h1><br><br><h2>O quê?</h2><p>A Febrace<sup>V</sup> (Feira Brasileira Virtual de Ciências e Engenharia) é uma feira virtual de ciências que possui recursos de rede social.</p><br><p>Ela foi desenvolvido através de um Projeto de Formatura no ano de 2009. O projeto é interdepartamental entre o PCS (departamento de Engenharia da Computação e Sistemas Digitais) e PSI (departamento de Engenharia de Sistemas Eletrônicos) da Escola Politécnica da USP.</p><br><p>Os autores do projeto são:</p><ul><li><a href='http://lattes.cnpq.br/0586119234521535' target='_blank'>Leandro Coletto Biazon</a> (aluno do PSI)</li><li><a href='http://lattes.cnpq.br/4584260856638573' target='_blank'>Nathalia Sautchuk Patrício</a> (aluna do PCS)</li><ul><br><p>As orientadoras do projeto são:</p><ul><li><a href='http://lattes.cnpq.br/9490410798668023' target='_blank'>Roseli de Deus Lopes</a> (professora do PSI)</li><li><a href='http://lattes.cnpq.br/7390536888473418' target='_blank'>Selma Shin Shimizu Melnikoff</a> (professora do PCS)</li></ul><br><h2>Por quê?</h2><p>Mantenha-se informado sobre projetos dos jovens cientistas e conheça outras pessoas interessadas em ciência.</p><br><h2>Como?</h2><p><a href='/accounts/register/'>Registre-se</a> e participe da rede social.</p>",
             "enable_comments": false
         }
     }, 
@@ -792,76 +1636,11 @@
         "model": "flatpages.flatpage", 
         "fields": {
             "registration_required": false,
-            "title": "Mapa do Site",
-            "url": "/sitemap/", 
-            "sites": [1],
-            "template_name": "",
-            "content": "<h1>Mapa do Site</h1>",
-            "enable_comments": false
-        }
-    }, 
-    {
-        "pk": 4, 
-        "model": "flatpages.flatpage", 
-        "fields": {
-            "registration_required": false,
             "title": "Termos de Uso",
             "url": "/terms/", 
             "sites": [1],
             "template_name": "",
-            "content": "<h1>Termos de Uso</h1>",
-            "enable_comments": false
-        }
-    },
-    {
-        "pk": 5, 
-        "model": "flatpages.flatpage", 
-        "fields": {
-            "registration_required": false,
-            "title": "Ajuda",
-            "url": "/help/", 
-            "sites": [1],
-            "template_name": "",
-            "content": "<h1>Ajuda</h1>",
-            "enable_comments": false
-        }
-    },
-    {
-        "pk": 6, 
-        "model": "flatpages.flatpage", 
-        "fields": {
-            "registration_required": false,
-            "title": "O quê?",
-            "url": "/what/", 
-            "sites": [1],
-            "template_name": "",
-            "content": "<h1>O quê?</h1>",
-            "enable_comments": false
-        }
-    },
-    {
-        "pk": 7, 
-        "model": "flatpages.flatpage", 
-        "fields": {
-            "registration_required": false,
-            "title": "Por quê?",
-            "url": "/why/", 
-            "sites": [1],
-            "template_name": "",
-            "content": "<h1>Por quê?</h1>",
-            "enable_comments": false
-        }
-    },
-    {
-        "pk": 8, 
-        "model": "flatpages.flatpage", 
-        "fields": {
-            "registration_required": false,
-            "title": "Como",
-            "url": "/how/", 
-            "sites": [1],
-            "template_name": "",
-            "content": "<h1>Como</h1>",
+            "content": "<h1>Termos de Uso</h1><br><br><p>POR FAVOR, LEIA COM ATENÇÃO ESSES TERMOS DE USO DA FEBRACE<sup>V</sup>. SE VOCÊ NÃO CONCORDA COM ESTES TERMOS DE USO, POR FAVOR NÃO CONCLUA O SEU CADASTRO NEM USE O SITE FEBRACE<sup>V</sup> OU SUAS FERRAMENTAS. AO PROSSEGUIR COM O SEU CADASTRO OU UTILIZAR O SITE, VOCÊ RECONHECE A INTEGRIDADE DESTE DOCUMENTO E CONCORDA QUE SE VINCULOU AOS SEUS TERMOS DE FORMA LIVRE E ESPONTÂNEA.</p><br><p>Bem vindo a Febrace<sup>V</sup>. A utilização dos recursos e ferramentas disponibilizados pela Febrace<sup>V</sup> é regida por estes termos e pela <a href='/privacy'>política de privacidade Febrace<sup>V</sup></a>.</p><br><h2>Produtos e serviços da Febrace<sup>V</sup></h2><p>Você, usuário, pode participar da Febrace<sup>V</sup> gratuitamente.</p><br><p>Algumas ferramentas e facilidades disponibilizadas pela Febrace<sup>V</sup> permitem: <br>(i) a utilização de espaço para a criação de páginas pessoais; <br>(ii) a participação em grupos de discussão, sessões e ambientes da Febrace<sup>V</sup>; e <br>(iii) a criação, inclusão e veiculação de conteúdo e informações, sob a forma de textos, imagens, fotos, vídeos e sons, que são hospedados e disponibilizados para o público em geral. <br>Para fins destes termos, todo o conteúdo incluído por qualquer usuário será denominado genericamente “conteúdo”, ou, no plural, “conteúdos”.</p><br><h2>Acesso</h2><p>O usuário é responsável por guardar a sua senha em lugar seguro, não devendo disponibilizá-la a quaisquer terceiros. O usuário poderá trocar sua senha a qualquer momento, bastando, para isso, efetuar logon no site.</p><br><p>Os pais, tutores ou responsáveis pela guarda dos usuários que, nos termos da lei civil, são considerados incapazes ou absolutamente incapazes, responderão pelos atos dos seus filhos ou tutelados.</p><br><h2>Interação e uso do site</h2><p>A Febrace<sup>V</sup> é um espaço aberto à interação social, tendo como fim a construção de uma rede de relacionamentos acadêmica. O objetivo da Febrace<sup>V</sup> é fomentar a troca de conhecimento, aproximação entre parceiros e/ou colaboradores e usuários, e estabelecer discussões saudáveis que gerem outras discussões acerca do mesmo tema ou de outro igualmente interessante.</p><br><p>Você responde por todo o conteúdo que postar na Febrace<sup>V</sup>, inclusive no que diz respeito à titularidade dos direitos relacionados a tais postagens.</p><br><p>Qualquer conteúdo que não guarde relação com a temática do site ou, a critério da Febrace<sup>V</sup>, seja considerado inadequado, poderá ser removido sem prévia notificação a quem o inseriu. Nesse caso, a Febrace<sup>V</sup> poderá bloquear sua utilização do site e remover todo o conteúdo por Você inserido.</p><br><p>O usuário concorda em se abster de:</p><br><ul class='blue_bullet'><li>(i) criar, participar ou encaminhar esquemas de pirâmide e similares na Febrace<sup>V</sup>;</li><li>(ii) fazer passar-se e/ou se identificar como outra pessoa (pelo uso de endereço de e-mail ou de imagem de terceiros, pseudônimos, características ou atributos pessoais alheios ou por qualquer outro modo);</li><li>(iii) gerar, enviar e/ou facilitar o tráfego de cadeias de e-mail não solicitados (spam);</li><li>(iv) ataques pessoais, ameaças, insultos, ofensas e outras violações de direitos de terceiros;</li><li>(v) envidar qualquer atividade racial ou contra minorias, etnias, nacionalidades, religiões, credos, sexo, política, entre outros;</li><li>(vi) atos que divulguem ou façam apologia à pornografia e/ou à pedofilia;</li><li>(vii) quaisquer atos que atentem contra a dignidade da pessoa humana ou contra os bons costumes.</li></ul><p>Adicionalmente, não serão permitidas a propaganda e oferta de produtos e/ou serviços por Você, salvo mediante prévia e expressa autorização da Febrace<sup>V</sup>.</p><br><p>COMO PROVEDOR DE HOSPEDAGEM E DADAS AS CARACTERÍSTICAS DAS FERRAMENTAS DA FEBRACE<sup>V</sup>, O CONTEÚDO POSTADO POR SEUS USUÁRIOS NÃO É MONITORADO NEM REVISADO PELA FEBRACE<sup>V</sup>.</p><br><p>Ainda que possam existir conteúdos considerados ofensivos para certas pessoas, muitas vezes a Febrace<sup>V</sup> não tem condições de julgar, num caso concreto, se determinado conteúdo é ilegal ou se fere direitos subjetivos de terceiros. Em qualquer hipótese, se Você entender que seus direitos foram violados em função de um conteúdo postado por terceiros, Você precisará submetê-lo ao crivo do Poder Judiciário, devendo responsabilizar o responsável pelo conteúdo tido como ofensivo ou ilegal.</p><br><p>Ainda que a Febrace<sup>V</sup> adote medidas tecnológicas compatíveis com as ferramentas que disponibiliza, não é oferecido qualquer garantia de backup, cópia de segurança ou disponibilidade dos conteúdos inseridos por seus usuários. Recomenda-se, portanto, que Você mantenha cópias de todo o seu conteúdo.</p><br><p>Da mesma forma, considerando que nenhum método de transmissão via internet ou de armazenamento eletrônico é totalmente seguro, a Febrace<sup>V</sup>, não se responsabiliza por acessos não autorizados aos dados por Você transmitidos ou armazenados.</p><br><p>Os recursos disponibilizados pela Febrace<sup>V</sup> são limitados, e os usuários podem estar sujeitos a restrições de quantidade de conteúdo que possam incluir, acessar, ou, de alguma forma, disponibilizar.</p><br><h3>Relacionamento com terceiros</h3><p>Como descrito em nossa Política de Privacidade, você pode concordar em ser contatado por nossos parceiros para participar de ações específicas e particulares. Eventuais relacionamentos que Você passar a ter com nossos parceiros são totalmente independente das atividades da Febrace<sup>V</sup>, que não responde por nenhum aspecto decorrente de tal relacionamento.</p><br><h3>Encerramento do uso dos serviços e conteúdo da Febrace<sup>V</sup></h3><p>Você poderá solicitar o encerramento da sua relação com a Febrace<sup>V</sup> a qualquer momento por meio de ferramenta própria disponibilizada pela Febrace<sup>V</sup>. Eventuais créditos ou o direito de acesso às ferramentas da Febrace<sup>V</sup>, se aplicáveis, não serão reembolsados, creditados ou transferidos.</p><br><h3>Disposições Finais</h3><p>A Febrace<sup>V</sup> se reserva o direito de, a qualquer momento, conforme seja conveniente, modificar e/ou aperfeiçoar as características de qualquer de seus produtos ou serviços, alterar esses termos e demais documentos aqui referidos, comunicando-o através do site ou de forma similar (inclusive por meio do e-mail fornecido no momento do seu cadastro). É sua incumbência consultar freqüentemente referidos documentos para se atualizar acerca de eventuais alterações neles promovidas. Caso Você não concorde com qualquer alteração, Você deverá encerrar a sua conta Febrace<sup>V</sup>, como descrito acima.</p><br><p>Na eventualidade de qualquer das disposições deste documento vir a ser considerada nula, anulável ou ilegal, as demais disposições permanecerão em vigor e inalteradas, devendo a disposição considerada nula, anulável ou ilegal ser aplicada na extensão máxima possível.</p><br><p>Este instrumento será regido e interpretado de acordo com a legislação brasileira, sendo eleito o Foro da Comarca de São Paulo, Estado de São Paulo, para questões a ele relativas, com renúncia expressa a qualquer outro, por mais privilegiado que seja.</p><br>",
             "enable_comments": false
         }
     },
@@ -869,11 +1648,11 @@
         "pk": 1, 
         "model": "articles.article", 
         "fields": {
-            "title": "Divulgue a FEBRACE",
+            "title": "Presidente da República recebe estudantes brasileiros",
             "slug": "febrace",
             "author": 1, 
-            "excerpt": "Divulgue a FEBRACE em sua escola, em seu bairro",
-            "body": "Divulgue a FEBRACE em sua escola, em seu bairro",
+            "excerpt": "Premiados na Intel ISEF, 5 estudantes brasileiros foram homenageados pelo presidente Lula",
+            "body": "<p>Enquanto boa parte dos estudantes aguarda o retorno às aulas, Ivan, Ana Clara, Ana Claudia, Rafael e Felipe estavam ocupados com uma “viagem de negócios” para encontrar ninguém mais do que o presidente de seu país, Lula.</p><br><p>A convite da INTEL, patrocinadora da ISEF (International Science and Engineering Fair), os cinco estudantes brasileiros premiados na Intel ISEF 2009 e seus orientadores embarcaram no dia 04 de agosto para Brasília. Após um rápido passeio pela cidade satélite e um gostoso almoço, todos foram conduzidos ao Centro Cultural Banco do Brasil, pois às 15h o tão esperado encontro aconteceria.</p><br><p>O Presidente da República Luiz Inácio Lula da Silva ouviu atenciosamente os estudantes contarem sobre suas trajetórias de vida e seus projetos científicos. Além disso, Lula, de forma muito carismática, lhes deu palavras de incentivo e falou um pouco da intenção do governo federal em apoiar mais o desenvolvimento de feiras de ciências investigativas no Brasil.</p><br><p>Participaram da audiência representantes do governo – o Ministro da Educação Fernando Haddad, o Ministro das Comunicações Helio Costa, o Secretário de Inclusão Social do Ministério da Ciência e Tecnologia Joe Valle e o Diretor de Popularização e Difusão da Ciência e Tecnologia do MCT Ildeu de Castro Moreira.</p><br><p>A INTEL estava representada por Oscar Clarke, presidente da Intel do Brasil; Nuno Simões, Diretor de Assuntos Corporativos para América Latina e Rosangela Melatto, Responsabilidade Social da Intel Latino América.</p><br><p>Estavam também presentes na audiência os orientadores dos estudantes premiados: Prof. Pedro Ismael da Silva Junior, Prof. Marcos Zuccolotto, Profa. Sandra Maria Rudella Tonidandel e Profa. Maria Celeste Monteiro de Souza Costa.</p><br><p>Representando as feiras brasileiras afiliadas à ISEF estavam a Profa. Roseli de Deus Lopes, Coordenadora da FEBRACE e a Profa. Maria Inês Utzig Zulke da MOSTRATEC.",
             "pub_date": "2009-07-02 23:40",
             "enable_comments": false,
             "tags": "febrace"            
@@ -883,11 +1662,11 @@
         "pk": 2, 
         "model": "articles.article", 
         "fields": {
-            "title": "Um espaço para os estudantes",
+            "title": "1ª Mostra Científica do Norte Nordeste",
             "slug": "febrace",
-            "author": 1, 
-            "excerpt": "Escreva sua história e participe do FEBRACE Acontece",
-            "body": "Escreva sua história e participe do FEBRACE Acontece",
+            "author": 10, 
+            "excerpt": "Vem aí a 1ª Mostra Científica do Norte Nordeste.",
+            "body": "<p>Vem aí a 1ª Mostra Científica do Norte Nordeste. O evento é uma iniciativa de alguns professores do norte e nordeste que querem realizar um evento científico de caráter nacional na região.</p><br><p>A 1ª MOCINN acontecerá de 26 a 29 de janeiro no Centro de Convenções e Feiras da Amazônia-Hangarem em Belém, no Pará.</p><br><p>Mais informações no site da <a href='www.mocinn.net'>MOCINN</a>.</p>",
             "pub_date": "2009-07-02 23:40",
             "enable_comments": false,
             "tags": "febrace"            
@@ -897,11 +1676,11 @@
         "pk": 3, 
         "model": "articles.article", 
         "fields": {
-            "title": "Visite o Criatividade e Inovação",
+            "title": "Mobilefest 2009 faz pré-lançamento em setembro",
             "slug": "febrace",
             "author": 1, 
-            "excerpt": "Reune informações sobre feiras de ciências no Brasil e no mundo",
-            "body": "Reune informações sobre feiras de ciências no Brasil e no mundo",
+            "excerpt": "Festival de tecnologias móveis realiza palestra sobre games urbanos e o projeto Gincana Global em São Paulo.",
+            "body": "<p>O IV Mobilefest - Festival Internacional de Criatividade Móvel, maior evento latino-americano integrando tecnologias móveis, entretenimento interativo e cultura digital, realizará nos dias 17, 18 e 25 de setembro, o pré-lançamento das atividades de 2009. O primeiro evento de pré-lançamento do IV Mobilefest, o projeto Gincana Global, será realizado nos dias 17 e 18 de setembro, no Museu da Imagem e do Som (MIS), em São Paulo. Durante esses dois dias, professores e alunos irão participar de um workshop de criação de jogos educacionais que utilizam celulares e GPS (Sistema de Posicionamento Global). O workshop será ministrado em parceria com o instituto holandês Waag Society e as atividades práticas serão sempre acompanhadas da equipe do Mobilefest.</p><br><p>Nos dias 17 e 18 das 9:00 as 17:30, o grupo de alunos e seus professores terão a oportunidade de conhecer a tecnologia e suas potencialidades, experimentar um jogo e depois desenvolver um jogo para os estudantes holandeses. Ao mesmo tempo, haverá workshop em Amsterdã, no qual os alunos de lá irão criar jogos para os brasileiros, baseados em temas culturais de cada país.</p><br><p>Esses workshops resultarão em uma grande gincana global, jogada simultaneamente por brasileiros e holandeses, no dia 25 de setembro, no período da manhã, nos arredores do MIS, em São Paulo, e no Festival PICNIC, em Amsterdã. No final da gincana, no dia 25, haverá o momento de discussão e reflexão sobre o processo, pois os participantes dos dois países irão se conhecer e trocar experiências sobre as tarefas realizadas por meio de uma vídeoconferência. O objetivo é estimular a reflexão sobre a pluralidade cultural e o papel do cidadão no mundo fomentando a discussão sobre o ensino com tecnologias móveis e a cultura global.</p><br><p>Poderão participar grupos formados por professores e educadores da rede pública e privada e estudantes entre 13 e 17 anos, com conhecimentos básicos do idioma inglês.</p><br><p>Também no dia 17, às 19:00 haverá a palestra aberta ao público geral: 'Novos games urbanos: GPS e celulares na educação', do diretor de desenvolvimento e estrategista de software do instituto holandês Waag Society, Ronald Lenz, após esta palestra, haverá ainda um debate com especialistas brasileiros sobre as novas fronteiras da educação entre eles a Dra Roseli de Deus Lopes e Dr Alberto Magno.</p><br><p>O IV Mobilefest terá duas edições simultâneas em novembro de 2009, nas cidades de São Paulo e Rio de Janeiro. A programação completa será anunciada no pré-lançamento do Festival.</p><br>",
             "pub_date": "2009-07-02 23:40",
             "enable_comments": false,
             "tags": "febrace"            
@@ -911,11 +1690,11 @@
         "pk": 4, 
         "model": "articles.article", 
         "fields": {
-            "title": "Invista em jovens inovadores",
+            "title": "Fórum Projeto de Ciências",
             "slug": "febrace",
-            "author": 1, 
-            "excerpt": "Estimule a cultura de inovação e empreendedorismo na Educação Básica",
-            "body": "Estimule a cultura de inovação e empreendedorismo na Educação Básica",
+            "author": 10, 
+            "excerpt": "Tire suas dúvidas on-line",
+            "body": "<p>Atenção professores:</p><br><p>O <a href='http://www.educarede.org.br/educa/index.cfm'>EducaRede</a>, portal da Fundação Telefonica, abre um novo fórum de debate, mediado pela Dra. Ramona Straube, responsável pelo sistema de avaliação da Feira Brasileira de Ciências e Engenharia (FEBRACE), com objetivo de orientar professores do Ensino Fundamental II, Médio e Técnico a trabalharem com iniciação científica na escola.</p><br><p>Para participar, acesse o fórum <a href='http://www.educarede.org.br/educa/index.cfm?pg=forum.ds_forum&id_comunidade=0'>aqui</a>.",
             "pub_date": "2009-07-02 23:40",
             "enable_comments": false,
             "tags": "febrace"            
@@ -923,13 +1702,13 @@
     }, 
     {
         "pk": 5, 
-        "model": "articles.article", 
+        "model": "articles.article",    
         "fields": {
-            "title": "Brasil na Intel ISEF",
+            "title": "Criatividade e Inovação - um espaço para os estudantes",
             "slug": "febrace",
             "author": 1, 
-            "excerpt": "Estudantes brasileiros trazem 5 prêmios para o Brasil",
-            "body": "Estudantes brasileiros trazem 5 prêmios para o Brasil",
+            "excerpt": "A FEBRACE cria um espaço em seu jornal eletrônico para os estudantes publicarem e compartilharem projetos em que estão trabalhando",
+            "body": "<p>O FEBRACE Acontece, jornal trimestral da Feira Brasileira de Ciências e Engenharia, quer a participação de seu principal público, os estudantes. Para isso criou um espaço no qual o estudante poderá compartilhar com outros estudantes e professores, aquilo que vem desenvolvendo com o objetivo investigativo ou de benefício do meio em que vive.</p><br><p>A partir da próxima edição nosso jornal contará sempre com um ou dois textos escritos pelos jovens cientistas. Para participar é simples, o estudante deverá nos escrever contando sobre um projeto científico ou de engenharia que tenha desenvolvido ou no qual esteja trabalhando em sua escola. É pré-requisito já ter participado de uma feira de ciências.</p><br><p>Todos os projetos enviados serão submetidos a uma comissão avaliadora, composta de profissionais capacitados, com vasta experiência em sua área de atuação, que selecionará os melhores para serem publicados. Os textos serão avaliados nos aspectos científico, criativo e narrativo.</p><br><p>O texto deve ser encaminhado via e-mail para nossa assessoria de comunicação (lais@lsi.usp.br), em formato word, fonte arial, ter no máximo uma página, além de apresentar título e dados pessoais do estudante: nome completo, série, instituição de ensino, foto digital, nome da feira de Ciências que participou e seus objetivos para o futuro.</p><br><p>A FEBRACE visa assim interagir com os estudantes durante todo o ano, não somente no período da feira, incentivando o desenvolvimento do espírito científico e empreendedor dos jovens, através de um espaço para publicarem suas idéias.</p>",
             "pub_date": "2009-07-02 23:40",
             "enable_comments": false,
             "tags": "febrace"            
@@ -951,8 +1730,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Col\u00e9gio Christus", 
             "address": ""
         }
@@ -962,8 +1741,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "CEFET-MG", 
             "address": ""
         }
@@ -973,8 +1752,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "E.E.M.E.P.J.A Embaixador Assis Chateaubriand", 
             "address": ""
         }
@@ -984,8 +1763,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Funda\u00e7\u00e3o Bradesco \u2013 Escola de Canuan\u00e3 ", 
             "address": ""
         }
@@ -995,8 +1774,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Universidade Tecnol\u00f3gica Federal do Paran\u00e1", 
             "address": ""
         }
@@ -1006,8 +1785,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Col\u00e9gio Christus - Unidade Bar\u00e3o de Studart", 
             "address": ""
         }
@@ -1017,8 +1796,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Col\u00e9gio Interativa", 
             "address": ""
         }
@@ -1028,8 +1807,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Col\u00e9gio Estadual Luiz Reid", 
             "address": ""
         }
@@ -1039,8 +1818,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Col\u00e9gio Koelle", 
             "address": ""
         }
@@ -1050,8 +1829,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "SENAI Geraldo Vieira Martins", 
             "address": ""
         }
@@ -1061,8 +1840,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "E.E.E.F. Seival", 
             "address": ""
         }
@@ -1072,8 +1851,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Institui\u00e7\u00e3o de Ensino Latino Americano", 
             "address": ""
         }
@@ -1083,8 +1862,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "Escola T\u00e9cnica Estadual Trajano Camargo", 
             "address": ""
         }
@@ -1094,8 +1873,8 @@
         "model": "institutions.institution", 
         "fields": {
             "website": "", 
-            "city": "", 
-            "state": "", 
+            "city": "São Paulo", 
+            "state": "SP", 
             "name": "FEBRACE", 
             "address": ""
         }
@@ -1789,6 +2568,267 @@
             "institution": 15
         }
     }, 
+    {
+        "pk": 1, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 1, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 2
+        }
+    },
+    {
+        "pk": 2, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 1, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 3
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 1, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 5
+        }
+    },
+    {
+        "pk": 4, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 45, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 3
+        }
+    },
+    {
+        "pk": 5, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 45, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 5
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 13, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 3
+        }
+    },
+    {
+        "pk": 7, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 13, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 5
+        }
+    },
+    {
+        "pk": 8, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 13, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 31
+        }
+    },
+    {
+        "pk": 9, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 13, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 15
+        }
+    },
+    {
+        "pk": 10, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 24, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 3
+        }
+    },
+    {
+        "pk": 11, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 24, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 5
+        }
+    },
+    {
+        "pk": 12, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 34, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 5
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 1, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 1
+        }
+    },
+    {
+        "pk": 2, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 1, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 2
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 1, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 3
+        }
+    },
+    {
+        "pk": 4, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 1, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 4
+        }
+    },
+    {
+        "pk": 5, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 1, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 5
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 9, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 1
+        }
+    },
+    {
+        "pk": 7, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 9, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 10
+        }
+    },
+    {
+        "pk": 8, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 9, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 11
+        }
+    },
+    {
+        "pk": 9, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 6, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 1
+        }
+    },
+    {
+        "pk": 10, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 6, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 2
+        }
+    },
+    {
+        "pk": 11, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 6, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 40
+        }
+    },
+    {
+        "pk": 12, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 6, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 15
+        }
+    },
+    {
+        "pk": 13, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 7, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 19
+        }
+    },
+    {
+        "pk": 14, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 7, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 18
+        }
+    },
+    {
+        "pk": 15, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 7, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 37
+        }
+    },
+    {
+        "pk": 16, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 3, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 10
+        }
+    },
+    {
+        "pk": 17, 
+        "model": "projects.projectlink", 
+        "fields": {
+            "project": 3, 
+            "date_added": "2009-07-03 01:50:22", 
+            "user": 14
+        }
+    },
     {
         "pk": 1, 
         "model": "projects.prizelink", 
