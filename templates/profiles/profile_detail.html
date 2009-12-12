@@ -83,7 +83,7 @@
                         Email: {{ profile.user.email }} <br/>
                         Cidade: {{ profile.city }} <br/>
                         Estado: {{ profile.state }} <br/>
-                        Data de Nascimento: {{ profile.birthdate }} <br/>
+                        Data de Nascimento: {{ profile.birthdate|date:"d/m/Y" }} <br/>
                         Sexo: {{ profile.gender }} <br/>
                     </div>
                 </div>

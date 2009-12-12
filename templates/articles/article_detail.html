@@ -16,9 +16,9 @@
     <div id="meta">
         <br/>
         {% if object.author.get_profile %}
-        <p>Escrito por <a href="{{ object.author.get_profile.get_absolute_url }}">{{ object.author.username }}</a> em {{ object.pub_date|date:"d/M/Y" }}<br/></p>
+        <p>Escrito por <a href="{{ object.author.get_profile.get_absolute_url }}">{{ object.author.get_profile.name }}</a> em {{ object.pub_date|date:"d/m/Y" }}<br/></p>
         {% else %}
-            <p>Escrito por {{ object.author.username }} em {{ object.pub_date|date:"d/M/Y" }}<br/></p>
+            <p>Escrito por {{ object.author.username }} em {{ object.pub_date|date:"d/m/Y" }}<br/></p>
         {% endif %}
     </div>
 
