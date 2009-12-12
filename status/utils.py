@@ -36,7 +36,7 @@ def get_most_followed_projects():
     return project_list[:10]
 
 def get_most_commented_projects():
-    content_type = ContentType.objects.get(name='project')
+    content_type = ContentType.objects.get_for_model(Project)
     project_ids = Comment.objects.filter(content_type=content_type).values_list('object_pk', flat=True)
     project_count = {}
     for project_id in project_ids:
@@ -49,9 +49,9 @@ def get_most_commented_projects():
     project_list.sort(key=lambda(x): x[1], reverse=True)
 
     return project_list[:5]
-    
+
 def get_most_commented_posts():
-    content_type = ContentType.objects.get(name='post')
+    content_type = ContentType.objects.get_for_model(Post)
     post_ids = Comment.objects.filter(content_type=content_type).values_list('object_pk', flat=True)
     post_count = {}
     for post_id in post_ids:
