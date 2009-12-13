@@ -10,10 +10,14 @@
 
     <div id="institution">
         <br/>
-        Endereço: {{ object.address }} <br/>
-        Cidade: {{ object.city }} <br/>
-        Estado: {{ object.state }} <br/>
-        Website: <a href='{{ object.website }}'>{{ object.website }} </a><br/>
+        <h3>Endereço</h3> 
+        {{ object.address }} <br/><br/>
+        <h3>Cidade</h3> 
+        {{ object.city }} <br/><br/>
+        <h3>Estado</h3> 
+        {{ object.state }} <br/><br/> 
+        <h3>Website</h3> 
+        <a href='{{ object.website }}'>{{ object.website }} </a><br/>
     </div>
 
 {% endblock %}
