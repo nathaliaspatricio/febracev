@@ -80,11 +80,11 @@
                     {% endif %}
                     <div id="bio">
                         <br/>
-                        Email: {{ profile.user.email }} <br/>
                         Cidade: {{ profile.city }} <br/>
                         Estado: {{ profile.state }} <br/>
                         Data de Nascimento: {{ profile.birthdate|date:"d/m/Y" }} <br/>
                         Sexo: {{ profile.gender }} <br/>
+                        Instituição: <a href="/institutions/{{ profile.institution.id }}">{{ profile.institution }}</a><br/>
                     </div>
                 </div>
             </div>
@@ -101,51 +101,72 @@
 		</div>
 		<div class="subcolumns">
 			<div class="subcolumn" id="columnBleft">
-                <h3>Pessoas que sigo</h3>
-                <ul>
-                {% for following in following_list %}
-                    <li><a href={{ following.get_profile.get_absolute_url }}>{{ following.username }}</a></li>
-                {% endfor %}
-                </ul>
+                <h3>Usuários que sigo</h3>
+                {% if following_list %}
+                    <ul>
+                    {% for following in following_list %}
+                        <li><a href={{ following.get_profile.get_absolute_url }}>{{ following.username }}</a></li>
+                    {% endfor %}
+                    </ul>
+                    <br>
                     <a href={% url friends_following username=profile.user.username %}>mais...</a>
-                    <div class="clear">&nbsp;</div>
+                {% else %}
+                    <p>Não há usuários que sigo.</p>
+                {% endif %}
+                <div class="clear">&nbsp;</div>
             </div>
 			<div class="subcolumn" id="columnBright">
-                <h3>Pessoas que me seguem</h3>
-                <ul>
-                {% for follower in follower_list %}
-                    <li><a href={{ follower.get_profile.get_absolute_url }}>{{ follower.username }}</a></li>
-                {% endfor %}
-                </ul>
-                <a href={% url friends_followers username=profile.user.username %}>mais...</a>
+                <h3>Usuários que me seguem</h3>
+                {% if follower_list %}
+                    <ul>
+                    {% for follower in follower_list %}
+                        <li><a href={{ follower.get_profile.get_absolute_url }}>{{ follower.username }}</a></li>
+                    {% endfor %}
+                    </ul>
+                    <br>
+                    <a href={% url friends_followers username=profile.user.username %}>mais...</a>
+                {% else %}  
+                    <p>Não há usuários que me seguem.</p>
+                {% endif %}
                 <div class="clear">&nbsp;</div>
 			</div>
 			<div class="subcolumn" id="columnBright">
                 <h3>Amigos</h3>
-                <ul>
-                {% for mutual in mutual_list %}
-                    <li><a href={{ mutual.get_profile.get_absolute_url }}>{{ mutual.username }}</a></li>
-                {% endfor %}
-                </ul>
-                <a href={% url friends_mutual username=profile.user.username %}>mais...</a>
+                {% if mutual_list %}
+                    <ul>
+                    {% for mutual in mutual_list %}
+                        <li><a href={{ mutual.get_profile.get_absolute_url }}>{{ mutual.username }}</a></li>
+                    {% endfor %}
+                    </ul>
+                    <br>
+                    <a href={% url friends_mutual username=profile.user.username %}>mais...</a>
+                {% else %}
+                    <p>Não há amigos.</p>
+                {% endif %}
                 <div class="clear">&nbsp;</div>
 			</div>
             
 		</div>
 		<div class="clear"></div>
+        <br>
         <div class="columnBhead">
             <h2>Projetos Favoritos</h2>
 			<div class="clear">&nbsp;</div>
 		</div>
 		<div class="subcolumns">
 			<div class="subcolumn" id="columnBleft">
-                <ul>
-                {% for project in favorite_projects %}
-                    <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
-                {% endfor %}
-                </ul>
-                <a href={% url projects_favorite_projects username=profile.user.username %}>mais...</a>
-                    <div class="clear">&nbsp;</div>
+                {% if favorite_projects %}
+                    <ul>
+                    {% for project in favorite_projects %}
+                        <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                    <br>
+                    <a href={% url projects_favorite_projects username=profile.user.username %}>mais...</a>
+                {% else %}
+                    <p>Não há projetos favoritos.</p>
+                {% endif %}
+                <div class="clear">&nbsp;</div>
             </div>            
 		</div>
 	</div>
@@ -195,19 +216,23 @@
                 <h3>Recados recebidos</h3>
                 <br>
                 {% get_comment_list for profile as comment_list %}
-                <ul>
-                    {% for comment in comment_list %}
-                        <li>
-                        {% if comment.user.get_profile %}
-	                        <a href="{{ comment.user.get_profile.get_absolute_url }}" class="label">{{ comment.user.get_profile.name }}</a>
-                        {% else %} 
-                            <a href="mailto:{{ comment.email }}" class="label">{{ comment.user_name }}</a>
-                        {% endif %}
-                        </li>
-                        <li> {{ comment.comment }}</li>
-                        <br>
-                    {% endfor %}
-                </ul>
+                {% if comment_list %}
+                    <ul>
+                        {% for comment in comment_list %}
+                            <li>
+                            {% if comment.user.get_profile %}
+	                            <a href="{{ comment.user.get_profile.get_absolute_url }}" class="label">{{ comment.user.get_profile.name }}</a>
+                            {% else %} 
+                                <a href="mailto:{{ comment.email }}" class="label">{{ comment.user_name }}</a>
+                            {% endif %}
+                            </li>
+                            <li> {{ comment.comment }}</li>
+                            <br>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Não há recados recebidos.</p>
+                {% endif %}
 			    <div class="clear">&nbsp;</div>
 	        </div>
         </div>

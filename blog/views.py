@@ -87,7 +87,9 @@ def post_list(request, edition=None, category=None, code=None, project_slug=None
         queryset = Post.objects.published(project),
         paginate_by = 20,
         page = page,
-        extra_context= {'feed_url': feed_url},
+        extra_context= {'feed_url': feed_url,
+                        'project': project,
+                        },
         **kwargs
     )
 post_list.__doc__ = list_detail.object_list.__doc__

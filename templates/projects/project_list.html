@@ -6,10 +6,14 @@
 
 {% block content %}
 
-    <ul>
-    {% for project in project_list %}
-        <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
-    {% endfor %}
-    </ul>
+    {% if project_list %}
+        <ul>
+        {% for project in project_list %}
+            <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há projetos cadastrados.</p>
+    {% endif %}
 
 {% endblock %}
