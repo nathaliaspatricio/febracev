@@ -2,20 +2,34 @@
 {% load i18n %} 
 {% block content %}
 <h1>{% trans "View Message" %}</h1>
-<dl class="message-headers">
-    <dt>{% trans "Subject" %}</dt>
-    <dd><strong>{{ message.subject }}</strong></dd>
-    <dt>{% trans "Sender" %}</dt>
-    <dd>{{ message.sender }}</dd>
-    <dt>{% trans "Date" %} </dt>
-    <dd>{{ message.sent_at|date:_("DATETIME_FORMAT")}}</dd>
-    <dt>{% trans "Recipient" %}</dt>
-    <dd>{{ message.recipient }}</dd>
-</dl>
-{{ message.body|linebreaksbr }}<br /><br />
+<br>
+    <div class="field">
+        <label for="id_subject"><h2>Remetente</h2></label>
+        {% if message.sender.get_profile %}
+            <a href={{ message.sender.get_profile.get_absolute_url }}>{{ message.sender.get_profile.name }}</a>
+        {% else %}
+            {{ message.sender }}
+        {% endif %}
+    </div>
+    <br>
+    <div class="field">
+        <label for="id_subject"><h2>Data</h2></label>
+        {{ message.sent_at|date:"d/m/Y H:m" }}
+    </div>
+    <br>
+    <div class="field">
+        <label for="id_subject"><h2>Assunto</h2></label>
+        {{ message.subject }}
+    </div>
+    <br>
+    <div class="field">
+        <label for="id_subject"><h2>Mensagem</h2></label>
+        {{ message.body|linebreaksbr }}
+    </div>
+    <br>
 
 {% ifequal message.recipient user %}
-<a href="{% url messages_reply message.id %}">{% trans "Reply" %}</a>
+    <input type="button" onClick="parent.location='{% url messages_reply message.id %}'" value="{% trans "Reply" %}">
 {% endifequal %}
-<a href="{% url messages_delete message.id %}">{% trans "Delete" %}</a>
+    <input type="button" onClick="parent.location='{% url messages_delete message.id %}'" value="{% trans "Delete" %}">
 {% endblock %}

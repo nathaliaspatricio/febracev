@@ -2,11 +2,30 @@
 {% load i18n %} 
 {% block content %} 
 <h1>{% trans "Compose Message"%}</h1>
+<br>
+    {% if form.errors %}
+        <p style="color: red;">
+            Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
+        </p>
+    {% endif %}
+<br>
 <form action="" method="post">
-<table>
-{{ form.as_table }}
-</table>
-<input type="submit" value="{% trans "Send" %} &raquo;"/>
+    <div style="display:none;" class="field">
+        <label for="id_recipient"><h2>Usuário</h2></label>
+        {{ form.recipient }} {{ form.recipient.errors }}
+    </div>
+    <br>
+    <div class="field">
+        <label for="id_subject"><h2>Assunto</h2></label>
+        {{ form.subject }} {{ form.subject.errors }}
+    </div>
+    <br>
+    <div class="field">
+        <label for="id_message"><h2>Mensagem</h2></label>
+        {{ form.body }} {{ form.body.errors }}
+    </div>
+    <br><br>
+<input type="submit" value="{% trans "Send" %} "/>
 </form>
 
 {% endblock %}

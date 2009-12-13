@@ -2,21 +2,34 @@
 {% load i18n %} 
 {% block content %} 
 <h1>{% trans "Sent Messages" %}</h1>
-<table class="messages">
-    <thead>
-        <tr><th>{% trans "Recipient" %}</th><th>{% trans "Subject" %}</th><th>{% trans "Sent" %}</th><th>{% trans "Action" %}</th></tr>
-    </thead>
-    <tbody>
-{% for message in message_list %} 
-    <tr>
-        <td>{{ message.recipient }}</td>
-        <td>
-        <a href="{{ message.get_absolute_url }}">{{ message.subject }}</a>
-        </td>
-        <td>{{ message.sent_at|date:_("DATETIME_FORMAT") }}</td>
-        <td><a href="{% url messages_delete message.id %}?next={% url messages_outbox %}">{% trans "delete" %}</a></td>
-    </tr>
-{% endfor %}
-    </tbody>
-</table>
+<br>
+    {% if message_list %}
+    <table class="messages">
+        <thead>
+            <tr>
+                <th>{% trans "Recipient" %}</th>
+                <th>{% trans "Subject" %}</th>
+                <th>{% trans "Sent" %}</th>
+                <th>{% trans "Action" %}</th></tr>
+        </thead>
+        <tbody>
+    {% for message in message_list %} 
+        <tr>
+            {% if message.recipient.get_profile %}
+                <td><a href={{ message.recipient.get_profile.get_absolute_url }}>{{ message.recipient.get_profile.name }}</a></td>
+            {% else %}
+                <td>{{ message.recipient }}</td>
+            {% endif %}
+            <td>
+            <a href="{{ message.get_absolute_url }}">{{ message.subject }}</a>
+            </td>
+            <td>{{ message.sent_at|date:"d/m/Y H:m" }}</td>
+            <td><a href="{% url messages_delete message.id %}?next={% url messages_outbox %}">{% trans "delete" %}</a></td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    {% else %}  
+        <p>Não há mensagens na sua caixa de saída.</p>
+    {% endif %}
 {% endblock %}

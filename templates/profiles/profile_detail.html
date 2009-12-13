@@ -165,18 +165,18 @@
                 <form action="{% comment_form_target %}" method="POST">
                     {% if user.is_anonymous %}
                         <div class="field">
-                            <label for="id_name"><h2>Nome</h2></label>
+                            <label for="id_name"><h3>Nome</h3></label>
                             {{ form.name }} {{ form.name.errors }}
                         </div>
                         <br>
                         <div class="field">
-                            <label for="id_email"><h2>E-mail</h2></label>
+                            <label for="id_email"><h3>E-mail</h3></label>
                             {{ form.email }} {{ form.email.errors }}
                         </div>
                         <br>
                     {% endif %}
                     <div class="field">
-                        <label for="id_comment"><h2>Texto</h2></label>
+                        <label for="id_comment"><h3>Texto</h3></label>
                         {{ form.comment }} {{ form.comment.errors }}
                     </div>
                     <br>
@@ -191,11 +191,21 @@
                     <input type="hidden" name="next" value="{{ profile.get_absolute_url }}" />
                     <input type="submit" value="Enviar recado" id="id_submit" />
                 </form>
+                <br><br>
+                <h3>Recados recebidos</h3>
+                <br>
                 {% get_comment_list for profile as comment_list %}
                 <ul>
                     {% for comment in comment_list %}
-                        <li> {{ comment.user_name }}</li>
+                        <li>
+                        {% if comment.user.get_profile %}
+	                        <a href="{{ comment.user.get_profile.get_absolute_url }}" class="label">{{ comment.user.get_profile.name }}</a>
+                        {% else %} 
+                            <a href="mailto:{{ comment.email }}" class="label">{{ comment.user_name }}</a>
+                        {% endif %}
+                        </li>
                         <li> {{ comment.comment }}</li>
+                        <br>
                     {% endfor %}
                 </ul>
 			    <div class="clear">&nbsp;</div>

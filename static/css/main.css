@@ -30,6 +30,22 @@ table {
 border-collapse:collapse;
 border-spacing:0;
 }
+table.messages {
+border: 1px solid black;
+width:100%;
+}
+th, td {
+border: 1px solid black;
+}
+td{
+padding:5px;
+}
+th {
+padding:15px;
+font-size:14px;
+text-align:center;
+background-color:#F6F6EA;
+}
 ul {
 list-style-type:none;
 }
@@ -120,10 +136,6 @@ margin:0 0 2px;
 }
 div.toolbar_item .paginate_left span, div.toolbar_item .paginate_right span {
 color:#969696 !important;
-}
-table {
-border-collapse:collapse;
-border-spacing:0;
 }
 input {
 border:3px solid #DEDED0;

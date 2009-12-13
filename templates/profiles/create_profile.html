@@ -10,13 +10,13 @@
 
     {% if user_form.errors %}
         <p style="color: red;">
-            Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
+            Por favor, corrija o{{ user_form.errors|pluralize }} erro{{ user_form.errors|pluralize }} abaixo.
         </p>
     {% endif %}
 
     {% if profile_form.errors %}
         <p style="color: red;">
-            Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
+            Por favor, corrija o{{ profile_form.errors|pluralize }} erro{{ profile_form.errors|pluralize }} abaixo.
         </p>
     {% endif %}
 
