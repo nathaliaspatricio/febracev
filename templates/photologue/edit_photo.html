@@ -6,22 +6,34 @@
 
 {% block content %}
 
-<h1>{{ object.title }}</h1>
+<h1>Editar foto</h1>
 <div class="gallery-photo">
-    <a href="{{ object.image.url }}"><img src="{{ object.get_display_url }}" alt="{{ object.title }}"/></a>
-    {% if object.caption %}<p>{{ object.caption }}</p>{% endif %}
+    <a href="{{ object.image.url }}"><img src="{{ object.image.url }}" alt="{{ object.title }}"/></a>
 </div>
 
 {% if form.errors %}
     <p style="color: red;">
         Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
     </p>
+    <br>
 {% endif %}
-
+<br>
 <form enctype="multipart/form-data" method="post" action="">
-    <table>
-        {{ form.as_table }}
-    </table>
+        <div class="field">
+            <label for="id_title"><h2>Título</h2></label>
+            {{ form.title }} {{ form.title.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_caption"><h2>Legenda</h2></label>
+            {{ form.caption }} {{ form.caption.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_image"><h2>Palavras-chave</h2></label>
+            {{ form.tags }} {{ form.tags.errors }}
+        </div>
+        <br>
     <input type="submit" value="Enviar">
 </form>
 

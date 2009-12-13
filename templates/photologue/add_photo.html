@@ -15,9 +15,31 @@
     {% endif %}
 
     <form enctype="multipart/form-data" method="post" action="">
-        <table>
-            {{ form.as_table }}
-        </table>
+        <div class="field">
+            <label for="id_image"><h2>Imagem</h2></label>
+            {{ form.image }} {{ form.image.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_title"><h2>Título</h2></label>
+            {{ form.title }} {{ form.title.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_slug"><h2>Slug</h2></label>
+            {{ form.title_slug }} {{ form.title_slug.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_caption"><h2>Legenda</h2></label>
+            {{ form.caption }} {{ form.caption.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_image"><h2>Palavras-chave</h2></label>
+            {{ form.tags }} {{ form.tags.errors }}
+        </div>
+        <br>
         <input type="submit" value="Enviar">
     </form>
 {% endblock %}

@@ -4,14 +4,13 @@
 
 {% block content %}
 
-<h1>{{ object.title }}</h1>
+<h1>Galeria de fotos do projeto {{ object.title }}</h1>
 {% if object.description %}<p>{{ object.description }}</p>{% endif %}
+<br>
 <div class="photo-gallery">
     {% if object.public %}
         {% for photo in object.public %}
-        <div class="gallery-photo">
-            <a href="{{ photo.get_absolute_url }}"><img src="{{ photo.get_thumbnail_url }}" alt="{{ photo.title }}"/></a>
-        </div>
+            <a href="{{ photo.get_absolute_url }}"><img src="{{ photo.image.url }}" alt="{{ photo.title }}" width="150"/></a>
         {% endfor %}
     {% else %}
         <p> Não há fotos relacionadas a esse projeto.</p>
