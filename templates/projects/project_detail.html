@@ -92,42 +92,62 @@
 	<div class="column" id="columnB">
         <div class="columnBhead">
             <h2>Dados do projeto</h2>
-			<div class="clear">&nbsp;</div>
-                <h3>Autores</h3>
+		<div class="clear">&nbsp;</div>
+                <h3>Autor{{ student_list|pluralize:"es" }}:</h3>
                 {% for student in student_list %}
-                    {% if student.is_active %}
-                        <a href={{ student.get_absolute_url }}> {{ student.name }}</a><br/>
-                    {% else %}
-                        {{ student.name }}<br/>
+		    {% if forloop.last %}
+                        {% if student.is_active %}
+                            <a href={{ student.get_absolute_url }}>{{ student.name }}</a>
+                        {% else %}
+                            {{ student.name }}
+                        {% endif %}
+		    {% else %}
+                        {% if student.is_active %}
+                            <a href={{ student.get_absolute_url }}>{{ student.name }}, </a>
+                        {% else %}
+                            <pre>{{ student.name }}, </pre>
+                        {% endif %}
                     {% endif %}
-                {% endfor %}<br>
-                <h3>Orientadores</h3>
+                {% endfor %}
+                <br/>
+                <h3>Orientador{{ advisor_list|pluralize:"es" }}:</h3>
                 {% for advisor in advisor_list %}
-                    {% if advisor.is_active %}
-                        <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}</a><br/>
+		    {% if forloop.last %}
+                        {% if adivisor.is_active %}
+                            <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}</a>
+                        {% else %}
+                            {{ advisor.name }}
+                        {% endif %}
                     {% else %}
-                        {{ advisor.name }}<br/>
+                        {% if adivisor.is_active %}
+                            <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}, </a>
+                        {% else %}
+                            {{ advisor.name }}, 
+                        {% endif %}
                     {% endif %}
                 {% endfor %} 
-                <br>
-                Instituição: <a href="/institutions/{{ project.institution.id }}">{{ project.institution }}</a> <br/>
-                {% if project.edition %}
-                    Ano: <a href="/projects/{{ project.edition }}">{{ project.edition }} </a><br/>
-                {% endif %}
-                Área: <a href="/projects/{{ project.category }}">{{ project.category }} </a><br/>
-                Palavras-chave: {{ project.keywords }} <br/>
-                <br>
-                <h3>Prêmios</h3>
+                <br/>
+                <h3>Instituição:</h3>
+		<a href={{ project.institution.get_absolute_url }}>{{ project.institution }}</a>
+                <br/>
+		{% if tag_list %}
+                    <h3>Palavras-chave:</h3>
+                    {% for tag in tag_list %}
+		        {% if forloop.last %}
+                            <a href={{ tag.get_absolute_url }}>{{ tag.name }}</a>
+			{% else %}
+                            <a href={{ tag.get_absolute_url }}>{{ tag.name }}, </a>
+			{% endif %}
+                    {% endfor %} 
+                    <br/>
+		{% endif %}
                 {% if prize_list %}
+                    <h3>Prêmios</h3>
                     {% for prize in prize_list %}
                         <img src="{{ MEDIA_URL }}images/star.png" id="star" alt="estrela" /> {{ prize.name }}<br/>
                     {% endfor %} 
-                {% else %}
-                    Não há.
                 {% endif %}
-                <br>
-                <h3>Resumo</h3> 
-                {{ project.abstract }} <br/><br/>
+                <br />
                 {% if project.slug %}
                     <a href={% url blog_index_slug project_slug=project.slug %}>Diário de Bordo</a><br/>
                 {% else %}
