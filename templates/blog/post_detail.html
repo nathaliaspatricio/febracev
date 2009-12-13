@@ -15,25 +15,8 @@
   {% load blog markup comments tagging_tags %}
     <h1>Diário de Bordo do projeto {{project.name}}</h1>
     <br>
-    <p class="other_posts">
-    {% if object.get_previous_by_publish %}
-        <a class="previous" href="{{ object.get_previous_post.get_absolute_url }}">&laquo; {{ object.get_previous_post }}</a>
-    {% endif %}
-    {% if object.get_next_by_publish %}
-        | <a class="next" href="{{ object.get_next_post.get_absolute_url }}">{{ object.get_next_post }} &raquo;</a> 
-    {% endif %}  
-    {% if is_owner %}
-        <br/>
-        {% if project.slug %}
-            <a href={% url blog_edit_post_slug project_slug=project.slug year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
-        {% else %}
-            <a href={% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
-        {% endif %}
-    {% endif %}
-    </p>
-    <br>
     <h2>{{ object.title }}</h2>
-    <p class="date">{{ object.publish|date:"j F Y" }}</p>
+    <p class="date">{{ object.publish|date:"d/m/Y H:m" }}</p>
     <br>
     <div class="body">
         {{ object.body|markdown:"safe" }}
@@ -48,53 +31,84 @@
         </p>
     {% endif %}
     <br>
-
-  {% get_comment_list for object as comment_list %}
-  {% if comment_list %}
-  <div id="comments">
-{% load comments %}
-
-
-    <a name="comments"></a>
-    <h3 class="comments_title">Comments</h3>
-    {% for comment in comment_list %}
-      {% if comment.is_public %}
-      <div class="comment">
-        <h5 class="name">
-          <a name="c{{ comment.id }}" href="{{ comment.get_absolute_url }}" title="Permalink to {{ comment.person_name }}'s comment" class="count">{{ forloop.counter }}</a> 
-          {% if comment.user_url %}<a href="{{ comment.user_url }}">{{ comment.user_name }}</a>{% else %}{{ comment.user_name }}{% endif %} says...
-        </h5>
-        {{ comment.comment|urlizetrunc:"60"|markdown:"safe" }}
-        <p class="date">Posted at {{ comment.submit_date|date:"P" }} on {{ comment.submit_date|date:"F j, Y" }}</p>
-      </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% if object.allow_comments %}
-    {% get_comment_form for object as form %}
-    <form action="{% comment_form_target %}" method="POST">
-        {% if user.is_anonymous %}
-            <p><label for="id_name">Nome</label>{{ form.name }}</p>
-            <p><label for="id_email">Email</label>{{ form.email }}</p>
+    <p class="other_posts">
+    {% if object.get_previous_by_publish %}
+        <input type="button" onClick="parent.location='{{ object.get_previous_post.get_absolute_url }}'" value="&laquo; {{ object.get_previous_post }}">
+    {% endif %}
+    {% if object.get_next_by_publish %}
+        <input type="button" onClick="parent.location='{{ object.get_next_post.get_absolute_url }}'" value="{{ object.get_next_post }} &raquo;">
+    {% endif %}  
+    {% if is_owner %}
+        <br/>
+        {% if project.slug %}
+            <a href={% url blog_edit_post_slug project_slug=project.slug year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
+        {% else %}
+            <a href={% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
         {% endif %}
-        <p><label for="id_comment">Recado</label>{{ form.comment }}</p>
+    {% endif %}
+    </p>
+    <br><br>
+    {% get_comment_list for object as comment_list %}
+    <div id="comments">
+    {% load comments %}
+        <h2>Comentários</h2>
+        <br>
+        {% if comment_list %}
+            <ul>
+                {% for comment in comment_list %}
+                    <li>
+                    {% if comment.user.get_profile %}
+                        <a href="{{ comment.user.get_profile.get_absolute_url }}" class="label">{{ comment.user.get_profile.name }}</a>
+                    {% else %} 
+                        <a href="mailto:{{ comment.email }}" class="label">{{ comment.user_name }}</a>
+                    {% endif %}
+                    </li>
+                    <li> {{ comment.submit_date|date:"d/m/Y H:m" }}</li>
+                    <li> {{ comment.comment }}</li>
+                    <br>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Não há comentários.</p>
+        {% endif %}
+    </div><br><br>
+    {% if object.allow_comments %}
+    <h3>Deixe seu comentário</h3>
+    <br>
+    {% get_comment_form for object as form %}
+        <form action="{% comment_form_target %}" method="POST">
+        {% if user.is_anonymous %}
+            <div class="field">
+                <label for="id_name"><h3>Nome</h3></label>
+                {{ form.name }} {{ form.name.errors }}
+            </div>
+            <br>
+            <div class="field">
+                <label for="id_email"><h3>E-mail</h3></label>
+                {{ form.email }} {{ form.email.errors }}
+            </div>
+            <br>
+        {% endif %}
+        <div class="field">
+            <label for="id_comment"><h3>Texto</h3></label>
+            {{ form.comment }} {{ form.comment.errors }}
+        </div>
+        <br>
          <p style="display:none;">
-             <label for="id_honeypot">Se você escrever algo aqui,
-                 seu recado será tratado como spam</label>
+             <label for="id_honeypot">Se você escrever algo aqui, seu recado será tratado como spam</label>
             {{ form.honeypot }}
         </p>
         {{ form.content_type }}
         {{ form.object_pk }}
         {{ form.timestamp }}
         {{ form.security_hash }}
-        <input type="hidden" name="next" value="{{ object.get_absolute_url }}" />
-        <input type="submit" value="Enviar recado" id="id_submit" />
+        <input type="hidden" name="next" value="{{ profile.get_absolute_url }}" />
+        <input type="submit" value="Enviar comentário" id="id_submit" />
     </form>
-  {% else %}
+    {% else %}
     <div id="comment_form">
-      <h3>Caixa de comentários fechada.</h3>
-      <p>Esse post não permite comentários.</p>
+        <h3>Caixa de comentários fechada.</h3>
+        <p>Esse post não permite comentários.</p>
     </div>
-  {% endif %}
+    {% endif %}
 {% endblock %}

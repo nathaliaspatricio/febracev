@@ -8,6 +8,13 @@
 
 {% block content %}
 
+    {% if user.is_authenticated %}
+        <h2>Crie o seu projeto<h2>
+        <br />
+        <input type="button" onClick="parent.location='{% url projects_request_project  %}'" value="Novo projeto">
+        <br /><br />
+    {% endif %} 
+
     <h2>Projetos por categoria<h2>
     <br />
     <ul>

@@ -10,14 +10,47 @@
 
     {% if form.errors %}
         <p style="color: red;">
-            Please correct the error{{ form.errors|pluralize }} below.
+            Por favor, corrija o{{ user_form.errors|pluralize }} erro{{ user_form.errors|pluralize }} abaixo.
         </p>
+        <br>
     {% endif %}
 
     <form enctype="multipart/form-data" method="post" action="">
-        <table>
-            {{ form.as_table }}
-        </table>
+        <div class="field">
+            <label for="id_slug"><h2>Slug</h2></label>
+            {{ form.slug }} {{ form.slug.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_name"><h2>Nome</h2></label>
+            {{ form.name }} {{ form.name.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_abstract"><h2>Resumo</h2></label>
+            {{ form.abstract }} {{ form.abstract.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_institution"><h2>Instituição</h2></label>
+            {{ form.institution }} {{ form.institution.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_keywords"><h2>Palavras-chave</h2></label>
+            {{ form.keywords }} {{ form.keywords.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_category"><h2>Categoria</h2></label>
+            {{ form.category }} {{ form.category.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_role"><h2>Papel</h2></label>
+            {{ form.role }} {{ form.role.errors }}
+        </div>
+        <br>
         <input type="submit" value="Enviar">
     </form>
 {% endblock %}

@@ -226,6 +226,7 @@
                                 <a href="mailto:{{ comment.email }}" class="label">{{ comment.user_name }}</a>
                             {% endif %}
                             </li>
+                            <li> {{ comment.submit_date|date:"d/m/Y H:m" }}</li>
                             <li> {{ comment.comment }}</li>
                             <br>
                         {% endfor %}

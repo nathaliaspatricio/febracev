@@ -9,7 +9,7 @@
 {% block content %}
     Você tem certeza? <br/>
 
-    <a href={% url projects_new_project %}>Sim</a><br/>
-    <a href={{ visitor.get_absolute_url }}>Não</a><br/>
+    <input type="button" onClick="parent.location='{% url projects_new_project %}'" value="Sim">
+    <input type="button" onClick="parent.location='{{ visitor.get_absolute_url }}'" value="Não">
 
 {% endblock %}
