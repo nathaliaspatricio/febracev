@@ -50,47 +50,16 @@
         </div>
         <div class="portrait_area">
             <div class="portrait">
-                Autores: 
-                <br/>
-                {% for student in student_list %}
-                    {% if student.is_active %}
-                        <a href={{ student.get_absolute_url }}> {{ student.name }}</a><br/>
+                {% if project.video %}
+                    {% if project.is_local %}
+                        <video src="{{ MEDIA_URL }}/video/{{ project.video }}"
+                        controls="true" width="300" height="288"></video>
                     {% else %}
-                        {{ student.name }}<br/>
-                    {% endif %}
-                {% endfor %}
-                Orientador: 
-                <br/>
-                {% for advisor in advisor_list %}
-                    {% if adivisor.is_active %}
-                        <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}</a><br/>
-                    {% else %}
-                        {{ advisor.name }}<br/>
-                    {% endif %}
-                {% endfor %} 
-                Instituição: <a href="/institutions/{{ project.institution.id }}">{{ project.institution }}</a> <br/>
-                {% if project.edition %}
-                    Ano: <a href="/projects/{{ project.edition }}">{{ project.edition }} </a><br/>
-                {% endif %}
-                Área: <a href="/projects/{{ project.category }}">{{ project.category }} </a><br/>
-                Palavras-chave: {{ project.keywords }} <br/>
-                {# Resumo: {{ project.abstract }} <br/> #}
-                Prêmios: 
-                {% for prize in prize_list %}
-                    {{ prize.name }}<br/>
-                {% endfor %} 
-                <br/>
-                {% if project.slug %}
-                    <a href={% url blog_index_slug project_slug=project.slug %}>Diário de Bordo</a><br/>
-                    {% if is_owner %}
-                        <a href={% url blog_add_post_slug project_slug=project.slug %}>adicionar post</a><br/>
-                    {% endif %}
-                {% else %}
-                    <a href={% url blog_index edition=project.edition category=project.category code=project.code %}>Diário de Bordo</a><br/>
-                    <a href={% url pl-project-gallery edition=project.edition category=project.category code=project.code %}>Galeria de fotos</a><br/>
-                    {% if is_owner %}
-                        <a href={% url blog_add_post edition=project.edition category=project.category code=project.code %}>adicionar post</a><br/>
-                        <a href={% url pl-add-photo edition=project.edition category=project.category code=project.code %}>adicionar foto</a><br/>
+                        <embed TYPE='application/x-mplayer2'
+                        pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
+                        SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
+                        ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=288 LOOP='false'>
+                        </embed> <br/>
                     {% endif %}
                 {% endif %}
             </div>
@@ -100,6 +69,20 @@
             <div class="sosoft" style=" height: 15px;">
                 <div style=" height: 15px;"></div>
             </div>
+            <div class="insides">
+                <div class="personal">
+                    {% if project.slug %}
+                        {% if is_owner %}
+                            <a href={% url blog_add_post_slug project_slug=project.slug %}>Adicionar post no Diário de Bordo</a><br/>
+                        {% endif %}
+                    {% else %}
+                        {% if is_owner %}
+                            <a href={% url blog_add_post edition=project.edition category=project.category code=project.code %}>Adicionar post no Diário de Bordo</a><br/>
+                            <a href={% url pl-add-photo edition=project.edition category=project.category code=project.code %}>Adicionar foto na Galeria</a><br/>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
             <div class="sosoft" style="background: url('{{ MEDIA_URL }}images/rounder_right_inferior.gif') no-repeat bottom right; height: 15px;">
                 <div style="background: url('{{ MEDIA_URL }}images/rounder_left_inferior.gif') no-repeat bottom left;  height: 15px;" ></div>
             </div>
@@ -108,20 +91,50 @@
 
 	<div class="column" id="columnB">
         <div class="columnBhead">
-            <h2>Vídeo</h2>
+            <h2>Dados do projeto</h2>
 			<div class="clear">&nbsp;</div>
-            {% if project.video %}
-                {% if project.is_local %}
-                    <video src="{{ MEDIA_URL }}/video/{{ project.video }}"
-                    controls="true" width="352" height="288"></video>
-                {% else %}
-                    <embed TYPE='application/x-mplayer2'
-                    pluginspage='html://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp'
-                    SRC='http://iptv.usp.br/overmedia/Id.do?instance=0&id={{ project.video }}&type=video'
-                    ShowControls=1 ShowDisplay=0 ShowStatusBar=1 width=352 height=288 LOOP='false'>
-                    </embed> <br/>
+                <h3>Autores</h3>
+                {% for student in student_list %}
+                    {% if student.is_active %}
+                        <a href={{ student.get_absolute_url }}> {{ student.name }}</a><br/>
+                    {% else %}
+                        {{ student.name }}<br/>
+                    {% endif %}
+                {% endfor %}<br>
+                <h3>Orientadores</h3>
+                {% for advisor in advisor_list %}
+                    {% if advisor.is_active %}
+                        <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}</a><br/>
+                    {% else %}
+                        {{ advisor.name }}<br/>
+                    {% endif %}
+                {% endfor %} 
+                <br>
+                Instituição: <a href="/institutions/{{ project.institution.id }}">{{ project.institution }}</a> <br/>
+                {% if project.edition %}
+                    Ano: <a href="/projects/{{ project.edition }}">{{ project.edition }} </a><br/>
                 {% endif %}
-            {% endif %}
+                Área: <a href="/projects/{{ project.category }}">{{ project.category }} </a><br/>
+                Palavras-chave: {{ project.keywords }} <br/>
+                <br>
+                <h3>Prêmios</h3>
+                {% if prize_list %}
+                    {% for prize in prize_list %}
+                        <img src="{{ MEDIA_URL }}images/star.png" id="star" alt="estrela" /> {{ prize.name }}<br/>
+                    {% endfor %} 
+                {% else %}
+                    Não há.
+                {% endif %}
+                <br>
+                <h3>Resumo</h3> 
+                {{ project.abstract }} <br/><br/>
+                {% if project.slug %}
+                    <a href={% url blog_index_slug project_slug=project.slug %}>Diário de Bordo</a><br/>
+                {% else %}
+                    <a href={% url blog_index edition=project.edition category=project.category code=project.code %}>Diário de Bordo</a><br/>
+                    <a href={% url pl-project-gallery edition=project.edition category=project.category code=project.code %}>Galeria de fotos</a><br/>
+                {% endif %}
+                <br/>
 		</div>
     </div>
 {% endblock %}

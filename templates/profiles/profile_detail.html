@@ -68,24 +68,14 @@
                 <div class="personal">
                     {% if user.is_authenticated %}
                         {% ifequal user profile.user %}
-                            <div class="where">
-                                <span class="locality"></span><br />
-                                <span class="url"><a href={% url profiles_delete_profile %}>Apagar Perfil</a></span><br/>
-                                <span class="url"><a href={% url profiles_edit_profile %}>Editar Perfil</a></span><br/>
-                                <span class="url"><a href={% url messages_inbox %}>Mensagens Recebidas</a></span><br/>
-                                <span class="url"><a href={% url messages_outbox %}>Mensagens Enviadas</a></span><br/>
-                                <span class="url"><a href={% url messages_trash %}>Mensagens Apagadas</a></span><br/>
-                            </div>
+                            <span class="locality"></span><br />
+                            <a href={% url profiles_delete_profile %}>Apagar Perfil</a><br/>
+                            <a href={% url profiles_edit_profile %}>Editar Perfil</a><br/>
+                            <a href={% url messages_inbox %}>Mensagens Recebidas</a><br/>
+                            <a href={% url messages_outbox %}>Mensagens Enviadas</a><br/>
+                            <a href={% url messages_trash %}>Mensagens Apagadas</a><br/>
                         {% endifequal %}
                     {% endif %}
-                    <div id="bio">
-                        <br/>
-                        Cidade: {{ profile.city }} <br/>
-                        Estado: {{ profile.state }} <br/>
-                        Data de Nascimento: {{ profile.birthdate|date:"d/m/Y" }} <br/>
-                        Sexo: {{ profile.gender }} <br/>
-                        Instituição: <a href="/institutions/{{ profile.institution.id }}">{{ profile.institution }}</a><br/>
-                    </div>
                 </div>
             </div>
             <div class="sosoft" style="background: url('{{ MEDIA_URL }}images/rounder_right_inferior.gif') no-repeat bottom right; height: 15px;">
@@ -95,6 +85,16 @@
     </div>
 
 	<div class="column" id="columnB">
+        <div class="columnBhead">
+            <h2>Dados pessoais</h2>
+			<div class="clear">&nbsp;</div>
+		</div>
+        Local: {{ profile.city }}, {{ profile.state }} <br/>
+        Data de Nascimento: {{ profile.birthdate|date:"d/m/Y" }} <br/>
+        Sexo: {{ profile.gender }} <br/>
+        Instituição: <a href="/institutions/{{ profile.institution.id }}">{{ profile.institution }}</a><br/>
+        Projeto: <br/>
+        <br>
 		<div class="columnBhead">
             <h2>Contatos</h2>
 			<div class="clear">&nbsp;</div>

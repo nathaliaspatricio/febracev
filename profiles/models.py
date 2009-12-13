@@ -6,8 +6,8 @@ from django.contrib.localflavor.br.br_states import STATE_CHOICES
 from institutions.models import Institution
 
 GENDER_CHOICES = (
-    (u'M', u'Masculino'),
-    (u'F', u'Feminino'),
+    (u'Masculino', u'Masculino'),
+    (u'Feminino', u'Feminino'),
 )
 
 USER_TYPES = (
@@ -34,7 +34,7 @@ class UserProfile(models.Model):
     city = models.CharField(max_length=100, blank=True, verbose_name='Cidade')
     state =  models.CharField(max_length=2, choices=STATE_CHOICES, blank=True, verbose_name='Estado')
     birthdate = models.DateField(null=True, blank=True, verbose_name='Data de Nascimento')
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=True, verbose_name='Sexo')
+    gender = models.CharField(max_length=9, choices=GENDER_CHOICES, blank=True, verbose_name='Sexo')
 
     institution = models.ForeignKey(Institution, blank=True, null=True, verbose_name='Instituição')
     mugshot = models.ImageField(upload_to='uploads/', blank=True, verbose_name='Foto')
