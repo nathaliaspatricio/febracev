@@ -10,21 +10,57 @@
 
     {% if user_form.errors %}
         <p style="color: red;">
-            Please correct the error{{ user_form.errors|pluralize }} below.
+            Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
         </p>
     {% endif %}
 
     {% if profile_form.errors %}
         <p style="color: red;">
-            Please correct the error{{ profile_form.errors|pluralize }} below.
+            Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
         </p>
     {% endif %}
 
     <form enctype="multipart/form-data" method="post" action="">
-        <table>
-            {{ user_form.as_table }}
-            {{ profile_form.as_table }}
-        </table>
+        <div class="field">
+            <label for="id_email"><h2>E-mail</h2></label>
+            {{ user_form.email }} {{ user_form.email.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_name"><h2>Nome</h2></label>
+            {{ profile_form.name }} {{ profile_form.name.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_city"><h2>Cidade</h2></label>
+            {{ profile_form.city }} {{ profile_form.city.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_state"><h2>Estado</h2></label>
+            {{ profile_form.state }} {{ profile_form.state.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_bithdate"><h2>Data de Nascimento</h2></label>
+            {{ profile_form.birthdate }} {{ profile_form.birthdate.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_gender"><h2>Sexo</h2></label>
+            {{ profile_form.gender }} {{ profile_form.gender.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_institution"><h2>Instituição</h2></label>
+            {{ profile_form.institution }} {{ profile_form.institution.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_mugshot"><h2>Foto</h2></label>
+            {{ profile_form.mugshot }} {{ profile_form.mugshot.errors }}
+        </div>
+        <br><br>
         <input type="submit" value="Enviar">
     </form>
 {% endblock %}

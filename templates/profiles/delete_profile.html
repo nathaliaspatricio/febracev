@@ -9,7 +9,7 @@
 {% block content %}
     Você tem certeza? <br/>
 
-    <a href={% url profiles_delete_profile_confirm %}>Sim</a><br/>
-    <a href={{ visitor.get_absolute_url }}>Não</a><br/>
+    <input type="button" onClick="parent.location='{% url profiles_delete_profile_confirm %}'" value="Sim">
+    <input type="button" onClick="parent.location='{{ visitor.get_absolute_url }}'" value="Não">
 
 {% endblock %}

@@ -1,6 +1,6 @@
 import os, sys
-sys.path.append('/home/leandro/projects')
-sys.path.append('/home/leandro/projects/febracev')
+sys.path.append('/media/disk/nathalia/')
+sys.path.append('/media/disk/nathalia/febracev/')
 os.environ['DJANGO_SETTINGS_MODULE']='febracev.settings'
 
 import django.core.handlers.wsgi

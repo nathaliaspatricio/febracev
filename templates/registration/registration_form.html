@@ -6,41 +6,42 @@
 {% endif %}
 {% endblock %}
 
-{% block title%} | Registro {% endblock %}
+{% block title%} | Cadastro {% endblock %}
 
 {% block header %}
-    <h1>Registro</h1>
+    <h1>Cadastro</h1>
 {% endblock %}
 
 {% block content %}
 
     {% if form.errors %}
         <p style="color: red;">
-            Please correct the error{{ form.errors|pluralize }} below.
+            Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
         </p>
+        <br>
     {% endif %}
 
     <form action="" method="post">
         <div class="field">
-            {{ form.username.errors }}
-            <label for="id_subject">Usuário:</label>
-            {{ form.username }}
+            <label for="id_user"><h2>Usuário</h2></label>
+            {{ form.username }} {{ form.username.errors }}
         </div>
+        <br>
         <div class="field">
-            {{ form.email.errors }}
-            <label for="id_email">E-mail:</label>
-            {{ form.email }}
+            <label for="id_email"><h2>E-mail</h2></label>
+            {{ form.email }} {{ form.email.errors }}
         </div>
+        <br>
         <div class="field">
-            {{ form.password1.errors }}
-            <label for="id_message">Senha:</label>
-            {{ form.password1 }}
+            <label for="id_password1"><h2>Senha</h2></label>
+            {{ form.password1 }} {{ form.password1.errors }}
         </div>
+        <br>
         <div class="field">
-            {{ form.password2.errors }}
-            <label for="id_message">Confirme a Senha:</label>
-            {{ form.password2 }}
+            <label for="id_password2"><h2>Confirme a Senha</h2></label>
+            {{ form.password2 }} {{ form.password2.errors }}
         </div>
+        <br><br>
         <input type="submit" value="Enviar">
     </form>
 {% endblock %}

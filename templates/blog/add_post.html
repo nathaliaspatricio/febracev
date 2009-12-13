@@ -15,9 +15,41 @@
     {% endif %}
 
     <form enctype="multipart/form-data" method="post" action="">
-        <table>
-            {{ form.as_table }}
-        </table>
+        <div class="field">
+            <label for="id_title"><h2>Título</h2></label>
+            {{ form.title }} {{ form.title.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_slug"><h2>Slug</h2></label>
+            {{ form.slug }} {{ form.slug.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_tease"><h2>Resumo</h2></label>
+            {{ form.tease }} {{ form.tease.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_body"><h2>Texto</h2></label>
+            {{ form.body }} {{ form.body.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_status"><h2>Status</h2></label>
+            {{ form.status }} {{ form.status.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_tags"><h2>Palavras-chave</h2></label>
+            {{ form.tags }} {{ form.tags.errors }}
+        </div>
+        <br>
+        <div class="field">
+            <label for="id_comments"><h2>Comentários</h2></label>
+            {{ form.allow_comments }} Permitir {{ form.allow_comments.errors }}
+        </div>
+        <br>
         <input type="submit" value="Enviar">
     </form>
 {% endblock %}

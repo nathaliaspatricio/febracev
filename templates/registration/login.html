@@ -20,21 +20,22 @@
 
     {% if form.errors %}
         <p style="color: red;">
-            Por favor, corrija o erro {{ form.error|pluralize }} abaixo.
+            Por favor, corrija o{{ form.errors|pluralize }} erro{{ form.errors|pluralize }} abaixo.
         </p>
+        <br>
     {% endif %}
 
     <form action="" method="post">
         <div class="field">
-            {{ form.username.errors }}
-            <label for="id_username">Usuário:</label>
-            {{ form.username }}
+            <label for="id_username"><h2>Usuário</h2></label>
+            {{ form.username }} {{ form.username.errors }}
         </div>
+        <br>
         <div class="field">
-            {{ form.password.errors }}
-            <label for="id_password">Senha:</label>
-            {{ form.password }}
+            <label for="id_password"><h2>Senha</h2></label>
+            {{ form.password }} {{ form.password.errors }}
         </div>
+        <br><br>
         <input type="submit" value="Enviar">
         <input type="hidden" name="next" value="/accounts/login/" />
 
