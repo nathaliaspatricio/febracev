@@ -92,8 +92,8 @@
 	<div class="column" id="columnB">
         <div class="columnBhead">
             <h2>Dados do projeto</h2>
-		<div class="clear">&nbsp;</div>
-                <h3>Autor{{ student_list|pluralize:"es" }}:</h3>
+		    <div class="clear">&nbsp;</div>
+            <h3>Autor{{ student_list|pluralize:"es" }}</h3>
                 {% for student in student_list %}
                    {% if student.is_active %}
                        <a href={{ student.get_absolute_url }}>{{ student.name }}{% if not forloop.last %}, {% endif %}</a>
@@ -102,7 +102,7 @@
                    {% endif %}
                 {% endfor %}
                 <br/>
-                <h3>Orientador{{ advisor_list|pluralize:"es" }}:</h3>
+                <h3>Orientador{{ advisor_list|pluralize:"es" }}</h3>
                 {% for advisor in advisor_list %}
                    {% if advisor.is_active %}
                        <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}{% if not forloop.last %}, {% endif %}</a>
@@ -111,8 +111,8 @@
                    {% endif %}
                 {% endfor %} 
                 <br/>
-                <h3>Instituição:</h3>
-		<a href={{ project.institution.get_absolute_url }}>{{ project.institution }}</a>
+                <h3>Instituição</h3>
+		        <a href={{ project.institution.get_absolute_url }}>{{ project.institution }}</a>
                 <br/>
                 {% load tagging_tags %}
                 {% tags_for_object project as tag_list %}
@@ -124,12 +124,14 @@
                     <br />
                 {% endif %}
                 {% if prize_list %}
-                    <h3>Prêmios</h3>
+                    <h3>Prêmio{{ prize_list|pluralize:"s" }}</h3>
                     {% for prize in prize_list %}
                         <img src="{{ MEDIA_URL }}images/star.png" id="star" alt="estrela" /> {{ prize.name }}<br/>
                     {% endfor %} 
                 {% endif %}
-                <br />
+                <h3>Resumo</h3>
+                  {{ project.abstract }}
+                <br /><br />
                 {% if project.slug %}
                     <a href={% url blog_index_slug project_slug=project.slug %}>Diário de Bordo</a><br/>
                 {% else %}
