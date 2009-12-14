@@ -41,37 +41,15 @@
     {% if is_owner %}
         <br/>
         {% if project.slug %}
-            <a href={% url blog_edit_post_slug project_slug=project.slug year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
+            <a href={% url blog_edit_post_slug project_slug=project.slug year=object.publish.year month=month day=object.publish.day slug=object.slug %}>Editar post</a>
         {% else %}
-            <a href={% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}>editar</a>
+            <a href={% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}>Editar post</a>
         {% endif %}
     {% endif %}
     </p>
     <br><br>
     {% get_comment_list for object as comment_list %}
     <div id="comments">
-    {% load comments %}
-        <h2>Comentários</h2>
-        <br>
-        {% if comment_list %}
-            <ul>
-                {% for comment in comment_list %}
-                    <li>
-                    {% if comment.user.get_profile %}
-                        <a href="{{ comment.user.get_profile.get_absolute_url }}" class="label">{{ comment.user.get_profile.name }}</a>
-                    {% else %} 
-                        <a href="mailto:{{ comment.email }}" class="label">{{ comment.user_name }}</a>
-                    {% endif %}
-                    </li>
-                    <li> {{ comment.submit_date|date:"d/m/Y H:i" }}</li>
-                    <li> {{ comment.comment }}</li>
-                    <br>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>Não há comentários.</p>
-        {% endif %}
-    </div><br><br>
     {% if object.allow_comments %}
     <h3>Deixe seu comentário</h3>
     <br>
@@ -82,12 +60,14 @@
                 <label for="id_name"><h3>Nome</h3></label>
                 {{ form.name }} {{ form.name.errors }}
             </div>
-            <br>
             <div class="field">
                 <label for="id_email"><h3>E-mail</h3></label>
                 {{ form.email }} {{ form.email.errors }}
             </div>
-            <br>
+            <div class="field">
+                <label for="id_url"><h3>URL</h3></label>
+                {{ form.url }} {{ form.url.errors }}
+            </div>
         {% endif %}
         <div class="field">
             <label for="id_comment"><h3>Texto</h3></label>
@@ -102,7 +82,7 @@
         {{ form.object_pk }}
         {{ form.timestamp }}
         {{ form.security_hash }}
-        <input type="hidden" name="next" value="{{ profile.get_absolute_url }}" />
+        <input type="hidden" name="next" value="{{ post_url }}" />
         <input type="submit" value="Enviar comentário" id="id_submit" />
     </form>
     {% else %}
@@ -111,4 +91,31 @@
         <p>Esse post não permite comentários.</p>
     </div>
     {% endif %}
+    <br />
+    {% load comments %}
+        <h2>Comentários</h2>
+        <br>
+        {% if comment_list %}
+            <ul>
+                {% for comment in comment_list reversed %}
+                    <li>
+                    {% if comment.user.get_profile %}
+                        <a href="{{ comment.user.get_profile.get_absolute_url }}" class="label">{{ comment.user.get_profile.name }}</a>
+                    {% else %} 
+                        {% if comment.url %}
+                        <a href={{ comment.url }} class="label">{{ comment.user_name }}</a>
+                        {% else %}
+                        {{ comment.user_name }}
+                        {% endif %}
+                    {% endif %}
+                    </li>
+                    <li> {{ comment.submit_date|date:"d/m/Y H:i" }}</li>
+                    <li> {{ comment.comment }}</li>
+                    <br>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Não há comentários.</p>
+        {% endif %}
+    </div>
 {% endblock %}

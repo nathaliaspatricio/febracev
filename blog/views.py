@@ -48,7 +48,7 @@ def edit_post(request, slug, year, month, day, edition=None, category=None, code
     else:
         project = get_object_or_404(Project, edition=edition, category=category, code=code)
 
-    visitor = request.user
+    visitor = request.user.get_profile()
     student_list = project.students.all()
     advisor_list = project.advisors.all()
 
@@ -153,12 +153,17 @@ def post_detail(request, slug, year, month, day, edition=None, category=None, co
     else:
         project = get_object_or_404(Project, edition=edition, category=category, code=code)
 
-    visitor = request.user
-    student_list = project.students.all()
-    advisor_list = project.advisors.all()
+    if not request.user.is_anonymous():
+        visitor = request.user.get_profile()
+        student_list = project.students.all()
+        advisor_list = project.advisors.all()
 
-    users = list(student_list)+list(advisor_list)
-    is_owner = visitor in users
+        users = list(student_list)+list(advisor_list)
+        is_owner = visitor in users
+    else:
+        is_owner = False
+
+    post_url =  request.path
 
     return date_based.object_detail(
         request,
@@ -168,7 +173,7 @@ def post_detail(request, slug, year, month, day, edition=None, category=None, co
         date_field = 'publish',
         slug = slug,
         queryset = Post.objects.published(project),
-        extra_context= {'is_owner': is_owner, 'project': project, 'month': month},
+        extra_context= {'is_owner': is_owner, 'project': project, 'month': month, 'post_url': post_url},
         **kwargs
     )
 post_detail.__doc__ = date_based.object_detail.__doc__
