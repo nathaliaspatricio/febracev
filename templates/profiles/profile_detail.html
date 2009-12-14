@@ -84,23 +84,23 @@
         </div>
     </div>
 
-	<div class="column" id="columnB">
+    <div class="column" id="columnB">
         <div class="columnBhead">
             <h2>Dados pessoais</h2>
-			<div class="clear">&nbsp;</div>
-		</div>
+            <div class="clear">&nbsp;</div>
+        </div>
         Local: {{ profile.city }}, {{ profile.state }} <br/>
         Data de Nascimento: {{ profile.birthdate|date:"d/m/Y" }} <br/>
         Sexo: {{ profile.gender }} <br/>
         Instituição: <a href="/institutions/{{ profile.institution.id }}">{{ profile.institution }}</a><br/>
         Projeto: <br/>
-        <br>
-		<div class="columnBhead">
+        <br />
+        <div class="columnBhead">
             <h2>Contatos</h2>
-			<div class="clear">&nbsp;</div>
-		</div>
-		<div class="subcolumns">
-			<div class="subcolumn" id="columnBleft">
+	    <div class="clear">&nbsp;</div>
+        </div>
+        <div class="subcolumns">
+	    <div class="subcolumn" id="columnBleft">
                 <h3>Usuários que sigo</h3>
                 {% if following_list %}
                     <ul>
@@ -115,7 +115,7 @@
                 {% endif %}
                 <div class="clear">&nbsp;</div>
             </div>
-			<div class="subcolumn" id="columnBright">
+            <div class="subcolumn" id="columnBright">
                 <h3>Usuários que me seguem</h3>
                 {% if follower_list %}
                     <ul>
@@ -125,12 +125,12 @@
                     </ul>
                     <br>
                     <a href={% url friends_followers username=profile.user.username %}>mais...</a>
-                {% else %}  
+                {% else %}
                     <p>Não há usuários que me seguem.</p>
                 {% endif %}
                 <div class="clear">&nbsp;</div>
-			</div>
-			<div class="subcolumn" id="columnBright">
+	     </div>
+             <div class="subcolumn" id="columnBright">
                 <h3>Amigos</h3>
                 {% if mutual_list %}
                     <ul>
@@ -144,32 +144,47 @@
                     <p>Não há amigos.</p>
                 {% endif %}
                 <div class="clear">&nbsp;</div>
-			</div>
-            
-		</div>
-		<div class="clear"></div>
+             </div>
+        </div>
+        <div class="clear"></div>
         <br>
         <div class="columnBhead">
-            <h2>Projetos Favoritos</h2>
-			<div class="clear">&nbsp;</div>
-		</div>
-		<div class="subcolumns">
-			<div class="subcolumn" id="columnBleft">
-                {% if favorite_projects %}
+            <h2>Projetos</h2>
+            <div class="clear">&nbsp;</div>
+        </div>
+        <div class="subcolumns">
+            <div class="subcolumn" id="columnBleft">
+                <h3>Meus projetos</h3>
+                {% if user_projects %}
                     <ul>
-                    {% for project in favorite_projects %}
+                    {% for project in user_projects %}
                         <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
                     {% endfor %}
                     </ul>
-                    <br>
-                    <a href={% url projects_favorite_projects username=profile.user.username %}>mais...</a>
+                {% else %}
+                    <p>Não há projetos</p>
+                {% endif %}
+                <div class="clear">&nbsp;</div>
+            </div>
+	    <div class="subcolumn" id="columnBright">
+                <h3>Projetos favoritos</h3>
+                {% if favorite_projects %}
+                    <ul>
+                    {% for project in favorite_projects|slice:":5" %}
+                        <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                    {% if favorite_projects|slice:"5:" %}
+                        <br>
+                        <a href={% url projects_favorite_projects username=profile.user.username %}>mais...</a>
+                    {% endif %}
                 {% else %}
                     <p>Não há projetos favoritos.</p>
                 {% endif %}
                 <div class="clear">&nbsp;</div>
-            </div>            
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 

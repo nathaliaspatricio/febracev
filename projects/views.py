@@ -71,11 +71,9 @@ def project_detail(request, year=None, category=None, code=None, slug=None):
     prize_list   = get_prizes(project)
     tag_list     = get_tag_list(project.keywords)
 
-    users = list(student_list)+list(advisor_list)
-
     if visitor.is_authenticated():
         is_fav = is_favorite(visitor, project)
-        is_owner = visitor.get_profile() in users
+        is_owner = visitor.get_profile() in ( list(student_list)+list(advisor_list) )
     else:
         is_fav = is_owner = False
 

@@ -11,3 +11,6 @@ def is_favorite(visitor, project):
 def get_prizes(project):
     pl = PrizeLink.objects.filter(project=project).values('prize')
     return Prize.objects.filter(id__in=[i['prize'] for i in pl])
+
+def get_user_projects(user_profile):
+    return list( set(user_profile.students.all()).union( set(user_profile.advisors.all()) ) )

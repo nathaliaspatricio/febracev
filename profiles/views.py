@@ -316,6 +316,7 @@ def profile_detail(request, username, public_profile_field=None,
     following_list = friends_utils.get_following_set(user)
     mutual_list = friends_utils.get_mutual_set(user)
     favorite_projects = projects_utils.get_favorite_projects(user)
+    user_projects = projects_utils.get_user_projects(user.get_profile())
 
     if profile_obj.is_active:
         return render_to_response(template_name,
@@ -326,6 +327,7 @@ def profile_detail(request, username, public_profile_field=None,
                                     'following_list': following_list,
                                     'mutual_list': mutual_list,
                                     'favorite_projects': favorite_projects,
+                                    'user_projects': user_projects,
                                   },
                                   context_instance=context)
     else:
