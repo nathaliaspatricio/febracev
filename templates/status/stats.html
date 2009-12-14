@@ -9,33 +9,49 @@
 {% block content %}
 
     <h2>Projetos mais seguidos</h2>
-    <ul>
-    {% for project,count in most_followed_projects %}
-        <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a> ({{ count }} seguidor{{ count|pluralize:"es" }})</li>
-    {% endfor %}
-    </ul>
+    {% if most_followed_projects %}
+        <ul>
+        {% for project,count in most_followed_projects %}
+            <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a> ({{ count }} seguidor{{ count|pluralize:"es" }})</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há projetos seguidos.</p>
+    {% endif %}
     <br/>
 
     <h2>Usuários mais seguidos</h2>
-    <ul>
-    {% for user,count in most_followed_users %}
-        <li><a href="{{ user.get_profile.get_absolute_url }}">{{ user.get_profile.name }}</a> ({{ count }} seguidor{{ count|pluralize:"es" }})</li>
-    {% endfor %}
-    </ul>
+    {% if most_followed_projects %}
+        <ul>
+        {% for user,count in most_followed_users %}
+            <li><a href="{{ user.get_profile.get_absolute_url }}">{{ user.get_profile.name }}</a> ({{ count }} seguidor{{ count|pluralize:"es" }})</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há usuários seguidos.</p>
+    {% endif %}
     <br/>
 
     <h2>Projetos mais comentados</h2>
-    <ul>
-    {% for project,count in most_commented_projects %}
-        <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a> ({{ count }} comentário{{ count|pluralize }})</li>
-    {% endfor %}
-    </ul>
+    {% if most_commented_projects %}
+        <ul>
+        {% for project,count in most_commented_projects %}
+            <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a> ({{ count }} comentário{{ count|pluralize }})</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há projetos comentados.</p>
+    {% endif %}
     <br/>
 
     <h2>Posts mais comentados</h2>
-    <ul>
-    {% for post,count in most_commented_posts %}
-        <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> ({{ count }} comentário{{ count|pluralize }})</li>
-    {% endfor %}
-    </ul>
+    {% if most_commented_posts %}
+        <ul>
+        {% for post,count in most_commented_posts %}
+            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> ({{ count }} comentário{{ count|pluralize }})</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há posts comentados.</p>
+    {% endif %}
 {% endblock %}
