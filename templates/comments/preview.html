@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Preview your comment" %}{% endblock %}
+
+{% block content %}
+  {% load comments %}
+  <form action="{% comment_form_target %}" method="post">
+    {% if next %}<input type="hidden" name="next" value="{{ next }}" />{% endif %}
+    {% if form.errors %}
+    <h1>{% blocktrans count form.errors|length as counter %}Please correct the error below{% plural %}Please correct the errors below{% endblocktrans %}</h1>
+    {% else %}
+    <h1>{% trans "Preview your comment" %}</h1>
+      <blockquote>{{ comment|linebreaks }}</blockquote>
+      <p>
+      {% trans "and" %} <input type="submit" name="submit" class="submit-post" value="{% trans "Post your comment" %}" id="submit" /> {% trans "or make changes" %}:
+      </p>
+    {% endif %}
+                    {% if user.is_anonymous %}
+                        <div class="field">
+                            <label for="id_name"><h3>Nome</h3></label>
+                            {{ form.name }} {{ form.name.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_email"><h3>E-mail</h3></label>
+                            {{ form.email }} {{ form.email.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_url"><h3>URL</h3></label>
+                            {{ form.url }} {{ form.url.errors }}
+                        </div>
+                    {% endif %}
+                    <div class="field">
+                        <label for="id_comment"><h3>Texto</h3></label>
+                        {{ form.comment }} {{ form.comment.errors }}
+                    </div>
+                    <br>
+                     <p style="display:none;">
+                         <label for="id_honeypot">Se você escrever algo aqui, seu recado será tratado como spam</label>
+                        {{ form.honeypot }}
+                    </p>
+                    {{ form.content_type }}
+                    {{ form.object_pk }}
+                    {{ form.timestamp }}
+                    {{ form.security_hash }}
+                    <input type="submit" value="Enviar recado" id="id_submit" />
+  </form>
+{% endblock %}

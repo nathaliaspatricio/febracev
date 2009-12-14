@@ -204,12 +204,14 @@
                             <label for="id_name"><h3>Nome</h3></label>
                             {{ form.name }} {{ form.name.errors }}
                         </div>
-                        <br>
                         <div class="field">
                             <label for="id_email"><h3>E-mail</h3></label>
                             {{ form.email }} {{ form.email.errors }}
                         </div>
-                        <br>
+                        <div class="field">
+                            <label for="id_url"><h3>URL</h3></label>
+                            {{ form.url }} {{ form.url.errors }}
+                        </div>
                     {% endif %}
                     <div class="field">
                         <label for="id_comment"><h3>Texto</h3></label>
@@ -233,12 +235,16 @@
                 {% get_comment_list for profile as comment_list %}
                 {% if comment_list %}
                     <ul>
-                        {% for comment in comment_list %}
+                        {% for comment in comment_list reversed %}
                             <li>
                             {% if comment.user.get_profile %}
 	                            <a href="{{ comment.user.get_profile.get_absolute_url }}" class="label">{{ comment.user.get_profile.name }}</a>
                             {% else %} 
-                                <a href="mailto:{{ comment.email }}" class="label">{{ comment.user_name }}</a>
+                                {% if comment.url %}
+                                     <a href="{{ comment.url }}" class="label">{{ comment.user_name }}</a>
+                                {% else %}
+                                     {{ comment.user_name }}
+                                {% endif %}
                             {% endif %}
                             </li>
                             <li> {{ comment.submit_date|date:"d/m/Y H:i" }}</li>
