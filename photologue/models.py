@@ -184,7 +184,11 @@ class Gallery(models.Model):
 def handler(sender, **kwargs):
     instance = kwargs['instance']
     if not Gallery.objects.filter(project=instance):
-        Gallery.objects.create(project=instance, title=instance.name, title_slug=instance.edition+instance.category+instance.code)
+        if instance.slug:
+            print instance.slug
+            Gallery.objects.create(project=instance, title=instance.name, title_slug=instance.slug)
+        else:
+            Gallery.objects.create(project=instance, title=instance.name, title_slug=instance.edition+instance.category+instance.code)
 
 post_save.connect( handler, sender=Project )
 

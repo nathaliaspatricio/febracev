@@ -135,8 +135,13 @@
                 {% if project.slug %}
                     <a href={% url blog_index_slug project_slug=project.slug %}>Diário de Bordo</a><br/>
                 {% else %}
+                    {% if project.slug %}
+                    <a href={% url blog_index_slug project_slug=project.slug %}>Diário de Bordo</a><br/>
+                    <a href={% url pl-gallery slug=project.slug %}>Galeria de fotos</a><br/>
+                    {% else %}
                     <a href={% url blog_index edition=project.edition category=project.category code=project.code %}>Diário de Bordo</a><br/>
                     <a href={% url pl-project-gallery edition=project.edition category=project.category code=project.code %}>Galeria de fotos</a><br/>
+                    {% endif %}
                 {% endif %}
                 <br/>
 		</div>

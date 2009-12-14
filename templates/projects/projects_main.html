@@ -8,12 +8,6 @@
 
 {% block content %}
 
-    {% if user.is_authenticated %}
-        <h2>Crie o seu projeto<h2>
-        <br />
-        <input type="button" onClick="parent.location='{% url projects_request_project  %}'" value="Novo projeto">
-        <br /><br />
-    {% endif %} 
 
     <h2>Projetos por categoria<h2>
     <br />
@@ -32,5 +26,12 @@
         <li><a href="{% url projects_by_year year  %}">{{ year }}</a></li>
     {% endfor %}
     </ul>
+
+    {% if user.is_authenticated %}
+	<br />
+        <h2>Crie o seu projeto<h2>
+        <input type="button" onClick="parent.location='{% url projects_request_project  %}'" value="Novo projeto">
+        <br /><br />
+    {% endif %} 
 
 {% endblock %}

@@ -135,7 +135,7 @@ def new_project(request):
             if request.POST.get("role") == "E":
                 project.students.add(request.user.get_profile())
             project.save()
-            return HttpResponseRedirect(project.get_absolute_url)
+            return HttpResponseRedirect(project.get_absolute_url())
     else:
         form = ProjectForm()  
     return render_to_response('projects/new_project.html',

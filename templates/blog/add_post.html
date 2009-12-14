@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title%} | Adicionar post{% endblock %}
+{% block title%} | {{ title }}{% endblock %}
 
 {% block header%}
-    <h1>Adicionar Post</h1>
+    <h1>{{ title }}</h1>
 {% endblock %}
 
 {% block content %}
@@ -20,11 +20,13 @@
             {{ form.title }} {{ form.title.errors }}
         </div>
         <br>
+        {% ifequal title "Adicionar post" %}
         <div class="field">
             <label for="id_slug"><h2>Slug</h2></label>
             {{ form.slug }} {{ form.slug.errors }}
         </div>
         <br>
+        {% endifequal %}
         <div class="field">
             <label for="id_tease"><h2>Resumo</h2></label>
             {{ form.tease }} {{ form.tease.errors }}

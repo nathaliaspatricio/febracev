@@ -38,8 +38,10 @@ def add_post(request, edition=None, category=None, code=None, project_slug=None,
         else:
             form = AddPostForm()
 
+        title = 'Adicionar post'
+
         return render_to_response('blog/add_post.html',
-                                  { 'form': form },
+                                  { 'form': form, 'title': title },
                                     context_instance=RequestContext(request))
 @login_required
 def edit_post(request, slug, year, month, day, edition=None, category=None, code=None, project_slug=None, **kwargs):
@@ -69,8 +71,10 @@ def edit_post(request, slug, year, month, day, edition=None, category=None, code
         else:
             form = EditPostForm(instance=post)
 
+        title = 'Editar post'
+
         return render_to_response('blog/add_post.html',
-                                  { 'form': form },
+                                  { 'form': form, 'title': title },
                                     context_instance=RequestContext(request))
     else:
         raise Http404
