@@ -95,52 +95,34 @@
 		<div class="clear">&nbsp;</div>
                 <h3>Autor{{ student_list|pluralize:"es" }}:</h3>
                 {% for student in student_list %}
-		    {% if forloop.last %}
-                        {% if student.is_active %}
-                            <a href={{ student.get_absolute_url }}>{{ student.name }}</a>
-                        {% else %}
-                            {{ student.name }}
-                        {% endif %}
-		    {% else %}
-                        {% if student.is_active %}
-                            <a href={{ student.get_absolute_url }}>{{ student.name }}, </a>
-                        {% else %}
-                            <pre>{{ student.name }}, </pre>
-                        {% endif %}
-                    {% endif %}
+                   {% if student.is_active %}
+                       <a href={{ student.get_absolute_url }}>{{ student.name }}{% if not forloop.last %}, {% endif %}</a>
+                   {% else %}
+                       {{ student.name }}{% if not forloop.last %}, {% endif %}
+                   {% endif %}
                 {% endfor %}
                 <br/>
                 <h3>Orientador{{ advisor_list|pluralize:"es" }}:</h3>
                 {% for advisor in advisor_list %}
-		    {% if forloop.last %}
-                        {% if advisor.is_active %}
-                            <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}</a>
-                        {% else %}
-                            {{ advisor.name }}
-                        {% endif %}
-                    {% else %}
-                        {% if advisor.is_active %}
-                            <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}, </a>
-                        {% else %}
-                            {{ advisor.name }}, 
-                        {% endif %}
-                    {% endif %}
+                   {% if advisor.is_active %}
+                       <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}{% if not forloop.last %}, {% endif %}</a>
+                   {% else %}
+                       {{ advisor.name }}{% if not forloop.last %}, {% endif %}
+                   {% endif %}
                 {% endfor %} 
                 <br/>
                 <h3>Instituição:</h3>
 		<a href={{ project.institution.get_absolute_url }}>{{ project.institution }}</a>
                 <br/>
-		{% if tag_list %}
+                {% load tagging_tags %}
+                {% tags_for_object project as tag_list %}
+                {% if tag_list %}
                     <h3>Palavras-chave:</h3>
                     {% for tag in tag_list %}
-		        {% if forloop.last %}
-                            <a href={{ tag.get_absolute_url }}>{{ tag.name }}</a>
-			{% else %}
-                            <a href={{ tag.get_absolute_url }}>{{ tag.name }}, </a>
-			{% endif %}
-                    {% endfor %} 
-                    <br/>
-		{% endif %}
+                        <a href={{ tag.get_absolute_url }}>{{ tag }}{% if not forloop.last %}, {% endif %}</a>
+                    {% endfor %}
+                    <br />
+                {% endif %}
                 {% if prize_list %}
                     <h3>Prêmios</h3>
                     {% for prize in prize_list %}

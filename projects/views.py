@@ -5,8 +5,6 @@ from django.http import Http404, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
-from tagging.utils import get_tag_list
-
 from projects.models import Project, ProjectLink, CATEGORIES
 from projects.utils import get_favorite_projects, is_favorite, get_prizes
 from projects.forms import ProjectForm
@@ -69,7 +67,6 @@ def project_detail(request, year=None, category=None, code=None, slug=None):
     student_list = project.students.all()
     advisor_list = project.advisors.all()
     prize_list   = get_prizes(project)
-    tag_list     = get_tag_list(project.keywords)
 
     if visitor.is_authenticated():
         is_fav = is_favorite(visitor, project)
@@ -84,7 +81,6 @@ def project_detail(request, year=None, category=None, code=None, slug=None):
                                 'student_list': student_list,
                                 'advisor_list': advisor_list,
                                 'prize_list': prize_list,
-                                'tag_list': tag_list,
                                 'title': project.name,
                                 'year': project.edition,
                                 'category': project.category,

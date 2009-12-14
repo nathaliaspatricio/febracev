@@ -1,19 +1,20 @@
 {% extends "photologue/root.html" %}
 
-{% load photologue_tags %}
+{% load photologue_tags tagging_tags %}
 
 {% block title %}{{ object.title }}{% endblock %}
 
 {% block content %}
 
 <h1>{{ object.title }}</h1>
-{% for tag in tag_list %}
-    {% if forloop.last %}
-        <a href={{ tag.get_absolute_url }}>{{ tag.name }}</a>
-    {% else %}
-        <a href={{ tag.get_absolute_url }}>{{ tag.name }}, </a>
-    {% endif %}
-{% endfor %}
+{% tags_for_object object as tag_list %}
+{% if tag_list %}
+    <p class="inline_tag_list"><strong>Tags:</strong>
+    {% for tag in tag_list %}
+        <a href={{ tag.get_absolute_url }}>{{ tag }}{% if not forloop.last %}, {% endif %}</a>
+    {% endfor %}
+    </p>
+{% endif %}
 <br /><br />
 <div class="gallery-photo">
     <a href="{{ object.image.url }}"><img src="{{ object.image.url }}" alt="{{ object.title }}" width="500"/></a>

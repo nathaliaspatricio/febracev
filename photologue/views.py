@@ -10,7 +10,6 @@ from django.views.generic import list_detail
 from projects.models import Project
 from photologue.models import Gallery, Photo
 from photologue.forms import AddPhotoForm, EditPhotoForm
-from tagging.utils import get_tag_list
 
 SAMPLE_SIZE = ":%s" % getattr(settings, 'GALLERY_SAMPLE_SIZE', 5)
 
@@ -74,13 +73,12 @@ def photo_detail(request, slug):
             photos.extend( list( gallery.photos.all() ) )
 
         is_owner =  photo in photos
-        tag_list     = get_tag_list(photo.tags)
 
     return list_detail.object_detail(
         request,
         queryset = Photo.objects.filter(is_public=True),
         object_id = photo.id,
-        extra_context = { 'is_owner': is_owner, 'tag_list': tag_list }
+        extra_context = { 'is_owner': is_owner }
     )
 
 
