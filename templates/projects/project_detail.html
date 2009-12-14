@@ -113,13 +113,13 @@
                 <h3>Orientador{{ advisor_list|pluralize:"es" }}:</h3>
                 {% for advisor in advisor_list %}
 		    {% if forloop.last %}
-                        {% if adivisor.is_active %}
+                        {% if advisor.is_active %}
                             <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}</a>
                         {% else %}
                             {{ advisor.name }}
                         {% endif %}
                     {% else %}
-                        {% if adivisor.is_active %}
+                        {% if advisor.is_active %}
                             <a href={{ advisor.get_absolute_url }}>{{ advisor.name }}, </a>
                         {% else %}
                             {{ advisor.name }}, 
