@@ -7,9 +7,16 @@
 {% block content %}
 
 <h1>{{ object.title }}</h1>
-<br>
+{% for tag in tag_list %}
+    {% if forloop.last %}
+        <a href={{ tag.get_absolute_url }}>{{ tag.name }}</a>
+    {% else %}
+        <a href={{ tag.get_absolute_url }}>{{ tag.name }}, </a>
+    {% endif %}
+{% endfor %}
+<br /><br />
 <div class="gallery-photo">
-    <a href="{{ object.image.url }}"><img src="{{ object.image.url }}" alt="{{ object.title }}"/></a>
+    <a href="{{ object.image.url }}"><img src="{{ object.image.url }}" alt="{{ object.title }}" width="500"/></a>
     {% if object.caption %}<p>{{ object.caption }}</p>{% endif %}
 </div>
 <br>
@@ -20,7 +27,7 @@
 {% if object.public_galleries %}
     <ol>
     {% for gallery in object.public_galleries %}
-        <li><input type="button" onClick="parent.location='{{ gallery.get_absolute_url }}'" value="Voltar para a galeria"></li>
+        <li><a href={{ gallery.get_absolute_url }}>Voltar para a galeria</a></li>
         <li>{% previous_in_gallery object gallery %} {% next_in_gallery object gallery %}</li>
     {% endfor %}
     </ol>
