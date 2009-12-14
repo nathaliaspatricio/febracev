@@ -31,6 +31,17 @@
         </p>
     {% endif %}
     <br>
+    {% if object.author.get_profile %}
+        <p class="author">
+            <strong>Autor:</strong> 
+            <a href={{ object.author.get_profile.get_absolute_url }}>{{ object.author.get_profile.name }}</a>
+        </p>
+        <br>
+    {% else %}
+        <p class="author"><strong>Autor:</strong> {{ object.author }}</p>
+        <br>
+    {% endif %}
+    <br>
     <p class="other_posts">
     {% if object.get_previous_by_publish %}
         <input type="button" onClick="parent.location='{{ object.get_previous_post.get_absolute_url }}'" value="&laquo; {{ object.get_previous_post }}">
@@ -41,9 +52,9 @@
     {% if is_owner %}
         <br/>
         {% if project.slug %}
-            <a href={% url blog_edit_post_slug project_slug=project.slug year=object.publish.year month=month day=object.publish.day slug=object.slug %}>Editar post</a>
+            <input type="button" onClick="parent.location='{% url blog_edit_post_slug project_slug=project.slug year=object.publish.year month=month day=object.publish.day slug=object.slug %}'" value="Editar post">
         {% else %}
-            <a href={% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}>Editar post</a>
+            <input type="button" onClick="parent.location='{% url blog_edit_post edition=project.edition category=project.category code=project.code year=object.publish.year month=month day=object.publish.day slug=object.slug %}'" value="Editar post">
         {% endif %}
     {% endif %}
     </p>

@@ -27,7 +27,7 @@
                 <a href="{{message.get_absolute_url }}">{{ message.subject }}</a>
                 {% if message.replied %}</em>{% endif %}
                 {% if message.new %}</strong>{% endif %}</td>
-            <td>{{ message.sent_at|date:"d/m/Y H:m" }}</td>
+            <td>{{ message.sent_at|date:"d/m/Y H:i" }}</td>
             <td><a href="{% url messages.views.delete message.id %}">{% trans "delete" %}</a></td>
         </tr>
     {% endfor %}

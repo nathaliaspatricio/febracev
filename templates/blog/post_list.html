@@ -20,9 +20,16 @@
         <div class="post_list">
         {% for post in object_list %}
         <div>
-          <h3 class="title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
-          <p class="date">{{ post.publish|date:"d/m/Y H:i" }}</p>
-          <p class="tease">{{ post.tease }}</p>
+            <h3 class="title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+            <p class="date">{{ post.publish|date:"d/m/Y H:i" }}</p>
+            {% if post.author.get_profile %}
+                <p class="author">
+                    Por <a href={{ post.author.get_profile.get_absolute_url }}>{{ post.author.get_profile.name }}</a>
+                </p>
+            {% else %}
+                <p class="author">Por {{ post.author }}</p>
+            {% endif %}
+            <p class="tease">{{ post.tease }}</p>
         </div>
         <br>
         {% endfor %}

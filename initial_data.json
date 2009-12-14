@@ -889,7 +889,7 @@
             "birthdate": "1992-02-12",  
             "state": "SP", 
             "user": 3, 
-            "mugshot": "", 
+            "mugshot": "uploads/auricelia.jpg", 
             "institution": 3
         }
     }, 
@@ -1033,7 +1033,7 @@
             "birthdate": "1992-02-12",  
             "state": "SP", 
             "user": 13, 
-            "mugshot": "", 
+            "mugshot": "uploads/joel.png", 
             "institution": 12
         }
     }, 
@@ -1337,7 +1337,7 @@
             "birthdate": "1992-02-12",  
             "state": "SP", 
             "user": 32, 
-            "mugshot": "", 
+            "mugshot": "uploads/bruno.png", 
             "institution": 1
         }
     }, 
@@ -2677,6 +2677,24 @@
         }
     },
     {
+        "pk": 13, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 3, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 13
+        }
+    },
+    {
+        "pk": 14, 
+        "model": "friends.friendlink", 
+        "fields": {
+            "to_user": 32, 
+            "date_added": "2009-07-03 01:50:22", 
+            "from_user": 13
+        }
+    },
+    {
         "pk": 1, 
         "model": "projects.projectlink", 
         "fields": {
@@ -2953,6 +2971,43 @@
             "project": 14, 
             "date_added": "2009-07-03 01:54:55", 
             "prize": 5
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "messages.message", 
+        "fields": {
+            "sender": 3, 
+            "recipient": 13,
+            "subject": "oi",
+            "body": "gostei do seu projeto! Ficou bom mesmo!",
+            "sent_at": "2009-12-03 01:50:22"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "blog.post", 
+        "fields": {
+            "title": "Você sabe porque o SMS tem 160 caracteres?", 
+            "slug": "sms",
+            "author": 13,
+            "project": 3,
+            "body": "Em 1985, o alemão Friedham Hillebrand pesquisava tudo relacionado a comunicações e trabalhava com um grupo que estava desenvolvendo um padrão para que celulares pudessem enviar e receber mensagens de texto, conhecidas hoje como Short Message Service, os famosos SMSs. Para chegar a esse número, Hillebrand sentou-se na frente de sua máquina de escrever e redigiu uma série de mensagens de diferentes tamanhos e sobre variados assuntos. Após o feito, analisou tudo o que tinha escrito, incluindo espaços, acentos e pontuações, chegando à média de 160 caracteres. Entretanto, de acordo com o site Slashdot, Hillebrand se aproveitou de um canal de rádio secundário que já existia para redes móveis e testou seu padrão, que no início ficou restrito a apenas 128 caracteres. No início, essas mensagens eram utilizadas apenas para dar avisos como força do sinal ou ligações. Após alguns cortes de caracteres que poderiam ser utilizados, Hillebrand conseguiu aumentar em 32 caracteres as mensagens, chegando finalmente em seu número de 160. Isso aconteceu na mesma época em que se tornou um dos diretores do Sistema Global de Comunicações Móveis (GSM) em 1986, quando decretou que todas as operadoras deveriam adotar seu padrão. Dois argumentos convincentes ajudaram Hillebrand, além de sua tosca pesquisa na máquina de escrever. Primeiro, Hillebrand informou que cartões postais normalmente continham 150 caracteres de texto. Depois, declarou que o Telex, um antecessor do e-mail voltado para empresas, também utilizavam número semelhante. Outro empecilho que evitava um número maior de letras e outros sinais era o método de introdução desses caracteres. Em um teclado de celular, é preciso clicar até quatro vezes em um botão para se chegar nas letras desejadas, sem mencionar acentos e outras pontuações, que demandam mais trabalho ainda. Hoje, com o sistema T9, que 'adivinha' as palavras mais utilizadas, e com alguns celulares chegando ao mercado com teclado padrão QWERTY, a escrita ficou mais fácil. Graças às pesquisas de Hillebrand, as mensagens de texto hoje em dia são um sucesso, e atualmente americanos enviam mais SMS do que realizam ligações, produzindo uma média de 357 mensagens por mês versus 204 ligações. 'Minha amiga disse que isso era impossível para o mercado de massa. Eu era mais otimista', declarou o pesquisador. 'Ninguém jamais imaginou o quão rápido os jovens poderiam utilizar isso', disse Hillebrand, que fica impressionado com os recordes de velocidade quebrados por essas pessoas ao escreverem SMS. Um exemplo do sucesso das curtas mensagens também na internet pode ser visto no Twitter, serviço de microblogging que permite o envio de mensagens com apenas 140 caracteres por vez, o que não impediu que milhões de pessoas aderissem ao site.",
+            "status": 2,
+            "tags": "sms, celular, engenharia",
+            "publish": "2009-12-03 01:50:22"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "photologue.photo", 
+        "fields": {
+            "image": "photologue/photos/projeto.jpg", 
+            "title": "Engenharia de Software",
+            "title_slug": "software",
+            "caption": "Satiriza o processo de desenvolvimento de software",
+            "is_public": 1,
+            "tags": "engenharia, software"
         }
     }
 ]

@@ -23,7 +23,7 @@
             <td>
             <a href="{{ message.get_absolute_url }}">{{ message.subject }}</a>
             </td>
-            <td>{{ message.sent_at|date:"d/m/Y H:m" }}</td>
+            <td>{{ message.sent_at|date:"d/m/Y H:i" }}</td>
             <td><a href="{% url messages_delete message.id %}?next={% url messages_outbox %}">{% trans "delete" %}</a></td>
         </tr>
     {% endfor %}
