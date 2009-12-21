@@ -330,7 +330,15 @@ As tecnologias foram escolhidas com base na experiência prévia e habilidades t
     A primeira iteração, com duração de três semanas, foi realizada entre 20 de abril e 8 de maio, e teve como resultado a implementação de cinco histórias. A descrição de cada uma delas é feita abaixo.
 
     \subsubsection{História 2 - Autenticação no sistema}
-      Parte do código do módulo de Login deve oferecer a funcionalidade de autenticação no sistema. Foram desenvolvidas as telas de \textit{login} e \textit{logout} do Febrace\textsuperscript{V}, e a elas foi integrada a lógica de autenticação de usuários e o mecanismo de validação de sessões. Para iniciar a sessão, o usuário deve acessar a página de login e entrar corretamente com seu nome de usuário e senha. Caso as informações sejam incorretas, ele recebe a notificação do problema. Em caso contrário, o usuário acessa o sistema e é redirecionado para a página de seu perfil (caso já o tenha criado).
+      Parte do código do módulo de Login deve oferecer a funcionalidade de autenticação no sistema (figura ~\ref{login}). Foram desenvolvidas as telas de \textit{login} e \textit{logout} do Febrace\textsuperscript{V}, e a elas foi integrada a lógica de autenticação de usuários e o mecanismo de validação de sessões. Para iniciar a sessão, o usuário deve acessar a página de login e entrar corretamente com seu nome de usuário e senha. Caso as informações sejam incorretas, ele recebe a notificação do problema. Em caso contrário, o usuário acessa o sistema e é redirecionado para a página de seu perfil (caso já o tenha criado).
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/login.png}
+        \end{center}
+        \caption{Página de login}
+        \label{login}
+    \end{figure}
 
     \subsubsection{História 3 - Cadastro de usuário}
       A segunda parte do módulo de Login é o cadastro de usuários. Para se cadastrar, o usuário deve entrar com seu nome de usuário desejado e senha, além de um email válido. Ao término do cadastro, um email contendo um link com sua chave de ativação é enviado para o usuário. Ele deve então clicar nesse link para ativar sua conta. Após sete dias, a chave de ativação perde a validade, e o usuário necessita realizar novamente o cadastro caso queira ter acesso ao sistema.
@@ -362,9 +370,17 @@ As tecnologias foram escolhidas com base na experiência prévia e habilidades t
     A segunda iteração, com duração de duas semanas, de 11 a 22 de maio, teve como resultado a implementação das quatro histórias descritas à seguir:
 
     \subsubsection{História 7 - Visualização de projeto}
-      Cada projeto cadastrado no sistema tem uma página no sistema, a partir da qual podem ser acessadas diversas de suas informações. Essa página também oferece links para a página da edição da Febrace que ele participou e para a página da categoria na qual está cadastrado, bem como para as páginas referentes às suas palavras-chave.
+      Cada projeto cadastrado no sistema tem uma página no sistema, a partir da qual podem ser acessadas diversas de suas informações (figura ~\ref{projeto}). Essa página também oferece links para a página da edição da Febrace que ele participou e para a página da categoria na qual está cadastrado, bem como para as páginas referentes às suas palavras-chave.
 
       Os demais elementos presentes na página de projetos são descritos em outros cartões relacionados ao tema.
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/projeto.png}
+        \end{center}
+        \caption{Página de projeto}
+        \label{projeto}
+    \end{figure}
 
     \subsubsection{História 8 - Listar participantes de um projeto}
       Cada projeto está associado aos usuários de seus participantes, alunos e orientadores. Esses participantes são mostrados na página de seu projeto, e suas representações (fotos ou nomes) são links para as páginas de perfil desses usuários.
@@ -451,7 +467,15 @@ As tecnologias foram escolhidas com base na experiência prévia e habilidades t
       Na página de detalhes de um projeto são listados os prêmios que esse projeto ganhou na edição da Febrace em que participou. Ao clicar nos prêmios, tem-se acesso a sua página de detalhes, descrita na História 27.
 
     \subsubsection{História 20 - Colunas}
-      Membros da equipe da Febrace contam com uma região do sistema na qual podem, sempre que quiserem, criar textos que desejem ser compartilhados com os outros integrantes da rede social. É a sessão de colunas, que pode ser lida e comentada por qualquer usuário, autenticado ou não.
+      Membros da equipe da Febrace contam com uma região do sistema na qual podem, sempre que quiserem, criar textos que desejem ser compartilhados com os outros integrantes da rede social. É a sessão de colunas, que pode ser lida e comentada por qualquer usuário, autenticado ou não (figura~\ref{coluna}).
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/coluna.png}
+        \end{center}
+        \caption{Página de visualização de uma coluna}
+        \label{coluna}
+    \end{figure}
 
     \subsubsection{História 16 - Recados/Caixas de comentários}
       Um dos componentes das páginas de perfil de usuário é o mural de recados. Nele, outros usuários podem deixar pequenas mensagens de texto para o dono do perfil. Os recados podem ser tanto escritos por usuários autenticado quanto por visitantes. No caso de um usuário autenticado, o recado é automaticamente vinculado a ele. No caso de um visitante, é solicitado o preenchimento de um pequeno formulário contendo nome e email válido.
@@ -504,10 +528,26 @@ As tecnologias foram escolhidas com base na experiência prévia e habilidades t
     A quinta iteração, com duração de duas semanas, foi realizada entre 27 de julho e 13 de agosto, e teve como resultado a implementação de duas histórias. A descrição de cada uma delas é feita abaixo.
 
     \subsubsection{História 12 - Edição de Diário de Bordo de um projeto}
-      Cada projeto tem seu diário de bordo, que é um blog no qual os participantes podem postar quaisquer questões relacionadas ao projeto. A criação de novas entradas e a edição das entradas já criadas em um diário de bordo só podem ser feitas pelos integrantes do projeto. Tanto usuários logados quanto deslogados podem deixar comentários em um diário de bordo.
+      Cada projeto tem seu diário de bordo, que é um blog no qual os participantes podem postar quaisquer questões relacionadas ao projeto. A criação de novas entradas e a edição das entradas já criadas em um diário de bordo só podem ser feitas pelos integrantes do projeto (figura~\ref{post}). Tanto usuários logados quanto deslogados podem deixar comentários em um diário de bordo.
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/post.png}
+        \end{center}
+        \caption{Página de adição de post no diário de bordo do projeto}
+        \label{post}
+    \end{figure}
 
     \subsubsection{História 19 - Notificação de novos conteúdos}
-      Cada diário de bordo tem seu próprio RSS, sendo que os usuários interessados em acompanhar aquele diário de bordo podem cadastrá-lo em seu leitor de RSS favorito. Assim, cada vez que for postada uma nova entrada no diário de bordo, o usuário ficará sabendo e poderá lê-la.
+      Cada diário de bordo tem seu próprio RSS, sendo que os usuários interessados em acompanhar aquele diário de bordo podem cadastrá-lo em seu leitor de RSS favorito (figura~\ref{feed}). Assim, cada vez que for postada uma nova entrada no diário de bordo, o usuário ficará sabendo e poderá lê-la.
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/feed.png}
+        \end{center}
+        \caption{RSS de diário de bordo de projeto}
+        \label{feed}
+    \end{figure}
       
  \subsection{Implementação da sexta iteração}
     A sexta iteração, com duração de duas semanas, foi realizada entre 14 de agosto e 3 de setembro, e teve como resultado a implementação de duas histórias. A descrição de cada uma delas é feita abaixo.
@@ -518,7 +558,31 @@ As tecnologias foram escolhidas com base na experiência prévia e habilidades t
       Em uma versão futura haverá uma integração entre essa funcionalidade e o sistema de submissão de projetos para Febrace para que projetos criados no Febrace\textsuperscript{V} possam ser submitidos diretamente para a Febrace sem a necessidade de que se preencha todos os dados novamente.
 
     \subsubsection{História 17 - Enviar mensagens a outros usuários}
-      Para que um usuário tenha a permissão de enviar uma mensagem direta a um outro usuário do sistema, é necessário que haja uma relação mútua entre eles (os usuários devem seguir um ao outro). O usuário tem a possibilidade de ver as mensagens recebidas de seus amigos, as mensagens enviadas por ele e as mensagens que foram enviadas para a lixeira. Quando uma mensagem é apagada da caixa de entrada ou da caixa de saída ela é enviada para a lixeira. Com uma certa frequência, as mensagens na lixeira são apagadas automaticamente.
+      Para que um usuário tenha a permissão de enviar uma mensagem direta (figura~\ref{mensagem}) a um outro usuário do sistema, é necessário que haja uma relação mútua entre eles (os usuários devem seguir um ao outro). O usuário tem a possibilidade de ver as mensagens recebidas de seus amigos (figura~\ref{caixa_de_entrada}), as mensagens enviadas por ele e as mensagens que foram enviadas para a lixeira (figura~\ref{trash}). Quando uma mensagem é apagada da caixa de entrada ou da caixa de saída ela é enviada para a lixeira. Com uma certa frequência, as mensagens na lixeira são apagadas automaticamente.
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/caixa_de_entrada.png}
+        \end{center}
+        \caption{Página de caixa de entrada de mensagens}
+        \label{caixa_de_entrada}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/mensagem.png}
+        \end{center}
+        \caption{Página de mensagem recebida}
+        \label{mensagem}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/trash.png}
+        \end{center}
+        \caption{Página de lixeira de mensagens}
+        \label{trash}
+    \end{figure}
 
  \subsection{Implementação da sétima iteração}
     A sétima iteração, com duração de três semanas, foi realizada entre 4 a 24 de setembro, e teve como resultado a implementação de uma história. A descrição dela é feita abaixo.
@@ -535,11 +599,19 @@ As tecnologias foram escolhidas com base na experiência prévia e habilidades t
 
       Um usuário participante de um projeto pode querer inserir mais informações sobre seu projeto. Para isso, foi criado um módulo de galeria de fotos relacionada a cada projeto, sendo que o participante pode inserir e deletar fotos desse álbum. 
       
-      Há também uma interface para a visualização das fotos de um projeto e qualquer usuário tem acesso a ela.
+      Há também uma interface para a visualização das fotos de um projeto e qualquer usuário tem acesso a ela (figura~\ref{galeria}).
+
+    \begin{figure}[h]
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/galeria.png}
+        \end{center}
+        \caption{Galeria de fotos de projeto}
+        \label{galeria}
+    \end{figure}
 
       Um outro conteúdo adicional que pode ser inserido em um projeto é o relatório do projeto. São aceitos arquivos de texto em diferentes formatos (pdf, odt, doc).
 
-    \subsubsection{História 21 - Estatísticas do uso do sistema}
+    \subsubsection{História 21 - Estatísticas de uso do sistema}
 
         Foi criada uma página simples que mostra algumas estatísticas do sistema. Essa página é de acesso público, sendo que não precisa estar logado para ver seu conteúdo. São mostradas quatro estatísticas:
 	\begin{itemize}
@@ -557,7 +629,15 @@ As tecnologias foram escolhidas com base na experiência prévia e habilidades t
 	  }
 	\end{itemize}
 
-        A idéia é a de mostrar a relevância dos conteúdos existentes na rede social.
+        A idéia é a de mostrar a relevância dos conteúdos existentes na rede social (figura~\ref{stats}).
+
+    \begin{figure}
+        \begin{center}
+    \includegraphics[width=1.0\linewidth]{arquivos/stats.png}
+        \end{center}
+        \caption{Página de estatísticas de uso do sistema}
+        \label{stats}
+    \end{figure}
 
   \subsection{Redefinição dos cartões}
 
